@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos CSS propios -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicons con https://www.favicon-generator.org/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Metadatos -->
+    <title>My Projects</title>
+    <!-- Esta etiqueta contiene la "descripción" básica de google -->
+    <meta name="description" content="Compre mis camisetas señora. Me las quitan de las manos.">
+    <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
+    <meta name="keywords" content="camisetas de algodón, camisetas de lycra, camisetas"/>
+
+    <!-- METADADATOS DE OPENGRAPH (FACEBOOK) -->
+    <meta property="og:title" content="Camisetas baratas"/>
+    <meta property="og:description" content="Compre mis camisetas señora. Me las quitan de las manos."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://camisetasbaratas.com"/>
+    <meta property="og:image" content="https://locahost...."/>
+
+    <!-- METADATOS DE TWITTER -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Camisetas baratas"/>
+    <meta name="twitter:description" content="Compre mis camisetas señora. Me las quitan de las manos."/>
+    <meta name="twitter:image" content="https://locahost..."/>
+
+    <!-- Estilos CSS propios -->
+    <style></style>
+</head>
+<body>
+<!-- Header -->
+<header class="fixed-top"><!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">My story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Montamos el menú dropdown -->
+                            <li><a class="dropdown-item" href="#">Raspi</a></li>
+                            <li><a class="dropdown-item" href="#">Web</a></li>
+                            <li><a class="dropdown-item" href="#">Docker</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <!-- Incluimos los iconos con FontAwesome -->
+                            <i class="d-none d-lg-inline fas fa-envelope"></i>
+                            <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
+                            <span class="d-lg-none"> Correo</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-menu-end">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="d-none d-lg-inline fas fa-user"></i>
+                            <span class="d-lg-none"> Usuario</span>
+                        </a>
+                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Adultos</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Señoras</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="headercontainer pe-0">
+        <div class="progress-">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+</header>
+
+<!-- Main -->
+<main>
+    <!-- Carousel https://getbootstrap.com/docs/5.0/components/carousel/-->
+    <section class="slider">
+        <!-- Marcadores del pie -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <!-- Diapositivas con https://dummyimage.com/ -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://dummyimage.com/1920x1080/000000/fff" class="d-block w-100" alt="Slide 1">
+                    <!-- Texto del slider 1 -->
+                    <div class="slider-text">
+                        <h2>Proyecto Raspberry Pi</h2>
+                        <p>Servidor web alojado en la Raspberry Pi 4b. Además de la fabricacion de la carcasa de la
+                            raspberry.</p>
+                        <a href="#" class="btn btn-warning text-white">Consulte la promoción</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://dummyimage.com/1920x1080/000000/fff" class="d-block w-100" alt="Slide 2">
+                    <!-- Texto del slider 2 -->
+                    <div class="slider-text">
+                        <h2>Segundo monitor modificado</h2>
+                        <p>Modificacion de pantalla portatil en segundo monitor</p>
+                        <a href="#" class="btn btn-warning text-white">Consulte la promoción</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://dummyimage.com/1920x1080/000000/fff" class="d-block w-100" alt="Slide 3">
+                    <!-- Texto del slider 3 -->
+                    <div class="slider-text">
+                        <h2>Servidor OMV Raspberry Pi</h2>
+                        <p>Servidor NAS en red local</p>
+                        <a href="#" class="btn btn-warning text-white">Consulte la promoción</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones adelante y atrás -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="container mt-5 mb-5">
+        <h1>Camisetas</h1>
+
+        <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-light p-2">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Projects</li>
+            </ol>
+        </nav>
+
+        <!-- Listado de productos -->
+        <section class="t-shirts">
+            <h2 class="d-none">Listado</h2>
+            <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
+            <div class="row"> <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
+                <!-- Generamos la primera columna y luego repetimos -->
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2">
+                    <article>
+                        <img src="https://dummyimage.com/640x480/000000/fff" class="img-fluid mb-2" alt="Camiseta">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-warning text-white">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagination https://getbootstrap.com/docs/5.0/components/pagination/ -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center mt-4 mb-4">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="pt-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h4>Sobre nosotros</h4>
+                <!-- Estos enlaces los he construido sin los estilos de BootStrap, solo añadiendo <nav> -->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Sobre Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="#">Aviso Legal</a>
+                        </li>
+                        <li>
+                            <a href="#">Política de cookies</a>
+                        </li>
+                        <li>
+                            <a href="#">Condiciones de compra</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md">
+                <h4>Nuestras marcas</h4>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Adidas</a>
+                        </li>
+                        <li>
+                            <a href="#">Nike</a>
+                        </li>
+                        <li>
+                            <a href="#">Reebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Puma</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md">
+                <h4>Síguenos</h4>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="#">Instagram</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

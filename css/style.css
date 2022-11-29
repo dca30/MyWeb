@@ -1,0 +1,75 @@
+.carousel-item {
+    position: relative;
+}
+
+main {
+    margin-top: 4rem;
+}
+.sombranav {
+    background: #eee;
+    /*box-shadow: 0 8px 8px -6px lightgrey;*/
+}
+
+.padding-header{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+}
+.slider-text {
+    width: 60%;
+    text-align: center;
+    /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
+    color: #fff;
+    z-index: 500;
+    top: 25%;
+}
+/*Style de la barra de desplazamiento
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 4px;
+  background: #FFC107;
+  width: 0%;
+}
+
+.dark-mode-body {
+background-color: #1f1b24;/*#121212*/
+color: white;
+}
+.dark-mode-header {
+background-color: #1f1b24;
+color: white;
+}
+#sol {
+    display: none;
+}
+/*
+Paleta de colores
+2C3333
+395B64
+A5C9CA
+E7F6F2
+
+https://colorhunt.co/palettes/dark
+*/

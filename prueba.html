@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos CSS propios -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicons con https://www.favicon-generator.org/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Metadatos -->
+    <title>Diego Calvo Alegre</title>
+    <!-- Esta etiqueta contiene la "descripción" básica de google -->
+    <meta name="description" content="Compre mis camisetas señora. Me las quitan de las manos.">
+    <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
+    <meta name="keywords" content="camisetas de algodón, camisetas de lycra, camisetas"/>
+
+    <!-- METADADATOS DE OPENGRAPH (FACEBOOK) -->
+    <meta property="og:title" content="Camisetas baratas"/>
+    <meta property="og:description" content="Compre mis camisetas señora. Me las quitan de las manos."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://camisetasbaratas.com"/>
+    <meta property="og:image" content="https://locahost...."/>
+
+    <!-- METADATOS DE TWITTER -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Camisetas baratas"/>
+    <meta name="twitter:description" content="Compre mis camisetas señora. Me las quitan de las manos."/>
+    <meta name="twitter:image" content="https://locahost..."/>
+
+    <!-- Estilos CSS propios -->
+    <style></style>
+</head>
+<body>
+
+<!-- Header -->
+
+<header class="fixed-top px-auto padding-header"><!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
+        <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="prueba.html">My story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#enlaces">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Montamos el menú dropdown -->
+                            <li><a class="dropdown-item" href="#">Raspi</a></li>
+                            <li><a class="dropdown-item" href="#">Web</a></li>
+                            <li><a class="dropdown-item" href="#">Docker</a></li>
+                            <li><a class="dropdown-item" href="projects.html">Saber más</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <div id="sol">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <!-- Incluimos los iconos con FontAwesome -->
+
+                                <i onclick="funcionOscuro()" class="d-none d-lg-inline fas fa-sun"></i>
+
+                                <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
+                                <span class="d-lg-none">Cambiar de modo</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div id="luna">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <!-- Incluimos los iconos con FontAwesome -->
+
+                                <i onclick="funcionOscuro()" class="d-none d-lg-inline fas fa-moon"></i>
+
+                                <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
+                                <span class="d-lg-none">Cambiar de modo</span>
+                            </a>
+                        </li>
+                    </div>
+                    <li class="nav-item dropdown dropdown-menu-end">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="d-none d-lg-inline fas fa-user"></i>
+                            <span class="d-lg-none"> Usuario</span>
+                        </a>
+                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Adultos</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Señoras</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="headercontainer pe-0">
+        <div class="progress-">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+</header>
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<button onclick="funcionOscuro()">Try it</button>
+
+<div id="div1">
+    This is my DIV1 element.
+    <button onclick="funcionOscuro()">Try it</button>
+</div>
+<div id="div2">
+    This is my DIV2 element.
+    <button onclick="funcionOscuro()">Try it</button>
+</div>
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+<script>
+function funcionOscuro() {
+  var x = document.getElementById("sol");
+  var y = document.getElementById("luna");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+        y.style.display = "block";
+
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>
+
