@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -59,8 +59,9 @@
 
 <!-- Header -->
 
-<header class="fixed-top px-auto padding-header"><!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
+<header id="my-header" class="fixed-top px-auto padding-header">
+    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
         <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Logo</a>
@@ -83,7 +84,8 @@
                            id="navbarDropdown" role="button">
                             Projects
                         </a>
-                        <ul aria-labelledby="navbarDropdown" class="dropdown-menu"> <!-- Montamos el menú dropdown -->
+                        <ul aria-labelledby="navbarDropdown" id="dropdown-menu" class="dropdown-menu">
+                            <!-- Montamos el menú dropdown -->
                             <li><a class="dropdown-item" href="#">Raspi</a></li>
                             <li><a class="dropdown-item" href="#">Web</a></li>
                             <li><a class="dropdown-item" href="#">Docker</a></li>
@@ -98,7 +100,7 @@
                             <a class="nav-link">
                                 <!-- Incluimos los iconos con FontAwesome -->
 
-                                <i class="d-none d-lg-inline fas fa-sun" onclick="funcionOscuro()"></i>
+                                <i class="icono-sol d-none d-lg-inline fas fa-sun" onclick="funcionOscuro()"></i>
 
                                 <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
                                 <span class="d-lg-none">Cambiar de modo</span>
@@ -117,20 +119,24 @@
                             </a>
                         </li>
                     </div>
-                    <li class="nav-item dropdown dropdown-menu-end">
-                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                           id="navbarDropdown2" role="button">
-                            <i class="d-none d-lg-inline fas fa-user"></i>
-                            <span class="d-lg-none"> Usuario</span>
-                        </a>
-                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
-                        <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Adultos</a></li>
-                            <li><a class="dropdown-item" href="#">Niños</a></li>
-                            <li><a class="dropdown-item" href="#">Señoras</a></li>
-                        </ul>
-                    </li>
+                    <div>
+                        <li class="nav-item dropdown dropdown-menu-end">
+                            <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                            <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
+                               data-bs-toggle="dropdown" href="#"
+                               role="button"> <!--id="navbarDropdown2"-->
+                                <i class="d-none d-lg-inline fas fa-user"></i>
+                                <span class="d-lg-none"> Usuario</span>
+                            </a>
+                            <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                            <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Adultos</a></li>
+                                <li><a class="dropdown-item" href="#">Niños</a></li>
+                                <li><a class="dropdown-item" href="#">Señoras</a></li>
+                            </ul>
+                        </li>
+                    </div>
+
                 </ul>
             </div>
         </div>
@@ -204,7 +210,7 @@
         <h1>Camisetas</h1>
 
         <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="navTop">
             <ol class="breadcrumb bg-light p-2">
                 <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                 <li aria-current="page" class="breadcrumb-item active">Projects</li>
@@ -391,19 +397,19 @@
 <footer class="pt-4 pb-4">
     <div class="container">
         <div class="row">
-            <div class="col-md">
+            <div class="col">
                 <h4>Sobre nosotros</h4>
                 <!-- Estos enlaces los he construido sin los estilos de BootStrap, solo añadiendo <nav> -->
                 <nav>
                     <ul>
-                        <li><a href="#">Sobre Nosotros</a></li>
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Política de cookies</a></li>
-                        <li><a href="#">Condiciones de compra</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#enlaces">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#enlaces">Aviso legal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#enlaces">Politica de cookies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#enlaces">Condiciones de compra</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="col-md">
+            <!--<div class="col-md">
                 <h4>Nuestras marcas</h4>
                 <nav>
                     <ul>
@@ -413,14 +419,18 @@
                         <li><a href="#">Puma</a></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="col-md">
-                <h4>Síguenos</h4>
+            </div>-->
+            <div class="col">
+                <h4>Enlaces</h4>
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/dca30" id="enlaces">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/diego-calvo-b495a219a">LinkedIn</a></li>
-                        <li><a href="https://www.instagram.com/calvoalegrediego">Instagram</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/dca30">Github</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                                href="https://www.linkedin.com/in/diego-calvo-b495a219a">LinkedIn</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/calvoalegrediego">Instagram</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -431,34 +441,7 @@
 
 <!-- Bootstrap JS -->
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
-<script>
-function funcionOscuro() {
-    var iconoSol = document.getElementById("luna");
-    var iconoLuna = document.getElementById("sol");
-
-    if (iconoSol.style.display === "none") {
-      iconoSol.style.display = "block";
-      iconoLuna.style.display = "none";
-    } else {
-      iconoSol.style.display = "none";
-      iconoLuna.style.display = "block";
-  }
-  var element = document.body;
-    element.classList.toggle("dark-mode-body");
-  var element1 = document.header;
-    element1.classList.toggle("dark-mode-header");
-}
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-</script>
 </body>
 </html>

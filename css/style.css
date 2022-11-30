@@ -1,7 +1,9 @@
 .carousel-item {
     position: relative;
 }
-
+ul{
+ list-style:none;
+}
 main {
     margin-top: 4rem;
 }
@@ -49,18 +51,24 @@ main {
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 4px;
-  background: #FFC107;
+  background: #FACA2C;
+/*FFC107*/
   width: 0%;
 }
-
+body{
+transition:all 1s;
+}
 .dark-mode-body {
-background-color: #1f1b24;/*#121212*/
-color: white;
+background-color: #222831;/*#121212*/
+color:white;
 }
-.dark-mode-header {
-background-color: #1f1b24;
-color: white;
+.dark-mode-nav {
+background-color: #393E46;
 }
+.icono-sol, .dark-mode-iconUser, .dark-mode-nav, .dark-mode-header{
+transition:all 0.75s;
+}
+
 #sol {
     display: none;
 }
@@ -73,3 +81,22 @@ E7F6F2
 
 https://colorhunt.co/palettes/dark
 */
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
