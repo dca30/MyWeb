@@ -15,6 +15,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
+    <!--
     <link href="images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
     <link href="images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
     <link href="images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
@@ -27,13 +28,15 @@
     <link href="images/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
     <link href="images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
-    <link href="images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">-->
+    <link rel="shortcut icon" href="/images/favicon.png"/>
     <meta content="#ffffff" name="msapplication-TileColor">
     <meta content="images/favicons/ms-icon-144x144.png" name="msapplication-TileImage">
     <meta content="#ffffff" name="theme-color">
 
     <!-- Metadatos -->
     <title>Diego Calvo Alegre</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
     <!-- Esta etiqueta contiene la "descripción" básica de google -->
     <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="description">
     <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
@@ -59,12 +62,20 @@
 
 <!-- Header -->
 
+<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <header id="my-header" class="fixed-top px-auto padding-header">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+
     <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
         <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Logo</a>
+            <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
+                                      class="d-inline-block align-middle mr-2"
+                                      id="imagen"></a>
+            <!--<a class="navbar-brand" href="index.html">Logo</a>-->
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent"
                     data-bs-toggle="collapse" type="button">
@@ -207,6 +218,146 @@
     </section>
 
     <div class="container mt-5 mb-5">
+        <div class="row justify-content-md-center row-cols-2">
+            <div class="col"><h2>DIEGO</h2></div>
+            <div class="col"></div>
+            <div class="col-12"><h2>CALVO ALEGRE</h2></div>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <!--<h1>CV</h1>-->
+        <div class="row">
+            <!--Columna izquierda-->
+            <div class="col-4 border-end  border-4 rounded">
+                <div class="col">
+                    <h3>HABILIDADES</h3>
+                    <nav>
+                        <ul class="ul-circulo">
+                            <li class="nav-item"><a>Orientacion a objetivos</a></li>
+                            <li class="nav-item"><a>Empatía</a></li>
+                            <li class="nav-item"><a>Habilidades de comunicación</a></li>
+                            <li class="nav-item"><a>Trabajo en equipo</a></li>
+                            <li class="nav-item"><a>Optimización</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <h3>SOFTWARE</h3>
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a>Java</a></li>
+                            <li class="nav-item"><a>Docker</a></li>
+                            <li class="nav-item"><a>SQL</a></li>
+                            <li class="nav-item"><a>HTML</a></li>
+                            <li class="nav-item"><a>PHP</a></li>
+                            <li class="nav-item"><a>Javascript</a></li>
+                            <li class="nav-item"><a>Laravel</a></li>
+                            <li class="nav-item"><a>Bootstrap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <h3>IDIOMAS</h3>
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a>Inglés | B2 - EOI</a></li>
+                            <li class="nav-item"><a>Francés</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <h3>OTROS</h3>
+
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a>Paquete Office: Word, Excel, Access</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--Separador-->
+            <div class="vr col-1" style="height: 250px;"></div>
+
+            <!--Columna derecha-->
+            <div class="col-6">
+                <div class="col">
+                    <p>Me considero una persona abierta, con facilidad
+                        para el trato con mis compañeros.
+                        Enfocado al logro, soy una persona muy versátil y
+                        con mucha facilidad para aprender nuevos
+                        conocimientos y adaptarme a las circunstancias y
+                        entornos.
+                        Estoy interesado en poder aportar todo mi
+                        potencial en una empresa a medida que obtengo
+                        nuevas habilidades informáticas.</p>
+                </div>
+                <div class="col">
+
+                    <div class="container p-0">
+                        <div class="row">
+                            <div class="col"><h3>EXPERIENCIA</h3></div>
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul class="ulclass">
+                            <li class="nav-item"><h5>PROGRAMADOR</h5></li>
+                            <li class="nav-item"><a>ISYC | 2022</a></li>
+                        </ul>
+                        <ul>
+                            <li class="nav-item"><a class="text-secondary">Gestor de sistemas informaticos y
+                                desarrollador web</a></li>
+                        </ul>
+                        <ul class="ulclass">
+                            <li class="nav-item"><h5>VENDEDOR DEPORTIVO</h5></li>
+
+                            <li class="nav-item"><a>Decathlon | 2021</a></li>
+                        </ul>
+                        <ul>
+                            <li class="nav-item"><a class="text-secondary">Atención al cliente, reposición, tareas
+                                logísticas y cobro</a></li>
+                        </ul>
+                        <ul class="ulclass">
+                            <li class="nav-item"><h5>TÉCNICO DE MOTOS ELECTRICAS</h5></li>
+
+                            <li class="nav-item"><a>Ebroh Bikes | 2020</a></li>
+                        </ul>
+                        <ul>
+                            <li class="nav-item"><a class="text-secondary">Reparación de cableado y software de las
+                                motos</a></li>
+                        </ul>
+                    </nav>
+                    <div class="container p-0">
+                        <div class="row">
+                            <div class="col"><h3>EDUCACIÓN</h3></div>
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
+                            <li class="nav-item"><a>Grado superior en desarrollo de aplicaciones
+                                multiplataforma | (Actualidad)</a></li>
+                            <li class="nav-item"><a>Grado superior en desarrollo de aplicaciones
+                                Web | (Actualidad)</a></li>
+                        </ul>
+                        <ul>
+                            <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
+                            <li class="nav-item"><a>Certificado de profesionalidad de desarrollo de
+                                aplicaciones con tecnologías web</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+    <!--Camisetas-->
+    <div class="container mt-5 mb-5">
         <h1>Camisetas</h1>
 
         <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
@@ -218,6 +369,22 @@
         </nav>
 
         <!-- Listado de productos -->
+<!--
+        <section class="wrapper">
+            <ul class="socialIcons">
+                <li>
+                    <a class="btn text-white btn-lg btn-floating" style="background-color: #ac2bac;" href="#!"
+                       role="button">
+                        <i class="fab fa-instagram"></i>
+                    </a></li>
+                <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+                <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+                <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+                <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
+                <li class="steam"><a href=""><i class="fa fa-fw fa-steam"></i>Steam</a></li>
+            </ul>
+-->
+        </section>
         <section class="t-shirts">
             <h2 class="d-none">Listado</h2>
             <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
@@ -394,7 +561,19 @@
 </main>
 
 <!-- Footer -->
+<!-- https://codepen.io/sanketbodke/pen/LYymbRq -->
+
 <footer class="pt-4 pb-4">
+        <div class="social-menu" id="media">
+            <ul>
+                <li><a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i></i></a></li>
+                <li><a href="https://www.instagram.com/imsanketbodke/" target="blank"><i
+                        class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/sanket-bodake-995b5b205/" target="blank"><i
+                        class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://codepen.io/sanketbodke"><i class="fab fa-codepen" target="blank"></i></a></li>
+            </ul>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -441,6 +620,7 @@
 
 <!-- Bootstrap JS -->
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 
 </body>
