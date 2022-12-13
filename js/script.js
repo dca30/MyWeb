@@ -29,6 +29,9 @@ function funcionOscuro() {
   var element = document.body;
   element.classList.toggle("dark-mode-body");
 
+  var element = document.getElementById("btn-back-to-top");
+  element.style.color = "white";
+
   var element2 = document.getElementById("my-header");
   element2.classList.toggle("dark-mode-header");
 
@@ -67,3 +70,10 @@ function scrollFunction() {
 }
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+function changeIcon(anchor) {
+  var icon = anchor.querySelector("i");
+      //var iconDarkMode = document.getElementById("iconDarkMode");
+  icon.classList.toggle('fa-sun');
+  icon.classList.toggle('fa-moon');
+}
