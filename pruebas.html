@@ -111,11 +111,8 @@
                     <li class="nav-item">
                         <a class="nav-link">
                             <!-- Incluimos los iconos con FontAwesome -->
-
-                            <i class="icono-sol d-none d-lg-inline fas fa-sun" id="iconDarkMode" onclick="changeIcon(this);funcionOscuro()"></i>
-
+                            <i class="icono-sol d-none d-lg-inline fas fa-sun" id="iconDarkMode" onclick="changeIcon2(this)"></i>
                             <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
-                            <span class="d-lg-none">Cambiar de modo</span>
                         </a>
                     </li>
                     <!--
@@ -126,10 +123,12 @@
                         </a>
                     </li>
                     -->
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-                    <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn">
-                        <i id="faPlus" class="fa fa-sun font-xs"></i>
+                    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />-->
+                    <li class="nav-item">
+                    <a class="hover-black" onclick="changeIcon2(this)" id="myBtn">
+                        <i id="faPlus" class="fas fa-sun font-xs"></i>
                     </a>
+                    </li>
                     <li class="nav-item dropdown dropdown-menu-end">
                         <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
                         <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
@@ -251,4 +250,5 @@
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
+<script src="js/scriptDark.js"></script>
 </html>

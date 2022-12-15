@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" xmlns="http://www.w3.org/1999/html">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,6 +14,7 @@
     <!-- Estilos CSS propios -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/socialMedia.css" rel="stylesheet">
+    <link href="css/styleDark.css" rel="stylesheet">
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
     <!--
@@ -66,16 +67,14 @@
 <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
 </button>
-<div class="social-menu">
+<div class="social-menu" id="social">
     <ul>
-        <li><a href="https://github.com/dca30" target="blank"><i class="fab fa-github"></i></a>
+        <li><a href="https://github.com/dca30" target="blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
         </li>
-        <li><a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i
-                class="fab fa-instagram"></i></a></li>
         <li><a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
                 class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="https://codepen.io/sanketbodke"><i class="fab fa-codepen" target="blank"></i></a>
-        </li>
+        <li><a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"></i></a></li>
     </ul>
 </div>
 
@@ -119,48 +118,26 @@
                 </ul>
                 <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <div id="sol">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <!-- Incluimos los iconos con FontAwesome -->
-
-                                <i class="icono-sol d-none d-lg-inline fas fa-sun" onclick="funcionOscuro()"></i>
-
-                                <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
-                                <span class="d-lg-none">Cambiar de modo</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div id="luna">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <!-- Incluimos los iconos con FontAwesome -->
-
-                                <i class="d-none d-lg-inline fas fa-moon" onclick="funcionOscuro()"></i>
-
-                                <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
-                                <span class="d-lg-none">Cambiar de modo</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div>
-                        <li class="nav-item dropdown dropdown-menu-end">
-                            <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-                            <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
-                               data-bs-toggle="dropdown" href="#"
-                               role="button"> <!--id="navbarDropdown2"-->
-                                <i class="d-none d-lg-inline fas fa-user"></i>
-                                <span class="d-lg-none"> Usuario</span>
-                            </a>
-                            <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
-                            <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Adultos</a></li>
-                                <li><a class="dropdown-item" href="#">Niños</a></li>
-                                <li><a class="dropdown-item" href="#">Señoras</a></li>
-                            </ul>
-                        </li>
-                    </div>
-
+                    <li class="nav-item">
+                        <a class="hover-black nav-link" onclick="changeIcon(this)" id="myBtn">
+                            <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-menu-end">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
+                           data-bs-toggle="dropdown" href="#"
+                           role="button"> <!--id="navbarDropdown2"-->
+                            <i class="d-none d-lg-inline fas fa-user"></i>
+                            <span class="d-lg-none"> Usuario</span>
+                        </a>
+                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                        <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Adultos</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Señoras</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -375,20 +352,105 @@
 
         <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav aria-label="breadcrumb" class="navbar-light bg-gray">
-            <ol class="breadcrumb  p-2">
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <ol class="breadcrumb p-2">
+                <li class="breadcrumb-item "><a href="">Inicio</a></li>
                 <li aria-current="page" class="breadcrumb-item active">Projects</li>
             </ol>
         </nav>
-        </section>
         <section class="t-shirts">
             <h2 class="d-none">Listado</h2>
             <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
-            <div class="row"> <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
+            <div class="d-flex justify-content-center row gap-4">
+                <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
                 <!-- Generamos la primera columna y luego repetimos -->
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
+
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
+                    <a class="texcolor-black" href="projects.html">
+                        <article>
+                            <img alt="Camiseta" class="img-fluid mt-2 mb-2"
+                                 src="https://dummyimage.com/640x480/000000/fff">
+                            <h4>Camiseta</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                                pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi
+                                eget
+                                cursus sem.</p>
+                            <p class="text-center">
+                                <a class="btn btn-warning" href="#">Ver ficha</a>
+                            </p>
+                        </article>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
+                    <a href="projects.html">
+                        <article>
+                            <img alt="Camiseta" class="img-fluid mt-2 mb-2"
+                                 src="https://dummyimage.com/640x480/000000/fff">
+                            <h4>Camiseta</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                                pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi
+                                eget
+                                cursus sem.</p>
+                            <p class="text-center">
+                                <a class="btn btn-warning" href="#">Ver ficha</a>
+                            </p>
+                        </article>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
+                    <a href="projects.html">
+                        <article>
+                            <img alt="Camiseta" class="img-fluid mt-2 mb-2"
+                                 src="https://dummyimage.com/640x480/000000/fff">
+                            <h4>Camiseta</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                                pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi
+                                eget
+                                cursus sem.</p>
+                            <p class="text-center">
+                                <a class="btn btn-warning" href="#">Ver ficha</a>
+                            </p>
+                        </article>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
                     <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
+                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a class="btn btn-warning" href="#">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
+                    <article>
+                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a class="btn btn-warning" href="#">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
+                    <article>
+                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
+                        <h4>Camiseta</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
+                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
+                            cursus sem.</p>
+                        <p class="text-center">
+                            <a class="btn btn-warning" href="#">Ver ficha</a>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
+                    <article>
+                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
                         <h4>Camiseta</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
                             pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
@@ -398,9 +460,9 @@
                         </p>
                     </article>
                 </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
                     <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
+                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
                         <h4>Camiseta</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
                             pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
@@ -410,117 +472,9 @@
                         </p>
                     </article>
                 </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
+                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
                     <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mb-2" src="https://dummyimage.com/640x480/000000/fff">
+                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
                         <h4>Camiseta</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
                             pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
@@ -561,18 +515,18 @@
 
 <footer class="pt-4 pb-4">
 
-  <!--  <div class="social-menu">
-        <ul>
-            <li><a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i></a>
-            </li>
-            <li><a href="https://www.instagram.com/imsanketbodke/" target="blank"><i
-                    class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/sanket-bodake-995b5b205/" target="blank"><i
-                    class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="https://codepen.io/sanketbodke"><i class="fab fa-codepen" target="blank"></i></a>
-            </li>
-        </ul>
-    </div>-->
+    <!--  <div class="social-menu">
+          <ul>
+              <li><a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i></a>
+              </li>
+              <li><a href="https://www.instagram.com/imsanketbodke/" target="blank"><i
+                      class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sanket-bodake-995b5b205/" target="blank"><i
+                      class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://codepen.io/sanketbodke"><i class="fab fa-codepen" target="blank"></i></a>
+              </li>
+          </ul>
+      </div>-->
     <!--<div class="container">
         <div class="row">
             <div class="col">
@@ -621,6 +575,7 @@
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
+<script src="js/scriptDark.js"></script>
 
 </body>
 </html>
