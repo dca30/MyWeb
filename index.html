@@ -15,7 +15,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/socialMedia.css" rel="stylesheet">
     <link href="css/styleDark.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
     <!--
@@ -65,7 +64,7 @@
 
 <!-- Header -->
 
-<button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
 </button>
 <div class="social-menu" id="social">
@@ -79,14 +78,14 @@
     </ul>
 </div>
 
-<header id="my-header" class="fixed-top px-auto">
+<header id="my-header" class="fixed-top px-auto padding-header">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
 
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
+    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
         <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <div class="container-fluid">
             <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
-                                      class="d-inline-block align-middle ps-2 pe-2 mr-2"
+                                      class="d-inline-block align-middle mr-2"
                                       id="imagen"></a>
             <!--<a class="navbar-brand" href="index.html">Logo</a>-->
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -97,18 +96,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a aria-current="page" class="nav-link active" href="prueba.html">My story</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Proyectos</a>
+                        <a class="nav-link" href="#enlaces">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a aria-current="page" class="nav-link" href="skills.html">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">Sobre mi</a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
                         <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
@@ -149,11 +141,12 @@
                 </ul>
             </div>
         </div>
-        <div class="progress mx-auto">
+    </nav>
+    <div class="headercontainer pe-0">
+        <div class="progress-">
             <div class="progress-bar" id="myBar"></div>
         </div>
-    </nav>
-
+    </div>
 </header>
 <!-- Main -->
 <main>
@@ -178,26 +171,25 @@
                         <h2>Proyecto Raspberry Pi</h2>
                         <p>Servidor web alojado en la Raspberry Pi 4b. Además de la fabricacion de la carcasa de la
                             raspberry.</p>
-                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
+                        <a class="btn btn-warning text-white" href="#">Consulte la promoción</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img alt="Slide 2" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
                     <!-- Texto del slider 2 -->
                     <div class="slider-text">
-                        <h2>Twitter Bot</h2>
-                        <p>Bot de Twitter que publica periodicamente frames de la pelicula Matrix</p>
-                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
+                        <h2>Segundo monitor modificado</h2>
+                        <p>Modificacion de pantalla portatil en segundo monitor</p>
+                        <a class="btn btn-warning text-white" href="#">Consulte la promoción</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img alt="Slide 3" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
                     <!-- Texto del slider 3 -->
                     <div class="slider-text">
-                        <h2>Movie to colors</h2>
-                        <p>Script de python que a partir de una pelicula genera una imagen formada por barras en la cual
-                            cada una de ellas es del color medio de cada frame</p>
-                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
+                        <h2>Servidor OMV Raspberry Pi</h2>
+                        <p>Servidor NAS en red local</p>
+                        <a class="btn btn-warning text-white" href="#">Consulte la promoción</a>
                     </div>
                 </div>
             </div>
@@ -356,7 +348,7 @@
     </div>
     <!--Camisetas-->
     <div class="container mt-5 mb-5">
-        <h1>Proyectos</h1>
+        <h1>Camisetas</h1>
 
         <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav aria-label="breadcrumb" class="navbar-light bg-gray">
@@ -493,8 +485,7 @@
                     </article>
                 </div>
             </div>
-            <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta"
-                 class="img-fluid"
+            <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta" class="img-fluid"
                  src="https://dummyimage.com/640x480/000000/fff">
         </section>
 
@@ -587,7 +578,6 @@
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 <script src="js/scriptDark.js"></script>
-<script src="js/navbar.js"></script>
 
 </body>
 </html>

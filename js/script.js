@@ -4,11 +4,9 @@
 window.onscroll = function() {scrollFunction()};
 /*Funcion boton volver arriba*/
 //Get the button
-let btnArriba = document.getElementById("btn-back-to-top");
-let socialMenu = document.getElementById("social");
-
+let mybutton = document.getElementById("btn-back-to-top");
 // When the user clicks on the button, scroll to the top of the document
-btnArriba.addEventListener("click", backToTop);
+mybutton.addEventListener("click", backToTop);
 var node = document.querySelector('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]');
 node.style.display = "none";
 function backToTop() {
@@ -25,11 +23,9 @@ function scrollFunction() {
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      btnArriba.style.display = "block";
-      socialMenu.style.display = "block";
+      mybutton.style.display = "block";
     } else {
-      btnArriba.style.display = "none";
-      socialMenu.style.display = "none";
+      mybutton.style.display = "none";
     }
 }
 
