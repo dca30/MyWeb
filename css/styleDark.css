@@ -1,0 +1,12 @@
+/*DARK MODE*/
+.dark-mode-body {
+    background-color: #222831;/*#121212*/
+    color:white;
+}
+.dark-mode-nav {
+    background-color: #393E46;
+    color:white;
+}
+.icono-sol, .dark-mode-iconUser, .dark-mode-nav, .dark-mode-header{
+    transition:all 0.75s;
+}

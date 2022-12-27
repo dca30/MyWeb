@@ -14,7 +14,7 @@ function changeIcon(anchor) {
             element.classList.toggle('text-white')
                     });
     var element = document.getElementById("btn-back-to-top");
-            element.classList.toggle('text-white')
+    element.classList.toggle('text-white')
 
     var element2 = document.getElementById("my-header");
     element2.classList.toggle("dark-mode-header");
