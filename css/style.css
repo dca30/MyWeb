@@ -10,10 +10,16 @@ body{
 color: white;
 }
 nav{
-    transition:all 0.5s;
+    transition: all 0.5s;
 }
 main {
     margin-top: 2rem;
+}
+.main-skills{
+    margin-top:6rem;
+}
+.main-about{
+    margin-top:6rem;
 }
 hr{
     width:100%;
@@ -202,9 +208,44 @@ https://colorhunt.co/palettes/dark
     border: 0;
     margin-bottom: 1.5em;
   }
+  .card-skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
   .card:hover {
     transform: scale(1.1);
   }
   img {
     max-width: 100%;
   }
+
+  .section-title h4::after {
+    content: "";
+    width: 180px;
+    height: 3px;
+    display: inline-block;
+    background: #dee2e6;
+    margin: 6px 15px;
+  }
+  .section-title h4::before {
+    content: "";
+    width: 180px;
+    height: 3px;
+    display: inline-block;
+    background: #dee2e6;
+    margin: 6px 15px;
+  }
+  .section-title{
+    display: flex;
+            align-items: center;  /* align elements to the center of the cross axis */
+            justify-content: center;
+  }
+  /*  .container {
+      display: flex;
+      align-items: justify;   align elements to the start of the cross axis
+    }
+*/

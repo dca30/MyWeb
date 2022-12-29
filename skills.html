@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos CSS propios -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/socialMedia.css" rel="stylesheet">
+    <link href="css/styleDark.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+
+    <!-- Favicons con https://www.favicon-generator.org/ -->
+    <!--
+    <link href="images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="images/favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="images/favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="images/favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="images/favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="images/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="/images/favicon.png"/>
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="images/favicons/ms-icon-144x144.png" name="msapplication-TileImage">
+    <meta content="#ffffff" name="theme-color">
+
+    <!-- Metadatos -->
+    <title>Diego Calvo Alegre</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
+    <!-- Esta etiqueta contiene la "descripción" básica de google -->
+    <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="description">
+    <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
+    <meta content="camisetas de algodón, camisetas de lycra, camisetas" name="keywords"/>
+
+    <!-- METADADATOS DE OPENGRAPH (FACEBOOK) -->
+    <meta content="Camisetas baratas" property="og:title"/>
+    <meta content="Compre mis camisetas señora. Me las quitan de las manos." property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://camisetasbaratas.com" property="og:url"/>
+    <meta content="https://locahost...." property="og:image"/>
+
+    <!-- METADATOS DE TWITTER -->
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Camisetas baratas" name="twitter:title"/>
+    <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="twitter:description"/>
+    <meta content="https://locahost..." name="twitter:image"/>
+
+    <!-- Estilos CSS propios -->
+    </head>
+<body>
+
+<!-- Header -->
+
+<button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<div class="social-menu" id="social">
+    <ul>
+        <li><a href="https://github.com/dca30" target="blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li><a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
+                class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"></i></a></li>
+    </ul>
+</div>
+
+<header id="my-header" class="fixed-top px-auto">
+    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+
+    <nav id="navTop" class="navbar navbar-expand-lg fixed-top navbar-light bg-gray sombranav mx-auto">
+        <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
+        <div class="container-fluid">
+            <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
+                                      class="d-inline-block align-middle ps-2 pe-2 mr-2"
+                                      id="imagen"></a>
+            <!--<a class="navbar-brand" href="index.html">Logo</a>-->
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">Sobre mi</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                           id="navbarDropdown" role="button">
+                            Projects
+                        </a>
+                        <ul aria-labelledby="navbarDropdown" id="dropdown-menu" class="dropdown-menu">
+                            <!-- Montamos el menú dropdown -->
+                            <li><a class="dropdown-item" href="#">Raspi</a></li>
+                            <li><a class="dropdown-item" href="#">Web</a></li>
+                            <li><a class="dropdown-item" href="#">Docker</a></li>
+                            <li><a class="dropdown-item" href="projects.html">Saber más</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="hover-black nav-link" onclick="changeIcon(this)" id="myBtn">
+                            <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-menu-end">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
+                           data-bs-toggle="dropdown" href="#"
+                           role="button"> <!--id="navbarDropdown2"-->
+                            <i class="d-none d-lg-inline fas fa-user"></i>
+                            <span class="d-lg-none"> Usuario</span>
+                        </a>
+                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                        <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Adultos</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Señoras</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="progress mx-auto">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </nav>
+
+</header>
+<main class="main-skills">
+    <section class="skills">
+        <div class="section-title">
+            <h4 class="pb-4">SKILLS</h4>
+        </div>
+        <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
+        <div class="d-flex justify-content-center row gap-4">
+            <!--linux -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-linux fa-2x"></i>
+                    <h2>Linux</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--docker -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-docker fa-2x"></i>
+                    <h2>Docker</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--Java -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-java fa-2x"></i>
+                    <h2>Java</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--Python -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-python fa-2x"></i>
+                    <h2>Python</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--Html -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-html5 fa-2x"></i>
+                    <h2>HTML</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--Javascript -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-js fa-2x"></i>
+                    <h2>Javascript</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--bootstrap -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-bootstrap fa-2x"></i>
+                    <h2>Bootstrap</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--Css -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-css3-alt fa-2x"></i>
+                    <h2>CSS</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--Sql -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-solid fa-database fa-2x"></i>
+                    <h2>SQL</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--php -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-php fa-2x"></i>
+                    <h2>PHP</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!--laravel -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-laravel fa-2x"></i>
+                    <h2>Laravel</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+            <!-- Git -->
+            <div class="col-sm-2">
+                <div class="card card-skill pt-4">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                    <h2>Git</h2>
+                    <p>Description of the card</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="pt-4 pb-4">
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptDark.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/cardcolors.js"></script>
+
+</body>
+</html>
