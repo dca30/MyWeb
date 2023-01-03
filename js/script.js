@@ -33,3 +33,12 @@ function scrollFunction() {
       socialMenu.style.display = "none";
     }
 }
+
+function copyToClipboard(event, text) {
+    event.preventDefault();
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Copied to clipboard');
+    }, function(err) {
+      console.error('Failed to copy: ', err);
+    });
+  }

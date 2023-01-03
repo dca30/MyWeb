@@ -1,6 +1,23 @@
+let btn = document.getElementById("myBtn");
+let btn2 = document.getElementById("btn2");
+/*
+if(localStorage.getItem('dark')) {
+        changeIcon(anchor);
+    }
+*/
+
+
 function changeIcon(anchor) {
   // Toggle the dark mode preference in local storage
   // Toggle the dark mode styles
+  /*
+    if (btn2.classList.contains('fa-moon')) {
+      console.log('Tiene moon');
+      localStorage.setItem('dark', false);
+    } else {
+      console.log('No tiene moon');
+      localStorage.setItem('dark',true);
+    }*/
   var icon = anchor.querySelector("i");
   var navTop = document.getElementById("navTop");
   var dropdownMenu = document.getElementById("dropdown-menu");

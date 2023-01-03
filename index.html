@@ -8,14 +8,21 @@
     <!-- Bootstrap CSS -->
     <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+
     <!-- Font Awesome -->
     <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
     <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Estilos CSS propios -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/socialMedia.css" rel="stylesheet">
     <link href="css/styleDark.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/styleSwitch.css" rel="stylesheet">
+
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
     <!--
@@ -61,11 +68,11 @@
     <!-- Estilos CSS propios -->
     <style></style>
 </head>
-<body>
+<body class="light">
 
 <!-- Header -->
 
-<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
+<button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
 </button>
 <div class="social-menu" id="social">
@@ -75,18 +82,19 @@
         </li>
         <li><a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
                 class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"></i></a></li>
+        <li><a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
+                class="fab fa-at"></i></a></li>
     </ul>
 </div>
 
-<header id="my-header" class="fixed-top px-auto padding-header">
+<header id="my-header" class="fixed-top px-auto">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
 
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
+    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
         <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <div class="container-fluid">
             <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
-                                      class="d-inline-block align-middle mr-2"
+                                      class="d-inline-block align-middle  mx-2 mr-2"
                                       id="imagen"></a>
             <!--<a class="navbar-brand" href="index.html">Logo</a>-->
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -97,11 +105,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link active" href="prueba.html">My story</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#enlaces">Contact</a>
+                        <a class="nav-link" href="projects.html">Proyectos</a>
                     </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About</a>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
                         <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
@@ -119,35 +134,42 @@
                 </ul>
                 <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!--
                     <li class="nav-item">
                         <a class="hover-black nav-link" onclick="changeIcon(this)" id="myBtn">
-                            <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs"></i>
+                            <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs" id="btn2"></i>
                         </a>
-                    </li>
+                    </li>-->
                     <li class="nav-item dropdown dropdown-menu-end">
                         <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
                         <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
                            data-bs-toggle="dropdown" href="#"
                            role="button"> <!--id="navbarDropdown2"-->
-                            <i class="d-none d-lg-inline fas fa-user"></i>
+                            <i class="d-none d-lg-inline fas fa-globe"></i>
                             <span class="d-lg-none"> Usuario</span>
                         </a>
                         <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
                         <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Adultos</a></li>
-                            <li><a class="dropdown-item" href="#">Niños</a></li>
-                            <li><a class="dropdown-item" href="#">Señoras</a></li>
+                            <li><a class="dropdown-item" href="#">Español</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
                         </ul>
+                    </li>
+                    <li class="my-1">
+                        <input type="checkbox" id="toggle">
+                        <label class="toggle" for="toggle">
+                            <i class="bx bxs-sun"></i>
+                            <i class="bx bx-moon"></i>
+                            <span class="ball"></span>
+                        </label>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
-    <div class="headercontainer pe-0">
-        <div class="progress-">
+        <div class="progress mx-auto">
             <div class="progress-bar" id="myBar"></div>
         </div>
-    </div>
+    </nav>
+
 </header>
 <!-- Main -->
 <main>
@@ -172,25 +194,26 @@
                         <h2>Proyecto Raspberry Pi</h2>
                         <p>Servidor web alojado en la Raspberry Pi 4b. Además de la fabricacion de la carcasa de la
                             raspberry.</p>
-                        <a class="btn btn-warning text-white" href="#">Consulte la promoción</a>
+                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img alt="Slide 2" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
                     <!-- Texto del slider 2 -->
                     <div class="slider-text">
-                        <h2>Segundo monitor modificado</h2>
-                        <p>Modificacion de pantalla portatil en segundo monitor</p>
-                        <a class="btn btn-warning text-white" href="#">Consulte la promoción</a>
+                        <h2>Twitter Bot</h2>
+                        <p>Bot de Twitter que publica periodicamente frames de la pelicula Matrix</p>
+                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img alt="Slide 3" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
                     <!-- Texto del slider 3 -->
                     <div class="slider-text">
-                        <h2>Servidor OMV Raspberry Pi</h2>
-                        <p>Servidor NAS en red local</p>
-                        <a class="btn btn-warning text-white" href="#">Consulte la promoción</a>
+                        <h2>Movie to colors</h2>
+                        <p>Script de python que a partir de una pelicula genera una imagen formada por barras en la cual
+                            cada una de ellas es del color medio de cada frame</p>
+                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
                     </div>
                 </div>
             </div>
@@ -207,19 +230,21 @@
             </button>
         </div>
     </section>
-
-    <div class="container mt-5 mb-5">
+    <div class="section-title">
+        <h4 class="pt-5 pb-0">CV</h4>
+    </div>
+    <div class="container mt-1 mb-5">
         <div class="row justify-content-md-center row-cols-2">
             <div class="col"><h2>DIEGO</h2></div>
             <div class="col"></div>
             <div class="col-12"><h2>CALVO ALEGRE</h2></div>
         </div>
     </div>
+
     <div class="container mt-5 mb-5">
         <!--<h1>CV</h1>-->
         <div class="row">
-            <!--Columna izquierda-->
-            <div class="col-4 border-end  border-4 rounded">
+            <div class="col-4 ">
                 <div class="col">
                     <h3>HABILIDADES</h3>
                     <nav>
@@ -232,21 +257,24 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col">
-                    <h3>SOFTWARE</h3>
-                    <nav>
-                        <ul>
-                            <li class="nav-item"><a>Java</a></li>
-                            <li class="nav-item"><a>Docker</a></li>
-                            <li class="nav-item"><a>SQL</a></li>
-                            <li class="nav-item"><a>HTML</a></li>
-                            <li class="nav-item"><a>PHP</a></li>
-                            <li class="nav-item"><a>Javascript</a></li>
-                            <li class="nav-item"><a>Laravel</a></li>
-                            <li class="nav-item"><a>Bootstrap</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <a href="skills.html">
+                    <div class="col">
+                        <!--onclick="goToLink()" -->
+                        <h3>SOFTWARE</h3>
+                        <nav>
+                            <ul>
+                                <li class="nav-item">Java</li>
+                                <li class="nav-item">Docker</li>
+                                <li class="nav-item">SQL</li>
+                                <li class="nav-item">HTML</li>
+                                <li class="nav-item">PHP</li>
+                                <li class="nav-item">Javascript</li>
+                                <li class="nav-item">Laravel</li>
+                                <li class="nav-item">Bootstrap</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </a>
                 <div class="col">
                     <h3>IDIOMAS</h3>
                     <nav>
@@ -258,40 +286,23 @@
                 </div>
                 <div class="col">
                     <h3>OTROS</h3>
-
                     <nav>
                         <ul>
                             <li class="nav-item"><a>Paquete Office: Word, Excel, Access</a></li>
                         </ul>
                     </nav>
                 </div>
+
             </div>
-            <!--Separador-->
-            <div class="vr col-1" style="height: 250px;"></div>
-
-            <!--Columna derecha-->
-            <div class="col-6">
-                <div class="col">
-                    <p>Me considero una persona abierta, con facilidad
-                        para el trato con mis compañeros.
-                        Enfocado al logro, soy una persona muy versátil y
-                        con mucha facilidad para aprender nuevos
-                        conocimientos y adaptarme a las circunstancias y
-                        entornos.
-                        Estoy interesado en poder aportar todo mi
-                        potencial en una empresa a medida que obtengo
-                        nuevas habilidades informáticas.</p>
+            <div class="col-1 section-title">
+                <div class="h-100 vr">
+                    <p></p>
                 </div>
-                <div class="col">
+            </div>
+            <div class="col-7">
 
-                    <div class="container p-0">
-                        <div class="row">
-                            <div class="col"><h3>EXPERIENCIA</h3></div>
-                            <div class="col">
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col cv-title">
+                    <h3 class="pb-1">EXPERIENCIA</h3>
                     <nav>
                         <ul class="ulclass">
                             <li class="nav-item"><h5>PROGRAMADOR</h5></li>
@@ -311,7 +322,7 @@
                                 logísticas y cobro</a></li>
                         </ul>
                         <ul class="ulclass">
-                            <li class="nav-item"><h5>TÉCNICO DE MOTOS ELECTRICAS</h5></li>
+                            <li class="nav-item"><h5>TÉCNICO DE MOTOS ELÉCTRICAS</h5></li>
 
                             <li class="nav-item"><a>Ebroh Bikes | 2020</a></li>
                         </ul>
@@ -320,36 +331,35 @@
                                 motos</a></li>
                         </ul>
                     </nav>
-                    <div class="container p-0">
-                        <div class="row">
-                            <div class="col"><h3>EDUCACIÓN</h3></div>
-                            <div class="col">
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
+
+                </div>
+                <div class="col cv-title">
+                    <h3 class="pb-1">EDUCACIÓN</h3>
                     <nav>
-                        <ul>
+                        <ul class="ulclass">
                             <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
+                        </ul>
+                        <ul>
                             <li class="nav-item"><a>Grado superior en desarrollo de aplicaciones
                                 multiplataforma | (Actualidad)</a></li>
                             <li class="nav-item"><a>Grado superior en desarrollo de aplicaciones
                                 Web | (Actualidad)</a></li>
                         </ul>
-                        <ul>
+                        <ul class="ulclass">
                             <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
+                        </ul>
+                        <ul>
                             <li class="nav-item"><a>Certificado de profesionalidad de desarrollo de
                                 aplicaciones con tecnologías web</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col"></div>
             </div>
         </div>
     </div>
     <!--Camisetas-->
     <div class="container mt-5 mb-5">
-        <h1>Camisetas</h1>
+        <h1>Proyectos</h1>
 
         <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav aria-label="breadcrumb" class="navbar-light bg-gray">
@@ -486,8 +496,9 @@
                     </article>
                 </div>
             </div>
-            <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta" class="img-fluid"
-                 src="https://dummyimage.com/640x480/000000/fff">
+            <!-- <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta"
+                  class="img-fluid"
+                  src="https://dummyimage.com/640x480/000000/fff">-->
         </section>
 
         <!-- Pagination https://getbootstrap.com/docs/5.0/components/pagination/ -->
@@ -517,6 +528,7 @@
 <!-- https://codepen.io/sanketbodke/pen/LYymbRq -->
 
 <footer class="pt-4 pb-4">
+
 
     <!--  <div class="social-menu">
           <ul>
@@ -579,6 +591,9 @@
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 <script src="js/scriptDark.js"></script>
+<script src="js/navbar.js"></script>
+<script type="text/javascript" src="js/scriptSwitch.js"></script>
+
 
 </body>
 </html>

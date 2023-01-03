@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <!-- Bootstrap CSS -->
     <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,90 +11,220 @@
     <!-- Font Awesome -->
     <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
 
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/styleSwitch.css">
+
+    <!-- BoxIcons v2.1.2 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
     <!-- Estilos CSS propios -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/socialMedia.css" rel="stylesheet">
+    <link href="css/styleDark.css" rel="stylesheet">
+    <link href="css/styleSwitch.css" rel="stylesheet">
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <!--
+    <link href="images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="images/favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="images/favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="images/favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="images/favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="images/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">-->
+    <link rel="shortcut icon" href="/images/favicon.png"/>
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="images/favicons/ms-icon-144x144.png" name="msapplication-TileImage">
+    <meta content="#ffffff" name="theme-color">
 
     <!-- Metadatos -->
-    <title>My Projects</title>
+    <title>Diego Calvo Alegre</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
     <!-- Esta etiqueta contiene la "descripción" básica de google -->
-    <meta name="description" content="Compre mis camisetas señora. Me las quitan de las manos.">
+    <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="description">
     <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
-    <meta name="keywords" content="camisetas de algodón, camisetas de lycra, camisetas"/>
+    <meta content="camisetas de algodón, camisetas de lycra, camisetas" name="keywords"/>
 
     <!-- METADADATOS DE OPENGRAPH (FACEBOOK) -->
-    <meta property="og:title" content="Camisetas baratas"/>
-    <meta property="og:description" content="Compre mis camisetas señora. Me las quitan de las manos."/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://camisetasbaratas.com"/>
-    <meta property="og:image" content="https://locahost...."/>
+    <meta content="Camisetas baratas" property="og:title"/>
+    <meta content="Compre mis camisetas señora. Me las quitan de las manos." property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://camisetasbaratas.com" property="og:url"/>
+    <meta content="https://locahost...." property="og:image"/>
 
     <!-- METADATOS DE TWITTER -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Camisetas baratas"/>
-    <meta name="twitter:description" content="Compre mis camisetas señora. Me las quitan de las manos."/>
-    <meta name="twitter:image" content="https://locahost..."/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Camisetas baratas" name="twitter:title"/>
+    <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="twitter:description"/>
+    <meta content="https://locahost..." name="twitter:image"/>
 
     <!-- Estilos CSS propios -->
     <style></style>
 </head>
-<body>
-<section class="wrapper">
-    <div class="button">
-        <div class="icon">
-            <i class="fab fa-facebook"></i>
-        </div>
-        <span>Facebook</span>
-    </div>
+<body class="light">
+<!--
+<input type="checkbox" id="toggle">
 
-</section>
+<label class="toggle" for="toggle">
+    <i class="bx bxs-sun"></i>
+    <i class="bx bx-moon"></i>
+    <span class="ball"></span>
+</label>
+<label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+</label>-->
+
+<!-- JS File-->
+<script type="text/javascript" src="js/scriptSwitch.js"></script>
+
 <!-- Header -->
+
+<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<div class="social-menu" id="social">
+    <ul>
+        <li><a href="https://github.com/dca30" target="blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li><a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
+                class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"></i></a></li>
+    </ul>
+</div>
+
+<header id="my-header" class="fixed-top px-auto">
+    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+
+    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
+        <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
+        <div class="container-fluid">
+            <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
+                                      class="d-inline-block align-middle mr-2"
+                                      id="imagen"></a>
+            <!--<a class="navbar-brand" href="index.html">Logo</a>-->
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">Sobre mi</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                           id="navbarDropdown" role="button">
+                            Projects
+                        </a>
+                        <ul aria-labelledby="navbarDropdown" id="dropdown-menu" class="dropdown-menu">
+                            <!-- Montamos el menú dropdown -->
+                            <li><a class="dropdown-item" href="#">Raspi</a></li>
+                            <li><a class="dropdown-item" href="#">Web</a></li>
+                            <li><a class="dropdown-item" href="#">Docker</a></li>
+                            <li><a class="dropdown-item" href="projects.html">Saber más</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="hover-black nav-link" onclick="changeIcon(this)" id="myBtn">
+                            <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs"></i>
+                        </a>
+                    </li>
+                    <!---->
+                    <li>
+                        <input type="checkbox" id="toggle">
+
+                        <label class="toggle" for="toggle">
+                            <i class="bx bxs-sun"></i>
+                            <i class="bx bx-moon"></i>
+                            <span class="ball"></span>
+                        </label>
+                    </li>
+
+                    <li class="nav-item dropdown dropdown-menu-end">
+                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                        <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
+                           data-bs-toggle="dropdown" href="#"
+                           role="button"> <!--id="navbarDropdown2"-->
+                            <i class="d-none d-lg-inline fas fa-user"></i>
+                            <span class="d-lg-none"> Usuario</span>
+                        </a>
+                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                        <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Adultos</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                            <li><a class="dropdown-item" href="#">Señoras</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="progress mx-auto">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+                <div class="col-8">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 <!-- Main -->
 <main>
-    <!--
-    <section>
-        <ul class="socialIcons">
-            <div class="row">
-                <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
-            </div>
-            <div class="row">
-                <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
-            </div>
-            <div class="row">
-                <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
-            </div>
-            <div class="row">
-                <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
-            </div>
-            <div class="row">
-                <li class="steam"><a href=""><i class="fa fa-fw fa-steam"></i>Steam</a></li>
-            </div>
-        </ul>
 
-    </section>
-    -->
 </main>
 <!-- Footer -->
-<footer></footer>
+<!-- https://codepen.io/sanketbodke/pen/LYymbRq -->
+
+<footer class="pt-4 pb-4">
+
+</footer>
+
 <!-- Bootstrap JS -->
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptDark.js"></script>
+<script src="js/navbar.js"></script>
+
 </body>
 </html>
