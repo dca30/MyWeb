@@ -162,12 +162,7 @@ padding-left:7px;
         box-shadow: 0 5px 4px rgba(0,0,0,.5);
 }
 
-#social {
-    transition:all 0.75s;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-}
+
 #imagen{
     border-radius:15%;
 }
