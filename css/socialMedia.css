@@ -61,3 +61,11 @@
   left: -10px;
   transition: left 1s;
 }
+#social {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+#social.show {
+  display: block;
+}
