@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
   } else {
     // otherwise, reset the navbar to its original style
     navbar.style.width = '100%';
-        navbar.style.margin = '0px';
+    navbar.style.margin = '0px';
     navbar.classList.remove("rounded-pill");
   }
 });
