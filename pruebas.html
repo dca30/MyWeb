@@ -22,6 +22,8 @@
     <link href="css/styleDark.css" rel="stylesheet">
     <link href="css/navbar.css" rel="stylesheet">
     <link href="css/styleSwitch.css" rel="stylesheet">
+    <link href="css/prueba.css" rel="stylesheet">
+    
 
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
@@ -72,134 +74,125 @@
 
 <!-- Header -->
 
-<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
+<button class="learn-more">
+  <span class="circle" aria-hidden="true">
+  <span class="icon arrow"></span>
+  </span>
+  <span class="button-text">COPY MAIL</span>
 </button>
 
 
-<header id="my-header" class="fixed-top px-auto padding-header">
-    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+<header id="my-header" class="fixed-top px-auto">
+      <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
 
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav">
+      <nav
+        id="navTop"
+        class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto"
+      >
         <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <div class="container-fluid">
-            <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
-                                      class="d-inline-block align-middle mr-2"
-                                      id="imagen"></a>
-            <!--<a class="navbar-brand" href="index.html">Logo</a>-->
-            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
-                    data-bs-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a aria-current="page" class="nav-link active" href="prueba.html">My story</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#enlaces">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                           id="navbarDropdown" role="button">
-                            Projects
-                        </a>
-                        <ul aria-labelledby="navbarDropdown" id="dropdown-menu" class="dropdown-menu">
-                            <!-- Montamos el menú dropdown -->
-                            <li><a class="dropdown-item" href="#">Raspi</a></li>
-                            <li><a class="dropdown-item" href="#">Web</a></li>
-                            <li><a class="dropdown-item" href="#">Docker</a></li>
-                            <li><a class="dropdown-item" href="projects.html">Saber más</a></li>
-                        </ul>
-                    </li>
+          <a href="#"
+            ><img
+              src="/images/favicon.png"
+              width="45"
+              alt=""
+              class="d-inline-block align-middle mx-2 mr-2"
+              id="imagen"
+          /></a>
+          <!--<a class="navbar-brand" href="index.html">Logo</a>-->
+          <button
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="skills.html">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutme.html">About</a>
+              </li>
+              <!--
+              <li class="nav-item dropdown">
+                Recordad que cada menú desplegable tiene que tener su propio id 
+                <a
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  id="navbarDropdown"
+                  role="button"
+                >
+                  Projects
+                </a>
+                <ul
+                  aria-labelledby="navbarDropdown"
+                  id="dropdown-menu"
+                  class="dropdown-menu"
+                >
+                  Montamos el menú dropdown 
+                  <li><a class="dropdown-item" href="#">Raspi</a></li>
+                  <li><a class="dropdown-item" href="#">Web</a></li>
+                  <li><a class="dropdown-item" href="#">Docker</a></li>
+                  <li>
+                    <a class="dropdown-item" href="projects.html">Saber más</a>
+                  </li>
                 </ul>
-                <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <!-- Incluimos los iconos con FontAwesome -->
-                            <i class="icono-sol d-none d-lg-inline fas fa-sun" id="iconDarkMode" onclick="changeIcon2(this)"></i>
-                            <!-- Y con las clases .d-none .d-md-inline etc mostramos/ocultamos el icono o el texto según el tamaño de la página -->
-                        </a>
-                    </li>
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link">
-                            <i class="d-none d-lg-inline fas fa-moon" onclick="funcionOscuro()"></i>
-                            <span class="d-lg-none">Cambiar de modo</span>
-                        </a>
-                    </li>
-                    -->
-                    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />-->
-                    <li class="nav-item">
-                    <a class="hover-black" onclick="changeIcon2(this)" id="myBtn">
-                        <i id="faPlus" class="fas fa-sun font-xs"></i>
-                    </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-menu-end">
-                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-                        <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
-                           data-bs-toggle="dropdown" href="#"
-                           role="button"> <!--id="navbarDropdown2"-->
-                            <i class="d-none d-lg-inline fas fa-user"></i>
-                            <span class="d-lg-none"> Usuario</span>
-                        </a>
-                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
-                        <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Adultos</a></li>
-                            <li><a class="dropdown-item" href="#">Niños</a></li>
-                            <li><a class="dropdown-item" href="#">Señoras</a></li>
-                        </ul>
-                    </li>
-                    <!--
-                    <div id="sol">
-                        <li class="nav-item">
-                            <a class="nav-link">
-
-                                <i class="icono-sol d-none d-lg-inline fas fa-sun" onclick="funcionOscuro()"></i>
-
-                                <span class="d-lg-none">Cambiar de modo</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div id="luna">
-                        <li class="nav-item">
-                            <a class="nav-link">
-
-                                <i class="d-none d-lg-inline fas fa-moon" onclick="funcionOscuro()"></i>
-
-                                <span class="d-lg-none">Cambiar de modo</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div>
-                        <li class="nav-item dropdown dropdown-menu-end">
-                            <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
-                               data-bs-toggle="dropdown" href="#"
-                               role="button">
-                                <i class="d-none d-lg-inline fas fa-user"></i>
-                                <span class="d-lg-none"> Usuario</span>
-                            </a>
-                            <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Adultos</a></li>
-                                <li><a class="dropdown-item" href="#">Niños</a></li>
-                                <li><a class="dropdown-item" href="#">Señoras</a></li>
-                            </ul>
-                        </li>
-                    </div>
--->
+              </li>-->
+            </ul>
+            <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown dropdown-menu-end">
+                <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                <a
+                  id="iconUser"
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                >
+                  <!--id="navbarDropdown2"-->
+                  <i class="d-none d-lg-inline fas fa-globe"></i>
+                  <span class="d-lg-none"> Idioma</span>
+                </a>
+                <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                <ul
+                  aria-labelledby="navbarDropdown2"
+                  class="dropdown-menu dropdown-menu-end"
+                >
+                  <li><a class="dropdown-item" href="#">Español</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
                 </ul>
-            </div>
+              </li>
+              <li class="my-1">
+                <input type="checkbox" id="toggle" />
+                <label class="toggle" for="toggle">
+                  <i class="bx bxs-sun"></i>
+                  <i class="bx bx-moon"></i>
+                  <span class="ball"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    <div class="headercontainer pe-0">
-        <div class="progress-">
-            <div class="progress-bar" id="myBar"></div>
+        <div class="progress mx-auto">
+          <div class="progress-bar" id="myBar"></div>
         </div>
-    </div>
-</header>
+      </nav>
+    </header>
 
 <section>
     <p style="width:25%;">
@@ -255,6 +248,12 @@
         </li>
     </ul>
 </div>
+<a class="learn-more" href="#">
+            <span class="circle" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+            <span class="button-text">Learn More</span>
+          </a>
 </body>
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>

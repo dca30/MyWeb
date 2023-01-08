@@ -65,4 +65,4 @@ function copyToClipboard(event, text) {
     }, function(err) {
       console.error('Failed to copy: ', err);
     });
-  }
+}

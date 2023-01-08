@@ -1,28 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!-- Bootstrap CSS -->
-    <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
-    <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link
+      href="vendor/fontawesome-free-5.15.4-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="vendor/fontawesome-free-6.2.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Estilos CSS propios -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/socialMedia.css" rel="stylesheet">
-    <link href="css/styleDark.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
-    <link href="css/styleSwitch.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/socialMedia.css" rel="stylesheet" />
+    <link href="css/styleDark.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/styleSwitch.css" rel="stylesheet" />
 
     <!-- Favicons con https://www.favicon-generator.org/ -->
     <!--
@@ -39,464 +52,679 @@
     <link href="images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
     <link href="images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">-->
-    <link rel="shortcut icon" href="/images/favicon.png"/>
-    <meta content="#ffffff" name="msapplication-TileColor">
-    <meta content="images/favicons/ms-icon-144x144.png" name="msapplication-TileImage">
-    <meta content="#ffffff" name="theme-color">
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
+    <meta
+      content="images/favicons/ms-icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta content="#ffffff" name="theme-color" />
 
     <!-- Metadatos -->
     <title>Diego Calvo Alegre</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
     <!-- Esta etiqueta contiene la "descripción" básica de google -->
-    <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="description">
+    <meta
+      content="Compre mis camisetas señora. Me las quitan de las manos."
+      name="description"
+    />
     <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
-    <meta content="camisetas de algodón, camisetas de lycra, camisetas" name="keywords"/>
+    <meta
+      content="camisetas de algodón, camisetas de lycra, camisetas"
+      name="keywords"
+    />
 
     <!-- METADADATOS DE OPENGRAPH (FACEBOOK) -->
-    <meta content="Camisetas baratas" property="og:title"/>
-    <meta content="Compre mis camisetas señora. Me las quitan de las manos." property="og:description"/>
-    <meta content="website" property="og:type"/>
-    <meta content="https://camisetasbaratas.com" property="og:url"/>
-    <meta content="https://locahost...." property="og:image"/>
+    <meta content="Camisetas baratas" property="og:title" />
+    <meta
+      content="Compre mis camisetas señora. Me las quitan de las manos."
+      property="og:description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="https://camisetasbaratas.com" property="og:url" />
+    <meta content="https://locahost...." property="og:image" />
 
     <!-- METADATOS DE TWITTER -->
-    <meta content="summary_large_image" name="twitter:card"/>
-    <meta content="Camisetas baratas" name="twitter:title"/>
-    <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="twitter:description"/>
-    <meta content="https://locahost..." name="twitter:image"/>
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Camisetas baratas" name="twitter:title" />
+    <meta
+      content="Compre mis camisetas señora. Me las quitan de las manos."
+      name="twitter:description"
+    />
+    <meta content="https://locahost..." name="twitter:image" />
 
     <!-- Estilos CSS propios -->
     <style></style>
-</head>
-<body class="light">
+  </head>
+  <body class="light">
+    <!-- Header -->
 
-<!-- Header -->
+    <button
+      type="button"
+      class="btn btn-warning btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-<button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-<div class="social-menu" id="social">
-    <ul>
-        <li><a href="https://github.com/dca30" target="blank"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+    <div class="social-menu" id="social">
+      <ul>
+        <li>
+          <a
+            href="https://github.com/dca30"
+            target="blank"
+            style="font-size: 2em"
+          >
+            <i class="fab fa-github"></i>
+          </a>
         </li>
-        <li><a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
-                class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
-                class="fab fa-at"></i></a></li>
-    </ul>
-</div>
+        <li>
+          <a href="https://www.instagram.com/calvoalegrediego/" target="blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/diego-calvo-b495a219a/"
+            target="blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="copyToClipboard(event,'calvoalegred@gmail.com')"
+            target="blank"
+            ><i class="fab fa-at"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <header id="my-header" class="fixed-top px-auto">
+      <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
 
-<header id="my-header" class="fixed-top px-auto">
-    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
+      <nav
+        id="navTop"
+        class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto"
+      >
         <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <div class="container-fluid">
-            <a href="#"><img src="/images/favicon.png" width="45" alt=""
-                             class="d-inline-block align-middle  mx-2 mr-2"
-                             id="imagen"></a>
-            <!--<a class="navbar-brand" href="index.html">Logo</a>-->
-            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
-                    data-bs-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="skills.html" >Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html" >About</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                           id="navbarDropdown" role="button">
-                            Projects
-                        </a>
-                        <ul aria-labelledby="navbarDropdown" id="dropdown-menu" class="dropdown-menu">
-                            <!-- Montamos el menú dropdown -->
-                            <li><a class="dropdown-item" href="#">Raspi</a></li>
-                            <li><a class="dropdown-item" href="#">Web</a></li>
-                            <li><a class="dropdown-item" href="#">Docker</a></li>
-                            <li><a class="dropdown-item" href="projects.html">Saber más</a></li>
-                        </ul>
-                    </li>
+          <a href="#"
+            ><img
+              src="/images/favicon.png"
+              width="45"
+              alt=""
+              class="d-inline-block align-middle mx-2 mr-2"
+              id="imagen"
+          /></a>
+          <!--<a class="navbar-brand" href="index.html">Logo</a>-->
+          <button
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="skills.html">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutme.html">About</a>
+              </li>
+              <!--
+              <li class="nav-item dropdown">
+                Recordad que cada menú desplegable tiene que tener su propio id 
+                <a
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  id="navbarDropdown"
+                  role="button"
+                >
+                  Projects
+                </a>
+                <ul
+                  aria-labelledby="navbarDropdown"
+                  id="dropdown-menu"
+                  class="dropdown-menu"
+                >
+                  Montamos el menú dropdown 
+                  <li><a class="dropdown-item" href="#">Raspi</a></li>
+                  <li><a class="dropdown-item" href="#">Web</a></li>
+                  <li><a class="dropdown-item" href="#">Docker</a></li>
+                  <li>
+                    <a class="dropdown-item" href="projects.html">Saber más</a>
+                  </li>
                 </ul>
-                <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <!--
-                    <li class="nav-item">
-                        <a class="hover-black nav-link" onclick="changeIcon(this)" id="myBtn">
-                            <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs" id="btn2"></i>
-                        </a>
-                    </li>-->
-                    <li class="nav-item dropdown dropdown-menu-end">
-                        <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-                        <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle"
-                           data-bs-toggle="dropdown" href="#"
-                           role="button"> <!--id="navbarDropdown2"-->
-                            <i class="d-none d-lg-inline fas fa-globe"></i>
-                            <span class="d-lg-none"> Usuario</span>
-                        </a>
-                        <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
-                        <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Español</a></li>
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                        </ul>
-                    </li>
-                    <li class="my-1">
-                        <input type="checkbox" id="toggle">
-                        <label class="toggle" for="toggle">
-                            <i class="bx bxs-sun"></i>
-                            <i class="bx bx-moon"></i>
-                            <span class="ball"></span>
-                        </label>
-                    </li>
+              </li>-->
+            </ul>
+            <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown dropdown-menu-end">
+                <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+                <a
+                  id="iconUser"
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                >
+                  <!--id="navbarDropdown2"-->
+                  <i class="d-none d-lg-inline fas fa-globe"></i>
+                  <span class="d-lg-none"> Idioma</span>
+                </a>
+                <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+                <ul
+                  aria-labelledby="navbarDropdown2"
+                  class="dropdown-menu dropdown-menu-end"
+                >
+                  <li><a class="dropdown-item" href="#">Español</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
                 </ul>
-            </div>
+              </li>
+              <li class="my-1">
+                <input type="checkbox" id="toggle" />
+                <label class="toggle" for="toggle">
+                  <i class="bx bxs-sun"></i>
+                  <i class="bx bx-moon"></i>
+                  <span class="ball"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="progress mx-auto">
-            <div class="progress-bar" id="myBar"></div>
+          <div class="progress-bar" id="myBar"></div>
         </div>
-    </nav>
-
-</header>
-<!-- Main -->
-<main>
-    <!-- Carousel https://getbootstrap.com/docs/5.0/components/carousel/-->
-    <section class="slider">
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Carousel https://getbootstrap.com/docs/5.0/components/carousel/-->
+      <section class="slider">
         <!-- Marcadores del pie -->
-        <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators">
-            <div class="carousel-indicators">
-                <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
-                        data-bs-target="#carouselExampleIndicators" type="button"></button>
-                <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators"
-                        type="button"></button>
-                <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators"
-                        type="button"></button>
+        <div
+          class="carousel slide"
+          data-bs-ride="carousel"
+          id="carouselExampleIndicators"
+        >
+          <div class="carousel-indicators">
+            <button
+              aria-current="true"
+              aria-label="Slide 1"
+              class="active"
+              data-bs-slide-to="0"
+              data-bs-target="#carouselExampleIndicators"
+              type="button"
+            ></button>
+            <button
+              aria-label="Slide 2"
+              data-bs-slide-to="1"
+              data-bs-target="#carouselExampleIndicators"
+              type="button"
+            ></button>
+            <button
+              aria-label="Slide 3"
+              data-bs-slide-to="2"
+              data-bs-target="#carouselExampleIndicators"
+              type="button"
+            ></button>
+          </div>
+          <!-- Diapositivas con https://dummyimage.com/ -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                alt="Slide 1"
+                class="d-block w-100"
+                src="https://dummyimage.com/1920x1080/000000/fff"
+              />
+              <!-- Texto del slider 1 -->
+              <div class="slider-text">
+                <h2>Proyecto Raspberry Pi</h2>
+                <p>
+                  Servidor web alojado en la Raspberry Pi 4b. Además de la
+                  fabricacion de la carcasa de la raspberry.
+                </p>
+                <a class="btn btn-warning text-white" href="projects.html"
+                  >Ver</a
+                >
+              </div>
             </div>
-            <!-- Diapositivas con https://dummyimage.com/ -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img alt="Slide 1" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
-                    <!-- Texto del slider 1 -->
-                    <div class="slider-text">
-                        <h2>Proyecto Raspberry Pi</h2>
-                        <p>Servidor web alojado en la Raspberry Pi 4b. Además de la fabricacion de la carcasa de la
-                            raspberry.</p>
-                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img alt="Slide 2" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
-                    <!-- Texto del slider 2 -->
-                    <div class="slider-text">
-                        <h2>Twitter Bot</h2>
-                        <p>Bot de Twitter que publica periodicamente frames de la pelicula Matrix</p>
-                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img alt="Slide 3" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff">
-                    <!-- Texto del slider 3 -->
-                    <div class="slider-text">
-                        <h2>Movie to colors</h2>
-                        <p>Script de python que a partir de una pelicula genera una imagen formada por barras en la cual
-                            cada una de ellas es del color medio de cada frame</p>
-                        <a class="btn btn-warning text-white" href="projects.html">Ver</a>
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <img
+                alt="Slide 2"
+                class="d-block w-100"
+                src="https://dummyimage.com/1920x1080/000000/fff"
+              />
+              <!-- Texto del slider 2 -->
+              <div class="slider-text">
+                <h2>Twitter Bot</h2>
+                <p>
+                  Bot de Twitter que publica periodicamente frames de la
+                  pelicula Matrix
+                </p>
+                <a class="btn btn-warning text-white" href="projects.html"
+                  >Ver</a
+                >
+              </div>
             </div>
-            <!-- Botones adelante y atrás -->
-            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators"
-                    type="button">
-                <span aria-hidden="true" class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators"
-                    type="button">
-                <span aria-hidden="true" class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+              <img
+                alt="Slide 3"
+                class="d-block w-100"
+                src="https://dummyimage.com/1920x1080/000000/fff"
+              />
+              <!-- Texto del slider 3 -->
+              <div class="slider-text">
+                <h2>Movie to colors</h2>
+                <p>
+                  Script de python que a partir de una pelicula genera una
+                  imagen formada por barras en la cual cada una de ellas es del
+                  color medio de cada frame
+                </p>
+                <a class="btn btn-warning text-white" href="projects.html"
+                  >Ver</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Botones adelante y atrás -->
+          <button
+            class="carousel-control-prev"
+            data-bs-slide="prev"
+            data-bs-target="#carouselExampleIndicators"
+            type="button"
+          >
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            data-bs-slide="next"
+            data-bs-target="#carouselExampleIndicators"
+            type="button"
+          >
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-    </section>
-    <div class="section-title">
+      </section>
+      <div class="section-title">
         <h4 class="pt-5 pb-0">CV</h4>
-    </div>
-    <div class="container mt-1 mb-5">
+      </div>
+      <div class="container mt-1 mb-5">
         <div class="row justify-content-md-center row-cols-2">
-            <div class="col"><h2>DIEGO</h2></div>
-            <div class="col"></div>
-            <div class="col-12"><h2>CALVO ALEGRE</h2></div>
+          <div class="col"><h2>DIEGO</h2></div>
+          <div class="col"></div>
+          <div class="col-12"><h2>CALVO ALEGRE</h2></div>
         </div>
-    </div>
+      </div>
 
-    <div class="container mt-5 mb-5">
+      <div class="container mt-5 mb-5">
         <!--<h1>CV</h1>-->
         <div class="row">
-            <div class="col-4 ">
-                <div class="col">
-                    <h3>HABILIDADES</h3>
-                    <nav>
-                        <ul class="ul-circulo">
-                            <li class="nav-item"><a>Orientacion a objetivos</a></li>
-                            <li class="nav-item"><a>Empatía</a></li>
-                            <li class="nav-item"><a>Habilidades de comunicación</a></li>
-                            <li class="nav-item"><a>Trabajo en equipo</a></li>
-                            <li class="nav-item"><a>Optimización</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <a href="skills.html">
-                    <div class="col">
-                        <!--onclick="goToLink()" -->
-                        <h3>SOFTWARE</h3>
-                        <nav>
-                            <ul>
-                                <li class="nav-item">Java</li>
-                                <li class="nav-item">Docker</li>
-                                <li class="nav-item">SQL</li>
-                                <li class="nav-item">HTML</li>
-                                <li class="nav-item">PHP</li>
-                                <li class="nav-item">Javascript</li>
-                                <li class="nav-item">Laravel</li>
-                                <li class="nav-item">Bootstrap</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </a>
-                <div class="col">
-                    <h3>IDIOMAS</h3>
-                    <nav>
-                        <ul>
-                            <li class="nav-item"><a>Inglés | B2 - EOI</a></li>
-                            <li class="nav-item"><a>Francés</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col">
-                    <h3>OTROS</h3>
-                    <nav>
-                        <ul>
-                            <li class="nav-item"><a>Paquete Office: Word, Excel, Access</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
+          <div class="col-4">
+            <div class="col">
+              <h3>HABILIDADES</h3>
+              <nav>
+                <ul class="ul-circulo">
+                  <li class="nav-item"><a>Orientacion a objetivos</a></li>
+                  <li class="nav-item"><a>Empatía</a></li>
+                  <li class="nav-item"><a>Habilidades de comunicación</a></li>
+                  <li class="nav-item"><a>Trabajo en equipo</a></li>
+                  <li class="nav-item"><a>Optimización</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="col-1 section-title">
-                <div class="h-100 vr">
-                    <p></p>
-                </div>
+            <a href="skills.html">
+              <div class="col">
+                <!--onclick="goToLink()" -->
+                <h3>SOFTWARE</h3>
+                <nav>
+                  <ul>
+                    <li class="nav-item">Java</li>
+                    <li class="nav-item">Docker</li>
+                    <li class="nav-item">SQL</li>
+                    <li class="nav-item">HTML</li>
+                    <li class="nav-item">PHP</li>
+                    <li class="nav-item">Javascript</li>
+                    <li class="nav-item">Laravel</li>
+                    <li class="nav-item">Bootstrap</li>
+                  </ul>
+                </nav>
+              </div>
+            </a>
+            <div class="col">
+              <h3>IDIOMAS</h3>
+              <nav>
+                <ul>
+                  <li class="nav-item"><a>Inglés | B2 - EOI</a></li>
+                  <li class="nav-item"><a>Francés</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="col-7">
-
-                <div class="col cv-title">
-                    <h3 class="pb-1">EXPERIENCIA</h3>
-                    <nav>
-                        <ul class="ulclass">
-                            <li class="nav-item"><h5>PROGRAMADOR</h5></li>
-                            <li class="nav-item"><a>ISYC | 2022</a></li>
-                        </ul>
-                        <ul>
-                            <li class="nav-item"><a class="text-secondary">Gestor de sistemas informaticos y
-                                desarrollador web</a></li>
-                        </ul>
-                        <ul class="ulclass">
-                            <li class="nav-item"><h5>VENDEDOR DEPORTIVO</h5></li>
-
-                            <li class="nav-item"><a>Decathlon | 2021</a></li>
-                        </ul>
-                        <ul>
-                            <li class="nav-item"><a class="text-secondary">Atención al cliente, reposición, tareas
-                                logísticas y cobro</a></li>
-                        </ul>
-                        <ul class="ulclass">
-                            <li class="nav-item"><h5>TÉCNICO DE MOTOS ELÉCTRICAS</h5></li>
-
-                            <li class="nav-item"><a>Ebroh Bikes | 2020</a></li>
-                        </ul>
-                        <ul>
-                            <li class="nav-item"><a class="text-secondary">Reparación de cableado y software de las
-                                motos</a></li>
-                        </ul>
-                    </nav>
-
-                </div>
-                <div class="col cv-title">
-                    <h3 class="pb-1">EDUCACIÓN</h3>
-                    <nav>
-                        <ul class="ulclass">
-                            <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
-                        </ul>
-                        <ul>
-                            <li class="nav-item"><a>Grado superior en desarrollo de aplicaciones
-                                multiplataforma | (Actualidad)</a></li>
-                            <li class="nav-item"><a>Grado superior en desarrollo de aplicaciones
-                                Web | (Actualidad)</a></li>
-                        </ul>
-                        <ul class="ulclass">
-                            <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
-                        </ul>
-                        <ul>
-                            <li class="nav-item"><a>Certificado de profesionalidad de desarrollo de
-                                aplicaciones con tecnologías web</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="col">
+              <h3>OTROS</h3>
+              <nav>
+                <ul>
+                  <li class="nav-item">
+                    <a>Paquete Office: Word, Excel, Access</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
+          </div>
+          <div class="col-1 section-title">
+            <div class="h-100 vr">
+              <p></p>
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="col cv-title">
+              <h3 class="pb-1">EXPERIENCIA</h3>
+              <nav>
+                <ul class="ulclass">
+                  <li class="nav-item"><h5>PROGRAMADOR</h5></li>
+                  <li class="nav-item"><a>ISYC | 2022</a></li>
+                </ul>
+                <ul>
+                  <li class="nav-item">
+                    <a class="text-secondary"
+                      >Gestor de sistemas informaticos y desarrollador web</a
+                    >
+                  </li>
+                </ul>
+                <ul class="ulclass">
+                  <li class="nav-item"><h5>VENDEDOR DEPORTIVO</h5></li>
+
+                  <li class="nav-item"><a>Decathlon | 2021</a></li>
+                </ul>
+                <ul>
+                  <li class="nav-item">
+                    <a class="text-secondary"
+                      >Atención al cliente, reposición, tareas logísticas y
+                      cobro</a
+                    >
+                  </li>
+                </ul>
+                <ul class="ulclass">
+                  <li class="nav-item"><h5>TÉCNICO DE MOTOS ELÉCTRICAS</h5></li>
+
+                  <li class="nav-item"><a>Ebroh Bikes | 2020</a></li>
+                </ul>
+                <ul>
+                  <li class="nav-item">
+                    <a class="text-secondary"
+                      >Reparación de cableado y software de las motos</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col cv-title">
+              <h3 class="pb-1">EDUCACIÓN</h3>
+              <nav>
+                <ul class="ulclass">
+                  <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
+                </ul>
+                <ul>
+                  <li class="nav-item">
+                    <a
+                      >Grado superior en desarrollo de aplicaciones
+                      multiplataforma | (Actualidad)</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      >Grado superior en desarrollo de aplicaciones Web |
+                      (Actualidad)</a
+                    >
+                  </li>
+                </ul>
+                <ul class="ulclass">
+                  <li class="nav-item"><h5>CPIFP LOS ENLACES</h5></li>
+                </ul>
+                <ul>
+                  <li class="nav-item">
+                    <a
+                      >Certificado de profesionalidad de desarrollo de
+                      aplicaciones con tecnologías web</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-    </div>
-    <!--Camisetas-->
-    <div class="container mt-5 mb-5">
+      </div>
+      <!--Camisetas-->
+      <div class="container mt-5 mb-5">
         <h1>Proyectos</h1>
 
         <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav aria-label="breadcrumb" class="navbar-light bg-gray">
-            <ol class="breadcrumb p-2">
-                <li class="breadcrumb-item "><a href="">Inicio</a></li>
-                <li aria-current="page" class="breadcrumb-item active">Projects</li>
-            </ol>
+          <ol class="breadcrumb p-2">
+            <li class="breadcrumb-item"><a href="">Inicio</a></li>
+            <li aria-current="page" class="breadcrumb-item active">Projects</li>
+          </ol>
         </nav>
         <section class="t-shirts">
-            <h2 class="d-none">Listado</h2>
-            <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
-            <div class="d-flex justify-content-center row gap-4">
-                <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
-                <!-- Generamos la primera columna y luego repetimos -->
+          <h2 class="d-none">Listado</h2>
+          <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
+          <div class="d-flex justify-content-center row gap-4">
+            <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
+            <!-- Generamos la primera columna y luego repetimos -->
 
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <a class="texcolor-black" href="projects.html">
-                        <article>
-                            <img alt="Camiseta" class="img-fluid mt-2 mb-2"
-                                 src="https://dummyimage.com/640x480/000000/fff">
-                            <h4>Camiseta</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                                pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi
-                                eget
-                                cursus sem.</p>
-                            <p class="text-center">
-                                <a class="btn btn-warning" href="#">Ver ficha</a>
-                            </p>
-                        </article>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <a href="projects.html">
-                        <article>
-                            <img alt="Camiseta" class="img-fluid mt-2 mb-2"
-                                 src="https://dummyimage.com/640x480/000000/fff">
-                            <h4>Camiseta</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                                pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi
-                                eget
-                                cursus sem.</p>
-                            <p class="text-center">
-                                <a class="btn btn-warning" href="#">Ver ficha</a>
-                            </p>
-                        </article>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <a href="projects.html">
-                        <article>
-                            <img alt="Camiseta" class="img-fluid mt-2 mb-2"
-                                 src="https://dummyimage.com/640x480/000000/fff">
-                            <h4>Camiseta</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                                pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi
-                                eget
-                                cursus sem.</p>
-                            <p class="text-center">
-                                <a class="btn btn-warning" href="#">Ver ficha</a>
-                            </p>
-                        </article>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3">
-                    <article>
-                        <img alt="Camiseta" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff">
-                        <h4>Camiseta</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac aliquet metus, accumsan
-                            pretium nisi. Etiam dictum neque id ex egestas, vitae rutrum ante condimentum. Morbi eget
-                            cursus sem.</p>
-                        <p class="text-center">
-                            <a class="btn btn-warning text-white" href="#">Ver ficha</a>
-                        </p>
-                    </article>
-                </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <a class="texcolor-black" href="projects.html">
+                <article>
+                  <img
+                    alt="Camiseta"
+                    class="img-fluid mt-2 mb-2"
+                    src="https://dummyimage.com/640x480/000000/fff"
+                  />
+                  <h4>Camiseta</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac aliquet metus, accumsan pretium nisi. Etiam dictum
+                    neque id ex egestas, vitae rutrum ante condimentum. Morbi
+                    eget cursus sem.
+                  </p>
+                  <p class="text-center">
+                    <a class="btn btn-warning" href="#">Ver ficha</a>
+                  </p>
+                </article>
+              </a>
             </div>
-            <!-- <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta"
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <a href="projects.html">
+                <article>
+                  <img
+                    alt="Camiseta"
+                    class="img-fluid mt-2 mb-2"
+                    src="https://dummyimage.com/640x480/000000/fff"
+                  />
+                  <h4>Camiseta</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac aliquet metus, accumsan pretium nisi. Etiam dictum
+                    neque id ex egestas, vitae rutrum ante condimentum. Morbi
+                    eget cursus sem.
+                  </p>
+                  <p class="text-center">
+                    <a class="btn btn-warning" href="#">Ver ficha</a>
+                  </p>
+                </article>
+              </a>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <a href="projects.html">
+                <article>
+                  <img
+                    alt="Camiseta"
+                    class="img-fluid mt-2 mb-2"
+                    src="https://dummyimage.com/640x480/000000/fff"
+                  />
+                  <h4>Camiseta</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac aliquet metus, accumsan pretium nisi. Etiam dictum
+                    neque id ex egestas, vitae rutrum ante condimentum. Morbi
+                    eget cursus sem.
+                  </p>
+                  <p class="text-center">
+                    <a class="btn btn-warning" href="#">Ver ficha</a>
+                  </p>
+                </article>
+              </a>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <article>
+                <img
+                  alt="Camiseta"
+                  class="img-fluid mt-2 mb-2"
+                  src="https://dummyimage.com/640x480/000000/fff"
+                />
+                <h4>Camiseta</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac aliquet metus, accumsan pretium nisi. Etiam dictum neque id
+                  ex egestas, vitae rutrum ante condimentum. Morbi eget cursus
+                  sem.
+                </p>
+                <p class="text-center">
+                  <a class="btn btn-warning" href="#">Ver ficha</a>
+                </p>
+              </article>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <article>
+                <img
+                  alt="Camiseta"
+                  class="img-fluid mt-2 mb-2"
+                  src="https://dummyimage.com/640x480/000000/fff"
+                />
+                <h4>Camiseta</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac aliquet metus, accumsan pretium nisi. Etiam dictum neque id
+                  ex egestas, vitae rutrum ante condimentum. Morbi eget cursus
+                  sem.
+                </p>
+                <p class="text-center">
+                  <a class="btn btn-warning" href="#">Ver ficha</a>
+                </p>
+              </article>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <article>
+                <img
+                  alt="Camiseta"
+                  class="img-fluid mt-2 mb-2"
+                  src="https://dummyimage.com/640x480/000000/fff"
+                />
+                <h4>Camiseta</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac aliquet metus, accumsan pretium nisi. Etiam dictum neque id
+                  ex egestas, vitae rutrum ante condimentum. Morbi eget cursus
+                  sem.
+                </p>
+                <p class="text-center">
+                  <a class="btn btn-warning" href="#">Ver ficha</a>
+                </p>
+              </article>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <article>
+                <img
+                  alt="Camiseta"
+                  class="img-fluid mt-2 mb-2"
+                  src="https://dummyimage.com/640x480/000000/fff"
+                />
+                <h4>Camiseta</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac aliquet metus, accumsan pretium nisi. Etiam dictum neque id
+                  ex egestas, vitae rutrum ante condimentum. Morbi eget cursus
+                  sem.
+                </p>
+                <p class="text-center">
+                  <a class="btn btn-warning text-white" href="#">Ver ficha</a>
+                </p>
+              </article>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3"
+            >
+              <article>
+                <img
+                  alt="Camiseta"
+                  class="img-fluid mt-2 mb-2"
+                  src="https://dummyimage.com/640x480/000000/fff"
+                />
+                <h4>Camiseta</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac aliquet metus, accumsan pretium nisi. Etiam dictum neque id
+                  ex egestas, vitae rutrum ante condimentum. Morbi eget cursus
+                  sem.
+                </p>
+                <p class="text-center">
+                  <a class="btn btn-warning text-white" href="#">Ver ficha</a>
+                </p>
+              </article>
+            </div>
+            <div
+              class="col-sm-6 col-sm-4 col-lg-3 mb-2 card shadow-sm rounded-3"
+            >
+              <article>
+                <img
+                  alt="Camiseta"
+                  class="img-fluid mt-2 mb-2"
+                  src="https://dummyimage.com/640x480/000000/fff"
+                />
+                <h4>Camiseta</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac aliquet metus, accumsan pretium nisi. Etiam dictum neque id
+                  ex egestas, vitae rutrum ante condimentum. Morbi eget cursus
+                  sem.
+                </p>
+                <p class="text-center">
+                  <a class="btn btn-warning text-white" href="#">Ver ficha</a>
+                </p>
+              </article>
+            </div>
+          </div>
+          <!-- <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta"
                   class="img-fluid"
                   src="https://dummyimage.com/640x480/000000/fff">-->
         </section>
@@ -521,16 +749,14 @@
                 </li>
             </ul>
         </nav>-->
-    </div>
-</main>
+      </div>
+    </main>
 
-<!-- Footer -->
-<!-- https://codepen.io/sanketbodke/pen/LYymbRq -->
+    <!-- Footer -->
+    <!-- https://codepen.io/sanketbodke/pen/LYymbRq -->
 
-<footer class="pt-4 pb-4">
-
-
-    <!--  <div class="social-menu">
+    <footer class="pt-4 pb-4">
+      <!--  <div class="social-menu">
           <ul>
               <li><a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i></a>
               </li>
@@ -542,7 +768,7 @@
               </li>
           </ul>
       </div>-->
-    <!--<div class="container">
+      <!--<div class="container">
         <div class="row">
             <div class="col">
                 <h4>Sobre nosotros</h4>
@@ -583,17 +809,17 @@
             </div>
         </div>
     </div>-->
+    </footer>
 
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
-<!--<script src="js/scriptDark.js"></script>-->
-<script src="js/navbar.js"></script>
-<script type="text/javascript" src="js/scriptSwitch.js"></script>
-
-
-</body>
+    <!-- Bootstrap JS -->
+    <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/66aa7c98b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <!--<script src="js/scriptDark.js"></script>-->
+    <script src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/scriptSwitch.js"></script>
+  </body>
 </html>
