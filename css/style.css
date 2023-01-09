@@ -3,37 +3,37 @@ html {
   scroll-behavior: smooth;
   z-index: 1;
 }
-body{
-    transition:all 0.5s;
-    /*transition: .2s;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  transition: all 0.5s;
+  /*transition: .2s;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.text-white{
-color: white;
+.text-white {
+  color: white;
 }
-nav{
-    transition: all 0.5s;
+nav {
+  transition: all 0.5s;
 }
 main {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
-.main-skills{
-    margin-top:6rem;
+.main-skills {
+  margin-top: 6rem;
 }
-.main-about{
-    margin-top:6rem;
+.main-about {
+  margin-top: 6rem;
 }
-hr{
-    width:100%;
-    color:#dee2e6;
-    opacity:1;
-    border-radius: 7px 7px 7px 7px;
+hr {
+  width: 100%;
+  color: #dee2e6;
+  opacity: 1;
+  border-radius: 7px 7px 7px 7px;
 }
-a{
-    text-decoration: none;
-    color:inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 a:hover {
   color: inherit;
@@ -41,24 +41,24 @@ a:hover {
 }
 
 hr:not([size]) {
-    height: 6px;
+  height: 6px;
 }
 /*  CLASES  */
 /*Color flecha*/
-.button:hover i{
-    color: white;
+.button:hover i {
+  color: white;
 }
-.button:nth-child(1):hover .icon{
-    background: black;
+.button:nth-child(1):hover .icon {
+  background: black;
 }
-.button:nth-child(2):hover .icon{
-    background: black;
+.button:nth-child(2):hover .icon {
+  background: black;
 }
-.button:nth-child(3):hover .icon{
-    background: #ff0000;
+.button:nth-child(3):hover .icon {
+  background: #ff0000;
 }
-.button:nth-child(4):hover .icon{
-    background: #333;
+.button:nth-child(4):hover .icon {
+  background: #333;
 }
 /*
 .button:nth-child(1){
@@ -74,39 +74,39 @@ hr:not([size]) {
     color:
 }*/
 .carousel-item {
-    position: relative;
+  position: relative;
 }
-.ulclass{
-list-style:none;
-margin:0;
-padding-left:7px;
+.ulclass {
+  list-style: none;
+  margin: 0;
+  padding-left: 7px;
 }
 .sombranav {
-        box-shadow: 0 5px 4px rgba(0,0,0,.5);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
-.navbar{
-    width:100%;
-    background: #eee;
-    margin-top: 0px;
+.navbar {
+  width: 100%;
+  background: #eee;
+  margin-top: 0px;
 }
-.padding-header{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
+.padding-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
 }
 .slider-text {
-    width: 60%;
-    text-align: center;
-    /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
-    color: #fff;
-    z-index: 500;
-    top: 25%;
+  width: 60%;
+  text-align: center;
+  /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
+  color: #fff;
+  z-index: 500;
+  top: 25%;
 }
 /*Style de la barra de desplazamiento
 /* Style the header: fixed position (always stay at the top) */
@@ -119,53 +119,48 @@ padding-left:7px;
 }
 */
 /* The progress container (grey background) */
-.progress{
-    width: 94%;
-    height: 3px;
-    position: absolute;
-    bottom:0;
-    left:3%;
-    right:3%;
-    background-color: transparent;
-
+.progress {
+  width: 94%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  right: 3%;
+  background-color: transparent;
 }
 /* The progress bar (scroll indicator) */
 .progress-bar {
-    background: #FACA2C;
-/*FFC107*/
-    width: 0%;
+  background: #faca2c;
+  /*FFC107*/
+  width: 0%;
 }
 .dark-mode-body {
-    background-color: #222831;/*#121212*/
-    color:white;
+  background-color: #222831; /*#121212*/
+  color: white;
 }
 .dark-mode-nav {
-    background-color: #393E46;
-    color:white;
-}
-.icono-sol, .dark-mode-iconUser, .dark-mode-nav, .dark-mode-header{
-    transition:all 0.75s;
+  background-color: #393e46;
+  color: white;
 }
 .vertical-text {
-    transform: rotate(270deg);
-    transform-origin: left top 0;
+  transform: rotate(270deg);
+  transform-origin: left top 0;
 }
 
 /*  ID    */
 #btn-back-to-top {
-    position: fixed;
-    bottom: 37px;
-    right: 20px;
-    display: none;
-    box-shadow: 0 5px 4px rgba(0,0,0,.5);
-    }
-#myHeader{
-        box-shadow: 0 5px 4px rgba(0,0,0,.5);
+  position: fixed;
+  bottom: 37px;
+  right: 20px;
+  display: none;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+#myHeader {
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-#imagen{
-    border-radius:15%;
+#imagen {
+  border-radius: 15%;
 }
 /*
 Paleta de colores
@@ -182,19 +177,19 @@ https://colorhunt.co/palettes/dark
 /* Style the custom scrollbar */
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 3px solid transparent;
-    background-clip: content-box;
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
+  background-color: #a8bbbf;
 }
 /* Container element with scrollable content */
 .scrollable-container {
@@ -206,77 +201,74 @@ html:hover .scrollable-container::-webkit-scrollbar {
   width: 10px;
 }
 
-.dark-mode-card{
-    color:white;
-    background:#303E54;
+.dark-mode-card {
+  color: white;
+  background: #303e54;
 }
-  .card {
-    transition: transform 0.2s ease;
-    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-    border-radius: 0;
-    border: 0;
-    margin-bottom: 1.5em;
-  }
-  .card-skill{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.card {
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 1.5em;
+}
+.card-skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.card:not(.expanded):hover {
+  transform: scale(1.1);
+}
 
-  }
+img {
+  max-width: 100%;
+}
 
-  .card:hover {
-    transform: scale(1.1);
-  }
-  img {
-    max-width: 100%;
-  }
-
-  .section-title h4::after {
-    content: "";
-    width: 180px;
-    height: 3px;
-    display: inline-block;
-    background: #dee2e6;
-    margin: 6px 15px;
-        border-radius:7px;
-
-  }
-  .cv-title h3::after {
-    content: "";
-    width: 50%;
-    height: 3px;
-    display: inline-block;
-    background: #dee2e6;
-    margin: 6px 15px;
-    border-radius:7px;
-  }
-  .section-title h4::before {
-    content: "";
-    width: 180px;
-    height: 3px;
-    display: inline-block;
-    background: #dee2e6;
-    margin: 6px 15px;
-    border-radius:7px;
-
-  }
-  .section-title{
-    display: flex;
-    align-items: center;  /* align elements to the center of the cross axis */
-    justify-content: center;
-  }
-  /*  .container {
+.section-title h4::after {
+  content: "";
+  width: 180px;
+  height: 3px;
+  display: inline-block;
+  background: #dee2e6;
+  margin: 6px 15px;
+  border-radius: 7px;
+}
+.cv-title h3::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  display: inline-block;
+  background: #dee2e6;
+  margin: 6px 15px;
+  border-radius: 7px;
+}
+.section-title h4::before {
+  content: "";
+  width: 180px;
+  height: 3px;
+  display: inline-block;
+  background: #dee2e6;
+  margin: 6px 15px;
+  border-radius: 7px;
+}
+.section-title {
+  display: flex;
+  align-items: center; /* align elements to the center of the cross axis */
+  justify-content: center;
+}
+/*  .container {
          align elements to the start of the cross axis
     }
 */
-.vr{
-    width:3px;
-    background: #dee2e6;
-    border-radius: 7px;
+.vr {
+  width: 3px;
+  background: #dee2e6;
+  border-radius: 7px;
 }
-#special{
-display: flex;
-      align-items: justify;
-      height:0px;
+#special {
+  display: flex;
+  align-items: justify;
+  height: 0px;
 }
