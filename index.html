@@ -67,7 +67,7 @@
 </head>
 
 <body class="light">
-  
+
   <!-- Changing letters: https://codepen.io/Bhkhlk/pen/aKoryo -->
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
@@ -108,16 +108,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" data-translate="home"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="projects.html">Proyectos</a>
+              <a class="nav-link" href="projects.html" data-translate="projects"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="skills.html">Skills</a>
+              <a class="nav-link" href="skills.html" data-translate="skills"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutme.html">About</a>
+              <a class="nav-link" href="aboutme.html" data-translate="about"></a>
             </li>
           </ul>
           <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
@@ -132,8 +132,8 @@
               </a>
               <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
               <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Español</a></li>
-                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="">Español</a></li>
+                <li><a class="dropdown-item" href="">English</a></li>
               </ul>
             </li>
             <li class="my-1">
@@ -172,11 +172,8 @@
             <img alt="Slide 1" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff" />
             <!-- Texto del slider 1 -->
             <div class="slider-text">
-              <h2>Proyecto Raspberry Pi</h2>
-              <p>
-                Servidor web alojado en la Raspberry Pi 4b. Además de la
-                fabricacion de la carcasa de la raspberry.
-              </p>
+              <h2 data-translate="carousel1Title"></h2>
+              <p data-translate="carousel1Description"></p>
               <a class="btn btn-warning text-white" href="projects.html">Ver</a>
             </div>
           </div>
@@ -184,11 +181,8 @@
             <img alt="Slide 2" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff" />
             <!-- Texto del slider 2 -->
             <div class="slider-text">
-              <h2>Twitter Bot</h2>
-              <p>
-                Bot de Twitter que publica periodicamente frames de la
-                pelicula Matrix
-              </p>
+              <h2 data-translate="carousel2Title"></h2>
+              <p data-translate="carousel2Description"></p>
               <a class="btn btn-warning text-white" href="projects.html">Ver</a>
             </div>
           </div>
@@ -196,12 +190,8 @@
             <img alt="Slide 3" class="d-block w-100" src="https://dummyimage.com/1920x1080/000000/fff" />
             <!-- Texto del slider 3 -->
             <div class="slider-text">
-              <h2>Movie to colors</h2>
-              <p>
-                Script de python que a partir de una pelicula genera una
-                imagen formada por barras en la cual cada una de ellas es del
-                color medio de cada frame
-              </p>
+              <h2 data-translate="carousel3Title"></h2>
+              <p data-translate="carousel3Description"></p>
               <a class="btn btn-warning text-white" href="projects.html">Ver</a>
             </div>
           </div>
@@ -220,7 +210,7 @@
       </div>
     </section>
     <div class="section-title">
-      <h4 class="pt-5 pb-0">CV</h4>
+      <h4 class="pt-5 pb-0 text-uppercase" data-translate="resume">CV</h4>
     </div>
     <div class="container mt-1 mb-5">
       <div class="row justify-content-md-center row-cols-2">
@@ -239,14 +229,14 @@
       <div class="row">
         <div class="col-4">
           <div class="col">
-            <h3>HABILIDADES</h3>
+            <h3 class="text-uppercase" data-translate="skills">HABILIDADES</h3>
             <nav>
               <ul class="ul-circulo">
-                <li class="nav-item"><a>Orientacion a objetivos</a></li>
-                <li class="nav-item"><a>Empatía</a></li>
-                <li class="nav-item"><a>Habilidades de comunicación</a></li>
-                <li class="nav-item"><a>Trabajo en equipo</a></li>
-                <li class="nav-item"><a>Optimización</a></li>
+                <li class="nav-item"><a data-translate="skills1">Orientacion a objetivos</a></li>
+                <li class="nav-item"><a data-translate="skills2">Empatía</a></li>
+                <li class="nav-item"><a data-translate="skills3">Habilidades de comunicación</a></li>
+                <li class="nav-item"><a data-translate="skills4">Trabajo en equipo</a></li>
+                <li class="nav-item"><a data-translate="skills5">Optimización</a></li>
               </ul>
             </nav>
           </div>
@@ -269,20 +259,20 @@
             </div>
           </a>
           <div class="col">
-            <h3>IDIOMAS</h3>
+            <h3 class="text-uppercase" data-translate="languages">IDIOMAS</h3>
             <nav>
               <ul>
-                <li class="nav-item"><a>Inglés | B2 - EOI</a></li>
-                <li class="nav-item"><a>Francés</a></li>
+                <li class="nav-item"><a data-translate="english">Inglés | B2 - EOI</a></li>
+                <li class="nav-item"><a data-translate="french">Francés</a></li>
               </ul>
             </nav>
           </div>
           <div class="col">
-            <h3>OTROS</h3>
+            <h3 class="text-uppercase" data-translate="others">OTROS</h3>
             <nav>
               <ul>
                 <li class="nav-item">
-                  <a>Paquete Office: Word, Excel, Access</a>
+                  <a data-translate="officepack">Paquete Office: Word, Excel, Access</a>
                 </li>
               </ul>
             </nav>
@@ -295,72 +285,75 @@
         </div>
         <div class="col-7">
           <div class="col cv-title">
-            <h3 class="pb-1">EXPERIENCIA</h3>
+            <h3 class="pb-1 text-uppercase" data-translate="experience">EXPERIENCIA</h3>
             <nav>
               <ul class="ulclass">
                 <li class="nav-item">
-                  <h5>PROGRAMADOR</h5>
+                  <h5 class="text-uppercase" data-translate="programmer">PROGRAMADOR</h5>
                 </li>
-                <li class="nav-item"><a>ISYC | 2022</a></li>
+                <li class="nav-item"><a class="text-uppercase">ISYC | 2022</a></li>
               </ul>
               <ul>
                 <li class="nav-item">
-                  <a class="text-secondary">Gestor de sistemas informaticos y desarrollador web</a>
+                  <a class="text-secondary" data-translate="programmertask">Gestor de sistemas informaticos y
+                    desarrollador web</a>
                 </li>
               </ul>
               <ul class="ulclass">
                 <li class="nav-item">
-                  <h5>VENDEDOR DEPORTIVO</h5>
+                  <h5 class="text-uppercase" data-translate="sportseller">VENDEDOR DEPORTIVO</h5>
                 </li>
 
                 <li class="nav-item"><a>Decathlon | 2021</a></li>
               </ul>
               <ul>
                 <li class="nav-item">
-                  <a class="text-secondary">Atención al cliente, reposición, tareas logísticas y
+                  <a class="text-secondary" data-translate="sportsellertask">Atención al cliente, reposición, tareas
+                    logísticas y
                     cobro</a>
                 </li>
               </ul>
               <ul class="ulclass">
                 <li class="nav-item">
-                  <h5>TÉCNICO DE MOTOS ELÉCTRICAS</h5>
+                  <h5 class="text-uppercase" data-translate="biker">TÉCNICO DE MOTOS ELÉCTRICAS</h5>
                 </li>
 
                 <li class="nav-item"><a>Ebroh Bikes | 2020</a></li>
               </ul>
               <ul>
                 <li class="nav-item">
-                  <a class="text-secondary">Reparación de cableado y software de las motos</a>
+                  <a class="text-secondary" data-translate="bikertask">Reparación de cableado y software de las
+                    motos</a>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="col cv-title">
-            <h3 class="pb-1">EDUCACIÓN</h3>
+            <h3 class="pb-1 text-uppercase" data-translate="education">EDUCACIÓN</h3>
             <nav>
               <ul class="ulclass">
                 <li class="nav-item">
-                  <h5>CPIFP LOS ENLACES</h5>
+                  <h5 class="text-uppercase">CPIFP LOS ENLACES</h5>
                 </li>
               </ul>
               <ul>
                 <li class="nav-item">
-                  <a>Grado superior en desarrollo de aplicaciones
+                  <a data-translate="dam">Grado superior en desarrollo de aplicaciones
                     multiplataforma | (Actualidad)</a>
                 </li>
                 <li class="nav-item">
-                  <a>Grado superior en desarrollo de aplicaciones Web |
+                  <a data-translate="daw">Grado superior en desarrollo de aplicaciones Web |
                     (Actualidad)</a>
                 </li>
               </ul>
               <ul class="ulclass">
                 <li class="nav-item">
-                  <h5>CPIFP LOS ENLACES</h5>
+                  <h5 class="text-uppercase">CPIFP LOS ENLACES</h5>
                 </li>
               </ul>
               <ul>
                 <li class="nav-item">
-                  <a>Certificado de profesionalidad de desarrollo de
+                  <a data-translate="certification">Certificado de profesionalidad de desarrollo de
                     aplicaciones con tecnologías web</a>
                 </li>
               </ul>
@@ -385,7 +378,7 @@
       <section>
         <h2 class="d-none">Listado</h2>
         <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
-        <div class="d-flex justify-content-center row gap-4">
+        <div class="d-flex justify-content-center row gap-4 mt-5">
           <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
           <!-- Generamos la primera columna y luego repetimos -->
 
@@ -548,6 +541,8 @@
   <!--<script src="js/scriptDark.js"></script>-->
   <script src="js/navbar.js"></script>
   <script src="js/scriptSwitch.js"></script>
+  <script src="js/language.js"></script>
+
 </body>
 
 </html>

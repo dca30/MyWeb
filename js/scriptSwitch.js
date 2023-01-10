@@ -1,13 +1,3 @@
-/*window.onbeforeunload = function () {
-  // Remove transition styles from body element
-  document.body.style.transition = "none";
-
-  // Remove transition styles from all elements with class "card"
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
-    card.style.transition = "none";
-  });
-};*/
 const body = document.querySelector("body");
 const toggle = document.getElementById("toggle");
 const sunIcon = document.querySelector(".toggle .bxs-sun");

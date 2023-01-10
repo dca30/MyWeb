@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+
   <!-- Font Awesome -->
   <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
   <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
@@ -67,30 +67,31 @@
 </head>
 
 <body class="light">
-  <!-- Header -->
 
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-<div class="social-menu" id="social">
-  <ul>
-    <li>
-      <a href="https://github.com/dca30" target="blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-    </li>
-    <li>
-      <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i class="fab fa-at"></i></a>
-    </li>
-  </ul>
-</div>
-
+  <div class="social-menu" id="social">
+    <ul>
+      <li>
+        <a href="https://github.com/dca30" target="blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
+            class="fab fa-linkedin-in"></i></a>
+      </li>
+      <li>
+        <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
+            class="fab fa-at"></i></a>
+      </li>
+    </ul>
+  </div>
+  <!-- Header -->
   <header id="my-header" class="fixed-top px-auto">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
     <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
@@ -105,16 +106,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" data-translate="home"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="projects.html">Proyectos</a>
+              <a class="nav-link" href="projects.html" data-translate="projects"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="skills.html">Skills</a>
+              <a class="nav-link" href="skills.html" data-translate="skills"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutme.html">About</a>
+              <a class="nav-link" href="aboutme.html" data-translate="about"></a>
             </li>
           </ul>
           <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
@@ -129,8 +130,8 @@
               </a>
               <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
               <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Español</a></li>
-                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="">Español</a></li>
+                <li><a class="dropdown-item" href="">English</a></li>
               </ul>
             </li>
             <li class="my-1">
@@ -153,7 +154,7 @@
     <div class="container m-0">
       <section class="skills">
         <div class="section-title">
-          <h4 class="pb-4">SKILLS</h4>
+          <h4 class="pb-4 text-uppercase" data-translate="skills"></h4>
         </div>
         <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
         <div class="d-flex justify-content-center row gap-4">
@@ -265,8 +266,10 @@
   <script src="js/script.js"></script>
   <!--<script src="js/scriptDark.js"></script>-->
   <script src="js/navbar.js"></script>
-  <script src="js/cardcolors.js"></script>
+  <script src="js/cardskills.js"></script>
   <script type="text/javascript" src="js/scriptSwitch.js"></script>
+  <script src="js/language.js"></script>
+
 </body>
 
 </html>

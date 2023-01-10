@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+
   <!-- Font Awesome -->
   <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
   <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
@@ -72,26 +72,28 @@
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-<div class="social-menu" id="social">
-  <ul>
-    <li>
-      <a href="https://github.com/dca30" target="blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-    </li>
-    <li>
-      <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i class="fab fa-at"></i></a>
-    </li>
-  </ul>
-</div>
+  <div class="social-menu" id="social">
+    <ul>
+      <li>
+        <a href="https://github.com/dca30" target="blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
+            class="fab fa-linkedin-in"></i></a>
+      </li>
+      <li>
+        <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
+            class="fab fa-at"></i></a>
+      </li>
+    </ul>
+  </div>
 
-  <header id="my-header" class="fixed-top px-auto ">
+  <header id="my-header" class="fixed-top px-auto">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
     <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
       <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
@@ -105,16 +107,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" data-translate="home"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="projects.html">Proyectos</a>
+              <a class="nav-link" href="projects.html" data-translate="projects"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="skills.html">Skills</a>
+              <a class="nav-link" href="skills.html" data-translate="skills"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutme.html">About</a>
+              <a class="nav-link" href="aboutme.html" data-translate="about"></a>
             </li>
           </ul>
           <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
@@ -129,8 +131,8 @@
               </a>
               <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
               <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Español</a></li>
-                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="">Español</a></li>
+                <li><a class="dropdown-item" href="">English</a></li>
               </ul>
             </li>
             <li class="my-1">
@@ -151,7 +153,7 @@
   </header>
   <main class="main-about">
     <div class="section-title">
-      <h4 class="pb-4">SOBRE MI</h4>
+      <h4 class="pb-4"><a data-translate="about_me">SOBRE MI</a></h4>
     </div>
     <div class="container">
       <div class="row">
@@ -161,13 +163,7 @@
         <div class="col-8 pt-4 ps-4">
           <div class="row">
             <div class="col-12">
-              <p class="">
-                Me considero una persona abierta, con facilidad para el trato
-                con mis compañeros. Enfocado al logro, soy una persona muy
-                versátil y con mucha facilidad para aprender nuevos
-                conocimientos y adaptarme a las circunstancias y entornos.
-                Estoy interesado en poder aportar todo mi potencial en una
-                empresa a medida que obtengo nuevas habilidades informáticas.
+              <p data-translate="description_aboutme">
               </p>
             </div>
           </div>
@@ -175,16 +171,15 @@
             <div class="col-6">
               <p>
                 <span><i class="fa-solid fa-angle-right"></i></span>
-                <b>Nacimiento:</b> 30/06/1999
+                <a class="fw-bold" data-translate="birthday"></a> 30/06/1999
               </p>
               <p>
-                <span><i class="fa-solid fa-angle-right"></i></span> <b>Ciudad:</b>
+                <span><i class="fa-solid fa-angle-right"></i></span> <a class="fw-bold" data-translate="city"></a>
                 Zaragoza
               </p>
             </div>
             <div class="col-6">
-              <p>
-                <span><i class="fa-solid fa-angle-right"></i></span> <b>Email:</b>
+                <span><i class="fa-solid fa-angle-right"></i></span> <a class="fw-bold">Email:</a>
                 calvoalegred@gmail.com
               </p>
               <p>
@@ -200,20 +195,20 @@
         <div class="col-6">
           <div class="row">
             <div class="section-title">
-              <h4 class="py-4">INTERESES</h4>
+              <h4 class="py-4" data-translate="interests"></h4>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-shield-halved fa-2x"></i>
-                <h6>Cyber Security</h6>
+                <h6 data-translate="cyber"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-server fa-2x"></i>
-                <h6>Servers</h6>
+                <h6 data-translate="servers"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
@@ -244,7 +239,7 @@
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-robot fa-2x"></i>
-                <h6>Automatization</h6>
+                <h6 data-translate="automation"></h6>
               </div>
             </div>
           </div>
@@ -253,7 +248,7 @@
         <div class="col-6">
           <div class="row">
             <div class="section-title">
-              <h4 class="py-4">AFICIONES</h4>
+              <h4 class="py-4" data-translate="hobbies"></h4>
             </div>
           </div>
           <div class="row">
@@ -264,7 +259,7 @@
                 <i class="fa-sharp fa-solid fa-tennis-ball"></i>
                 <i class="fa-regular fa-tennis-ball"></i>
                 <i class="fa-solid fa-table-tennis-paddle-ball fa-2x"></i>
-                <h6>Tennis</h6>
+                <h6 data-translate="tennis"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
@@ -282,27 +277,27 @@
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-bicycle fa-2x"></i>
-                <h6>Bike</h6>
+                <h6 data-translate="bike"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-person-running fa-2x"></i>
-                <h6>Bike</h6>
+                <h6 data-translate="running"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-beer-mug"></i>
                 <i class="fa-solid fa-beer-mug-empty fa-2x"></i>
-                <h6>Beer</h6>
+                <h6 data-translate="beer"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-party-horn"></i>
                 <i class="fa-solid fa-gift fa-2x"></i>
-                <h6>Party</h6>
+                <h6 data-translate="party"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
@@ -314,20 +309,20 @@
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-bolt fa-2x"></i>
-                <h6>Electronics</h6>
+                <h6 data-translate="electronics">Electronics</h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-tv fa-2x"></i>
-                <h6>Tv shows</h6>
+                <h6 data-translate="tvshow"></h6>
               </div>
             </div>
             <div class="col-sm-2 mx-auto">
               <div class="card card-skill pt-4">
                 <i class="fa-solid fa-camera-movie"></i>
                 <i class="fa-solid fa-film fa-2x"></i>
-                <h6>Movies</h6>
+                <h6 data-translate="movies"></h6>
               </div>
             </div>
           </div>
@@ -343,6 +338,8 @@
   <!--<script src="js/scriptDark.js"></script>-->
   <script src="js/navbar.js"></script>
   <script type="text/javascript" src="js/scriptSwitch.js"></script>
+  <script src="js/language.js"></script>
+
 </body>
 
 </html>
