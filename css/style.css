@@ -81,9 +81,6 @@ hr:not([size]) {
   margin: 0;
   padding-left: 7px;
 }
-.sombranav {
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
-}
 .navbar {
   width: 100%;
   background: #eee;
@@ -154,6 +151,7 @@ hr:not([size]) {
   right: 20px;
   display: none;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  transition: display 1.5s ease-in-out;
 }
 #myHeader {
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);

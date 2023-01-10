@@ -1,13 +1,30 @@
+/*.dark-mode-nav {
+  background-color: #393e46;
+  color: white;
+}*/
 /*DARK MODE*/
-.dark-mode-body {
-    background-color: #222831;/*#121212*/
-    color:white;
+.dark body {
+  background-color: #222831; /*#121212*/
+  color: white;
 }
-.dark-mode-nav {
-    background-color: #393E46;
-    color:white;
+.dark-body {
+  background-color: #222831; /*#121212*/
+  color: white;
 }
-.icono-sol, .dark-mode-iconUser, .dark-mode-nav, .dark-mode-header{
-    transition:all 0.75s;
+.icono-sol,
+.dark-mode-iconUser,
+.dark-mode-nav,
+.dark-mode-header {
+  transition: all 0.75s;
 }
- 
+.navbar-dark {
+  background-color: #303e54;
+  color: white;
+}
+.navbar-light {
+  color: black;
+  background-color: white;
+}
+.dropdown-menu-dark{
+    background-color: #303e54;
+}

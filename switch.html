@@ -216,13 +216,11 @@
 <body class="light">
   <header id="my-header" class="fixed-top px-auto">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
+    <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
       <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
       <div class="container-fluid">
-        <a href="index.html"><img src="/images/favicon.png" width="45" alt=""
-            class="d-inline-block align-middle mx-2 mr-2" id="imagen" /></a>
-        <!--<a class="navbar-brand" href="index.html">Logo</a>-->
+        <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
+            id="imagen" /></a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
           class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
@@ -230,79 +228,41 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="projects.html">Proyectos</a>
             </li>
             <li class="nav-item">
-              <a aria-current="page" class="nav-link" href="skills.html">Skills</a>
+              <a class="nav-link" href="skills.html">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutme.html">Sobre mi</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-              <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="navbarDropdown"
-                role="button">
-                Projects
-              </a>
-              <ul aria-labelledby="navbarDropdown" id="dropdown-menu" class="dropdown-menu">
-                <!-- Montamos el menú dropdown -->
-                <li><a class="dropdown-item" href="#">Raspi</a></li>
-                <li><a class="dropdown-item" href="#">Web</a></li>
-                <li><a class="dropdown-item" href="#">Docker</a></li>
-                <li>
-                  <a class="dropdown-item" href="projects.html">Saber más</a>
-                </li>
-              </ul>
+              <a class="nav-link" href="aboutme.html">About</a>
             </li>
           </ul>
           <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="hover-black nav-link" onclick="changeIcon(this)" id="myBtn">
-                <i class="icono-sol d-none d-lg-inline fas fa-moon font-xs" id="btn2"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-              </div>
-            </li>
-            <!-- <li class="nav-item">
-                         <label class="switch">
-                             <input type="checkbox">
-                             <span class="slider round">
-                             <i class="fas fa-moon icon-off"></i>
-                             <i class="fas fa-sun icon-on"></i>
-         </span>
-                         </label>
-                     </li>-->
-            <li class="nav-item">
-              <input type="checkbox" id="toggle" />
-
-              <label class="toggle" for="toggle">
-                <i class="bx bxs-sun"></i>
-                <i class="bx bx-moon"></i>
-                <span class="ball"></span>
-              </label>
-            </li>
-
             <li class="nav-item dropdown dropdown-menu-end">
               <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
               <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
                 role="button">
                 <!--id="navbarDropdown2"-->
                 <i class="d-none d-lg-inline fas fa-globe"></i>
-                <span class="d-lg-none"> Usuario</span>
+                <span class="d-lg-none"> Idioma</span>
               </a>
               <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
               <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#">Español</a></li>
                 <li><a class="dropdown-item" href="#">English</a></li>
               </ul>
+            </li>
+            <li class="my-1">
+              <input type="checkbox" id="toggle" />
+              <label class="toggle" for="toggle">
+                <i class="bx bxs-sun"></i>
+                <i class="bx bx-moon"></i>
+                <span class="ball"></span>
+              </label>
             </li>
           </ul>
         </div>

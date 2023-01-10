@@ -16,13 +16,15 @@ let socialMenu = document.getElementById("social");
 
 // When the user clicks on the button, scroll to the top of the document
 btnArriba.addEventListener("click", backToTop);
-
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 const currentPage = "/MyWeb" + location.pathname;
 if (currentPage.startsWith("/MyWeb/")) {
   const navlink = document.querySelector(
     `a[href="${currentPage.substring(7)}"]`
   );
-
   switch (currentPage) {
     case "/MyWeb/index.html":
     case "/MyWeb/aboutme.html":
@@ -39,10 +41,6 @@ if (currentPage.startsWith("/MyWeb/")) {
 var node = document.querySelector('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]');
 node.style.display = "none";
 */
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 
 function scrollFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -65,12 +63,5 @@ function scrollFunction() {
 
 function copyToClipboard(event, text) {
   event.preventDefault();
-  navigator.clipboard.writeText(text).then(
-    function () {
-      console.log("Copied to clipboard");
-    },
-    function (err) {
-      console.error("Failed to copy: ", err);
-    }
-  );
+  navigator.clipboard.writeText(text);
 }

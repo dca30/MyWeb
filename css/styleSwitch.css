@@ -52,8 +52,9 @@ input {
 }
 
 .light .toggle {
-    background: linear-gradient(145deg, #e1e1e1, #fff);
-    /*box-shadow: 3px 3px 4px #e6e6e6,
+    background: white;
+   /* background: linear-gradient(145deg, #e1e1e1, #fff);
+    box-shadow: 3px 3px 4px #e6e6e6,
                 -3px -3px 4px #ffffff;*/
 }
 
@@ -75,12 +76,12 @@ input {
 */
 
 .dark {
-    background: #151d2a;
+    background: #222831;
+    color: white;
 }
 
 .dark .toggle {
-    background: #474747;
-
+    background: transparent;
     /*box-shadow: 2px 2px 2px #474747,
                 -2px -2px 2px #474747;*/
 }
@@ -97,3 +98,4 @@ input {
     background: #fafafa;
     transform: translateX(29px);
 }
+

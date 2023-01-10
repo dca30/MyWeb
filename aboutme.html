@@ -8,14 +8,9 @@
 
   <!-- Bootstrap CSS -->
   <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome 
-    <link
-      href="vendor/fontawesome-free-5.15.4-web/css/all.min.css"
-      rel="stylesheet"
-    />-->
+  
+  <!-- Font Awesome -->
+  <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
   <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
@@ -71,39 +66,38 @@
   <style></style>
 </head>
 
-<body>
+<body class="light">
   <!-- Header -->
 
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  <div class="social-menu" id="social">
-    <ul>
-      <li>
-        <a href="https://github.com/dca30" target="blank"><i class="fab fa-github mx-5"></i></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
-            class="fab fa-linkedin-in"></i></a>
-      </li>
-      <li>
-        <a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"></i></a>
-      </li>
-    </ul>
-  </div>
+<div class="social-menu" id="social">
+  <ul>
+    <li>
+      <a href="https://github.com/dca30" target="blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li>
+      <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i class="fab fa-at"></i></a>
+    </li>
+  </ul>
+</div>
 
-  <header id="my-header" class="fixed-top px-auto">
+  <header id="my-header" class="fixed-top px-auto ">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
+    <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
       <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
       <div class="container-fluid">
         <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
             id="imagen" /></a>
-        <!--<a class="navbar-brand" href="index.html">Logo</a>-->
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
           class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
@@ -122,32 +116,6 @@
             <li class="nav-item">
               <a class="nav-link" href="aboutme.html">About</a>
             </li>
-            <!--
-              <li class="nav-item dropdown">
-                Recordad que cada menú desplegable tiene que tener su propio id 
-                <a
-                  aria-expanded="false"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  id="navbarDropdown"
-                  role="button"
-                >
-                  Projects
-                </a>
-                <ul
-                  aria-labelledby="navbarDropdown"
-                  id="dropdown-menu"
-                  class="dropdown-menu"
-                >
-                  Montamos el menú dropdown 
-                  <li><a class="dropdown-item" href="#">Raspi</a></li>
-                  <li><a class="dropdown-item" href="#">Web</a></li>
-                  <li><a class="dropdown-item" href="#">Docker</a></li>
-                  <li>
-                    <a class="dropdown-item" href="projects.html">Saber más</a>
-                  </li>
-                </ul>
-              </li>-->
           </ul>
           <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

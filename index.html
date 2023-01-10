@@ -9,8 +9,6 @@
   <!-- Bootstrap CSS -->
   <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-
   <!-- Font Awesome -->
   <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
   <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
@@ -69,6 +67,7 @@
 </head>
 
 <body class="light">
+  
   <!-- Changing letters: https://codepen.io/Bhkhlk/pen/aKoryo -->
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
@@ -91,13 +90,13 @@
       <li>
         <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
             class="fab fa-at"></i></a>
-      </li>      
+      </li>
     </ul>
   </div>
   <!-- Header -->
   <header id="my-header" class="fixed-top px-auto">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
+    <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
       <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
       <div class="container-fluid">
         <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
@@ -375,11 +374,13 @@
       <h1>Proyectos</h1>
 
       <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
+      <!--
       <nav aria-label="breadcrumb" class="navbar-light bg-gray">
         <ol class="breadcrumb p-2">
           <li class="breadcrumb-item"><a href="">Inicio</a></li>
           <li aria-current="page" class="breadcrumb-item active">Projects</li>
         </ol>
+      -->
       </nav>
       <section>
         <h2 class="d-none">Listado</h2>
