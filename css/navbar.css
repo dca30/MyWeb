@@ -10,18 +10,3 @@ nav{
     padding-right: 20px;
     padding-top: 0px;
 }
-
-.progress{
-    width: 94%;
-    height: 3px;
-    position: absolute;
-    bottom:0;
-    left:3%;
-    right:3%;
-    background-color: transparent;
-}
-.progress-bar {
-    background: #FACA2C;
-/*FFC107*/
-    width: 0%;
-}

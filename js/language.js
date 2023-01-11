@@ -112,11 +112,11 @@ const translations = {
     experience: "Experience",
     programmer: "Programmer",
     programmertask: "Computer Systems Manager and Web Developer",
-    sportseller: "Sport seller",
+    sportseller: "Sports seller",
     sportsellertask:
       "Customer service, restocking, logistics tasks and payment processing",
     biker: "Electric motorcycle technician",
-    bikertask: "Wiring and software repair of motorcycles",
+    bikertask: "Software and wiring repair of motorcycles",
     education: "Education",
     dam: "Higher Degree in Multiplatform Application Development | (Currently)",
     daw: "Higher Degree in Web Application Development | (Currently)",
