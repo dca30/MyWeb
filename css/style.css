@@ -219,7 +219,11 @@ html:hover .scrollable-container::-webkit-scrollbar {
 .card:not(.expanded):hover {
   transform: scale(1.1);
 }
-
+.horizontal {
+    display: flex;
+    flex-wrap: nowrap;
+    width:100%;
+}
 img {
   max-width: 100%;
 }
