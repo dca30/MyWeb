@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     change = Math.round(Math.random() * 100);
     el.setAttribute("data-change", change);
   });
-  
+
   function value() {
     var index;
     var randomEl = randomnbr[Math.floor(Math.random() * randomnbr.length)];
