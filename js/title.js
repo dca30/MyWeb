@@ -44,7 +44,26 @@ document.addEventListener("DOMContentLoaded", function () {
   var data = 0;
   var count = 0;
   var it, index, change;
-  var letters = ["d", "i", "e", "g", "o", " ", "c", "a", "l", "v", "o"];
+  var letters = [
+    "d",
+    "i",
+    "e",
+    "g",
+    "o",
+    " ",
+    "c",
+    "a",
+    "l",
+    "v",
+    "o" /*,
+    " ",
+    "a",
+    "l",
+    "e",
+    "g",
+    "r",
+    "e"*/,
+  ];
 
   randomnbr.forEach(function (el) {
     change = Math.round(Math.random() * 100);
@@ -52,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function value() {
-    var index;
     var randomEl = randomnbr[Math.floor(Math.random() * randomnbr.length)];
     randomEl.innerHTML = Math.round(Math.random() * 9);
     randomEl.setAttribute("data-number", data);
