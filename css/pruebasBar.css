@@ -16,11 +16,25 @@
   height: 100px;
   align-content: center;
   align-items: center; /* centers the content along the cross axis */
+  /*transition: width 1s ease-in-out;*/
+
+
+    transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 1.5em;
+}
+.card-skill {
+  display: flex;
+  justify-content: center;
+}
+.card:not(.expanded):hover {
+  transform: scale(1.1);
 }
 .card.small {
   height: 80px;
   align-items: unset; /* centers the content along the cross axis */
-
 }
 
 .one-per-row {
@@ -67,7 +81,7 @@
 
 .bar .progress-line span {
   position: absolute;
-  background: #25b79f;
+  background: black;
   height: 100%;
   border-radius: 10px;
   transform: scaleX(0);
@@ -81,43 +95,6 @@
     transform: scaleX(1);
   }
 }
-.progress-line .linux {
-  width: 80%;
-}
-.progress-line .docker {
-  width: 80%;
-}
-.progress-line .java {
-  width: 80%;
-}
-.progress-line .python {
-  width: 80%;
-}
-.progress-line .html {
-  width: 80%;
-}
-.progress-line .javascript {
-  width: 62%;
-}
-.progress-line .bootstrap {
-  width: 82%;
-}
-.progress-line .css {
-  width: 70%;
-}
-.progress-line .sql {
-  width: 70%;
-}
-.progress-line .php {
-  width: 70%;
-}
-.progress-line .laravel {
-  width: 70%;
-}
-.progress-line .git {
-  width: 90%;
-}
-
 .bar .progress-line span::before {
   position: absolute;
   content: "";
@@ -142,45 +119,6 @@
   background: #07374a;
   padding: 1px 8px;
   border-radius: 3px;
-}
-
-/*Etiqueta*/
-
-.progress-line .linux::after {
-  content: "80%";
-}
-.progress-line .docker::after {
-  content: "80%";
-}
-.progress-line .java::after {
-  content: "80%";
-}
-.progress-line .python::after {
-  content: "80%";
-}
-.progress-line .html::after {
-  content: "80%";
-}
-.progress-line .javascript::after {
-  content: "62%";
-}
-.progress-line .bootstrap::after {
-  content: "82%";
-}
-.progress-line .css::after {
-  content: "70%";
-}
-.progress-line .sql::after {
-  content: "70%";
-}
-.progress-line .php::after {
-  content: "70%";
-}
-.progress-line .laravel::after {
-  content: "70%";
-}
-.progress-line .git::after {
-  content: "90%";
 }
 
 /* ////........Media Query........//// */

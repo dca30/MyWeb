@@ -1,0 +1,8 @@
+.content {
+      text-align: center;
+    }
+    .content span {
+      width: 3rem;
+      display: inline-block;
+      text-transform: uppercase;
+    }

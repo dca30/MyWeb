@@ -1,3 +1,6 @@
+/*Este script fue el original para cambiar los colores de las
+cartas pero a dia de hoy no sirve pa na
+*/
 const colors = [
   "#f0c674", // Linux
   "#0db7ed", // Docker
@@ -12,7 +15,6 @@ const colors = [
   "#f05340", // Laravel
   "#f34b7d", // Git
 ];
-
 const transparentColors = colors.map((color) => {
   const [r, g, b] = color.match(/\w\w/g).map((x) => parseInt(x, 16));
   return `rgba(${r}, ${g}, ${b}, 0.5)`;
@@ -23,11 +25,11 @@ const cards = document.querySelectorAll(".card");
 cards.forEach((card, index) => {
   card.style.backgroundColor = transparentColors[index];
 });
-var target = document.getElementById("mySkill");
-console.log(target);
+/*var target = document.getElementById("mySkill");
+console.log(target);*/
+/*
 changeDisplay = document.getElementById("change-layout-button");
 changeDisplay.addEventListener("click", changeLayout);
-
 function changeLayout() {
   var cards = document.querySelectorAll(".carta");
   cards.forEach(function (card) {
@@ -70,7 +72,7 @@ function changeLayout() {
             </div>
           </div>`;
   });
-}
+}*/
 
 /*window.addEventListener("scroll", function () {
   var cards = document.querySelectorAll(".card-skill");
