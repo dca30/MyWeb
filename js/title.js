@@ -1,41 +1,51 @@
-$(document).ready(function () {
-  var randomnbr = $(".nbr");
-  var timer = 30;
-  var it;
-  var data = 0;
-  var index;
-  var change;
-  var letters = ["d", "i", "e", "g", "o", " ", "c", "a", "l", "v", "o"];
+const target = document.getElementById("elemento");
 
-  randomnbr.each(function () {
-    change = Math.round(Math.random() * 100);
-    $(this).attr("data-change", change);
-  });
+// Create a new IntersectionObserver
+const observer = new IntersectionObserver((entries) => {
+  // Check if the element is intersecting with the viewport
+  if (entries[0].isIntersecting) {
+    $(document).ready(function () {
+      var randomnbr = $(".nbr");
+      var timer = 30;
+      var it;
+      var data = 0;
+      var index;
+      var change;
+      var letters = ["d", "i", "e", "g", "o", " ", "c", "a", "l", "v", "o"];
 
-  function random() {
-    return Math.round(Math.random() * 9);
-  }
-  function select() {
-    return Math.round(Math.random() * randomnbr.length + 1);
-  }
-  function value() {
-    $(".nbr:nth-child(" + select() + ")").html("" + random() + "");
-    $(".nbr:nth-child(" + select() + ")").attr("data-number", data);
-    data++;
+      randomnbr.each(function () {
+        change = Math.round(Math.random() * 100);
+        $(this).attr("data-change", change);
+      });
 
-    randomnbr.each(function () {
-      if (
-        parseInt($(this).attr("data-number")) >
-        parseInt($(this).attr("data-change"))
-      ) {
-        index = $(".ltr").index(this);
-        $(this).html(letters[index]);
-        $(this).removeClass("nbr");
+      function random() {
+        return Math.round(Math.random() * 9);
       }
+      function select() {
+        return Math.round(Math.random() * randomnbr.length + 1);
+      }
+      function value() {
+        $(".nbr:nth-child(" + select() + ")").html("" + random() + "");
+        $(".nbr:nth-child(" + select() + ")").attr("data-number", data);
+        data++;
+
+        randomnbr.each(function () {
+          if (
+            parseInt($(this).attr("data-number")) >
+            parseInt($(this).attr("data-change"))
+          ) {
+            index = $(".ltr").index(this);
+            $(this).html(letters[index]);
+            $(this).removeClass("nbr");
+          }
+        });
+      }
+      $it = setInterval(value, timer);
     });
   }
-  $it = setInterval(value, timer);
-}); /*
+});
+observer.observe(target);
+ /*
 /*function random() {
           return Math.round(Math.random() * 9);
         }*/ /*

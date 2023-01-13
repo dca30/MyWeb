@@ -31,3 +31,4 @@ const darkMode = localStorage.getItem("dark");
 if (darkMode === "true") {
   toggleDarkMode();
 }
+

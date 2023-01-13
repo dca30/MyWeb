@@ -4,7 +4,7 @@ const translations = {
     home: "Inicio",
     projects: "Proyectos",
     skills: "Habilidades",
-    about: "Acerca de",
+    about: "Acerca",
     language: "Idioma",
     //About me
     about_me: "SOBRE MI",

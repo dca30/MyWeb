@@ -84,7 +84,15 @@ button:hover .button-text {
 .button-text {
   display: none;
 }
-
+/*MOOVING TITLE*/
+    .content {
+      text-align: center;
+    }
+    .content span {
+      width: 3rem;
+      display: inline-block;
+      text-transform: uppercase;
+    }
 /*SKILLS*/
 
 .skills {
