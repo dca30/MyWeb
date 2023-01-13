@@ -68,7 +68,7 @@ function changeLayout() {
                 </div>
               </div>
             </div>
-          </div>'`;
+          </div>`;
   });
 }
 

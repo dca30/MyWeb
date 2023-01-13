@@ -1,94 +1,91 @@
 button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button.learn-more {
- width: 9rem;
- height: auto;
+  width: 9rem;
+  height: auto;
 }
 
 button.learn-more .circle {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: relative;
- display: block;
- margin: 0;
- width: 3rem;
- height: 3rem;
- background: #FFCA2C;
- border-radius: 1.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #ffca2c;
+  border-radius: 1.625rem;
 }
 
 button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
 }
 
 button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
 }
 
 button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
 }
 
 button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- padding: 0.75rem 0;
- margin: 0 0 0 1.85rem;
- color: #282936;
- font-weight: 700;
- line-height: 1.6;
- text-align: center;
- text-transform: uppercase;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 button:hover .circle {
- width: 100%;
+  width: 100%;
 }
 
 button:hover .button-text {
- color: #fff;
- display: block;
+  color: #fff;
+  display: block;
 }
 .button-text {
   display: none;
 }
 
-
 /*SKILLS*/
-
-
 
 .skills {
   position: absolute;
@@ -136,7 +133,7 @@ button:hover .button-text {
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
-  text-transfrom : uppercase;
+  text-transfrom: uppercase;
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
@@ -188,7 +185,6 @@ button:hover .button-text {
   border-radius: 3px;
 }
 
-
 .progress-line .html::after {
   content: "80%";
 }
@@ -208,11 +204,11 @@ button:hover .button-text {
 /* ////........Media Query........//// */
 
 @media (max-width: 700px) {
-    .skills{
-        width: 80%;
-    }
+  .skills {
+    width: 80%;
+  }
 
-    .skills-bar .bar .progress-line{
-        width: 100%;
-    }
-}      
+  .skills-bar .bar .progress-line {
+    width: 100%;
+  }
+}
