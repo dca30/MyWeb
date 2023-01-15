@@ -10,3 +10,10 @@ nav{
     padding-right: 20px;
     padding-top: 0px;
 }
+.dropdown-item.activo {
+    background-color: #faca2c;
+    color: white;
+}
+.dropdown-itemactivo:active {
+  background-color: red; /* replace with desired color */
+}

@@ -19,6 +19,19 @@ function copyToClipboard(event, text) {
   navigator.clipboard.writeText(text);
 }
 
+var lang = localStorage.getItem("lang");
+if ((lang = "eng")) {
+
+} else {
+
+}
+
+//Ver idioma navegador
+console.log(navigator.language);
+//ver modo sistema
+let aa = window.matchMedia("(prefers-color-scheme: dark)").matches;
+console.log(aa);
+
 //Borrar marca de agua 000webhost
 /*
 console.log("intento externo");
