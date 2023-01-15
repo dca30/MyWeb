@@ -1,4 +1,7 @@
 /*  GENERICO    */
+img[alt="www.000webhost.com"] {
+  display: none;
+}
 html {
   scroll-behavior: smooth;
   z-index: 1;
@@ -220,9 +223,9 @@ html:hover .scrollable-container::-webkit-scrollbar {
   transform: scale(1.1);
 }
 .horizontal {
-    display: flex;
-    flex-wrap: nowrap;
-    width:100%;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 img {
   max-width: 100%;

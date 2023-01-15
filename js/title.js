@@ -4,6 +4,7 @@ const target = document.getElementById("elemento");
 const observer = new IntersectionObserver((entries) => {
   // Check if the element is intersecting with the viewport
   if (entries[0].isIntersecting) {
+    console.log("Interseccion");
     $(document).ready(function () {
       var randomnbr = $(".nbr");
       var timer = 30;
@@ -16,7 +17,7 @@ const observer = new IntersectionObserver((entries) => {
       randomnbr.each(function () {
         change = Math.round(Math.random() * 100);
         $(this).attr("data-change", change);
-      });
+      }); 
 
       function random() {
         return Math.round(Math.random() * 9);
