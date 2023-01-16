@@ -7,13 +7,6 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const card = button.parentElement.parentElement;
     card.classList.toggle("expanded");
-    const darkMode = localStorage.getItem("dark");
-
-    if (darkMode === "true") {
-      card.style.backgroundColor = "#303e54";
-    }
-    
-
     header.style.display = header.style.display === "none" ? "block" : "none";
     overlay.style.display = card.classList.contains("expanded")
       ? "block"
@@ -22,6 +15,5 @@ buttons.forEach((button) => {
     button.innerHTML = card.classList.contains("expanded")
       ? "Show less"
       : "Show more";
-    
   });
 });

@@ -23,7 +23,7 @@ main {
   margin-top: 2rem;
 }
 .main-skills {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .main-about {
   margin-top: 6rem;
@@ -206,6 +206,10 @@ html:hover .scrollable-container::-webkit-scrollbar {
   color: white;
   background: #303e54;
 }
+.card-about{
+  height: 70px;
+  width: auto;
+}
 .card {
   transition: transform 0.2s ease;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
@@ -219,6 +223,7 @@ html:hover .scrollable-container::-webkit-scrollbar {
   justify-content: center;
   text-align: center;
 }
+
 .card:not(.expanded):hover {
   transform: scale(1.1);
 }

@@ -20,6 +20,8 @@
   <link href="css/styleDark.css" rel="stylesheet" />
   <link href="css/navbar.css" rel="stylesheet" />
   <link href="css/styleSwitch.css" rel="stylesheet" />
+  <!--<link href="css/prueba.css" rel="stylesheet" />-->
+
 
   <!-- Favicons con https://www.favicon-generator.org/ -->
   <!--
@@ -67,7 +69,6 @@
 </head>
 
 <body class="light">
-  <!-- Header -->
 
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
@@ -92,7 +93,7 @@
       </li>
     </ul>
   </div>
-
+  <!-- Header -->
   <header id="my-header" class="fixed-top px-auto">
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
     <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
@@ -151,184 +152,123 @@
       </div>
     </nav>
   </header>
-  <main class="main-about">
+  <main class="main-skills">
+    <!--<a class="btn btn-warning" id="change-layout-button">See More</a>-->
     <div class="section-title">
-      <h4 class="pb-4"><a data-translate="about_me">SOBRE MI</a></h4>
+      <h4 class="pb-4 text-uppercase" data-translate="skills"></h4>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <img alt="imagen" class="img-fluid mt-2 mb-2" src="https://dummyimage.com/640x480/000000/fff" />
-        </div>
-        <div class="col-8 py-3 ps-4">
-          <div class="row">
-            <div class="col-12">
-              <p data-translate="description_aboutme">
-              </p>
-            </div>
+    <div class="container m-0 skills">
+      <div class="d-flex justify-content-center row gap-4">
+        <!--linux -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-linux fa-2x"></i>
+            <h2>Linux</h2>
+            <p>Description of the card</p>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <p>
-                <span><i class="fa-solid fa-angle-right"></i></span>
-                <a class="fw-bold" data-translate="birthday"></a> 30/06/1999
-              </p>
-              <p>
-                <span><i class="fa-solid fa-angle-right"></i></span> <a class="fw-bold" data-translate="city"></a>
-                Zaragoza
-              </p>
-            </div>
-            <div class="col-6">
-              <span><i class="fa-solid fa-angle-right"></i></span> <a class="fw-bold">Email:</a>
-              calvoalegred@gmail.com
-              </p>
-              <p>
-                <span><i class="fa-solid fa-angle-right"></i></span> Hola
-              </p>
-            </div>
+        </div>
+        <!--docker -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-docker fa-2x"></i>
+            <h2>Docker</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--Java -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-java fa-2x"></i>
+            <h2>Java</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--Python -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-python fa-2x"></i>
+            <h2>Python</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--Html -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-html5 fa-2x"></i>
+            <h2>HTML</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--Javascript -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-js fa-2x"></i>
+            <h2>Javascript</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--bootstrap -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-bootstrap fa-2x"></i>
+            <h2>Bootstrap</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--Css -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-css3-alt fa-2x"></i>
+            <h2>CSS</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--Sql -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-solid fa-database fa-2x"></i>
+            <h2>SQL</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--php -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-php fa-2x"></i>
+            <h2>PHP</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!--laravel -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-laravel fa-2x"></i>
+            <h2>Laravel</h2>
+            <p>Description of the card</p>
+          </div>
+        </div>
+        <!-- Git -->
+        <div class="carta col-sm-2">
+          <div class="card card-skill pt-4">
+            <i class="fa-brands fa-github fa-2x"></i>
+            <h2>Git</h2>
+            <p>Description of the card</p>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <!--Intereses-->
-        <div class="col-6">
-          <div class="row">
-            <div class="section-title">
-              <h4 class="py-4" data-translate="interests"></h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-shield-halved  card-about" data-translate="cyber"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-server " data-translate="servers"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-browser  "></i>
-                <i class="fa-solid fa-pager  "> Frontend</i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-regular fa-square-caret-left  "> Backend</i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-brands fa-linux  "> Linux</i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-brands fa-php  "> OS</i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-robot  " data-translate="automation"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Aficiones-->
-        <div class="col-6">
-          <div class="row">
-            <div class="section-title">
-              <h4 class="py-4" data-translate="hobbies"></h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-2  mx-auto">
-              <div class="card card-skill card-about py-3">
-                <i class="fa-solid fa-tennis-ball  "></i>
-                <i class="fa-duotone fa-tennis-ball"></i>
-                <i class="fa-sharp fa-solid fa-tennis-ball"></i>
-                <i class="fa-regular fa-tennis-ball"></i>
-                <i class="fa-solid fa-table-tennis-paddle-ball  " data-translate="tennis"></i>
-                <h6></h6>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill card-about py-3">
-                <i class="fa-brands fa-php"> Padel</i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill card-about py-3">
-                <i class="fa-solid fa-dumbbell"> Gym</i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-bicycle" data-translate="bike"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-person-running" data-translate="running"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-beer-mug"></i>
-                <i class="fa-solid fa-beer-mug-empty" data-translate="beer"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-party-horn"></i>
-                <i class="fa-solid fa-gift  " data-translate="party"></i>
-                <h6></h6>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-martini-glass"> Bar</i>
-              </div>
-            </div>
-            <!--<div class="col-sm-2 mx-auto">
-              <div class="card card-skill pt-4">
-                <i class="fa-solid fa-martini-glass fa-2x "></i>
-                <h6>Bar</h6>
-              </div>
-            </div>-->
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-bolt  " data-translate="electronics"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-tv  " data-translate="tvshow"></i>
-              </div>
-            </div>
-            <div class="col-sm-2 mx-auto">
-              <div class="card card-skill py-3">
-                <i class="fa-solid fa-camera-movie"></i>
-                <i class="fa-solid fa-film  " data-translate="movies"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
+  <footer class="pt-4 pb-4"></footer>
 
   <!-- Bootstrap JS -->
   <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
-  <!--<script src="js/scriptDark.js"></script>-->
   <script src="js/navbar.js"></script>
-  <script type="text/javascript" src="js/scriptSwitch.js"></script>
+  <script src="js/scriptSwitch.js"></script>
   <script src="js/language.js"></script>
+  <script src="js/cardskills.js"></script>
 
 </body>
 
