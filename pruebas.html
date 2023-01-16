@@ -16,13 +16,13 @@
   <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
-  <!-- Estilos CSS propios -->
+  <!-- Estilos CSS propios 
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/socialMedia.css" rel="stylesheet" />
   <link href="css/styleDark.css" rel="stylesheet" />
   <link href="css/navbar.css" rel="stylesheet" />
   <link href="css/styleSwitch.css" rel="stylesheet" />
-  <link href="css/prueba.css" rel="stylesheet" />
+  <link href="css/prueba.css" rel="stylesheet" />-->
 
   <!-- Favicons con https://www.favicon-generator.org/ -->
   <!--
@@ -70,179 +70,104 @@
     .content {
       text-align: center;
     }
+
     .content span {
       width: 3rem;
       display: inline-block;
       text-transform: uppercase;
+    }
+
+    .social-menu ul {
+      position: fixed;
+      top: 85%;
+      left: 4%;
+      padding: 0;
+      margin: 1px;
+      transform: translate(-50%, -50%);
+    }
+
+    .social-menu ul li {
+      list-style: none;
+      /*margin: 0 15px;*/
+      padding: 2px;
+    }
+
+    .social-menu ul li .fab {
+      font-size: 25px;
+      line-height: 50px;
+      transition: 0.3s;
+      color: #000;
+    }
+
+    
+
+    .social-menu ul li a {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      transition: 0.6s;
+      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+      background-color: white;
+    }
+
+    .social-menu a {
+      background-color: #fff;
+    }
+
+    .social-menu ul li a:hover {
+      transform: translate(0, -10%);
+    }
+
+    .social-menu ul li:nth-child(1) a:hover {
+      background-color: rgba(0, 0, 0, 0.829);
+    }
+
+    .social-menu ul li:nth-child(2) a:hover {
+      background-color: #e4405f;
+    }
+
+    .social-menu ul li:nth-child(3) a:hover {
+      background-color: #0077b5;
+    }
+
+    .social-menu ul li:nth-child(4) a:hover {
+      background-color: green;
+    }
+
+    .social-menu {
+      /*display: none;*/
+    }
+
+    
+
+    #social {
+      display: none;
+      transition: all 0.5s ease-in-out;
+    }
+
+    #social.show {
+      display: block;
+    }
+
+    .sci li a:hover {
+      background: #03a9f4;
+      color: #fff;
     }
   </style>
 </head>
 
 <body>
   <!-- Header -->
-  <header id="my-header" class="fixed-top px-auto">
-    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
 
-    <nav id="navTop" class="navbar navbar-expand-lg navbar-light bg-gray sombranav mx-auto">
-      <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
-      <div class="container-fluid">
-        <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
-            id="imagen" /></a>
-        <!--<a class="navbar-brand" href="index.html">Logo</a>-->
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-          class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="skills.html">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutme.html">About</a>
-            </li>
-            <!--
-              <li class="nav-item dropdown">
-                Recordad que cada menú desplegable tiene que tener su propio id 
-                <a
-                  aria-expanded="false"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  id="navbarDropdown"
-                  role="button"
-                >
-                  Projects
-                </a>
-                <ul
-                  aria-labelledby="navbarDropdown"
-                  id="dropdown-menu"
-                  class="dropdown-menu"
-                >
-                  Montamos el menú dropdown 
-                  <li><a class="dropdown-item" href="#">Raspi</a></li>
-                  <li><a class="dropdown-item" href="#">Web</a></li>
-                  <li><a class="dropdown-item" href="#">Docker</a></li>
-                  <li>
-                    <a class="dropdown-item" href="projects.html">Saber más</a>
-                  </li>
-                </ul>
-              </li>-->
-          </ul>
-          <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown dropdown-menu-end">
-              <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-              <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                role="button">
-                <!--id="navbarDropdown2"-->
-                <i class="d-none d-lg-inline fas fa-globe"></i>
-                <span class="d-lg-none"> Idioma</span>
-              </a>
-              <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
-              <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Español</a></li>
-                <li><a class="dropdown-item" href="#">English</a></li>
-              </ul>
-            </li>
-            <li class="my-1">
-              <input type="checkbox" id="toggle" />
-              <label class="toggle" for="toggle">
-                <i class="bx bxs-sun"></i>
-                <i class="bx bx-moon"></i>
-                <span class="ball"></span>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="progress mx-auto">
-        <div class="progress-bar" id="myBar"></div>
-      </div>
-    </nav>
-  </header>
   <main>
-    <section>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec
-        feugiat nisl pretium fusce id velit ut. Amet tellus cras adipiscing enim
-        eu turpis egestas pretium. Viverra justo nec ultrices dui sapien. Elit
-        at imperdiet dui accumsan sit amet. Mauris rhoncus aenean vel elit
-        scelerisque mauris pellentesque pulvinar. Sodales neque sodales ut
-        etiam. Nulla facilisi etiam dignissim diam quis enim lobortis
-        scelerisque fermentum. Ut diam quam nulla porttitor massa id neque
-        aliquam. Ultricies integer quis auctor elit sed vulputate mi sit. Leo in
-        vitae turpis massa. Sit amet justo donec enim diam vulputate ut. Feugiat
-        vivamus at augue eget arcu dictum varius. Nunc scelerisque viverra
-        mauris in aliquam sem fringilla ut morbi. Consectetur purus ut faucibus
-        pulvinar elementum integer. Quis viverra nibh cras pulvinar. Pharetra
-        massa massa ultricies mi. Pharetra diam sit amet nisl. Purus semper eget
-        duis at tellus at urna. Sagittis vitae et leo duis ut diam quam nulla
-        porttitor. Nibh mauris cursus mattis molestie a iaculis at erat
-        pellentesque. Bibendum ut tristique et egestas. Arcu ac tortor dignissim
-        convallis aenean et tortor at. Ultrices gravida dictum fusce ut placerat
-        orci nulla. Est ultricies integer quis auctor. Faucibus et molestie ac
-        feugiat sed. Morbi tincidunt ornare massa eget egestas purus. Pharetra
-        sit amet aliquam id. Massa ultricies mi quis hendrerit dolor magna.
-        Vitae sapien pellentesque habitant morbi tristique. Dolor sed viverra
-        ipsum nunc aliquet bibendum. Nisi scelerisque eu ultrices vitae auctor.
-        Hac habitasse platea dictumst vestibulum rhoncus est. Ultricies
-        tristique nulla aliquet enim. Augue interdum velit euismod in. Cursus
-        metus aliquam eleifend mi. Lacus viverra vitae congue eu consequat ac
-        felis donec et. Mi quis hendrerit dolor magna eget est. Quis ipsum
-        suspendisse ultrices gravida. Libero nunc consequat interdum varius sit
-        amet mattis vulputate. Urna duis convallis convallis tellus id interdum
-        velit laoreet. Et egestas quis ipsum suspendisse ultrices gravida. Metus
-        dictum at tempor commodo. Ut placerat orci nulla pellentesque dignissim
-        enim sit. In egestas erat imperdiet sed. Nulla posuere sollicitudin
-        aliquam ultrices sagittis orci a scelerisque. Velit euismod in
-        pellentesque massa. Suspendisse sed nisi lacus sed. Lacus laoreet non
-        curabitur gravida arcu. Lorem ipsum dolor sit amet consectetur
-        adipiscing elit duis tristique. Pharetra massa massa ultricies mi quis.
-        Suscipit tellus mauris a diam maecenas sed. Tellus rutrum tellus
-        pellentesque eu tincidunt tortor aliquam. Imperdiet nulla malesuada
-        pellentesque elit eget gravida cum. Id donec ultrices tincidunt arcu non
-        sodales neque. Vulputate mi sit amet mauris commodo quis imperdiet massa
-        tincidunt. Pellentesque habitant morbi tristique senectus et. Viverra
-        adipiscing at in tellus integer feugiat scelerisque. Justo nec ultrices
-        dui sapien eget mi proin. In mollis nunc sed id semper risus in. Cursus
-        in hac habitasse platea. Tristique et egestas quis ipsum suspendisse
-        ultrices gravida dictum. Eget nunc scelerisque viverra mauris in
-        aliquam. Cursus sit amet dictum sit amet justo. Dui id ornare arcu odio.
-        Egestas pretium aenean pharetra magna ac placerat vestibulum. Eu
-        tincidunt tortor aliquam nulla facilisi cras. Facilisis sed odio morbi
-        quis commodo odio aenean sed adipiscing. Facilisis gravida neque
-        convallis a cras. Arcu dui vivamus arcu felis bibendum ut tristique et
-        egestas. Neque volutpat ac tincidunt vitae semper quis. Faucibus vitae
-        aliquet nec ullamcorper sit amet risus nullam.
-      </p>
-    </section>
-    <section>
-      <div class="content">
-        <div class="random">
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-        </div>
-      </div>
-    </section>
+
+
 
     <div class="social-menu">
-      <ul class="ul-vertical">
+      <ul class="sci">
         <li class="list-item">
           <a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i></a>
         </li>
@@ -258,16 +183,10 @@
         </li>
       </ul>
     </div>
-
-    <a class="learn-more" href="#">
-      <span class="circle" aria-hidden="true">
-        <i class="fas fa-arrow-right"></i>
-      </span>
-      <span class="button-text">Learn More</span>
-    </a>
   </main>
 
 </body>
+<!--
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 
@@ -275,6 +194,6 @@
 <script src="js/navbar.js"></script>
 <script src="js/scriptSwitch.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/title.js"></script>
+<script src="js/title.js"></script>-->
 
 </html>

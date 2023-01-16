@@ -13,6 +13,7 @@ const translations = {
     interests: "INTERESES",
     hobbies: "AFICIONES",
     city: "Ciudad:",
+    country: "España",
     birthday: "Nacimiento:",
     cyber: " Cyber Seguridad",
     servers: " Servidores",
@@ -22,9 +23,9 @@ const translations = {
     running: " Correr",
     beer: " Cerveza",
     party: " Fiesta",
-    electronics: " Electrónica",
+    electronics: " Electronica",
     tvshow: " Series",
-    movies: " Películas",
+    movies: " Peliculas",
     //Index
     carousel1Title: "Proyecto Raspberry Pi",
     carousel2Title: "Bot Twitter",
@@ -60,6 +61,7 @@ const translations = {
     daw: "Grado superior en desarrollo de aplicaciones Web | (Actualidad)",
     certification:
       "Certificado de profesionalidad de desarrollo de aplicaciones con tecnologías web",
+    age: "Edad",
   },
   en: {
     //Navbar
@@ -75,6 +77,7 @@ const translations = {
     interests: "INTERESTS",
     hobbies: "HOBBIES",
     city: "City:",
+    country: "Spain",
     birthday: "Birthday:",
     cyber: " Cyber Security",
     servers: " Servers",
@@ -122,6 +125,8 @@ const translations = {
     daw: "Higher Degree in Web Application Development | (Currently)",
     certification:
       "Professional Certification in Web Technologies Application Development",
+    contactoo: "Contact me",
+    age:"Age:"
   },
 };
 function updateContent() {

@@ -206,10 +206,25 @@ html:hover .scrollable-container::-webkit-scrollbar {
   color: white;
   background: #303e54;
 }
-.card-about{
-  height: 70px;
-  width: auto;
+.card-about {
+  height: 60px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: fit-content;
 }
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.card-about i {
+  line-height: 1.5;
+}
+.col-about {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   transition: transform 0.2s ease;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
@@ -235,16 +250,6 @@ html:hover .scrollable-container::-webkit-scrollbar {
 img {
   max-width: 100%;
 }
-
-.section-title h4::after {
-  content: "";
-  width: 180px;
-  height: 3px;
-  display: inline-block;
-  background: #dee2e6;
-  margin: 6px 15px;
-  border-radius: 7px;
-}
 .cv-title h3::after {
   content: "";
   width: 50%;
@@ -254,9 +259,18 @@ img {
   margin: 6px 15px;
   border-radius: 7px;
 }
+.section-title h4::after {
+  content: "";
+  width: 160px;
+  height: 3px;
+  display: inline-block;
+  background: #dee2e6;
+  margin: 6px 15px;
+  border-radius: 7px;
+}
 .section-title h4::before {
   content: "";
-  width: 180px;
+  width: 160px;
   height: 3px;
   display: inline-block;
   background: #dee2e6;
