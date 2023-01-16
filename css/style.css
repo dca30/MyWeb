@@ -156,6 +156,7 @@ hr:not([size]) {
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
   transition: display 1.5s ease-in-out;
 }
+
 #myHeader {
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }

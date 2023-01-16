@@ -16,10 +16,12 @@
 
   <!-- Estilos CSS propios -->
   <link href="css/style.css" rel="stylesheet" />
-  <link href="css/socialMedia.css" rel="stylesheet" />
+    <!--<link href="css/socialMedia.css" rel="stylesheet" />-->
   <link href="css/styleDark.css" rel="stylesheet" />
   <link href="css/navbar.css" rel="stylesheet" />
   <link href="css/styleSwitch.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+
 
   <!-- Favicons con https://www.favicon-generator.org/ -->
   <!--
@@ -72,25 +74,35 @@
   <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  <div class="social-menu" id="social">
-    <ul>
-      <li>
-        <a href="https://github.com/dca30" target="blank">
-          <i class="fab fa-github"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
-            class="fab fa-linkedin-in"></i></a>
-      </li>
-      <li>
-        <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
-            class="fab fa-at"></i></a>
-      </li>
-    </ul>
+  <div class="contenido">
+    <div class="detail">
+      <ul class="sci">
+        <li>
+          <a href="https://github.com/dca30" target="blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
+              class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
+              class="fab fa-at"></i></a>
+        </li>
+        <li>
+          <button class="learn-more">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">COPY MAIL</span>
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <header id="my-header" class="fixed-top px-auto">

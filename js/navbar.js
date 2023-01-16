@@ -3,7 +3,8 @@ const navbar = document.querySelector(".navbar");
 /*Funcion boton volver arriba*/
 //Get the button
 let btnArriba = document.getElementById("btn-back-to-top");
-let socialMenu = document.getElementById("social");
+let social = document.querySelector(".contenido");
+//let socialMenu = document.getElementById("social");
 
 // When the user clicks on the button, scroll to the top of the document
 btnArriba.addEventListener("click", backToTop);
@@ -44,19 +45,19 @@ function scrollFunction() {
     document.documentElement.scrollTop > 20
   ) {
     btnArriba.style.display = "block";
-    socialMenu.style.display = "block";
+    social.style.display = "block";
   } else {
     btnArriba.style.display = "none";
-    socialMenu.style.display = "none";
+    social.style.display = "none";
   }
 }
 // When the user scrolls the page, execute scrollFunction
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrolled > 200) {
+  /*if (scrolled > 200) {
     document.getElementById("social").classList.add("show");
-  }
+  }*/
 };
 window.onscroll = function () {
   scrollFunction();

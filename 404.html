@@ -1,71 +1,91 @@
+<div class='console-container'><span id='text'></span>
+    <div class='console-underscore' id='console'>&#95;</div>
+</div>
 <style>
-    * {
-        transition: all 0.6s;
-    }
-
-    html {
-        height: 100%;
-    }
+    @import url(https://fonts.googleapis.com/css?family=Khula:700);
 
     body {
-        font-family: 'Source Code Pro', monospace;
-        /*font-family: 'Inconsolata', monospace;
-        font-family: 'Fira Code', monospace;
-        font-family: 'Roboto Mono', monospace;
-        font-family: 'Monaco', monospace;
-        font-family: 'Courier New', monospace;*/
-        color: #888;
-        margin: 0;
+        background: #111;
     }
 
-    #main {
-        display: table;
-        width: 100%;
-        height: 100vh;
+    .hidden {
+        opacity: 0;
+    }
+
+    .console-container {
+
+        font-family: Khula;
+        font-size: 4em;
         text-align: center;
+        height: 200px;
+        width: 600px;
+        display: block;
+        position: absolute;
+        color: white;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
-    .fof {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    button {
-        font-size: 30px;
-        font-family: 'Source Code Pro', monospace;
-        color: #888;
-        border: 1px solid #888;
-        height: 50px;
-        width: 100px;
-    }
-
-    .fof h1 {
-        font-size: 50px;
+    .console-underscore {
         display: inline-block;
-        padding-right: 12px;
-        animation: type .5s alternate infinite;
-    }
-
-    @keyframes type {
-        from {
-            box-shadow: inset -3px 0px 0px #888;
-        }
-
-        to {
-            box-shadow: inset -3px 0px 0px transparent;
-        }
+        position: relative;
+        top: -0.14em;
+        left: 10px;
     }
 </style>
-<div id="main">
-    <div class="fof">
-        <h1>Error 404</h1>
-        <br>
-        <a href="index.html">
-            <button>Home</button>
-        </a>
-    </div>
-</div>
+<script>
+    // function([string1, string2],target id,[color1,color2])    
+    consoleText(['Error 404.', 'Not found.', 'Go back home.'], 'text', ['tomato', 'rebeccapurple', 'lightblue']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function () {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function () {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function () {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function () {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+</script>
