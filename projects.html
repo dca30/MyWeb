@@ -16,13 +16,17 @@
 
   <!-- Estilos CSS propios -->
   <link href="css/style.css" rel="stylesheet" />
-    <!--<link href="css/socialMedia.css" rel="stylesheet" />-->
   <link href="css/styleDark.css" rel="stylesheet" />
   <link href="css/navbar.css" rel="stylesheet" />
   <link href="css/styleSwitch.css" rel="stylesheet" />
   <link href="css/projects.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
 
+  <style>
+    img[alt="www.000webhost.com"] {
+      display: none;
+    }
+  </style>
 
   <!-- Favicons con https://www.favicon-generator.org/ -->
   <!--
@@ -70,10 +74,10 @@
 </head>
 
 <body class="light">
-  <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+  <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill hidden" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  <div class="contenido">
+  <div class="contenido hidden">
     <div class="detail">
       <ul class="sci">
         <li>
@@ -104,69 +108,69 @@
     </div>
   </div>
   <!-- Header -->
-<header id="my-header" class="fixed-top px-auto">
-  <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-  <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
-    <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
-    <div class="container-fluid">
-      <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
-          id="imagen" /></a>
-      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html" data-translate="home"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html" data-translate="projects"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="skills.html" data-translate="skills"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutme.html" data-translate="about"></a>
-          </li>
-        </ul>
-        <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown dropdown-menu-end">
-            <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
-            <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-              role="button">
-              <!--id="navbarDropdown2"-->
-              <i class="d-none d-lg-inline fas fa-globe"></i>
-              <span class="d-lg-none"> Idioma</span>
-            </a>
-            <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
-            <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="">Español</a></li>
-              <li><a class="dropdown-item" href="">English</a></li>
-            </ul>
-          </li>
-          <li class="my-1">
-            <input type="checkbox" id="toggle" />
-            <label class="toggle" for="toggle">
-              <i class="bx bxs-sun"></i>
-              <i class="bx bx-moon"></i>
-              <span class="ball"></span>
-            </label>
-          </li>
-        </ul>
+  <header id="my-header" class="fixed-top px-auto">
+    <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
+    <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
+      <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
+      <div class="container-fluid">
+        <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
+            id="imagen" /></a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-translate="home"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html" data-translate="projects"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="skills.html" data-translate="skills"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html" data-translate="about"></a>
+            </li>
+          </ul>
+          <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown dropdown-menu-end">
+              <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
+              <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                role="button">
+                <!--id="navbarDropdown2"-->
+                <i class="d-none d-lg-inline fas fa-globe"></i>
+                <span class="d-lg-none"> Idioma</span>
+              </a>
+              <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
+              <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="">Español</a></li>
+                <li><a class="dropdown-item" href="">English</a></li>
+              </ul>
+            </li>
+            <li class="my-1">
+              <input type="checkbox" id="toggle" />
+              <label class="toggle" for="toggle">
+                <i class="bx bxs-sun"></i>
+                <i class="bx bx-moon"></i>
+                <span class="ball"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="progress mx-auto">
-      <div class="progress-bar" id="myBar"></div>
-    </div>
-  </nav>
-</header>
+      <div class="progress mx-auto">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </nav>
+  </header>
   <!-- Main -->
   <main class="main-skills">
     <section class="skills">
       <div class="section-title">
-        <h4 class="pb-4">PROJECTS</h4>
+        <h4 class="py-4">PROJECTS</h4>
       </div>
       <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
       <div id="overlay"></div>
@@ -179,8 +183,8 @@
                 <!--<button type="button" class="close-button" id="close-button">&times;</button>-->
               </div>
               <div class="card-middle">
-                <h2>Project 1</h2>
-                <p>Description of the card</p>
+                <h2>Raspberry Pi</h2>
+                <p class="px-4 minimized">Diseño carcasa Raspberry Pi, con su pantalla led e implantacion del SO Raspbian.</p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -195,8 +199,9 @@
                 <img src="https://dummyimage.com/640x240/000000/fff" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Project 2</h2>
-                <p>Description of the card</p>
+                <h2>Bot Twitter</h2>
+                <p class="px-4 minimized">Bot de Twitter que publica periodicamente frames de la pelicula Matrix.
+                </p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -211,8 +216,10 @@
                 <img src="https://dummyimage.com/640x240/000000/fff" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Project 3</h2>
-                <p>Description of the card</p>
+                <h2>De pelicula a colores</h2>
+                <p class="px-4 minimized">Script de python que a partir de una pelicula genera una imagen formada por barras en la
+                  cual cada una de ellas es del color medio de cada frame.
+                </p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -227,8 +234,9 @@
                 <img src="https://dummyimage.com/640x240/000000/fff" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Project 4</h2>
-                <p>Description of the card</p>
+                <h2>CV Website</h2>
+                <p class="px-4 minimized">Recorrido desde el diseño de la pagina web hasta hasta la implantacion en un servidor
+                  con un dominio adquirido</p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -244,7 +252,7 @@
               </div>
               <div class="card-middle">
                 <h2>Project 5</h2>
-                <p>Description of the card</p>
+                <p class="px-4 minimized">Description of the card</p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -260,7 +268,7 @@
               </div>
               <div class="card-middle">
                 <h2>Project 6</h2>
-                <p>Description of the card</p>
+                <p class="px-4 minimized">Description of the card</p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -276,7 +284,7 @@
               </div>
               <div class="card-middle">
                 <h2>Project 7</h2>
-                <p>Description of the card</p>
+                <p class="px-4 minimized">Description of the card</p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -292,7 +300,7 @@
               </div>
               <div class="card-middle">
                 <h2>Project 8</h2>
-                <p>Description of the card</p>
+                <p class="px-4 minimized">Description of the card</p>
               </div>
               <div class="card-bottom">
                 <button type="button" class="btn btn-warning mb-4 expand-button">
@@ -318,7 +326,7 @@
   <script src="js/navbar.js"></script>
   <script type="text/javascript" src="js/scriptSwitch.js"></script>
   <script type="text/javascript" src="js/cardsprojects.js"></script>
-      <script src="js/language.js"></script>
+  <script src="js/language.js"></script>
 
 </body>
 

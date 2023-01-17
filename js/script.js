@@ -16,21 +16,21 @@ if (currentPage.startsWith("/MyWeb/")) {
 }
 function copyToClipboard(event, text) {
   event.preventDefault();
-  navigator.clipboard.writeText(text);
-}
-
-var lang = localStorage.getItem("lang");
-if ((lang = "eng")) {
-
-} else {
-
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      console.log("Text copied to clipboard");
+    })
+    .catch((err) => {
+      console.error("Failed to copy text: ", err);
+    });
 }
 
 //Ver idioma navegador
-console.log(navigator.language);
+//console.log(navigator.language);
 //ver modo sistema
-let aa = window.matchMedia("(prefers-color-scheme: dark)").matches;
-console.log(aa);
+//let aa = window.matchMedia("(prefers-color-scheme: dark)").matches;
+//console.log(aa);
 
 //Borrar marca de agua 000webhost
 /*
@@ -45,3 +45,9 @@ setInterval(function () {
   ).style.display = "none";
 }, 5000);
 */
+const htmlHeight = document.body.scrollHeight;
+const displayHeight = window.innerHeight;
+if (htmlHeight < displayHeight) {
+  document.querySelector(".contenido").classList.remove("hidden");
+  //elementos.forEach((el) => el.classList.remove("hidden"));
+}

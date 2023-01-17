@@ -16,11 +16,10 @@
 
   <!-- Estilos CSS propios -->
   <link href="css/style.css" rel="stylesheet" />
-    <!--<link href="css/socialMedia.css" rel="stylesheet" />-->
   <link href="css/styleDark.css" rel="stylesheet" />
   <link href="css/navbar.css" rel="stylesheet" />
   <link href="css/styleSwitch.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
 
 
   <!-- Favicons con https://www.favicon-generator.org/ -->
@@ -65,16 +64,20 @@
   <meta content="https://locahost..." name="twitter:image" />
 
   <!-- Estilos CSS propios -->
-  <style></style>
+  <style>
+    img[alt="www.000webhost.com"] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="light">
   <!-- Header -->
 
-  <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+  <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill hidden" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  <div class="contenido">
+  <div class="contenido hidden">
     <div class="detail">
       <ul class="sci">
         <li>
@@ -199,9 +202,9 @@
                 23
               </p>
             </div>
-            <div class="col-10 center">
+            <!--<div class="col-10 center">
               <a class="btn btn-warning" href="contact">Contacta conmigo</a>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>

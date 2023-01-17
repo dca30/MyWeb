@@ -61,7 +61,7 @@ const translations = {
     daw: "Grado superior en desarrollo de aplicaciones Web | (Actualidad)",
     certification:
       "Certificado de profesionalidad de desarrollo de aplicaciones con tecnologías web",
-    age: "Edad",
+    age: "Edad:",
   },
   en: {
     //Navbar
@@ -126,9 +126,36 @@ const translations = {
     certification:
       "Professional Certification in Web Technologies Application Development",
     contactoo: "Contact me",
-    age:"Age:"
+    age: "Age:",
   },
 };
+function updateContent() {
+  let traducciones = document.querySelectorAll("[data-translate]");
+  traducciones.forEach(function (traduccion) {
+    traduccion.classList.add("fade-out"); // Add the "fade-out" class
+  });
+
+  let lang = localStorage.getItem("lang") || "es";
+  let elements = document.querySelectorAll("[data-translate]");
+  setTimeout(function () {
+    elements.forEach(function (element) {
+      let key = element.getAttribute("data-translate");
+      element.innerHTML = translations[lang][key];
+      element.classList.remove("fade-out"); // Remove the "fade-out" class
+    });
+  }, 1000);
+}
+//Guardar en una variable si estamos en ingles o español para que se preserve al cambiar de pag
+const links = document.querySelectorAll(".dropdown-item");
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function (event) {
+    event.preventDefault(); // To avoid redirecting to a link
+    localStorage.setItem("lang", this.innerHTML === "Español" ? "es" : "en");
+    updateContent();
+  });
+}
+updateContent();
+/*
 function updateContent() {
   let lang = localStorage.getItem("lang") || "es";
   let elements = document.querySelectorAll("[data-translate]");
@@ -146,7 +173,5 @@ for (let i = 0; i < links.length; i++) {
     updateContent();
   });
 }
-/*
-let activeItem = document.getElementsByClassName("dropdown-item activo");
-activeItem[0].style.backgroundColor = "#faca2c";*/
 updateContent();
+*/

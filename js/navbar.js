@@ -3,8 +3,6 @@ const navbar = document.querySelector(".navbar");
 /*Funcion boton volver arriba*/
 //Get the button
 let btnArriba = document.getElementById("btn-back-to-top");
-let social = document.querySelector(".contenido");
-//let socialMenu = document.getElementById("social");
 
 // When the user clicks on the button, scroll to the top of the document
 btnArriba.addEventListener("click", backToTop);
@@ -40,16 +38,6 @@ function scrollFunction() {
     document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    btnArriba.style.display = "block";
-    social.style.display = "block";
-  } else {
-    btnArriba.style.display = "none";
-    social.style.display = "none";
-  }
 }
 // When the user scrolls the page, execute scrollFunction
 // When the user scrolls down 20px from the top of the document, show the button
@@ -62,3 +50,8 @@ window.onscroll = function () {
 window.onscroll = function () {
   scrollFunction();
 };
+const elements = document.querySelectorAll(".contenido, #btn-back-to-top");
+window.addEventListener("scroll", function () {
+  const action = window.pageYOffset > 100 ? "remove" : "add";
+  elements.forEach((el) => el.classList[action]("hidden"));
+});

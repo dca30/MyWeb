@@ -7,6 +7,8 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const card = button.parentElement.parentElement;
     card.classList.toggle("expanded");
+    const cardParagraph = card.querySelector("p");
+    cardParagraph.classList.toggle("minimized");
     header.style.display = header.style.display === "none" ? "block" : "none";
     overlay.style.display = card.classList.contains("expanded")
       ? "block"

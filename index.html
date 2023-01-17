@@ -16,7 +16,6 @@
 
   <!-- Estilos CSS propios -->
   <link href="css/style.css" rel="stylesheet" />
-  <!--<link href="css/socialMedia.css" rel="stylesheet" />-->
   <link href="css/styleDark.css" rel="stylesheet" />
   <link href="css/navbar.css" rel="stylesheet" />
   <link href="css/styleSwitch.css" rel="stylesheet" />
@@ -75,12 +74,12 @@
 </head>
 
 <body class="light">
-
-  <!-- Changing letters: https://codepen.io/Bhkhlk/pen/aKoryo -->
-  <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
+  <div class="contenido hidden">
+    <!-- Changing letters: https://codepen.io/Bhkhlk/pen/aKoryo -->
+    <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
   <!--<div class="social-menu" id="social">
     <ul class="sci">
       <li>
@@ -101,7 +100,7 @@
       </li>
     </ul>
   </div>-->
-  <div class="contenido">
+  <div class="contenido hidden">
     <div class="detail">
       <ul class="sci">
         <li>
@@ -117,11 +116,11 @@
               class="fab fa-linkedin-in"></i></a>
         </li>
         <li>
-          <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
+          <a href="" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
               class="fab fa-at"></i></a>
         </li>
         <li>
-          <button class="learn-more">
+          <button class="learn-more" onclick="copyToClipboard(event,'calvoalegred@gmail.com')">
             <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
             </span>
@@ -403,24 +402,16 @@
       </div>
     </div>
     <!--Camisetas-->
-    <div class="container mt-5 mb-5">
-      <h1>Proyectos</h1>
 
-      <!-- Breadcrumbs o migas de pan https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
-      <!--
-      <nav aria-label="breadcrumb" class="navbar-light bg-gray">
-        <ol class="breadcrumb p-2">
-          <li class="breadcrumb-item"><a href="">Inicio</a></li>
-          <li aria-current="page" class="breadcrumb-item active">Projects</li>
-        </ol>
-      -->
+    <!--<div class="container mt-5 mb-5">
+      <h1>Proyectos</h1>
       </nav>
       <section>
         <h2 class="d-none">Listado</h2>
-        <!-- Para evitar el warning del validador incluimos una cabecera pero oculta -->
+        Para evitar el warning del validador incluimos una cabecera pero oculta
         <div class="d-flex justify-content-center row gap-4 mt-5">
-          <!-- grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/ -->
-          <!-- Generamos la primera columna y luego repetimos -->
+          grid con columnas https://getbootstrap.com/docs/5.0/layout/grid/
+          Generamos la primera columna y luego repetimos
 
           <div class="col-sm-6 col-sm-4 col-lg-3 mb-2 card card-index shadow-sm rounded-3">
             <a class="texcolor-black" href="projects.html">
@@ -564,25 +555,29 @@
             </article>
           </div>
         </div>
-        <!-- <img title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." alt="Camiseta"
-                  class="img-fluid"
-                  src="https://dummyimage.com/640x480/000000/fff">-->
       </section>
-    </div>
+    </div>-->
     <section>
       <div class="content pb-5" id="elemento">
         <div class="random">
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
-          <span class="nbr ltr">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
         </div>
       </div>
     </section>

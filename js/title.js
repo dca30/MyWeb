@@ -2,22 +2,42 @@ const target = document.getElementById("elemento");
 
 // Create a new IntersectionObserver
 const observer = new IntersectionObserver((entries) => {
+  var it;
+
   // Check if the element is intersecting with the viewport
   if (entries[0].isIntersecting) {
-    console.log("Interseccion");
+    //console.log("Interseccion");
     $(document).ready(function () {
       var randomnbr = $(".nbr");
       var timer = 30;
-      var it;
       var data = 0;
       var index;
       var change;
-      var letters = ["d", "i", "e", "g", "o", " ", "c", "a", "l", "v", "o"];
+      var letters = [
+        "d",
+        "i",
+        "e",
+        "g",
+        "o",
+        " ",
+        "c",
+        "a",
+        "l",
+        "v",
+        "o",
+        " ",
+        "a",
+        "l",
+        "e",
+        "g",
+        "r",
+        "e",
+      ];
 
       randomnbr.each(function () {
         change = Math.round(Math.random() * 100);
         $(this).attr("data-change", change);
-      }); 
+      });
 
       function random() {
         return Math.round(Math.random() * 9);
@@ -44,12 +64,37 @@ const observer = new IntersectionObserver((entries) => {
       $it = setInterval(value, timer);
     });
   }
+  it = 0;
+  //clearInterval(it);
+
+  const randomDiv = document.querySelector(".random");
+  const newHTML = "<p>Your new HTML content goes here</p>";
+  randomDiv.innerHTML = `<div class="random">
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+          <span class="nbr ltr h2">0</span>
+        </div>`;
 });
-observer.observe(target);
- /*
+observer.observe(target); /*
+/*
 /*function random() {
           return Math.round(Math.random() * 9);
-        }*/ /*
+        }*/
 /*function select() {
     return Math.floor(Math.random() * randomnbr.length);
   }*/

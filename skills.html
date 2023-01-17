@@ -13,53 +13,57 @@
 
     <!-- Estilos CSS propios -->
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/pruebasBar.css" rel="stylesheet" />
-    <!--<link href="css/socialMedia.css" rel="stylesheet" />-->
+    <link href="css/skillBar.css" rel="stylesheet" />
     <link href="css/styleDark.css" rel="stylesheet" />
     <link href="css/navbar.css" rel="stylesheet" />
     <link href="css/styleSwitch.css" rel="stylesheet" />
-        <link href="css/media.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
 
+    <style>
+        img[alt="www.000webhost.com"] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="light">
 
     <!-- Changing letters: https://codepen.io/Bhkhlk/pen/aKoryo -->
-    <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+    <button type="button" class="btn btn-warning btn-floating btn-lg rounded-pill hidden" id="btn-back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-<div class="contenido">
-    <div class="detail">
-        <ul class="sci">
-            <li>
-                <a href="https://github.com/dca30" target="blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i
-                        class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
-                        class="fab fa-linkedin-in"></i></a>
-            </li>
-            <li>
-                <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
-                        class="fab fa-at"></i></a>
-            </li>
-            <li>
-                <button class="learn-more">
-                    <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                    </span>
-                    <span class="button-text">COPY MAIL</span>
-                </button>
-            </li>
-        </ul>
+    <div class="contenido hidden">
+        <div class="detail">
+            <ul class="sci">
+                <li>
+                    <a href="https://github.com/dca30" target="blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/calvoalegrediego/" target="blank"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="#" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
+                            class="fab fa-at"></i></a>
+                </li>
+                <li>
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">COPY MAIL</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
     <!-- Header -->
     <header id="my-header" class="fixed-top px-auto">
         <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
@@ -74,7 +78,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-5 mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html" data-translate="home"></a>
                         </li>
@@ -103,7 +107,7 @@
                                 <li><a class="dropdown-item" href="">Español</a></li>
                                 <li><a class="dropdown-item" href="">English</a></li>
                                 <!--<i class="fa-solid fa-check" id="checkeng"></i>
-                    <i class="fa-solid fa-check" id="checkesp"></i>-->
+                <i class="fa-solid fa-check" id="checkesp"></i>-->
                             </ul>
                         </li>
                         <li class="my-1">
@@ -122,51 +126,51 @@
             </div>
         </nav>
     </header>
-    <main class="main-skills">
-        <div class="card-container">
-            <div class="card card-bar card-skill pt-4">
+    <main class="main-skills center">
+        <div class="card-container center">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-linux fa-2x"></i>
-                <h3>Linux</h3>
+                <h2>Linux</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>LINUX</span>
+                            <span class="fw-bold">LINUX</span>
                         </div>
                         <div class="progress-line"><span class="linux"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4 ">
                 <i class="icono fa-brands fa-docker fa-2x"></i>
-                <h3>Docker</h3>
+                <h2>Docker</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>DOCKER</span>
+                            <span class="fw-bold">DOCKER</span>
                         </div>
                         <div class="progress-line"><span class="docker"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-java fa-2x"></i>
-                <h3>Java</h3>
+                <h2>Java</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>JAVA</span>
+                            <span class="fw-bold">JAVA</span>
                         </div>
                         <div class="progress-line"><span class="java"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-python fa-2x"></i>
-                <h3>Python</h3>
+                <h2>Python</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>PYTHON</span>
+                            <span class="fw-bold">PYTHON</span>
                         </div>
                         <div class="progress-line">
                             <span class="python"></span>
@@ -174,105 +178,106 @@
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-html5 fa-2x"></i>
-                <h3>HTML</h3>
+                <h2>HTML</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>HTML</span>
+                            <span class="fw-bold">HTML</span>
                         </div>
                         <div class="progress-line"><span class="html"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-js fa-2x"></i>
-                <h3>Javascript</h3>
+                <h2>Javascript</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>JAVASCRIPT</span>
+                            <span class="fw-bold">JAVASCRIPT</span>
                         </div>
                         <div class="progress-line"><span class="javascript"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-bootstrap fa-2x"></i>
-                <h3>Bootstrap</h3>
+                <h2>Bootstrap</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>BOOTSTRAP</span>
+                            <span class="fw-bold">BOOTSTRAP</span>
                         </div>
                         <div class="progress-line"><span class="bootstrap"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-css3-alt fa-2x"></i>
-                <h3>CSS</h3>
+                <h2>CSS</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>CSS</span>
+                            <span class="fw-bold">CSS</span>
                         </div>
                         <div class="progress-line"><span class="css"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-solid fa-database fa-2x"></i>
-                <h3>SQL</h3>
+                <h2>SQL</h2>
                 <div class="skills-bar px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>SQL</span>
+                            <span class="fw-bold">SQL</span>
                         </div>
                         <div class="progress-line"><span class="sql"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-php fa-2x"></i>
-                <h3>PHP</h3>
+                <h2>PHP</h2>
                 <div class="skills-bar px-4 px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>PHP</span>
+                            <span class="fw-bold">PHP</span>
                         </div>
                         <div class="progress-line"><span class="php"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-laravel fa-2x"></i>
-                <h3>Laravel</h3>
+                <h2>Laravel</h2>
                 <div class="skills-bar px-4 px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>LARAVEL</span>
+                            <span class="fw-bold">LARAVEL</span>
                         </div>
                         <div class="progress-line"><span class="laravel"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="card card-bar card-skill pt-4">
+            <div class="card card-bar card-skill pt-4 my-4">
                 <i class="icono fa-brands fa-github fa-2x"></i>
-                <h3>Git</h3>
+                <h2>Git</h2>
                 <div class="skills-bar px-4 px-4">
                     <div class="bar oculto">
                         <div class="info">
-                            <span>GIT</span>
+                            <span class="fw-bold">GIT</span>
                         </div>
                         <div class="progress-line"><span class="git"></span></div>
                     </div>
                 </div>
             </div>
+
         </div>
-        <button id="myButton" class="btn btn-warning mb-4 expand-button">
-            Change Layout
+        <button id="show-more" class="btn btn-warning btn-lg mb-4 expand-button">
+            Show More
         </button>
     </main>
 
@@ -282,7 +287,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/scriptSwitch.js"></script>
     <script src="js/language.js"></script>
-    <script src="js/pruebasBar.js"></script>
+    <script src="js/skillBar.js"></script>
 
 </body>
 

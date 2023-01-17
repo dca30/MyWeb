@@ -15,7 +15,7 @@ const colors = [
 
 const transparentColors = colors.map((color) => {
   const [r, g, b] = color.match(/\w\w/g).map((x) => parseInt(x, 16));
-  return `rgba(${r}, ${g}, ${b}, 0.5)`;
+  return `rgba(${r}, ${g}, ${b}, 0.8)`;
 });
 
 const cards = document.querySelectorAll(".card");
@@ -23,7 +23,7 @@ const cards = document.querySelectorAll(".card");
 cards.forEach((card, index) => {
   card.style.backgroundColor = transparentColors[index];
 });
-var btn = document.getElementById("myButton");
+var btn = document.getElementById("show-more");
 const percentages = {
   linux: 80,
   docker: 75,
@@ -52,12 +52,13 @@ btn.addEventListener("click", function () {
   var cards = document.querySelectorAll(".card");
   var barras = document.querySelectorAll(".bar");
   var iconos = document.querySelectorAll(".icono");
-  var h3s = Array.from(document.getElementsByTagName("h3"));
+  var h2s = Array.from(document.getElementsByTagName("h2"));
 
   cards.forEach(function (card) {
     //setTimeout(() => {}, 1000);
     card.classList.toggle("one-per-row");
     card.classList.toggle("pt-4");
+    card.classList.toggle("my-4");
     card.classList.toggle("small");
     card.classList.toggle("expanded");
   });
@@ -69,7 +70,7 @@ btn.addEventListener("click", function () {
   iconos.forEach(function (icon) {
     icon.classList.toggle("oculto");
   });
-  h3s.forEach(function (h3) {
-    h3.classList.toggle("oculto");
+  h2s.forEach(function (h2) {
+    h2.classList.toggle("oculto");
   });
 });
