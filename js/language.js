@@ -143,7 +143,7 @@ function updateContent() {
       element.innerHTML = translations[lang][key];
       element.classList.remove("fade-out"); // Remove the "fade-out" class
     });
-  }, 1000);
+  }, 0);
 }
 //Guardar en una variable si estamos en ingles o español para que se preserve al cambiar de pag
 const links = document.querySelectorAll(".dropdown-item");

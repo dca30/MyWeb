@@ -41,12 +41,12 @@ function scrollFunction() {
 }
 // When the user scrolls the page, execute scrollFunction
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
+/*window.onscroll = function () {
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  /*if (scrolled > 200) {
+  if (scrolled > 200) {
     document.getElementById("social").classList.add("show");
-  }*/
-};
+  }
+};*/
 window.onscroll = function () {
   scrollFunction();
 };
