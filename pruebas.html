@@ -1,195 +1,270 @@
-<!DOCTYPE html>
-<html lang="es" xmlns="http://www.w3.org/1999/html">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-
-  <!-- Bootstrap CSS -->
-  <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
-  <link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-
-  <!-- Estilos CSS propios 
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/styleDark.css" rel="stylesheet" />
-  <link href="css/navbar.css" rel="stylesheet" />
-  <link href="css/styleSwitch.css" rel="stylesheet" />
-  <link href="css/prueba.css" rel="stylesheet" />-->
-
-  <!-- Favicons con https://www.favicon-generator.org/ -->
-  <!--
-    <link href="images/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
-    <link href="images/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
-    <link href="images/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="images/favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
-    <link href="images/favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-    <link href="images/favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
-    <link href="images/favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
-    <link href="images/favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
-    <link href="images/favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="images/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
-    <link href="images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
-    <link href="images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">-->
-  <link rel="shortcut icon" href="/images/favicon.png" />
-  <meta content="#ffffff" name="msapplication-TileColor" />
-  <meta content="images/favicons/ms-icon-144x144.png" name="msapplication-TileImage" />
-  <meta content="#ffffff" name="theme-color" />
-
-  <!-- Metadatos -->
-  <title>dca</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
-  <!-- Esta etiqueta contiene la "descripción" básica de google -->
-  <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="description" />
-  <!-- Hoy en día Google dice que nos los utiliza pero algunos buscadores quizás sí -->
-  <meta content="camisetas de algodón, camisetas de lycra, camisetas" name="keywords" />
-
-  <!-- METADADATOS DE OPENGRAPH (FACEBOOK) -->
-  <meta content="Camisetas baratas" property="og:title" />
-  <meta content="Compre mis camisetas señora. Me las quitan de las manos." property="og:description" />
-  <meta content="website" property="og:type" />
-  <meta content="https://camisetasbaratas.com" property="og:url" />
-  <meta content="https://locahost...." property="og:image" />
-
-  <!-- METADATOS DE TWITTER -->
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="Camisetas baratas" name="twitter:title" />
-  <meta content="Compre mis camisetas señora. Me las quitan de las manos." name="twitter:description" />
-  <meta content="https://locahost..." name="twitter:image" />
-
-  <!-- Estilos CSS propios -->
-  <style>
-    .content {
-      text-align: center;
-    }
-
-    .content span {
-      width: 3rem;
-      display: inline-block;
-      text-transform: uppercase;
-    }
-
-    .social-menu ul {
-      position: fixed;
-      top: 85%;
-      left: 4%;
-      padding: 0;
-      margin: 1px;
-      transform: translate(-50%, -50%);
-    }
-
-    .social-menu ul li {
-      list-style: none;
-      /*margin: 0 15px;*/
-      padding: 2px;
-    }
-
-    .social-menu ul li .fab {
-      font-size: 25px;
-      line-height: 50px;
-      transition: 0.3s;
-      color: #000;
-    }
-
-
-
-    .social-menu ul li a {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      text-align: center;
-      transition: 0.6s;
-      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
-      background-color: white;
-    }
-
-    .social-menu a {
-      background-color: #fff;
-    }
-
-    .social-menu ul li a:hover {
-      transform: translate(0, -10%);
-    }
-
-    .social-menu ul li:nth-child(1) a:hover {
-      background-color: rgba(0, 0, 0, 0.829);
-    }
-
-    .social-menu ul li:nth-child(2) a:hover {
-      background-color: #e4405f;
-    }
-
-    .social-menu ul li:nth-child(3) a:hover {
-      background-color: #0077b5;
-    }
-
-    .social-menu ul li:nth-child(4) a:hover {
-      background-color: green;
-    }
-
-    .social-menu {
-      /*display: none;*/
-    }
-
-
-
-    #social {
-      display: none;
-      transition: all 0.5s ease-in-out;
-    }
-
-    #social.show {
-      display: block;
-    }
-
-    .sci li a:hover {
-      background: #03a9f4;
-      color: #fff;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Header -->
-
-  <main>
-    <div class="social-menu">
-      <ul class="sci">
-        <li class="list-item">
-          <a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i></a>
-        </li>
-        <li class="list-item">
-          <a href="https://www.instagram.com/imsanketbodke/" target="blank"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li class="list-item">
-          <a href="https://www.linkedin.com/in/sanket-bodake-995b5b205/" target="blank"><i
-              class="fab fa-linkedin-in"></i></a>
-        </li>
-        <li class="list-item">
-          <a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"></i></a>
-        </li>
-      </ul>
+<!--<div class="container">
+  <div class="timeline">
+    <div class="dot" id="dot0">
+      <p class="dot-text">Dot</p>
     </div>
-  </main>
+    <div class="dot" id="dot1">
+      <p class="dot-text">Dot</p>
+    </div>
+    <div class="dot" id="dot2">
+      <p class="dot-text">Dot</p>
+    </div>
+    <div class="dot" id="dot3">
+      <p class="dot-text">Dot</p>
+    </div>
+    <div class="dot" id="dot4">
+      <p class="dot-text">Dot</p>
+    </div>
+    <div class="dot" id="dot5">
+      <p class="dot-text">Dot</p>
+    </div>
+  </div>
+</div>
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 
-</body>
-<!--
-<script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  .timeline {
+    width: 50%;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+  }
 
-<script src="js/script.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/scriptSwitch.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/title.js"></script>-->
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    top: -150%;
+    left: calc(20% - 10px);
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+  }
 
-</html>
+  .dot.expanded~.dot {
+    background-color: green;
+  }
+
+  #dot0 {
+    left: 0%;
+  }
+
+  #dot1 {
+    left: 20%;
+  }
+
+  #dot2 {
+    left: 40%;
+  }
+
+  #dot3 {
+    left: 60%;
+  }
+
+  #dot4 {
+    left: 80%;
+  }
+
+  #dot5 {
+    left: 100%;
+  }
+
+  .dot:hover {
+    cursor: pointer
+  }
+
+  .dot-text {
+    position: absolute;
+    top: -35px;
+    left: 12px;
+    font-size: 12px;
+    color: #333;
+    transform: rotate(-45deg);
+    font-weight: normal;
+
+  }
+
+  .expanded .dot-text {
+    font-weight: bold;
+  }
+
+
+  .expanded {
+    transform: scale(1.2);
+  }
+</style>
+<script>
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => {
+    dot.addEventListener('click', e => {
+      const expandedDots = document.querySelectorAll('.expanded');
+      expandedDots.forEach(dot => dot.classList.remove('expanded'));
+      dot.classList.toggle('expanded');
+    });
+  });
+</script>-->
+<div class="container">
+  <div class="timeline">
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+    <div class="input"></div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .timeline {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .input {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    position: relative;
+    margin-right: 30px;
+    /*add space between dots*/
+  }
+
+  .input::after {
+    content: "";
+    width: 100%;
+    /*calc(100% - 30px);*/
+    /*subtract margin from the width*/
+    height: 4px;
+    background-color: #333;
+    position: absolute;
+    left: 45px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input::before {
+    content: "";
+    width: 100%;
+    /*calc(100% - 30px);*/
+    /*subtract margin from the width*/
+    height: 4px;
+    background-color: #333;
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .input:last-child {
+    margin-right: 0;
+  }
+
+  .change-color {
+    background-color: blue;
+  }
+
+  .input.clicked {
+    background-color: #0f0;
+  }
+
+  .input.clicked::after {
+    background-color: #0f0;
+  }
+</style>
+<script>
+  const dots = document.querySelectorAll('.input');
+  dots.forEach(dot => {
+    dot.addEventListener('click', e => {
+      const expandedDots = document.querySelectorAll('.clicked');
+      expandedDots.forEach(dot => dot.classList.remove('clicked'));
+      dot.classList.add('clicked');
+      let currentDot = dot;
+      while (currentDot.nextElementSibling) {
+        currentDot.nextElementSibling.classList.add('clicked');
+        currentDot = currentDot.nextElementSibling;
+      }
+    });
+  });</script>
+  <!--<div class="flex-parent">
+	<div class="input-flex-container">
+		<div class="input"></div>
+		<div class="input"></div>
+		<div class="input"></div>
+		<div class="input"></div>
+		<div class="input"></div>
+		<div class="input active"></div>
+		<div class="input"></div>
+		<div class="input"></div>
+		<div class="input"></div>
+		<div class="input"></div>
+	</div>
+</div>
+<style>
+  div {
+    display: block;
+}
+  .input-flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 100px;
+    max-width: 1000px;
+    position: relative;
+    z-index: 0;
+}
+.input::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2C3E50;
+    width: 50px;
+    height: 5px;
+    max-width: 50px;
+}
+  .input::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left:0px;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2C3E50;
+    width: 50px;
+    height: 5px;
+    max-width: 50px;
+}
+  .input {
+    width: 25px;
+    height: 25px;
+    background-color: #2C3E50;
+    position: relative;
+    border-radius: 50%;
+}
+</style>-->
