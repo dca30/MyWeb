@@ -1,3 +1,115 @@
+<div class="center">
+  <div class="container">
+    <span class="line"></span>
+    <div class="circle">
+      <p class="diagonal">Circle 1</p>
+    </div>
+    <span class="line"></span>
+    <div class="circle">
+      <p class="diagonal">Circle 2</p>
+    </div>
+    <span class="line"></span>
+    <div class="circle">
+      <p class="diagonal">Circle 3</p>
+    </div>
+    <span class="line"></span>
+    <div class="circle">
+      <p class="diagonal">Circle 4</p>
+    </div>
+    <span class="line"></span>
+  </div>
+</div>
+<style>
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s ease;
+  }
+
+  .line {
+    width: 50px;
+    height: 4px;
+    background-color: black;
+  }
+
+  .diagonal {
+    position: absolute;
+    top: -55px;
+    left: 18px;
+    transform: rotate(-45deg);
+    color: black;
+    text-align: center;
+  }
+
+  /* Add this class to make the circle bigger when clicked */
+  .bigger {
+    transform: scale(1.15);
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  // Keep track of the last clicked circle
+  let lastClicked;
+  // Get all the circles
+  const circles = document.querySelectorAll('.circle');
+  // Iterate through the circles and add the click event listener
+  circles.forEach(circle => {
+    circle.addEventListener('click', function () {
+      // Remove the "bigger" class from the last clicked circle
+      lastClicked ? (lastClicked.classList.toggle("bigger"), lastClicked.classList.remove("bold")) : null;
+      // Add the "bigger" class to the current clicked circle
+      circle.classList.add("bigger");
+      circle.style.backgroundColor = "black";
+      this.querySelector('.diagonal').classList.add("bold");
+      lastClicked ? lastClicked.querySelector('.diagonal').classList.remove("bold") : null;
+      // Update the last clicked circle
+      lastClicked = circle;
+      // Iterate through all the circles before the clicked 
+      let prev = circle.previousElementSibling;
+      while (prev) {
+        // Check the class of the element
+        prev.classList.contains("circle") || prev.classList.contains("line") ? prev.style.backgroundColor = "black" : null;
+        // Get the previous element
+        prev = prev.previousElementSibling;
+      }
+      // Get the next element after the clicked circle
+      let next = circle.nextElementSibling;
+      // Iterate through all next elements
+      while (next) {
+        // Check the class of the element
+        next.classList.contains("circle") || next.classList.contains("line") ? next.style.backgroundColor = "lightgray" : null;
+        // Get the next element
+        next = next.nextElementSibling;
+      }
+    });
+  });
+</script>
+
+
+
+
+
 <!--<div class="container">
   <div class="timeline">
     <div class="dot" id="dot0">
@@ -111,21 +223,31 @@
     });
   });
 </script>-->
-<div class="container">
+<!--<div class="container">
   <div class="timeline">
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
-    <div class="input"></div>
+    <div class="input">
+      <div class="dot-text">Cyber Seguridad</div>
+    </div>
+    <div class="input">
+      <div class="dot-text">Servidores</div>
+    </div>
+    <div class="input">
+      <div class="dot-text">Frontend</div>
+    </div>
+    <div class="input">
+      <div class="dot-text">Backend</div>
+    </div>
+    <div class="input">
+      <div class="dot-text">Linux</div>
+    </div>
+    <div class="input">
+      <div class="dot-text">OS</div>
+    </div>
+    <div class="input">
+      <div class="dot-text">Automatizacion</div>
+    </div>
   </div>
 </div>
-
 <style>
   .container {
     display: flex;
@@ -144,69 +266,83 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #333;
+    background-color: black;
     position: relative;
     margin-right: 30px;
-    /*add space between dots*/
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
   }
-
-  .input::after {
-    content: "";
-    width: 100%;
-    /*calc(100% - 30px);*/
-    /*subtract margin from the width*/
-    height: 4px;
-    background-color: #333;
-    position: absolute;
-    left: 45px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .input::before {
     content: "";
-    width: 100%;
-    /*calc(100% - 30px);*/
-    /*subtract margin from the width*/
-    height: 4px;
-    background-color: #333;
+    width: 120%;
+    height: 5px;
+    background-color: black;
     position: absolute;
-    right: 45px;
+    left: 44px;
     top: 50%;
-    transform: translate(50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in-out;
+
   }
 
   .input:last-child {
     margin-right: 0;
   }
 
-  .change-color {
-    background-color: blue;
+  .input.clicked,
+  .input.clicked::before{
+    background-color: grey;
+    z-index: 3;
   }
 
-  .input.clicked {
-    background-color: #0f0;
+  .dot-text {
+    position: absolute;
+    top: -35px;
+    left: 12px;
+    font-size: 12px;
+    color: #333;
+    transform: rotate(-45deg);
+    font-weight: normal;
   }
 
-  .input.clicked::after {
-    background-color: #0f0;
+  .expanded {
+    transform: scale(1.2);
+  }
+
+  .expanded .dot-text {
+    font-weight: bold;
+  }
+
+  .input:hover {
+    cursor: pointer;
   }
 </style>
 <script>
   const dots = document.querySelectorAll('.input');
-  dots.forEach(dot => {
-    dot.addEventListener('click', e => {
-      const expandedDots = document.querySelectorAll('.clicked');
-      expandedDots.forEach(dot => dot.classList.remove('clicked'));
-      dot.classList.add('clicked');
-      let currentDot = dot;
-      while (currentDot.nextElementSibling) {
-        currentDot.nextElementSibling.classList.add('clicked');
-        currentDot = currentDot.nextElementSibling;
-      }
+    dots.forEach(dot => {
+      dot.addEventListener('click', e => {
+        let currentDot = dot;
+        while (currentDot) {
+          currentDot.classList.remove('clicked');
+          currentDot = currentDot.previousElementSibling;
+        }
+        currentDot = dot;
+        while (currentDot) {
+          if (currentDot !== dot) currentDot.classList.add('clicked');
+          currentDot = currentDot.nextElementSibling;
+        }
+      });
     });
-  });</script>
-  <!--<div class="flex-parent">
+    dots.forEach(dot => {
+      dot.addEventListener('click', e => {
+        const expandedDots = document.querySelectorAll('.input.expanded');
+        expandedDots.forEach(dot => dot.classList.remove('expanded'));
+        dot.classList.add('expanded');
+      });
+    });
+
+</script>-->
+<!--<div class="flex-parent">
 	<div class="input-flex-container">
 		<div class="input"></div>
 		<div class="input"></div>
