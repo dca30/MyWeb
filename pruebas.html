@@ -1,22 +1,7 @@
+<link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
+<link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
 <div class="center">
   <div class="container">
-    <span class="line"></span>
-    <div class="circle">
-      <p class="diagonal">Circle 1</p>
-    </div>
-    <span class="line"></span>
-    <div class="circle">
-      <p class="diagonal">Circle 2</p>
-    </div>
-    <span class="line"></span>
-    <div class="circle">
-      <p class="diagonal">Circle 3</p>
-    </div>
-    <span class="line"></span>
-    <div class="circle">
-      <p class="diagonal">Circle 4</p>
-    </div>
-    <span class="line"></span>
   </div>
 </div>
 <style>
@@ -34,13 +19,16 @@
   }
 
   .circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
     background-color: black;
     cursor: pointer;
     position: relative;
     transition: all .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .line {
@@ -74,22 +62,81 @@
   .secondary {
     background-color: lightgray;
   }
+
+  .hide {
+    display: none !important;
+  }
 </style>
 
 <script>
-  let lastClicked;
+  /*given this array i want you to give me font awesome icons i can use to identify this words   const words = ["Cyber Seguridad", "Servidores", "Frontend", "Backend", "Linux", "OS", "Automatizacion"];
+  
+*/
+  const words = ["Cyber Seguridad", "Servidores", "Frontend", "Backend", "Linux", "OS", "Automatizacion"];
+  const container = document.querySelector(".container");
+  createCirclesAndLines(words, container);
+
+  // Add click event listener to circles
   const circles = document.querySelectorAll('.circle');
-  // Iterate through the circles and add the click event listener
   circles.forEach(circle => {
+    addClickEventToCircle(circle);
+  });
+
+  let lastClicked;
+
+  function createCirclesAndLines(words, container) {
+    // Create start line
+    const startLine = document.createElement("span");
+    startLine.classList.add("line");
+    container.prepend(startLine);
+
+    // Create circles for each word
+    words.forEach((word, index) => {
+      const circle = createCircle(word);
+      container.appendChild(circle);
+      index < words.length - 1 ? container.appendChild(createLine()) : null;
+    });
+
+    // Create end line
+    const endLine = document.createElement("span");
+    endLine.classList.add("line");
+    container.appendChild(endLine);
+  }
+  // Create circle
+  function createCircle(word) {
+    const circle = document.createElement("div");
+    circle.classList.add("circle");
+
+    const diagonal = document.createElement("p");
+    diagonal.classList.add("diagonal");
+    diagonal.innerText = word;
+
+    circle.appendChild(diagonal);
+    return circle;
+  }
+  // Create line
+  function createLine() {
+    const line = document.createElement("span");
+    line.classList.add("line");
+    return line;
+  }
+  // Add click event to circle
+  function addClickEventToCircle(circle) {
+    const icon = document.createElement("i");
+    icon.classList.add("fas", "fa-check", "fa-2x", "icon", "hide");
+    icon.style.color = "white";
+    circle.appendChild(icon);
+
+
     circle.addEventListener('click', function () {
-      lastClicked ? (lastClicked.classList.toggle("bigger"), lastClicked.classList.remove("bold")) : null;
+      lastClicked ? (lastClicked.classList.toggle("bigger"), lastClicked.classList.remove("bold"), lastClicked.querySelector('.icon') ? lastClicked.querySelector('.icon').classList.add("hide") : null) : null;
       circle.classList.add("bigger");
+      circle.classList.contains("bigger") ? icon.classList.remove("hide") : icon.classList.add("hide");
       circle.style.backgroundColor = "black";
       circle.querySelector('.diagonal').classList.add("bold");
       lastClicked ? lastClicked.querySelector('.diagonal').classList.remove("bold") : null;
       lastClicked = circle;
 
-      // Iterate through all the circles before the clicked 
       let prev = circle.previousElementSibling;
       while (prev) {
         prev.classList.contains("circle") || prev.classList.contains("line") ? prev.style.backgroundColor = "black" : null;
@@ -101,13 +148,11 @@
         next = next.nextElementSibling;
       }
     });
-  });
+  }
+
 </script>
-
-
-
-
-
+<script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <!--<div class="container">
   <div class="timeline">
     <div class="dot" id="dot0">
