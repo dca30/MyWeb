@@ -1,0 +1,68 @@
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .container-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .line {
+    width: 50px;
+    height: 4px;
+    background-color: black;
+  }
+
+  .diagonal {
+    position: absolute;
+    top: -55px;
+    left: 18px;
+    transform: rotate(-45deg);
+    color: black;
+    text-align: center;
+  }
+
+  /* Add this class to make the circle bigger when clicked */
+  .bigger {
+    transform: scale(1.15);
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .primary {
+    background-color: black;
+  }
+
+  .secondary {
+    background-color: lightgray;
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .fas,
+  .fa-brands {
+    color: white;
+  }
