@@ -66,40 +66,38 @@
   .bold {
     font-weight: bold;
   }
+
+  .primary {
+    background-color: black;
+  }
+
+  .secondary {
+    background-color: lightgray;
+  }
 </style>
 
 <script>
-  // Keep track of the last clicked circle
   let lastClicked;
-  // Get all the circles
   const circles = document.querySelectorAll('.circle');
   // Iterate through the circles and add the click event listener
   circles.forEach(circle => {
     circle.addEventListener('click', function () {
-      // Remove the "bigger" class from the last clicked circle
       lastClicked ? (lastClicked.classList.toggle("bigger"), lastClicked.classList.remove("bold")) : null;
-      // Add the "bigger" class to the current clicked circle
       circle.classList.add("bigger");
       circle.style.backgroundColor = "black";
-      this.querySelector('.diagonal').classList.add("bold");
+      circle.querySelector('.diagonal').classList.add("bold");
       lastClicked ? lastClicked.querySelector('.diagonal').classList.remove("bold") : null;
-      // Update the last clicked circle
       lastClicked = circle;
+
       // Iterate through all the circles before the clicked 
       let prev = circle.previousElementSibling;
       while (prev) {
-        // Check the class of the element
         prev.classList.contains("circle") || prev.classList.contains("line") ? prev.style.backgroundColor = "black" : null;
-        // Get the previous element
         prev = prev.previousElementSibling;
       }
-      // Get the next element after the clicked circle
       let next = circle.nextElementSibling;
-      // Iterate through all next elements
       while (next) {
-        // Check the class of the element
         next.classList.contains("circle") || next.classList.contains("line") ? next.style.backgroundColor = "lightgray" : null;
-        // Get the next element
         next = next.nextElementSibling;
       }
     });
