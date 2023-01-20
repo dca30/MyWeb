@@ -18,10 +18,3 @@
   z-index: 900;
   display: none;
 }
-.close-button {
-  border: none;
-  background: transparent;
-  color: black;
-  font-size: 1.5rem;
-  cursor: pointer;
-}

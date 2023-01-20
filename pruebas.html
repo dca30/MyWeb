@@ -5,13 +5,7 @@
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 
 <div class="row" id="cardTimeline">
-  <div class="section-title">
-    <h4 class="py-4" data-translate="interests"></h4>
-  </div>
   <div class="container-timeline container1-timeline"></div>
-  <div class="section-title">
-    <h4 class="py-4" data-translate="hobbies"></h4>
-  </div>
   <div class="container-timeline container2-timeline"></div>
 </div>
 <style>
@@ -33,6 +27,10 @@
   .dot {
     width: 30px;
     height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
     border-radius: 30px;
     background-color: black;
     cursor: pointer;
@@ -44,7 +42,7 @@
   }
 
   .line {
-    width: 50px;
+    width: 100%;
     height: 4px;
     background-color: black;
   }
@@ -55,8 +53,9 @@
     left: 18px;
     transform: rotate(-45deg);
     color: black;
-    text-align: center;
+    text-align: left;
   }
+
   .bigger {
     transform: scale(1.15);
   }
@@ -87,6 +86,8 @@
     transition: transform 0.5s ease;
     box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
     border-radius: 0;
+    width: 100%;
+    margin: 0 auto;
   }
 </style>
 <script>
@@ -142,24 +143,24 @@
   createTimeline(words2, container2, icons2);
 
   function createTimeline(words, container, icons) {
-    createCirclesAndLines(words, container);
-    // Add click event listener to circles
+    createDotsAndLines(words, container);
+    // Add click event listener to dots
     let lastClicked;
-    const circles = document.querySelectorAll(".dot");
-    circles.forEach((circle) => {
-      addClickEventToCircle(circle);
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach((dot) => {
+      addClickEventToDot(dot);
     });
 
-    function createCirclesAndLines(words, container) {
+    function createDotsAndLines(words, container) {
       // Create start line
       const startLine = document.createElement("span");
       startLine.classList.add("line");
       container.prepend(startLine);
 
-      // Create circles for each word
+      // Create dots for each word
       words.forEach((word, index) => {
-        const circle = createCircle(word, index);
-        container.appendChild(circle);
+        const dot = createDot(word, index);
+        container.appendChild(dot);
         index < words.length - 1 ? container.appendChild(createLine()) : null;
       });
 
@@ -168,16 +169,16 @@
       endLine.classList.add("line");
       container.appendChild(endLine);
     }
-    // Create circle
-    function createCircle(word, index) {
-      const circle = document.createElement("div");
-      circle.classList.add("dot");
+    // Create dot
+    function createDot(word, index) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
 
       const diagonal = document.createElement("p");
       diagonal.classList.add("diagonal");
       diagonal.innerText = word;
 
-      // Add Font Awesome icon to circle
+      // Add Font Awesome icon to dot
       const iconClasses = icons[index];
       icon = iconClasses
         ? ((icon = document.createElement("i")),
@@ -185,9 +186,9 @@
           icon)
         : null;
 
-      circle.appendChild(icon);
-      circle.appendChild(diagonal);
-      return circle;
+      dot.appendChild(icon);
+      dot.appendChild(diagonal);
+      return dot;
     }
     // Create line
     function createLine() {
@@ -195,39 +196,43 @@
       line.classList.add("line");
       return line;
     }
-    // Add click event to circle
-    function addClickEventToCircle(circle) {
-      circle.addEventListener("click", function () {
-        lastClicked
-          ? (lastClicked.classList.toggle("bigger"),
-            lastClicked.classList.remove("bold"),
-            lastClicked.querySelector(".icon")
-              ? lastClicked.querySelector(".icon").classList.add("hide")
-              : null)
-          : null;
-        circle.classList.add("bigger");
-        circle.classList.contains("bigger")
-          ? circle.querySelector(".icon").classList.remove("hide")
-          : circle.querySelector(".icon").classList.add("hide");
-        circle.style.backgroundColor = "black";
-        circle.querySelector(".diagonal").classList.add("bold");
-        lastClicked
-          ? lastClicked.querySelector(".diagonal").classList.remove("bold")
-          : null;
-        lastClicked = circle;
+    // Add click event to dot
+    function addClickEventToDot(dot) {
+      dot.addEventListener("click", function () {
+        if (lastClicked === dot) {
+          return;
+        }
+        if (lastClicked) {
+          lastClicked.classList.toggle("bigger");
+          if (lastClicked.querySelector(".icon")) {
+            lastClicked.querySelector(".icon").classList.add("hide")
+          }
+        }
+        dot.classList.add("bigger");
+        if (dot.classList.contains("bigger")) {
+          dot.querySelector(".icon").classList.remove("hide");
+        } else {
+          dot.querySelector(".icon").classList.add("hide");
+        }
+        dot.style.backgroundColor = "black";
+        dot.querySelector(".diagonal").classList.add("bold");
+        if (lastClicked) {
+          lastClicked.querySelector(".diagonal").classList.remove("bold")
+        }
+        lastClicked = dot;
 
-        let prev = circle.previousElementSibling;
+        let prev = dot.previousElementSibling;
         while (prev) {
-          prev.classList.contains("dot") || prev.classList.contains("line")
-            ? (prev.style.backgroundColor = "black")
-            : null;
+          if (prev.classList.contains("dot") || prev.classList.contains("line")) {
+            prev.style.backgroundColor = "black";
+          }
           prev = prev.previousElementSibling;
         }
-        let next = circle.nextElementSibling;
+        let next = dot.nextElementSibling;
         while (next) {
-          next.classList.contains("dot") || next.classList.contains("line")
-            ? (next.style.backgroundColor = "lightgray")
-            : null;
+          if (next.classList.contains("dot") || next.classList.contains("line")) {
+            next.style.backgroundColor = "lightgray";
+          }
           next = next.nextElementSibling;
         }
       });
@@ -235,297 +240,3 @@
   }
 
 </script>
-<!--<div class="container">
-  <div class="timeline">
-    <div class="dot" id="dot0">
-      <p class="dot-text">Dot</p>
-    </div>
-    <div class="dot" id="dot1">
-      <p class="dot-text">Dot</p>
-    </div>
-    <div class="dot" id="dot2">
-      <p class="dot-text">Dot</p>
-    </div>
-    <div class="dot" id="dot3">
-      <p class="dot-text">Dot</p>
-    </div>
-    <div class="dot" id="dot4">
-      <p class="dot-text">Dot</p>
-    </div>
-    <div class="dot" id="dot5">
-      <p class="dot-text">Dot</p>
-    </div>
-  </div>
-</div>
-<style>
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-
-  .timeline {
-    width: 50%;
-    height: 5px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: black;
-  }
-
-  .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #333;
-    position: absolute;
-    top: -150%;
-    left: calc(20% - 10px);
-    transform-origin: center;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .dot.expanded~.dot {
-    background-color: green;
-  }
-
-  #dot0 {
-    left: 0%;
-  }
-
-  #dot1 {
-    left: 20%;
-  }
-
-  #dot2 {
-    left: 40%;
-  }
-
-  #dot3 {
-    left: 60%;
-  }
-
-  #dot4 {
-    left: 80%;
-  }
-
-  #dot5 {
-    left: 100%;
-  }
-
-  .dot:hover {
-    cursor: pointer
-  }
-
-  .dot-text {
-    position: absolute;
-    top: -35px;
-    left: 12px;
-    font-size: 12px;
-    color: #333;
-    transform: rotate(-45deg);
-    font-weight: normal;
-
-  }
-
-  .expanded .dot-text {
-    font-weight: bold;
-  }
-
-
-  .expanded {
-    transform: scale(1.2);
-  }
-</style>
-<script>
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach(dot => {
-    dot.addEventListener('click', e => {
-      const expandedDots = document.querySelectorAll('.expanded');
-      expandedDots.forEach(dot => dot.classList.remove('expanded'));
-      dot.classList.toggle('expanded');
-    });
-  });
-</script>-->
-<!--<div class="container">
-  <div class="timeline">
-    <div class="input">
-      <div class="dot-text">Cyber Seguridad</div>
-    </div>
-    <div class="input">
-      <div class="dot-text">Servidores</div>
-    </div>
-    <div class="input">
-      <div class="dot-text">Frontend</div>
-    </div>
-    <div class="input">
-      <div class="dot-text">Backend</div>
-    </div>
-    <div class="input">
-      <div class="dot-text">Linux</div>
-    </div>
-    <div class="input">
-      <div class="dot-text">OS</div>
-    </div>
-    <div class="input">
-      <div class="dot-text">Automatizacion</div>
-    </div>
-  </div>
-</div>
-<style>
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-
-  .timeline {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .input {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: black;
-    position: relative;
-    margin-right: 30px;
-    transition: all 0.5s ease-in-out;
-    z-index: 2;
-  }
-  .input::before {
-    content: "";
-    width: 120%;
-    height: 5px;
-    background-color: black;
-    position: absolute;
-    left: 44px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease-in-out;
-
-  }
-
-  .input:last-child {
-    margin-right: 0;
-  }
-
-  .input.clicked,
-  .input.clicked::before{
-    background-color: grey;
-    z-index: 3;
-  }
-
-  .dot-text {
-    position: absolute;
-    top: -35px;
-    left: 12px;
-    font-size: 12px;
-    color: #333;
-    transform: rotate(-45deg);
-    font-weight: normal;
-  }
-
-  .expanded {
-    transform: scale(1.2);
-  }
-
-  .expanded .dot-text {
-    font-weight: bold;
-  }
-
-  .input:hover {
-    cursor: pointer;
-  }
-</style>
-<script>
-  const dots = document.querySelectorAll('.input');
-    dots.forEach(dot => {
-      dot.addEventListener('click', e => {
-        let currentDot = dot;
-        while (currentDot) {
-          currentDot.classList.remove('clicked');
-          currentDot = currentDot.previousElementSibling;
-        }
-        currentDot = dot;
-        while (currentDot) {
-          if (currentDot !== dot) currentDot.classList.add('clicked');
-          currentDot = currentDot.nextElementSibling;
-        }
-      });
-    });
-    dots.forEach(dot => {
-      dot.addEventListener('click', e => {
-        const expandedDots = document.querySelectorAll('.input.expanded');
-        expandedDots.forEach(dot => dot.classList.remove('expanded'));
-        dot.classList.add('expanded');
-      });
-    });
-
-</script>-->
-<!--<div class="flex-parent">
-	<div class="input-flex-container">
-		<div class="input"></div>
-		<div class="input"></div>
-		<div class="input"></div>
-		<div class="input"></div>
-		<div class="input"></div>
-		<div class="input active"></div>
-		<div class="input"></div>
-		<div class="input"></div>
-		<div class="input"></div>
-		<div class="input"></div>
-	</div>
-</div>
-<style>
-  div {
-    display: block;
-}
-  .input-flex-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80vw;
-    height: 100px;
-    max-width: 1000px;
-    position: relative;
-    z-index: 0;
-}
-.input::before {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 0px;
-    z-index: -1;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #2C3E50;
-    width: 50px;
-    height: 5px;
-    max-width: 50px;
-}
-  .input::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left:0px;
-    z-index: -1;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #2C3E50;
-    width: 50px;
-    height: 5px;
-    max-width: 50px;
-}
-  .input {
-    width: 25px;
-    height: 25px;
-    background-color: #2C3E50;
-    position: relative;
-    border-radius: 50%;
-}
-</style>-->
