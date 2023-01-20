@@ -4,9 +4,15 @@
 <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 
-<div class="center">
-  <div class="container container1"></div>
-  <div class="container container2"></div>
+<div class="row" id="cardTimeline">
+  <div class="section-title">
+    <h4 class="py-4" data-translate="interests"></h4>
+  </div>
+  <div class="container-timeline container1-timeline"></div>
+  <div class="section-title">
+    <h4 class="py-4" data-translate="hobbies"></h4>
+  </div>
+  <div class="container-timeline container2-timeline"></div>
 </div>
 <style>
   .center {
@@ -17,21 +23,21 @@
     flex-direction: column;
   }
 
-  .container {
+  .container-timeline {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px;
   }
 
-  .circle {
+  .dot {
     width: 30px;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 30px;
     background-color: black;
     cursor: pointer;
     position: relative;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,8 +57,6 @@
     color: black;
     text-align: center;
   }
-
-  /* Add this class to make the circle bigger when clicked */
   .bigger {
     transform: scale(1.15);
   }
@@ -77,11 +81,26 @@
   .fa-brands {
     color: white;
   }
-</style>
 
+  #cardTimeline {
+    border: 1px solid #ccc;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 0;
+  }
+</style>
 <script>
-  const container1 = document.querySelector(".container1");
-  const words1 = ["Cyber Seguridad", "Servidores", "Frontend", "Backend", "Linux", "OS", "Automatizacion"];
+  //Primera timeline
+  const container1 = document.querySelector(".container1-timeline");
+  const words1 = [
+    "Cyber Seguridad",
+    "Servidores",
+    "Frontend",
+    "Backend",
+    "Linux",
+    "OS",
+    "Automatizacion",
+  ];
   const icons1 = [
     ["fas", "fa-shield-alt"],
     ["fas", "fa-server"],
@@ -89,24 +108,36 @@
     ["fas", "fa-database"],
     ["fa-brands", "fa-linux"],
     ["fas", "fa-laptop-code"],
-    ["fas", "fa-robot"]
+    ["fas", "fa-robot"],
   ];
-
-  const container2 = document.querySelector(".container2");
-  const words2 = ["Tenis", "Padel", "Gym", "Bici", "Correr", "Cerveza", "Fiesta", "Bar", "Electronica", "Series", "Peliculas"];
-  const icons2 = [["fas", "fa-tennis-ball"],
-  ["fas", "fa-paddle-ball"],
-  ["fas", "fa-dumbbell"],
-  ["fas", "fa-bicycle"],
-  ["fas", "fa-running"],
-  ["fas", "fa-beer"],
-  ["fas", "fa-glass-cheers"],
-  ["fas", "fa-beer"],
-  ["fas", "fa-plug"],
-  ["fas", "fa-tv"],
-  ["fas", "fa-film"]
-  ]
-
+  //Segunda timeline
+  const container2 = document.querySelector(".container2-timeline");
+  const words2 = [
+    "Tenis",
+    "padel",
+    "gym",
+    "bici",
+    "correr",
+    "cerveza",
+    "fiesta",
+    "bar",
+    "electronica",
+    "series",
+    "peliculas",
+  ];
+  const icons2 = [
+    ["fas", "fa-tennis-ball"],
+    ["fas", "fa-paddle-ball"],
+    ["fas", "fa-dumbbell"],
+    ["fas", "fa-bicycle"],
+    ["fas", "fa-running"],
+    ["fas", "fa-beer"],
+    ["fas", "fa-glass-cheers"],
+    ["fas", "fa-beer"],
+    ["fas", "fa-plug"],
+    ["fas", "fa-tv"],
+    ["fas", "fa-film"],
+  ];
   createTimeline(words1, container1, icons1);
   createTimeline(words2, container2, icons2);
 
@@ -114,9 +145,8 @@
     createCirclesAndLines(words, container);
     // Add click event listener to circles
     let lastClicked;
-    
-    const circles = document.querySelectorAll('.circle');
-    circles.forEach(circle => {
+    const circles = document.querySelectorAll(".dot");
+    circles.forEach((circle) => {
       addClickEventToCircle(circle);
     });
 
@@ -141,7 +171,7 @@
     // Create circle
     function createCircle(word, index) {
       const circle = document.createElement("div");
-      circle.classList.add("circle");
+      circle.classList.add("dot");
 
       const diagonal = document.createElement("p");
       diagonal.classList.add("diagonal");
@@ -149,7 +179,11 @@
 
       // Add Font Awesome icon to circle
       const iconClasses = icons[index];
-      icon = iconClasses ? (icon = document.createElement("i"), icon.classList.add(...iconClasses, "icon", "hide"), icon) : null;
+      icon = iconClasses
+        ? ((icon = document.createElement("i")),
+          icon.classList.add(...iconClasses, "icon", "hide"),
+          icon)
+        : null;
 
       circle.appendChild(icon);
       circle.appendChild(diagonal);
@@ -163,23 +197,37 @@
     }
     // Add click event to circle
     function addClickEventToCircle(circle) {
-      circle.addEventListener('click', function () {
-        lastClicked ? (lastClicked.classList.toggle("bigger"), lastClicked.classList.remove("bold"), lastClicked.querySelector('.icon') ? lastClicked.querySelector('.icon').classList.add("hide") : null) : null;
+      circle.addEventListener("click", function () {
+        lastClicked
+          ? (lastClicked.classList.toggle("bigger"),
+            lastClicked.classList.remove("bold"),
+            lastClicked.querySelector(".icon")
+              ? lastClicked.querySelector(".icon").classList.add("hide")
+              : null)
+          : null;
         circle.classList.add("bigger");
-        circle.classList.contains("bigger") ? circle.querySelector('.icon').classList.remove("hide") : circle.querySelector('.icon').classList.add("hide");
+        circle.classList.contains("bigger")
+          ? circle.querySelector(".icon").classList.remove("hide")
+          : circle.querySelector(".icon").classList.add("hide");
         circle.style.backgroundColor = "black";
-        circle.querySelector('.diagonal').classList.add("bold");
-        lastClicked ? lastClicked.querySelector('.diagonal').classList.remove("bold") : null;
+        circle.querySelector(".diagonal").classList.add("bold");
+        lastClicked
+          ? lastClicked.querySelector(".diagonal").classList.remove("bold")
+          : null;
         lastClicked = circle;
 
         let prev = circle.previousElementSibling;
         while (prev) {
-          prev.classList.contains("circle") || prev.classList.contains("line") ? prev.style.backgroundColor = "black" : null;
+          prev.classList.contains("dot") || prev.classList.contains("line")
+            ? (prev.style.backgroundColor = "black")
+            : null;
           prev = prev.previousElementSibling;
         }
         let next = circle.nextElementSibling;
         while (next) {
-          next.classList.contains("circle") || next.classList.contains("line") ? next.style.backgroundColor = "lightgray" : null;
+          next.classList.contains("dot") || next.classList.contains("line")
+            ? (next.style.backgroundColor = "lightgray")
+            : null;
           next = next.nextElementSibling;
         }
       });
@@ -187,7 +235,6 @@
   }
 
 </script>
-
 <!--<div class="container">
   <div class="timeline">
     <div class="dot" id="dot0">

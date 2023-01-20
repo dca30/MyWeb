@@ -1,3 +1,4 @@
+//Primera timeline
 const container1 = document.querySelector(".container1-timeline");
 const words1 = [
   "Cyber Seguridad",
@@ -9,7 +10,7 @@ const words1 = [
   "Automatizacion",
 ];
 const icons1 = [
-  ["fas", "fa-shield-alt"],
+  [("fas", "fa-shield-alt")],
   ["fas", "fa-server"],
   ["fas", "fa-code"],
   ["fas", "fa-database"],
@@ -17,7 +18,7 @@ const icons1 = [
   ["fas", "fa-laptop-code"],
   ["fas", "fa-robot"],
 ];
-
+//Segunda timeline
 const container2 = document.querySelector(".container2-timeline");
 const words2 = [
   "Tenis",
@@ -33,7 +34,7 @@ const words2 = [
   "peliculas",
 ];
 const icons2 = [
-  ["fas", "fa-tennis-ball"],
+  ["bx", "bx-tennis-ball"],
   ["fas", "fa-paddle-ball"],
   ["fas", "fa-dumbbell"],
   ["fas", "fa-bicycle"],
@@ -45,15 +46,14 @@ const icons2 = [
   ["fas", "fa-tv"],
   ["fas", "fa-film"],
 ];
-createTimeline(words2, container2, icons2);
-
 createTimeline(words1, container1, icons1);
+createTimeline(words2, container2, icons2);
 
 function createTimeline(words, container, icons) {
   createCirclesAndLines(words, container);
   // Add click event listener to circles
   let lastClicked;
-  const circles = document.querySelectorAll(".circle");
+  const circles = document.querySelectorAll(".dot");
   circles.forEach((circle) => {
     addClickEventToCircle(circle);
   });
@@ -79,7 +79,7 @@ function createTimeline(words, container, icons) {
   // Create circle
   function createCircle(word, index) {
     const circle = document.createElement("div");
-    circle.classList.add("circle");
+    circle.classList.add("dot");
 
     const diagonal = document.createElement("p");
     diagonal.classList.add("diagonal");
@@ -126,14 +126,14 @@ function createTimeline(words, container, icons) {
 
       let prev = circle.previousElementSibling;
       while (prev) {
-        prev.classList.contains("circle") || prev.classList.contains("line")
+        prev.classList.contains("dot") || prev.classList.contains("line")
           ? (prev.style.backgroundColor = "black")
           : null;
         prev = prev.previousElementSibling;
       }
       let next = circle.nextElementSibling;
       while (next) {
-        next.classList.contains("circle") || next.classList.contains("line")
+        next.classList.contains("dot") || next.classList.contains("line")
           ? (next.style.backgroundColor = "lightgray")
           : null;
         next = next.nextElementSibling;
