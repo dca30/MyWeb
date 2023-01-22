@@ -7,7 +7,7 @@ const words1 = [
   "Backend",
   "Linux",
   "OS",
-  "Automatizacion",
+  "Auto",
 ];
 const icons1 = [
   ["fas", "fa-shield-alt"],
@@ -22,16 +22,16 @@ const icons1 = [
 const container2 = document.querySelector(".container2-timeline");
 const words2 = [
   "Tenis",
-  "padel",
-  "gym",
-  "bici",
-  "correr",
-  "cerveza",
-  "fiesta",
-  "bar",
-  "electronica",
-  "series",
-  "peliculas",
+  "Padel",
+  "Gym",
+  "Bici",
+  "Correr",
+  "Cerveza",
+  "Fiesta",
+  "Bar",
+  "Electro",
+  "Series",
+  "Peliculas",
 ];
 const icons2 = [
   ["fas", "fa-tennis-ball"],

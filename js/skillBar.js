@@ -47,30 +47,33 @@ for (const skill in percentages) {
 const style = document.createElement("style");
 style.innerHTML = css;
 document.head.appendChild(style);
-
 btn.addEventListener("click", function () {
   var cards = document.querySelectorAll(".card");
   var barras = document.querySelectorAll(".bar");
   var iconos = document.querySelectorAll(".icono");
   var h2s = Array.from(document.getElementsByTagName("h2"));
 
-  cards.forEach(function (card) {
-    //setTimeout(() => {}, 1000);
-    card.classList.toggle("one-per-row");
-    card.classList.toggle("pt-4");
-    card.classList.toggle("my-4");
-    card.classList.toggle("small");
-    card.classList.toggle("expanded");
+  cards.forEach((card) => {
+    card.style.opacity = "0";
+    card.style.visibility = "hidden";
   });
+  setTimeout(() => {
+    cards.forEach(function (card) {
+      card.classList.toggle("one-per-row");
+      card.classList.toggle("pt-4");
+      card.classList.toggle("my-4");
+      card.classList.toggle("small");
+      card.classList.toggle("expanded");
+    });
 
-  barras.forEach(function (bar) {
-    bar.classList.toggle("oculto");
-  });
-
-  iconos.forEach(function (icon) {
-    icon.classList.toggle("oculto");
-  });
-  h2s.forEach(function (h2) {
-    h2.classList.toggle("oculto");
-  });
+    [...barras, ...iconos, ...h2s].forEach(function (element) {
+      element.classList.toggle("oculto");
+    });
+    setTimeout(() => {
+      cards.forEach((card) => {
+        card.style.opacity = "1";
+        card.style.visibility = "visible";
+      });
+    }, 500);
+  }, 500);
 });
