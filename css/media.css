@@ -9,6 +9,8 @@
 }
 .hidden {
   opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 #elemento {
   -webkit-box-reflect: below -2px linear-gredient(to bottom, transparent) rgba(0, 0, 0, 0.8);

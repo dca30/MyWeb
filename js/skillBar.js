@@ -15,7 +15,7 @@ const colors = [
 
 const transparentColors = colors.map((color) => {
   const [r, g, b] = color.match(/\w\w/g).map((x) => parseInt(x, 16));
-  return `rgba(${r}, ${g}, ${b}, 0.8)`;
+  return `rgba(${r}, ${g}, ${b}, 0.5)`;
 });
 
 const cards = document.querySelectorAll(".card");
@@ -74,6 +74,6 @@ btn.addEventListener("click", function () {
         card.style.opacity = "1";
         card.style.visibility = "visible";
       });
-    }, 500);
-  }, 500);
+    }, 300);
+  }, 300);
 });

@@ -130,33 +130,35 @@ const translations = {
   },
 };
 function updateContent() {
-  let traducciones = document.querySelectorAll("[data-translate]");
-  traducciones.forEach(function (traduccion) {
-    traduccion.classList.add("fade-out"); // Add the "fade-out" class
-  });
-
-  let lang = localStorage.getItem("lang") || "es";
+  // remove the "fade-out" class before updating the content
   let elements = document.querySelectorAll("[data-translate]");
-  setTimeout(function () {
-    elements.forEach(function (element) {
-      let key = element.getAttribute("data-translate");
-      element.innerHTML = translations[lang][key];
-      element.classList.remove("fade-out"); // Remove the "fade-out" class
-    });
-  }, 0);
+  /*elements.forEach(function (element) {
+    element.classList.remove("fade-out");
+  });*/
+  // get the current language from local storage or default to "es"
+  let lang = localStorage.getItem("lang") || "es";
+  // update the content
+  elements.forEach(function (element) {
+    let key = element.getAttribute("data-translate");
+    element.innerHTML = translations[lang][key];
+  });
+  /* add the "fade-out" class after updating the content
+  elements.forEach(function (element) {
+    element.classList.add("fade-out");
+  });*/
 }
-//Guardar en una variable si estamos en ingles o español para que se preserve al cambiar de pag
+// attach click event to each link
 const links = document.querySelectorAll(".dropdown-item");
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function (event) {
-    event.preventDefault(); // To avoid redirecting to a link
+links.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
     localStorage.setItem("lang", this.innerHTML === "Español" ? "es" : "en");
     updateContent();
   });
-}
+});
+// call the updateContent function to initialize the page
 updateContent();
-/*
-function updateContent() {
+/*function updateContent() {
   let lang = localStorage.getItem("lang") || "es";
   let elements = document.querySelectorAll("[data-translate]");
   elements.forEach(function (element) {
@@ -173,5 +175,4 @@ for (let i = 0; i < links.length; i++) {
     updateContent();
   });
 }
-updateContent();
-*/
+updateContent();*/

@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const toggle = document.getElementById("toggle");
+const timeline = document.getElementById("cardTimeline");
 const sunIcon = document.querySelector(".toggle .bxs-sun");
 const moonIcon = document.querySelector(".toggle .bx-moon");
 const navTop = document.getElementById("navTop");
@@ -19,6 +20,8 @@ function toggleDarkMode() {
   Array.from(document.getElementsByClassName("card")).forEach((card) => {
     card.classList.toggle("dark-mode-card");
   });
+  timeline.classList.toggle("dark-mode-card");
+
   dropdowns.forEach((dropdown) => {
     dropdown.classList.toggle("dropdown-menu-dark");
   });
@@ -27,7 +30,6 @@ function toggleDarkMode() {
 toggle.addEventListener("change", toggleDarkMode);
 
 const darkMode = localStorage.getItem("dark");
-
 if (darkMode === "true") {
   toggleDarkMode();
 }

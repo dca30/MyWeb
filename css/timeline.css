@@ -11,6 +11,10 @@
   justify-content: center;
   align-items: center;
   margin: 50px;
+  padding: 0 5% 0 5%;
+
+
+  
 }
 
 .dot {
@@ -71,10 +75,18 @@
 }
 
 #cardTimeline {
-  border: 1px solid #ccc;
   transition: transform 0.5s ease;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-  border-radius: 0;
+  border-radius: 20px;
   width: 100%;
   margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1 0 18%;
+  border: 1px solid #ccc;
+  border: 0;
+  margin-bottom: 1.5em;
 }
