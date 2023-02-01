@@ -62,6 +62,8 @@ const translations = {
     certification:
       "Certificado de profesionalidad de desarrollo de aplicaciones con tecnologías web",
     age: "Edad:",
+    showmore: "Mostrar más",
+    showless: "Mostrar menos",
   },
   en: {
     //Navbar
@@ -127,6 +129,8 @@ const translations = {
       "Professional Certification in Web Technologies Application Development",
     contactoo: "Contact me",
     age: "Age:",
+    showmore: "Show more",
+    showless: "Show less",
   },
 };
 function updateContent() {

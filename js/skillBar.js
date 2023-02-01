@@ -48,6 +48,11 @@ const style = document.createElement("style");
 style.innerHTML = css;
 document.head.appendChild(style);
 btn.addEventListener("click", function () {
+  if (btn.getAttribute("data-translate") === "showmore") {
+    btn.setAttribute("data-translate", "showless");
+  } else {
+    btn.setAttribute("data-translate", "showmore");
+  }
   var cards = document.querySelectorAll(".card");
   var barras = document.querySelectorAll(".bar");
   var iconos = document.querySelectorAll(".icono");
