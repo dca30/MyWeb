@@ -1,7 +1,7 @@
 //Primera timeline
 const container1 = document.querySelector(".container1-timeline");
 const words1 = [
-  "Cyber Seguridad",
+  "Cyber",
   "Servidores",
   "Frontend",
   "Backend",
@@ -26,9 +26,6 @@ const words2 = [
   "Gym",
   "Bici",
   "Correr",
-  "Cerveza",
-  "Fiesta",
-  "Bar",
   "Electro",
   "Series",
   "Peliculas",
@@ -39,9 +36,6 @@ const icons2 = [
   ["fas", "fa-dumbbell"],
   ["fas", "fa-bicycle"],
   ["fas", "fa-running"],
-  ["fas", "fa-beer"],
-  ["fas", "fa-glass-cheers"],
-  ["fas", "fa-beer"],
   ["fas", "fa-plug"],
   ["fas", "fa-tv"],
   ["fas", "fa-film"],

@@ -15,13 +15,13 @@
 }
 
 .dot {
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
-  max-width: 30px;
-  min-height: 30px;
-  max-height: 30px;
-  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  border-radius: 20px;
   background-color: black;
   cursor: pointer;
   position: relative;
@@ -39,15 +39,14 @@
 
 .diagonal {
   position: absolute;
-  top: -55px;
-  left: 18px;
-  transform: rotate(-45deg);
+  top: -40px;
+  left: 0px;
   color: black;
   text-align: left;
 }
 
 .bigger {
-  transform: scale(1.15);
+  transform: scale(1.75);
 }
 
 .bold {
