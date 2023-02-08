@@ -49,8 +49,10 @@ style.innerHTML = css;
 document.head.appendChild(style);
 btn.addEventListener("click", function () {
   if (btn.getAttribute("data-translate") === "showmore") {
+    updateContent();
     btn.setAttribute("data-translate", "showless");
   } else {
+    updateContent();
     btn.setAttribute("data-translate", "showmore");
   }
   var cards = document.querySelectorAll(".card");
