@@ -173,19 +173,21 @@
         <h4 class="py-4">PROJECTS</h4>
       </div>
       <div id="overlay"></div>
+      <div id="myDiv">This is the content of the div</div>
       <div class="container">
         <div class="d-flex justify-content-center row gap-3">
           <div class="col-sm-5">
             <div class="card card-skill">
               <div class="card-top">
-                <img src="images/raspberry.png" alt="Card image" />
+                <img src="images/projectcards/raspberry.png" class="image" alt="Card image" />
                 <!--<button type="button" class="close-button" id="close-button">&times;</button>-->
               </div>
               <div class="card-middle">
-                <h2>Raspberry Pi Setup</h2>
+                <h2 class="mt-3">Raspberry Pi Setup</h2>
                 <p class="px-4 small-size">Raspberry Pi 4b Raspbian installation with 3D printed case and display of
                   stats.</p>
-                <p class="px-4 big-size hidden">Raspberry Pi Setup: This project involved installing the Raspbian
+                <p class="px-4 big-size hiddenProjects">Raspberry Pi Setup: This project involved installing the
+                  Raspbian
                   operating system on a Raspberry Pi 4b, creating a custom 3D printed case, and implementing a display
                   that shows statistics about the Raspberry Pi's usage. The process included downloading the Raspbian
                   image, flashing it to a microSD card, configuring the Raspberry Pi's settings, and designing and
@@ -202,12 +204,13 @@
           <div class="col-sm-5">
             <div class="card card-skill ">
               <div class="card-top">
-                <img src="images/twitter1.png" alt="Card image" />
+                <img src="images/projectcards/twitter.png" class="image" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Matrix Twitter Bot</h2>
+                <h2 class="mt-3">Matrix Twitter Bot</h2>
                 <p class="px-4 small-size">Twitter bot in Python that publishes Matrix movie frames every hour. </p>
-                <p class="px-4 big-size hidden">Matrix Twitter Bot: This project was a Python script that automatically
+                <p class="px-4 big-size hiddenProjects">Matrix Twitter Bot: This project was a Python script that
+                  automatically
                   tweets a frame from the movie Matrix every hour. The process included creating a Twitter developer
                   account and obtaining API credentials, using the Python library Tweepy to connect to the Twitter API,
                   and designing the script to randomly select a frame from the movie and tweet it along with a caption.
@@ -223,13 +226,14 @@
           <div class="col-sm-5">
             <div class="card card-skill ">
               <div class="card-top">
-                <img src="images/timeline.png" alt="Card image" />
+                <img src="images/projectcards/timeline.png" class="image" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Movie Color Visualization</h2>
+                <h2 class="mt-3">Movie Color Visualization</h2>
                 <p class="px-4 small-size">Python script that extracts average color of each second of a movie and
                   creates image with color bars.</p>
-                <p class="px-4 big-size hidden">Movie Color Visualization: This project involved creating a Python
+                <p class="px-4 big-size hiddenProjects">Movie Color Visualization: This project involved creating a
+                  Python
                   script that extracts the average color of each second of a movie and generates an image with bars
                   representing each color. The process included using the Python library OpenCV to read the movie frame
                   by frame, analyzing each frame to extract the average color, and using the Python library Pillow to
@@ -246,13 +250,13 @@
           <div class="col-sm-5">
             <div class="card card-skill ">
               <div class="card-top">
-                <img src="images/internet.png" alt="Card image" />
+                <img src="images/projectcards/internet.png" class="image" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Website Design and Hosting</h2>
-                <p class="px-4 small-size">Website design and development, including domain purchase, free hosting, and
+                <h2 class="mt-3">Website Design and Hosting</h2>
+                <p class="px-4 small-size">Website design and development, including domain purchase, free hosting and
                   Cloudflare HTTPS configuration.</p>
-                <p class="px-4 big-size hidden">Website Design and Hosting: This project involved designing and
+                <p class="px-4 big-size hiddenProjects">Website Design and Hosting: This project involved designing and
                   developing a website to showcase my resume, IT skills,
                   and education. The process included purchasing a domain name, finding a free hosting provider, and
                   configuring Cloudflare to add HTTPS to the website. Additionally, I used HTML, CSS, JavaScript, and
@@ -269,12 +273,13 @@
           <div class="col-sm-5">
             <div class="card card-skill ">
               <div class="card-top">
-                <img src="images/publictransport.png" alt="Card image" />
+                <img src="images/projectcards/publictransport.png" class="image" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Transport times</h2>
+                <h2 class="mt-3">Transport times</h2>
                 <p class="px-4 small-size">App public transport wait times</p>
-                <p class="px-4 big-size hidden">App for Public Transport Wait Times: This project involved connecting to
+                <p class="px-4 big-size hiddenProjects">App for Public Transport Wait Times: This project involved
+                  connecting to
                   a city API to retrieve real-time information on the arrival times of various public transportation
                   options. The application was designed to process and display this data in an easily accessible format
                   for users. Technical steps included API integration, data processing and display logic implementation,
@@ -291,13 +296,14 @@
           <div class="col-sm-5">
             <div class="card card-skill ">
               <div class="card-top">
-                <img src="images/plans.png" alt="Card image" />
+                <img src="images/projectcards/plans.png" class="image" alt="Card image" />
               </div>
               <div class="card-middle">
-                <h2>Planning App</h2>
+                <h2 class="mt-3">Planning App</h2>
                 <p class="px-4 small-size">Mobile app for finding out the best weekend to do an activity some friends
                 </p>
-                <p class="px-4 big-size hidden">Mobile App for Group Activity Scheduling: This project involved creating
+                <p class="px-4 big-size hiddenProjects">Mobile App for Group Activity Scheduling: This project involved
+                  creating
                   a mobile application that helps users plan group activities. The app integrates with users' calendars
                   to determine the best times for a group event based on everyone's availability. The process involved
                   developing an algorithm to analyze users' schedules, as well as designing a user-friendly interface
@@ -328,7 +334,6 @@
   <script type="text/javascript" src="js/scriptSwitch.js"></script>
   <script type="text/javascript" src="js/cardsprojects.js"></script>
   <script src="js/language.js"></script>
-
 </body>
 
 </html>

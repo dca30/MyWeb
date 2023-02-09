@@ -18,3 +18,29 @@
   top: 0;
   z-index: 900;
 }
+.hiddenProjects {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.card-middle {
+  height: 50%;
+}
+
+.small {
+  height: 128px;
+  width: 344px;
+  top: 566px;
+  left: 10px;
+}
+#myDiv {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 95vh;
+  width: 95vw;
+  background-color: lightgray;
+  z-index: 200;
+  
+}

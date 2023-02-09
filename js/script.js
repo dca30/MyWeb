@@ -25,9 +25,13 @@ function copyToClipboard(event, text) {
       console.error("Failed to copy text: ", err);
     });
 }
-const htmlHeight = document.body.scrollHeight;
-const displayHeight = window.innerHeight;
-if (htmlHeight < displayHeight) {
-  document.querySelector(".contenido").classList.remove("hidden");
-  //elementos.forEach((el) => el.classList.remove("hidden"));
+function checkHeight() {
+  const htmlHeight = document.body.scrollHeight;
+  const displayHeight = window.innerHeight;
+  if (htmlHeight < displayHeight) {
+    document.querySelector(".contenido").classList.toggle("hidden");
+  }
 }
+checkHeight();
+// Call the checkHeight function after modifying the contents of the HTML document
+document.addEventListener("DOMContentModified", checkHeight);

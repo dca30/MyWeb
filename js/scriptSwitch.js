@@ -20,16 +20,11 @@ function toggleDarkMode() {
   Array.from(document.getElementsByClassName("card")).forEach((card) => {
     card.classList.toggle("dark-mode-card");
   });
-  timeline.classList.toggle("dark-mode-card");
-
+  if (timeline) timeline.classList.toggle("dark-mode-card");
   dropdowns.forEach((dropdown) => {
     dropdown.classList.toggle("dropdown-menu-dark");
   });
 }
 
 toggle.addEventListener("change", toggleDarkMode);
-
-const darkMode = localStorage.getItem("dark");
-if (darkMode === "true") {
-  toggleDarkMode();
-}
+localStorage.getItem("dark") === "true" ? toggleDarkMode() : undefined;

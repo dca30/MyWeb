@@ -1,156 +1,107 @@
 const target = document.getElementById("elemento");
 
-// Create a new IntersectionObserver
 const observer = new IntersectionObserver((entries) => {
-  var it;
-
-  // Check if the element is intersecting with the viewport
   if (entries[0].isIntersecting) {
-    //console.log("Interseccion");
-    $(document).ready(function () {
-      var randomnbr = $(".nbr");
-      var timer = 30;
-      var data = 0;
-      var index;
-      var change;
-      var letters = [
-        "d",
-        "i",
-        "e",
-        "g",
-        "o",
-        " ",
-        "c",
-        "a",
-        "l",
-        "v",
-        "o",
-        " ",
-        "a",
-        "l",
-        "e",
-        "g",
-        "r",
-        "e",
-      ];
-
-      randomnbr.each(function () {
-        change = Math.round(Math.random() * 100);
-        $(this).attr("data-change", change);
-      });
-
-      function random() {
-        return Math.round(Math.random() * 9);
-      }
-      function select() {
-        return Math.round(Math.random() * randomnbr.length + 1);
-      }
-      function value() {
-        $(".nbr:nth-child(" + select() + ")").html("" + random() + "");
-        $(".nbr:nth-child(" + select() + ")").attr("data-number", data);
-        data++;
-
-        randomnbr.each(function () {
-          if (
-            parseInt($(this).attr("data-number")) >
-            parseInt($(this).attr("data-change"))
-          ) {
-            index = $(".ltr").index(this);
-            $(this).html(letters[index]);
-            $(this).removeClass("nbr");
-          }
-        });
-      }
-      $it = setInterval(value, timer);
-    });
+    startNumberAnimation();
   }
-  it = 0;
-  //clearInterval(it);
-
-  const randomDiv = document.querySelector(".random");
-  const newHTML = "<p>Your new HTML content goes here</p>";
-  randomDiv.innerHTML = `<div class="random">
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-          <span class="nbr ltr h2">0</span>
-        </div>`;
+  clearInterval(it);
+  resetRandomDiv();
 });
-observer.observe(target); /*
-/*
-/*function random() {
-          return Math.round(Math.random() * 9);
-        }*/
-/*function select() {
-    return Math.floor(Math.random() * randomnbr.length);
-  }*/
-/*
-document.addEventListener("DOMContentLoaded", function () {
-  var randomnbr = document.querySelectorAll(".nbr");
-  var timer = 50;
-  var inc = 10;
-  var data = 0;
-  var count = 0;
-  var index, change;
-  var letters = [
-    "d",
-    "i",
-    "e",
-    "g",
-    "o",
-    " ",
-    "c",
-    "a",
-    "l",
-    "v",
-    "o" ,
-    " ",
-    "a",
-    "l",
-    "e",
-    "g",
-    "r",
-    "e",
-  ];
 
-  randomnbr.forEach(function (el) {
-    change = Math.round(Math.random() * 100);
-    el.setAttribute("data-change", change);
+observer.observe(target);
+
+let it;
+
+const startNumberAnimation = () => {
+  $(document).ready(function () {
+    const randomnbr = $(".nbr");
+    const timer = 30;
+    let data = 0;
+    let index;
+    let change;
+    const letters = [
+      "d",
+      "i",
+      "e",
+      "g",
+      "o",
+      " ",
+      "c",
+      "a",
+      "l",
+      "v",
+      "o",
+      " ",
+      "a",
+      "l",
+      "e",
+      "g",
+      "r",
+      "e",
+    ];
+
+    setChangeAttribute(randomnbr, change);
+
+    function random() {
+      return Math.round(Math.random() * 9);
+    }
+    function select() {
+      return Math.round(Math.random() * randomnbr.length + 1);
+    }
+    function value() {
+      setRandomNumber(randomnbr, select, random, data);
+      data++;
+
+      replaceNumbersWithLetters(randomnbr, letters, index);
+    }
+    it = setInterval(value, timer);
   });
+};
 
-  function value() {
-    var randomEl = randomnbr[Math.floor(Math.random() * randomnbr.length)];
-    randomEl.innerHTML = Math.round(Math.random() * 9);
-    randomEl.setAttribute("data-number", data);
-    data++;
+const setChangeAttribute = (elements, change) => {
+  elements.each(function () {
+    change = Math.round(Math.random() * 100);
+    $(this).attr("data-change", change);
+  });
+};
 
-    randomnbr.forEach(function (el) {
-      if (
-        parseInt(el.getAttribute("data-number")) <
-        parseInt(el.getAttribute("data-change"))
-      ) {
-        index = Array.from(randomnbr).indexOf(el);
-        el.innerHTML = letters[index];
-        el.classList.remove("nbr");
-        count++;
-      }
-    });
-    setTimeout(value, timer + inc * count);
-  }
-  it = setInterval(value, timer);
-});
-*/
+const setRandomNumber = (elements, selectFunction, randomFunction, data) => {
+  const selectedElement = elements.eq(selectFunction() - 1);
+  selectedElement.html("" + randomFunction() + "");
+  selectedElement.attr("data-number", data);
+};
+
+const replaceNumbersWithLetters = (elements, letters, index) => {
+  elements.each(function () {
+    if (
+      parseInt($(this).attr("data-number")) >
+      parseInt($(this).attr("data-change"))
+    ) {
+      index = $(".ltr").index(this);
+      $(this).html(letters[index]);
+      $(this).removeClass("nbr");
+    }
+  });
+};
+
+const resetRandomDiv = () => {
+  const randomDiv = document.querySelector(".random");
+  randomDiv.innerHTML = `<span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>
+                        <span class="nbr ltr h2">0</span>`;
+};
