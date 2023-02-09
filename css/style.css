@@ -22,11 +22,11 @@ html {
   z-index: 1;
 }
 body {
-  transition: all 0.5s;
+  align-items: center;
   /*transition: .2s;*/
   display: flex;
-  align-items: center;
   justify-content: center;
+  transition: all 0.5s;
 }
 .text-white {
   color: white;
@@ -44,18 +44,18 @@ main {
   margin-top: 6rem;
 }
 hr {
-  width: 100%;
+  border-radius: 7px 7px 7px 7px;
   color: #dee2e6;
   opacity: 1;
-  border-radius: 7px 7px 7px 7px;
+  width: 100%;
 }
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 a:hover {
-  color: inherit;
   background-color: transparent;
+  color: inherit;
 }
 
 hr:not([size]) {
@@ -99,29 +99,24 @@ hr:not([size]) {
   margin: 0;
   padding-left: 7px;
 }
-.navbar {
-  width: 100%;
-  background: #eee;
-  margin-top: 0px;
-}
 .padding-header {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 0px;
 }
 .slider-text {
-  width: 60%;
-  text-align: center;
   /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
-  position: absolute;
+  color: #fff;
   left: 0;
-  right: 0;
   margin-left: auto;
   margin-right: auto;
   /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
-  color: #fff;
-  z-index: 500;
+  position: absolute;
+  right: 0;
+  text-align: center;
   top: 25%;
+  width: 60%;
+  z-index: 500;
 }
 /*Style de la barra de desplazamiento
 /* Style the header: fixed position (always stay at the top) */
@@ -135,13 +130,13 @@ hr:not([size]) {
 */
 /* The progress container (grey background) */
 .progress {
-  width: 94%;
-  height: 3px;
-  position: absolute;
-  bottom: 0;
-  left: 3%;
-  right: 3%;
   background-color: transparent;
+  bottom: 0;
+  height: 3px;
+  left: 3%;
+  position: absolute;
+  right: 3%;
+  width: 94%;
 }
 /* The progress bar (scroll indicator) */
 .progress-bar {
@@ -192,10 +187,10 @@ https://colorhunt.co/palettes/dark
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  border-radius: 20px;
-  border: 3px solid transparent;
   background-clip: content-box;
+  background-color: #d6dee1;
+  border: 3px solid transparent;
+  border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
@@ -211,13 +206,13 @@ html:hover .scrollable-container::-webkit-scrollbar {
 }
 
 .dark-mode-card {
-  color: white;
   background: #303e54;
+  color: white;
 }
 .card-about {
   height: 60px;
-  padding-right: 15px;
   padding-left: 15px;
+  padding-right: 15px;
   width: fit-content;
 }
 .center {
@@ -234,15 +229,15 @@ html:hover .scrollable-container::-webkit-scrollbar {
 }
 
 .card {
-  transition: transform 0.2s ease;
-  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-  border-radius: 0;
   border: 0;
+  border-radius: 0;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
   margin-bottom: 1.5em;
+  transition: transform 0.2s ease;
 }
 .card-skill {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   text-align: center;
 }
@@ -259,35 +254,35 @@ img {
   max-width: 100%;
 }
 .cv-title h3::after {
-  content: "";
-  width: 50%;
-  height: 3px;
-  display: inline-block;
   background: #dee2e6;
-  margin: 6px 15px;
   border-radius: 7px;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  margin: 6px 15px;
+  width: 50%;
 }
 .section-title h4::after {
-  content: "";
-  width: 160px;
-  height: 3px;
-  display: inline-block;
   background: #dee2e6;
-  margin: 6px 15px;
   border-radius: 7px;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  margin: 6px 15px;
+  width: 160px;
 }
 .section-title h4::before {
-  content: "";
-  width: 160px;
-  height: 3px;
-  display: inline-block;
   background: #dee2e6;
-  margin: 6px 15px;
   border-radius: 7px;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  margin: 6px 15px;
+  width: 160px;
 }
 .section-title {
-  display: flex;
   align-items: center; /* align elements to the center of the cross axis */
+  display: flex;
   justify-content: center;
 }
 /*  .container {
@@ -295,12 +290,12 @@ img {
     }
 */
 .vr {
-  width: 3px;
   background: #dee2e6;
   border-radius: 7px;
+  width: 3px;
 }
 #special {
-  display: flex;
   align-items: justify;
+  display: flex;
   height: 0px;
 }

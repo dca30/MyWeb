@@ -1,18 +1,29 @@
 /*NAVBAR*/
-nav{
-    transition:all 0.5s;
+nav {
+  transition: all 0.5s;
+}
+.navbar {
+  background: #eee;
+  margin: 0px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.navbar.scrolled {
+  margin: 8px;
+  width: 55%;
 }
 .sombranav {
-        box-shadow: 0 5px 4px rgba(0,0,0,.5);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
-.padding-header{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
+.padding-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
 }
 .dropdown-item.activo {
-    background-color: #faca2c;
-    color: white;
+  background-color: #faca2c;
+  color: white;
 }
 .dropdown-itemactivo:active {
   background-color: red; /* replace with desired color */

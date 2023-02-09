@@ -6,19 +6,19 @@
   text-align: left;
 }
 .card {
-  flex: 1 0 18%;
-  min-width: 180px;
-  max-width: 200px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  height: 120px;
   align-content: center;
   align-items: center; /* centers the content along the cross axis */
+  border: 1px solid #ccc;
+  border: 0;
+  border-radius: 0;
   /*transition: transform 0.2s ease;*/
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-  border-radius: 0;
-  border: 0;
+  flex: 1 0 18%;
+  height: 120px;
+  margin: 10px;
   margin-bottom: 1.5em;
+  max-width: 200px;
+  min-width: 180px;
   transition: all 0.3s ease-in-out;
 }
 .card-skill {
@@ -39,8 +39,8 @@
 }
 
 .card.small {
-  height: 80px;
   align-items: unset; /* centers the content along the cross axis */
+  height: 80px;
 }
 
 .one-per-row {
@@ -50,13 +50,13 @@
   display: none;
 }
 .skills {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .skills-bar .bar {
@@ -73,25 +73,25 @@
 }
 
 .skills-bar .bar .progress-line {
-  position: relative;
-  height: 10px;
-  width: 100%;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   background: #f0f0f0;
   border-radius: 10px;
+  height: 10px;
+  position: relative;
   transform: scaleX(0);
   transform-origin: left;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  width: 100%;
 }
 
 .bar .progress-line span {
-  position: absolute;
-  background: rgb(63, 63, 63);
-  height: 100%;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
   /*text-transfrom: uppercase;*/
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  background: rgb(63, 63, 63);
+  border-radius: 10px;
+  height: 100%;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 @keyframes animate {
@@ -100,29 +100,29 @@
   }
 }
 .bar .progress-line span::before {
-  position: absolute;
-  content: "";
-  height: 0;
-  right: 0;
-  top: -14px;
-  width: 0;
   border: 7px solid transparent;
   border-bottom-width: 0px;
   border-right-width: 0px;
-  border-top-style: #f0f0f0;
   border-top-color: black;
+  border-top-style: #f0f0f0;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -14px;
+  width: 0;
 }
 
 .bar .progress-line span::after {
-  position: absolute;
-  right: 0;
-  top: -28px;
+  background: black;
+  border-radius: 15px 15px 5px 15px;
   color: #f0f0f0;
   font-size: 12px;
   font-weight: 700;
-  background: black;
   padding: 1px 8px;
-  border-radius: 15px 15px 5px 15px;
+  position: absolute;
+  right: 0;
+  top: -28px;
 }
 
 /* ////........Media Query........//// */

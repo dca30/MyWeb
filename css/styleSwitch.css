@@ -5,38 +5,38 @@
   transform: scale(0.5);
 }*/
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 
 .toggle {
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 60px;
-    height: 30px;
     border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    position: relative;
     transition: .8s;
+    width: 60px;
 }
 
 .toggle i {
-    width: 50%;
+    font-size: 15px;
     line-height: 30px;
     text-align: center;
-    font-size: 15px;
+    width: 50%;
     z-index: 1;
 }
 
 .toggle .ball {
-    position: absolute;
-    width: 22px;
+    border-radius: 50%;
     height: 22px;
     margin: 4px;
-    border-radius: 50%;
+    position: absolute;
     transition: .5s ease-out;
+    width: 22px;
 }
 
 input {

@@ -1,27 +1,25 @@
 #show-more {
-  position: fixed;
   bottom: 15px;
-  left: 45%;
-  /*box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);*/
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  left: 45%;
+  position: fixed;
   transition: 0.5s;
   z-index: 1000;
 }
 .hidden {
   opacity: 0;
   visibility: hidden;
-  display: none;
+  /*display: none;*/
 }
 #elemento {
   -webkit-box-reflect: below -2px linear-gredient(to bottom, transparent) rgba(0, 0, 0, 0.8);
 }
 
 #btn-back-to-top {
-  position: fixed;
   bottom: 37px;
-  right: 20px;
-  /*box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);*/
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  right: 20px;
   transition: 0.5s;
   z-index: 1000;
 }
@@ -30,12 +28,12 @@
 }
 
 .contenido {
-  /*display: none;*/
-  z-index: 1000;
-  position: fixed;
   bottom: 0%;
   left: 0%;
+  position: fixed;
   transition: opacity 0.5s ease-in-out;
+  /*display: none;*/
+  z-index: 1000;
   /*
   width: 100%;
   height: 100%;
@@ -45,10 +43,10 @@
 }
 
 .contenido.detail {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
@@ -59,15 +57,15 @@
 }
 
 .contenido.detail h2 span {
-  font-size: 0.7em;
   color: #03a9f4;
+  font-size: 0.7em;
   font-weight: bold;
 }
 
 .sci {
+  align-items: left;
   display: flex;
   flex-direction: column;
-  align-items: left;
 }
 
 .sci li {
@@ -76,19 +74,19 @@
 }
 
 .sci li a {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50%;
   background: transparent;
-  font-size: 1.5em;
   background: white;
-  color: black;
-  text-decoration: none;
+  border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: black;
+  display: flex;
+  font-size: 1.5em;
+  height: 45px;
+  justify-content: center;
+  text-decoration: none;
   transition: 0.5s;
+  width: 45px;
 }
 
 .sci li a:hover {
@@ -118,89 +116,86 @@
 
 /*BOTON QUE SE EXPANDE*/
 button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
   background: transparent;
-  padding: 0;
-  font-size: inherit;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
   font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  vertical-align: middle;
 }
 .circle {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/*.circle:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.23);
-}*/
 button.learn-more {
-  width: 150px;
   height: auto;
+  width: 0px;
 }
 
 button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
   background: #ffca2c;
   border-radius: 1.625rem;
+  display: block;
+  height: 3rem;
+  margin: 0;
+  position: relative;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  width: 3rem;
 }
 
 button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
+  background: #fff;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  position: absolute;
+  top: 0;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
   background: none;
+  height: 0.125rem;
+  left: 0.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  width: 1.125rem;
 }
 
 button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid black;
   border-right: 0.125rem solid black;
+  border-top: 0.125rem solid black;
+  content: "";
+  height: 0.625rem;
+  position: absolute;
+  right: 0.0625rem;
+  top: -0.29rem;
   transform: rotate(45deg);
+  width: 0.625rem;
 }
 
 button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
   color: #282936;
   font-weight: 700;
+  left: 0;
   line-height: 1.6;
+  margin: 0 0 0 1.85rem;
+  padding: 0.75rem 0;
+  position: absolute;
+  right: 0;
   text-align: center;
   text-transform: uppercase;
+  top: 0;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 button:hover .circle {
-  width: 100%;
+  width: 150px;
 }
 
 button:hover .button-text {
@@ -209,6 +204,7 @@ button:hover .button-text {
 }
 .button-text {
   display: none;
+  width: 125px;
 }
 .sci li a:hover {
   background: #03a9f4;

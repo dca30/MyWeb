@@ -1,48 +1,48 @@
 .center {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  display: flex;
   flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
 
 .container-timeline {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 50px;
   padding: 0 5% 0 5%;
 }
 
 .dot {
-  width: 20px;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
   height: 20px;
-  min-width: 20px;
+  justify-content: center;
+  max-height: 20px;
   max-width: 20px;
   min-height: 20px;
-  max-height: 20px;
-  border-radius: 20px;
-  background-color: black;
-  cursor: pointer;
+  min-width: 20px;
   position: relative;
   transition: all 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 20px;
 }
 
 .line {
-  width: 100%;
-  height: 4px;
   background-color: black;
+  height: 4px;
+  width: 100%;
 }
 
 .diagonal {
-  position: absolute;
-  top: -40px;
-  left: 0px;
   color: black;
+  left: 0px;
+  position: absolute;
   text-align: left;
+  top: -40px;
 }
 
 .bigger {
@@ -71,18 +71,18 @@
 }
 
 #cardTimeline {
-  transition: transform 0.5s ease;
-  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-  border-radius: 20px;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-
-  flex: 1 0 18%;
   border: 1px solid #ccc;
   border: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+  display: flex;
+
+  flex: 1 0 18%;
+  justify-content: center;
+  margin: 0 auto;
   margin-bottom: 1.5em;
+  max-width: 100%;
+  transition: transform 0.5s ease;
+  width: 100%;
 }

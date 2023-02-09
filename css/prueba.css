@@ -1,76 +1,76 @@
 button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
   background: transparent;
-  padding: 0;
-  font-size: inherit;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
   font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 button.learn-more {
-  width: 9rem;
   height: auto;
+  width: 9rem;
 }
 
 button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
   background: #ffca2c;
   border-radius: 1.625rem;
+  display: block;
+  height: 3rem;
+  margin: 0;
+  position: relative;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  width: 3rem;
 }
 
 button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
+  background: #fff;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  position: absolute;
+  top: 0;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
   background: none;
+  height: 0.125rem;
+  left: 0.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  width: 1.125rem;
 }
 
 button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
   border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid #fff;
+  content: "";
+  height: 0.625rem;
+  position: absolute;
+  right: 0.0625rem;
+  top: -0.29rem;
   transform: rotate(45deg);
+  width: 0.625rem;
 }
 
 button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
   color: #282936;
   font-weight: 700;
+  left: 0;
   line-height: 1.6;
+  margin: 0 0 0 1.85rem;
+  padding: 0.75rem 0;
+  position: absolute;
+  right: 0;
   text-align: center;
   text-transform: uppercase;
+  top: 0;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 button:hover .circle {
@@ -89,20 +89,20 @@ button:hover .button-text {
       text-align: center;
     }
     .content span {
-      width: 3rem;
       display: inline-block;
       text-transform: uppercase;
+      width: 3rem;
     }
 /*SKILLS*/
 
 .skills {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .skills-bar {
@@ -119,30 +119,30 @@ button:hover .button-text {
 }
 
 .skills-bar .bar .info {
-  margin-bottom: 8px;
   color: #07374a;
+  margin-bottom: 8px;
 }
 
 .skills-bar .bar .progress-line {
-  position: relative;
-  height: 10px;
-  width: 550px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   background: #f0f0f0;
   border-radius: 10px;
+  height: 10px;
+  position: relative;
   transform: scaleX(0);
   transform-origin: left;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  width: 550px;
 }
 
 .bar .progress-line span {
-  position: absolute;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   background: #25b79f;
-  height: 100%;
   border-radius: 10px;
+  height: 100%;
+  position: absolute;
+  text-transfrom: uppercase;
   transform: scaleX(0);
   transform-origin: left;
-  text-transfrom: uppercase;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 @keyframes animate {
@@ -168,29 +168,29 @@ button:hover .button-text {
 }
 
 .bar .progress-line span::before {
-  position: absolute;
-  content: "";
-  height: 0;
-  right: 0;
-  top: -14px;
-  width: 0;
   border: 7px solid transparent;
   border-bottom-width: 0px;
   border-right-width: 0px;
-  border-top-style: #f0f0f0;
   border-top-color: #07374a;
+  border-top-style: #f0f0f0;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -14px;
+  width: 0;
 }
 
 .bar .progress-line span::after {
-  position: absolute;
-  right: 0;
-  top: -28px;
+  background: #07374a;
+  border-radius: 3px;
   color: #f0f0f0;
   font-size: 12px;
   font-weight: 700;
-  background: #07374a;
   padding: 1px 8px;
-  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  top: -28px;
 }
 
 .progress-line .html::after {
