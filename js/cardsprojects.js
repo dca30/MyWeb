@@ -5,11 +5,11 @@ const overlay = document.getElementById("overlay");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const card = button.closest(".card");
-    var div = document.getElementById("myDiv");
-    div.style.display = "block";
+    /*var div = document.getElementById("myDiv");
+    div.style.display = "block";*/
 
     // Get the corresponding image
-    /*const image = card.querySelector(".image");
+    const image = card.querySelector(".image");
     image.classList.toggle("small");
     card.classList.toggle("expanded");
     const cardParagraph = card.querySelector("p");
@@ -24,6 +24,14 @@ buttons.forEach((button) => {
     const smallSize = card.querySelector(".small-size");
     const bigSize = card.querySelector(".big-size");
     smallSize.classList.toggle("hiddenProjects");
-    bigSize.classList.toggle("hiddenProjects");*/
+    bigSize.classList.toggle("hiddenProjects");
+
+    let selectedCardParagraph;
+    if (cardParagraph.classList.contains("minimized")) {
+      selectedCardParagraph = smallSize.textContent;
+    } else {
+      selectedCardParagraph = bigSize.textContent;
+    }
+    console.log(selectedCardParagraph);
   });
 });
