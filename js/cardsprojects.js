@@ -26,12 +26,11 @@ buttons.forEach((button) => {
     smallSize.classList.toggle("hiddenProjects");
     bigSize.classList.toggle("hiddenProjects");
 
-    let selectedCardParagraph;
-    if (cardParagraph.classList.contains("minimized")) {
-      selectedCardParagraph = smallSize.textContent;
-    } else {
-      selectedCardParagraph = bigSize.textContent;
-    }
-    console.log(selectedCardParagraph);
+    let small, big;
+    small = smallSize.textContent;
+    big = bigSize.textContent;
+
+    console.log(small);
+    console.log(big);
   });
 });
