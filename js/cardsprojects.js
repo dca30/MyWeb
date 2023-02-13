@@ -47,12 +47,6 @@ function generateCards() {
       bigText:
         "Mobile App for Group Activity Scheduling: This project involved creating a mobile application that helps users plan group activities. The app integrates with users' calendars to determine the best times for a group event based on everyone's availability. The process involved developing an algorithm to analyze users' schedules, as well as designing a user-friendly interface for adding and viewing schedules. The end result is a helpful tool for friends and groups to coordinate their schedules and ensure the maximum number of attendees for any planned activity.",
     },
-    /*{
-      image: "twitter.png",
-      title: "Test",
-      smallText: "Still some text",
-      bigText: "Even still more and more text",
-    },*/
   ];
 
   let html = `
@@ -66,23 +60,19 @@ function generateCards() {
           <p class="px-4 small-size">__SMALL_TEXT__</p>
           <p class="px-4 big-size hiddenProjects">__BIG_TEXT__</p>
         </div>
-        <div class="card-bottom">
-        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
-	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
-	<defs>
-		<filter id="filter">
-			<feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1">
-			</feTurbulence>
-			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp">
-			</feDisplacementMap>
-		</filter>
-	</defs>
-</svg>
-        		<div class="btn btn-small btn-clear btn-light btn-glitch">Glitch'n</div>
-
-          <button type="button" class="btn btn-warning mb-4 expand-button">
-            Show more
-          </button>
+        <div class="card-bottom mb-4">      
+          <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+                <defs>
+                  <filter id="filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1">
+                    </feTurbulence>
+                    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp">
+                    </feDisplacementMap>
+                  </filter>
+                </defs>
+              </svg>
+           <div class="glitch btn-small btn-dark btn-glitch expand-button rounded-pill">Bitch'n</div>
         </div>
       </div>
     </div>`;
@@ -117,9 +107,22 @@ function generateCards() {
         <div class="row">
           <div class="col-sm-12 text-center">
             <div class="card-bottom">
-              <button type="button" class="btn btn-warning mb-4 expand-button">
-                Show more
-              </button>
+              <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+                <defs>
+                  <filter id="filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1">
+                    </feTurbulence>
+                    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp">
+                    </feDisplacementMap>
+                  </filter>
+                </defs>
+              </svg>
+              <div class="body-section">
+                <div class="half">
+                <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n</div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -156,7 +159,6 @@ buttons.forEach((button) => {
     overlay.style.display = isExpanded ? "none" : "block";
     header.style.display = isExpanded ? "block" : "none";
     const h2 = card.querySelector("h2");
-    console.log(h2);
     card.querySelector("h2").classList.toggle("text-expanded");
 
     changeExpanded(card);

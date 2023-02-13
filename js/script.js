@@ -7,25 +7,25 @@ function generateNavbar() {
     <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
       <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
       <div class="container-fluid">
-        <a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
-            id="imagen" /></a>
+        <!--<a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
+            id="imagen" /></a>-->
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
           class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="enlaces">
             <li class="nav-item">
-              <a class="nav-link" href="index.html" data-translate="home"></a>
+              <a class="nav-link text-uppercase" href="index.html" data-translate="home"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="projects.html" data-translate="projects"></a>
+              <a class="nav-link text-uppercase" href="projects.html" data-translate="projects"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="skills.html" data-translate="skills"></a>
+              <a class="nav-link text-uppercase" href="skills.html" data-translate="skills"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutme.html" data-translate="about"></a>
+              <a class="nav-link text-uppercase" href="aboutme.html" data-translate="about"></a>
             </li>
           </ul>
           <!-- Con la clase .ms-auto (margin-start automatico) se alinea a la derecha-->

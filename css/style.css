@@ -20,8 +20,12 @@ img[alt="www.000webhost.com"] {
 html {
   scroll-behavior: smooth;
   z-index: 1;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 500;
 }
 body {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 500;
   align-items: center;
   /*transition: .2s;*/
   display: flex;
