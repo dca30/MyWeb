@@ -56,23 +56,36 @@ function generateCards() {
   ];
 
   let html = `
-<div class="col-sm-5">
-  <div class="card card-skill">
-    <div class="card-top">
-      <img src="images/projectcards/__IMAGE__" class="image" />
-    </div>
-    <div class="card-middle">
-      <h2 class="mt-3">__TITLE__</h2>
-      <p class="px-4 small-size">__SMALL_TEXT__</p>
-      <p class="px-4 big-size hiddenProjects">__BIG_TEXT__</p>
-    </div>
-    <div class="card-bottom">
-      <button type="button" class="btn btn-warning mb-4 expand-button">
-        Show more
-      </button>
-    </div>
-  </div>
-</div>`;
+    <div class="col-sm-5">
+      <div class="card card-skill">
+        <div class="card-top">
+          <img src="images/projectcards/__IMAGE__" class="image" />
+        </div>
+        <div class="card-middle">
+          <h2 class="mt-3">__TITLE__</h2>
+          <p class="px-4 small-size">__SMALL_TEXT__</p>
+          <p class="px-4 big-size hiddenProjects">__BIG_TEXT__</p>
+        </div>
+        <div class="card-bottom">
+        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+	<defs>
+		<filter id="filter">
+			<feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1">
+			</feTurbulence>
+			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp">
+			</feDisplacementMap>
+		</filter>
+	</defs>
+</svg>
+        		<div class="btn btn-small btn-clear btn-light btn-glitch">Glitch'n</div>
+
+          <button type="button" class="btn btn-warning mb-4 expand-button">
+            Show more
+          </button>
+        </div>
+      </div>
+    </div>`;
 
   let output = "";
   cards.forEach(function (card, index) {
@@ -84,65 +97,68 @@ function generateCards() {
     output += cardHtml;
   });
   let expandedElement = `
-      <div class="col-sm-5">
-      <div class="card card-skill expanded" style="z-index: 1000;" id="test">
-        <div class="card-top">
-          <img src="images/projectcards/raspberry.png" class="image small">
+    <div class="col-sm-5">
+      <div class="card card-skill expanded hiddenProjects" style="z-index: 1000;" id="expanded">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="card-top">
+              <!--<div id="background"></div>-->
+              <img src="images/projectcards/raspberry.png" class="image imgexpanded">
+              <h2 class="mt-3 text-uppercase"></h2>
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <div class="card-middle">
+              <p class="px-4 small-size minimized hiddenProjects"></p>
+              <p class="px-4 big-size"></p>
+            </div>
+          </div>
         </div>
-        <div class="card-middle">
-          <h2 class="mt-3">Raspberry Pi Setup</h2>
-          <p class="px-4 small-size minimized hiddenProjects">Raspberry Pi 4b Raspbian installation with 3D printed case and display of stats.</p>
-          <p class="px-4 big-size">Raspberry Pi Setup: This project involved installing the Raspbian operating system on a Raspberry Pi 4b, creating a custom 3D printed case, and implementing a display that shows statistics about the Raspberry Pi's usage. The process included downloading the Raspbian image, flashing it to a microSD card, configuring the Raspberry Pi's settings, and designing and printing the case using a 3D modeling software. The display was then connected to the Raspberry Pi and programmed to display real-time statistics such as CPU usage, memory usage, and temperature.</p>
-        </div>
-        <div class="card-bottom">
-          <button type="button" class="btn btn-warning mb-4 expand-button">
-            Show more
-          </button>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="card-bottom">
+              <button type="button" class="btn btn-warning mb-4 expand-button">
+                Show more
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>`;
-  output = output + expandedElement;
+  output += expandedElement;
   document.getElementById("cartas").innerHTML = output;
-  /*let lastCard = document.querySelectorAll(".col-sm-5")[cards.length - 1];
-  lastCard.id = "test";*/
+}
+function changeExpanded(card) {
+  const expanded = document.getElementById("expanded");
+  const imageSrc = card.querySelector(".image").src;
+  const h2 = card.querySelector("h2").textContent;
+  const smallSize = card.querySelector(".small-size").textContent;
+  const bigSize = card.querySelector(".big-size").textContent;
+
+  expanded.querySelector(".image").src = imageSrc;
+  expanded.querySelector("h2").innerHTML = h2;
+  expanded.querySelector(".small-size").innerHTML = smallSize;
+  expanded.querySelector(".big-size").innerHTML = bigSize;
 }
 
 generateCards();
-const test = document.getElementById("test");
-test.classList.toggle("hiddenProjects");
-//test.style.display = "none";
-const buttons = document.querySelectorAll(".expand-button");
+const expanded = document.getElementById("expanded"); //Expanded Card
+const buttons = document.querySelectorAll(".expand-button"); //Botones expandir
+
 const header = document.getElementById("my-header");
 const overlay = document.getElementById("overlay");
-const bigCard = document.getElementById("expanded");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const card = button.closest(".card");
-    test.classList.toggle("hiddenProjects");
+    expanded.classList.toggle("hiddenProjects");
+    const isExpanded = card.classList.contains("expanded");
+    overlay.style.display = isExpanded ? "none" : "block";
+    header.style.display = isExpanded ? "block" : "none";
+    const h2 = card.querySelector("h2");
+    console.log(h2);
+    card.querySelector("h2").classList.toggle("text-expanded");
 
-    /*const image = card.querySelector(".image");
-    image.classList.toggle("small");
-    card.classList.toggle("expanded");
-    const cardParagraph = card.querySelector("p");
-    cardParagraph.classList.toggle("minimized");
-    header.style.display = card.classList.contains("expanded")
-      ? "none"
-      : "block";
-    overlay.style.display = card.classList.contains("expanded")
-      ? "block"
-      : "none";
-    card.style.zIndex = card.classList.contains("expanded") ? 1000 : "";
-    const smallSize = card.querySelector(".small-size");
-    const bigSize = card.querySelector(".big-size");
-    smallSize.classList.toggle("hiddenProjects");
-    bigSize.classList.toggle("hiddenProjects");*/
-
-    /*let small, big;
-    small = smallSize.textContent;
-    big = bigSize.textContent;
-
-    console.log(small);
-    console.log(big);*/
+    changeExpanded(card);
   });
 });

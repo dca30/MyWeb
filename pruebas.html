@@ -1,242 +1,615 @@
-<link href="vendor/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
-<link href="vendor/fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+	<defs>
+		<filter id="filter">
+			<feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1">
+			</feTurbulence>
+			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp">
+			</feDisplacementMap>
+		</filter>
+	</defs>
+</svg>
+<div class="body-section">
+	<div class="half">
+		<div class="btn btn-small btn-dark btn-glitch">Bitch'n</div>
+	</div>
+	<div class="half dark">
+		<div class="btn btn-small btn-clear btn-light btn-glitch">Glitch'n</div>
+	</div>
+</div>
+<link rel="stylesheet" href="css/btnglitch.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="js/btnglitch.js"></script>
 
-<div class="row" id="cardTimeline">
-  <div class="container-timeline container1-timeline"></div>
-  <div class="container-timeline container2-timeline"></div>
+
+<!--<div class="wrapper">
+  <h1 class="glitch">Glitch</h1>
 </div>
 <style>
-  .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
+  * {
+    margin: 0;
+    padding: 0;
   }
 
-  .container-timeline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-  }
-
-  .dot {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    max-width: 30px;
-    min-height: 30px;
-    max-height: 30px;
-    border-radius: 30px;
-    background-color: black;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .line {
+  body,
+  html {
     width: 100%;
-    height: 4px;
+    height: 100%;
     background-color: black;
   }
 
-  .diagonal {
-    position: absolute;
-    top: -55px;
-    left: 18px;
-    transform: rotate(-45deg);
-    color: black;
-    text-align: left;
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .bigger {
-    transform: scale(1.15);
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
-  .primary {
-    background-color: black;
-  }
-
-  .secondary {
-    background-color: lightgray;
-  }
-
-  .hide {
-    display: none !important;
-  }
-
-  .fas,
-  .fa-brands {
+  .wrapper h1.glitch {
     color: white;
+    font-family: sans-serif;
+    font-weight: 800;
+    position: relative;
+    font-size: 100px;
+    padding: 30px;
   }
 
-  #cardTimeline {
-    border: 1px solid #ccc;
-    transition: transform 0.5s ease;
-    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-    border-radius: 0;
+  .wrapper h1.glitch::before,
+  .wrapper h1.glitch::after {
+    padding: 30px;
+    color: white;
+    content: "Glitch";
+    position: absolute;
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    top: 0;
+  }
+
+  .wrapper h1.glitch:before {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation-name: glitch-animation-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse-alternate;
+  }
+
+  .wrapper h1.glitch:after {
+    left: -3px;
+    text-shadow: -2px 0 yellow;
+    animation-name: glitch-animation-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse-alternate;
+  }
+
+  @keyframes glitch-animation-1 {
+    0% {
+      clip: rect(67px, 350px, 199px, 30px);
+    }
+
+    5% {
+      clip: rect(131px, 350px, 190px, 30px);
+    }
+
+    10% {
+      clip: rect(38px, 350px, 213px, 30px);
+    }
+
+    15% {
+      clip: rect(82px, 350px, 120px, 30px);
+    }
+
+    20% {
+      clip: rect(45px, 350px, 123px, 30px);
+    }
+  }
+
+  @keyframes glitch-animation-2 {
+    0% {
+      clip: rect(67px, 350px, 199px, 30px);
+    }
+
+    5% {
+      clip: rect(131px, 350px, 190px, 30px);
+    }
+
+    10% {
+      clip: rect(38px, 350px, 213px, 30px);
+    }
+
+    15% {
+      clip: rect(82px, 350px, 120px, 30px);
+    }
+
+    20% {
+      clip: rect(45px, 350px, 123px, 30px);
+    }
+  }
+</style>-->
+<!--<div class="botonglitch">
+  <button class="btn-split">
+    <div class="name">Show Less</div>
+    <div class="letters">
+      <ul class="letters-list">
+        <li data-letters='["l","a","p","k"]' data-initial="s"></li>
+        <li data-letters='["z","h","i","e"]' data-initial="h"></li>
+        <li data-letters='["c","n","o","q"]' data-initial="o"></li>
+        <li data-letters='["b","y","u","a"]' data-initial="w"></li>
+        <li data-letters='["l","a","p","k"]' data-initial=" "></li>
+        <li data-letters='["z","h","i","e"]' data-initial="l"></li>
+        <li data-letters='["c","n","o","q"]' data-initial="e"></li>
+        <li data-letters='["b","y","u","a"]' data-initial="s"></li>
+        <li data-letters='["q","t","h","l"]' data-initial="s"></li>
+      </ul>
+    </div>
+  </button>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  @import url('https://fonts.googleapis.com/css?family=Averia+Libre');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #181818;
+    color: #ECECEC;
+    font-family: 'Open Sans';
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .botonglitch {
+    max-width: 960px;
+    margin: 65px auto;
+    text-align: center;
+  }
+
+  .btn-split {
+    font-family: 'Averia Libre', cursive;
+    letter-spacing: 2px;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 40px;
+    min-width: 130px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+  }
+
+  .btn-split:hover .name {
+    opacity: 0;
+  }
+
+  .btn-split:hover .letters {
+    opacity: 1;
+  }
+
+  .btn-split:hover .letters-list>li:not(:first-child) {
+    margin-left: 2px;
+  }
+
+  .btn-split .name {
+    opacity: 1;
+    line-height: 40px;
+    background-color: #273746;
+  }
+
+  .btn-split .letters {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .25s;
+  }
+
+  .btn-split .letters-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  .btn-split .letters-list>li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    background-color: #273746;
+    transition: margin .25s;
+    animation: glitch 0.5s infinite;
+  }
+
+  .btn-split .letters-list>li:not(:first-child) {
+    margin-left: -10px;
+  }
+
+  @keyframes glitch {
+    from {
+      text-shadow: 0 0px 0px white;
+    }
+
+    20% {
+      text-shadow: 2px -2px 0px red;
+    }
+
+    40% {
+      text-shadow: -2px 2px 0px green;
+    }
+
+    60% {
+      text-shadow: 2px 2px 0px blue;
+    }
+
+    80% {
+      text-shadow: -2px -2px 0px green;
+    }
+
+    to {
+      text-shadow: 0px 0px 0px white;
+    }
   }
 </style>
 <script>
-  //Primera timeline
-  const container1 = document.querySelector(".container1-timeline");
-  const words1 = [
-    "Cyber Seguridad",
-    "Servidores",
-    "Frontend",
-    "Backend",
-    "Linux",
-    "OS",
-    "Automatizacion",
-  ];
-  const icons1 = [
-    ["fas", "fa-shield-alt"],
-    ["fas", "fa-server"],
-    ["fas", "fa-code"],
-    ["fas", "fa-database"],
-    ["fa-brands", "fa-linux"],
-    ["fas", "fa-laptop-code"],
-    ["fas", "fa-robot"],
-  ];
-  //Segunda timeline
-  const container2 = document.querySelector(".container2-timeline");
-  const words2 = [
-    "Tenis",
-    "padel",
-    "gym",
-    "bici",
-    "correr",
-    "cerveza",
-    "fiesta",
-    "bar",
-    "electronica",
-    "series",
-    "peliculas",
-  ];
-  const icons2 = [
-    ["fas", "fa-tennis-ball"],
-    ["fas", "fa-paddle-ball"],
-    ["fas", "fa-dumbbell"],
-    ["fas", "fa-bicycle"],
-    ["fas", "fa-running"],
-    ["fas", "fa-beer"],
-    ["fas", "fa-glass-cheers"],
-    ["fas", "fa-beer"],
-    ["fas", "fa-plug"],
-    ["fas", "fa-tv"],
-    ["fas", "fa-film"],
-  ];
-  createTimeline(words1, container1, icons1);
-  createTimeline(words2, container2, icons2);
+  const buttonSplit = document.querySelector('.btn-split');
+  const letters = document.querySelectorAll('.letters-list li');
+  const lettersArray = Array.from(letters);
+  const ANIMATION_TIMEOUT = 300;
+  const LETTER_TIMEOUT = 35;
+  const SUB_LETTER_TIMEOUT = 100;
 
-  function createTimeline(words, container, icons) {
-    createDotsAndLines(words, container);
-    // Add click event listener to dots
-    let lastClicked;
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach((dot) => {
-      addClickEventToDot(dot);
+  let letterTimeoutId = null;
+
+  buttonSplit.addEventListener('mouseenter', () => {
+    lettersArray.forEach((letter, index) => {
+      const renderLetter = [
+        ...JSON.parse(letter.dataset.letters),
+        letter.dataset.initial
+      ];
+
+      setTimeout(() => {
+        renderLetter.forEach((char, subIndex) => {
+          setTimeout(() => {
+            letter.textContent = char;
+          }, subIndex * SUB_LETTER_TIMEOUT);
+        });
+      }, ANIMATION_TIMEOUT + index * LETTER_TIMEOUT);
     });
+  });
 
-    function createDotsAndLines(words, container) {
-      // Create start line
-      const startLine = document.createElement("span");
-      startLine.classList.add("line");
-      container.prepend(startLine);
-
-      // Create dots for each word
-      words.forEach((word, index) => {
-        const dot = createDot(word, index);
-        container.appendChild(dot);
-        index < words.length - 1 ? container.appendChild(createLine()) : null;
-      });
-
-      // Create end line
-      const endLine = document.createElement("span");
-      endLine.classList.add("line");
-      container.appendChild(endLine);
-    }
-    // Create dot
-    function createDot(word, index) {
-      const dot = document.createElement("div");
-      dot.classList.add("dot");
-
-      const diagonal = document.createElement("p");
-      diagonal.classList.add("diagonal");
-      diagonal.innerText = word;
-
-      // Add Font Awesome icon to dot
-      const iconClasses = icons[index];
-      icon = iconClasses
-        ? ((icon = document.createElement("i")),
-          icon.classList.add(...iconClasses, "icon", "hide"),
-          icon)
-        : null;
-
-      dot.appendChild(icon);
-      dot.appendChild(diagonal);
-      return dot;
-    }
-    // Create line
-    function createLine() {
-      const line = document.createElement("span");
-      line.classList.add("line");
-      return line;
-    }
-    // Add click event to dot
-    function addClickEventToDot(dot) {
-      dot.addEventListener("click", function () {
-        if (lastClicked === dot) {
-          return;
-        }
-        if (lastClicked) {
-          lastClicked.classList.toggle("bigger");
-          if (lastClicked.querySelector(".icon")) {
-            lastClicked.querySelector(".icon").classList.add("hide")
-          }
-        }
-        dot.classList.add("bigger");
-        if (dot.classList.contains("bigger")) {
-          dot.querySelector(".icon").classList.remove("hide");
-        } else {
-          dot.querySelector(".icon").classList.add("hide");
-        }
-        dot.style.backgroundColor = "black";
-        dot.querySelector(".diagonal").classList.add("bold");
-        if (lastClicked) {
-          lastClicked.querySelector(".diagonal").classList.remove("bold")
-        }
-        lastClicked = dot;
-
-        let prev = dot.previousElementSibling;
-        while (prev) {
-          if (prev.classList.contains("dot") || prev.classList.contains("line")) {
-            prev.style.backgroundColor = "black";
-          }
-          prev = prev.previousElementSibling;
-        }
-        let next = dot.nextElementSibling;
-        while (next) {
-          if (next.classList.contains("dot") || next.classList.contains("line")) {
-            next.style.backgroundColor = "lightgray";
-          }
-          next = next.nextElementSibling;
-        }
-      });
-    }
-  }
-
-</script>
+  buttonSplit.addEventListener('mouseleave', () => {
+    lettersArray.forEach(letter => letter.textContent = '');
+    clearTimeout(letterTimeoutId);
+  });
+</script>-->
+<!--Glitch 1
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Glitch</title>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+  <div class="glitch" data-text="ELISABÉTH">ELISABÉTH</div>
+  <div class="glow">ELISABÉTH</div>
+  <p class="subtitle">IMPRACTICAL DEVELOPER</p>
+  </div>
+  <div class="scanlines"></div>
+</body>
+</html>
+<style>
+  body {
+	 background: black;
+	 font-family: "Oswald", sans-serif;
+	 font-style: italic;
+}
+ .container {
+	 position: absolute;
+	 transform: translate(-50%, -50%);
+	 top: 40%;
+	 left: 50%;
+}
+ .glitch, .glow {
+	 color: #dfbfbf;
+	 position: relative;
+	 font-size: 9vw;
+	 animation: glitch 5s 5s infinite;
+}
+ .glitch::before, .glow::before {
+	 content: attr(data-text);
+	 position: absolute;
+	 left: -2px;
+	 text-shadow: -5px 0 magenta;
+	 background: black;
+	 overflow: hidden;
+	 top: 0;
+	 animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+ .glitch::after, .glow::after {
+	 content: attr(data-text);
+	 position: absolute;
+	 left: 2px;
+	 text-shadow: -5px 0 lightgreen;
+	 background: black;
+	 overflow: hidden;
+	 top: 0;
+	 animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+ @keyframes glitch {
+	 1% {
+		 transform: rotateX(10deg) skewX(90deg);
+	}
+	 2% {
+		 transform: rotateX(0deg) skewX(0deg);
+	}
+}
+ @keyframes noise-1 {
+	 3.3333333333% {
+		 clip-path: inset(55px 0 22px 0);
+	}
+	 6.6666666667% {
+		 clip-path: inset(71px 0 5px 0);
+	}
+	 10% {
+		 clip-path: inset(86px 0 8px 0);
+	}
+	 13.3333333333% {
+		 clip-path: inset(80px 0 4px 0);
+	}
+	 16.6666666667% {
+		 clip-path: inset(38px 0 7px 0);
+	}
+	 20% {
+		 clip-path: inset(48px 0 17px 0);
+	}
+	 23.3333333333% {
+		 clip-path: inset(54px 0 7px 0);
+	}
+	 26.6666666667% {
+		 clip-path: inset(67px 0 21px 0);
+	}
+	 30% {
+		 clip-path: inset(29px 0 11px 0);
+	}
+	 33.3333333333% {
+		 clip-path: inset(41px 0 19px 0);
+	}
+	 36.6666666667% {
+		 clip-path: inset(79px 0 2px 0);
+	}
+	 40% {
+		 clip-path: inset(67px 0 19px 0);
+	}
+	 43.3333333333% {
+		 clip-path: inset(14px 0 13px 0);
+	}
+	 46.6666666667% {
+		 clip-path: inset(7px 0 1px 0);
+	}
+	 50% {
+		 clip-path: inset(23px 0 31px 0);
+	}
+	 53.3333333333% {
+		 clip-path: inset(72px 0 26px 0);
+	}
+	 56.6666666667% {
+		 clip-path: inset(2px 0 4px 0);
+	}
+	 60% {
+		 clip-path: inset(99px 0 1px 0);
+	}
+	 63.3333333333% {
+		 clip-path: inset(45px 0 24px 0);
+	}
+	 66.6666666667% {
+		 clip-path: inset(12px 0 41px 0);
+	}
+	 70% {
+		 clip-path: inset(94px 0 7px 0);
+	}
+	 73.3333333333% {
+		 clip-path: inset(91px 0 7px 0);
+	}
+	 76.6666666667% {
+		 clip-path: inset(69px 0 7px 0);
+	}
+	 80% {
+		 clip-path: inset(11px 0 4px 0);
+	}
+	 83.3333333333% {
+		 clip-path: inset(82px 0 6px 0);
+	}
+	 86.6666666667% {
+		 clip-path: inset(37px 0 54px 0);
+	}
+	 90% {
+		 clip-path: inset(64px 0 3px 0);
+	}
+	 93.3333333333% {
+		 clip-path: inset(87px 0 10px 0);
+	}
+	 96.6666666667% {
+		 clip-path: inset(34px 0 4px 0);
+	}
+	 100% {
+		 clip-path: inset(63px 0 18px 0);
+	}
+}
+ @keyframes noise-2 {
+	 0% {
+		 clip-path: inset(72px 0 11px 0);
+	}
+	 3.3333333333% {
+		 clip-path: inset(60px 0 1px 0);
+	}
+	 6.6666666667% {
+		 clip-path: inset(41px 0 51px 0);
+	}
+	 10% {
+		 clip-path: inset(54px 0 10px 0);
+	}
+	 13.3333333333% {
+		 clip-path: inset(76px 0 6px 0);
+	}
+	 16.6666666667% {
+		 clip-path: inset(93px 0 8px 0);
+	}
+	 20% {
+		 clip-path: inset(8px 0 52px 0);
+	}
+	 23.3333333333% {
+		 clip-path: inset(84px 0 7px 0);
+	}
+	 26.6666666667% {
+		 clip-path: inset(48px 0 50px 0);
+	}
+	 30% {
+		 clip-path: inset(3px 0 15px 0);
+	}
+	 33.3333333333% {
+		 clip-path: inset(18px 0 6px 0);
+	}
+	 36.6666666667% {
+		 clip-path: inset(94px 0 2px 0);
+	}
+	 40% {
+		 clip-path: inset(18px 0 35px 0);
+	}
+	 43.3333333333% {
+		 clip-path: inset(4px 0 23px 0);
+	}
+	 46.6666666667% {
+		 clip-path: inset(60px 0 18px 0);
+	}
+	 50% {
+		 clip-path: inset(66px 0 31px 0);
+	}
+	 53.3333333333% {
+		 clip-path: inset(61px 0 17px 0);
+	}
+	 56.6666666667% {
+		 clip-path: inset(46px 0 11px 0);
+	}
+	 60% {
+		 clip-path: inset(21px 0 69px 0);
+	}
+	 63.3333333333% {
+		 clip-path: inset(68px 0 6px 0);
+	}
+	 66.6666666667% {
+		 clip-path: inset(62px 0 28px 0);
+	}
+	 70% {
+		 clip-path: inset(29px 0 70px 0);
+	}
+	 73.3333333333% {
+		 clip-path: inset(98px 0 3px 0);
+	}
+	 76.6666666667% {
+		 clip-path: inset(40px 0 8px 0);
+	}
+	 80% {
+		 clip-path: inset(22px 0 23px 0);
+	}
+	 83.3333333333% {
+		 clip-path: inset(36px 0 18px 0);
+	}
+	 86.6666666667% {
+		 clip-path: inset(21px 0 7px 0);
+	}
+	 90% {
+		 clip-path: inset(23px 0 21px 0);
+	}
+	 93.3333333333% {
+		 clip-path: inset(65px 0 33px 0);
+	}
+	 96.6666666667% {
+		 clip-path: inset(22px 0 41px 0);
+	}
+	 100% {
+		 clip-path: inset(72px 0 5px 0);
+	}
+}
+ .scanlines {
+	 overflow: hidden;
+	 mix-blend-mode: difference;
+}
+ .scanlines::before {
+	 content: "";
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+	 background: repeating-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 0.5%, transparent 1%);
+	 animation: fudge 7s ease-in-out alternate infinite;
+}
+ @keyframes fudge {
+	 from {
+		 transform: translate(0px, 0px);
+	}
+	 to {
+		 transform: translate(0px, 2%);
+	}
+}
+ .glow {
+	 text-shadow: 0 0 1000px #dfbfbf;
+	 color: transparent;
+	 position: absolute;
+	 top: 0;
+}
+ .subtitle {
+	 font-family: Arial, Helvetica, sans-serif;
+	 font-weight: 100;
+	 font-size: 0.8vw;
+	 color: rgba(165, 141, 141, .4);
+	 text-transform: uppercase;
+	 letter-spacing: 1em;
+	 text-align: center;
+	 position: absolute;
+	 left: 17%;
+	 animation: glitch-2 5s 5.02s infinite;
+}
+ @keyframes glitch-2 {
+	 1% {
+		 transform: rotateX(10deg) skewX(70deg);
+	}
+	 2% {
+		 transform: rotateX(0deg) skewX(0deg);
+	}
+}
+ 
+</style>-->
