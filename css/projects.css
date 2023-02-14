@@ -24,9 +24,7 @@
   visibility: hidden;
   display: none;
 }
-.card-middle {
-  height: 50%;
-}
+
 .visible {
   display: block;
 }
@@ -52,4 +50,14 @@
   height: 85%;
   display: flex;
   flex-direction: column;
+}
+.card-middle {
+  height: 50%;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
