@@ -93,12 +93,13 @@ function generateCards() {
           <div class="col-sm-5">
             <div class="card-top">
               <!--<div id="background"></div>-->
-              <img src="images/projectcards/raspberry.png" class="image imgexpanded">
-              <h2 class="mt-3 text-uppercase"></h2>
+              <img src="images/projectcards/raspberry.png" class="image imgexpanded" >              
             </div>
           </div>
           <div class="col-sm-7">
             <div class="card-middle">
+              <!--<h2 class="mt-3 text-uppercase"></h2>-->
+              <h2 class="data text-uppercase" id="movingletters"></h2>
               <p class="px-4 small-size minimized hiddenProjects"></p>
               <p class="px-4 big-size"></p>
             </div>
@@ -134,16 +135,40 @@ function generateCards() {
 function changeExpanded(card) {
   const expanded = document.getElementById("expanded");
   const imageSrc = card.querySelector(".image").src;
+  /*.replace(/\.png$/, "E.png");*/
   const h2 = card.querySelector("h2").textContent;
   const smallSize = card.querySelector(".small-size").textContent;
   const bigSize = card.querySelector(".big-size").textContent;
 
   expanded.querySelector(".image").src = imageSrc;
   expanded.querySelector("h2").innerHTML = h2;
+  //expanded.querySelector("h2").innerHTML = h2;
   expanded.querySelector(".small-size").innerHTML = smallSize;
   expanded.querySelector(".big-size").innerHTML = bigSize;
 }
+function movingLetters() {
+  const texto = baffle(".data", {
+    characters: "`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/",
+    speed: 80,
+    text: true,
+    whitespace: false,
+  });
 
+  texto.start();
+
+  const revealDuration = texto.text.length * 250;
+  const revealInterval = 250;
+
+  for (let i = 0; i < texto.text.length; i++) {
+    setTimeout(function () {
+      texto.reveal(i);
+    }, i * revealInterval);
+  }
+
+  setTimeout(function () {
+    texto.reveal(2000);
+  }, revealDuration);
+}
 generateCards();
 const expanded = document.getElementById("expanded"); //Expanded Card
 const buttons = document.querySelectorAll(".expand-button"); //Botones expandir
@@ -162,5 +187,6 @@ buttons.forEach((button) => {
     card.querySelector("h2").classList.toggle("text-expanded");
 
     changeExpanded(card);
+    movingLetters();
   });
 });

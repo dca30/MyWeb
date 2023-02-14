@@ -14,7 +14,20 @@
         }
     </style>
 </head>
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <div class="col-6 bg-dark h-100"></div>
+        <div class="col-6 h-100 d-flex flex-column">
+            <div class="row bg-primary flex-grow-1"></div>
+            <div class="row bg-secondary flex-grow-1"></div>
+            <div class="row bg-success flex-grow-1"></div>
+        </div>
+    </div>
+</div>
 
+
+
+<!--
 <body>
     <button style="margin:50px;" onclick="moveBox()">Move Box</button>
 
@@ -35,7 +48,7 @@
         <div class="box col-sm-2">Element 14</div>
         <div class="box col-sm-2">Element 15</div>
     </div>
-    <!--
+    
     <div class="container d-flex justify-content-center row gap-4">
         <div class="col-sm-2 box"></div>
         <div class="col-sm-2 box"></div>
@@ -54,42 +67,42 @@
         <div class="col-sm-2 box"></div>
     </div>-->
 
-    <script>
-        var moved = false;
-        //var originalLeft = [];
-        var originalTop = [];
-        var colors = ["blue", "red", "green", "yellow", "purple", "orange", "pink", "black", "white", "gray", "brown", "cyan", "magenta", "indigo", "violet"];
-        //var leftValues = [0, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600, 660, 720, 780, 840];
+<script>
+    var moved = false;
+    //var originalLeft = [];
+    var originalTop = [];
+    var colors = ["blue", "red", "green", "yellow", "purple", "orange", "pink", "black", "white", "gray", "brown", "cyan", "magenta", "indigo", "violet"];
+    //var leftValues = [0, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600, 660, 720, 780, 840];
+    var boxes = document.querySelectorAll(".box");
+
+    boxes.forEach(function (box, index) {
+        box.style.backgroundColor = colors[index];
+        //box.style.left = leftValues[index] + "px";
+    });
+
+    function moveBox() {
+        //console.log("hello");
         var boxes = document.querySelectorAll(".box");
-
-        boxes.forEach(function (box, index) {
-            box.style.backgroundColor = colors[index];
-            //box.style.left = leftValues[index] + "px";
-        });
-
-        function moveBox() {
-            //console.log("hello");
-            var boxes = document.querySelectorAll(".box");
-            if (!moved) {
-                var y = 0;
-                boxes.forEach(function (box, index) {
-                    //originalLeft[index] = box.offsetLeft;
-                    originalTop[index] = box.offsetTop;
-                    //box.style.left = 0 + "px";
-                    box.style.top = + y + "px";
-                    y += 5;
-                });
-            } else {
-                boxes.forEach(function (box, index) {
-                    //box.style.left = originalLeft[index] + "px";
-                    box.style.top = originalTop[index] + "px";
-                    //box.style.left = 0 + "px";
-                    y -= 5;
-                });
-            }
-            moved = !moved;
+        if (!moved) {
+            var y = 0;
+            boxes.forEach(function (box, index) {
+                //originalLeft[index] = box.offsetLeft;
+                originalTop[index] = box.offsetTop;
+                //box.style.left = 0 + "px";
+                box.style.top = + y + "px";
+                y += 5;
+            });
+        } else {
+            boxes.forEach(function (box, index) {
+                //box.style.left = originalLeft[index] + "px";
+                box.style.top = originalTop[index] + "px";
+                //box.style.left = 0 + "px";
+                y -= 5;
+            });
         }
-    </script>
+        moved = !moved;
+    }
+</script>
 </body>
 
 </html>
