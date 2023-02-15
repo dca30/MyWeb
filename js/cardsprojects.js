@@ -1,7 +1,7 @@
 function generateCards() {
   let cards = [
     {
-      image: "raspberry.png",
+      image: "raspberry.webp",
       title: "Raspberry Pi Setup",
       smallText:
         "Raspberry Pi 4b Raspbian installation with 3D printed case and display of stats.",
@@ -9,7 +9,7 @@ function generateCards() {
         "Raspberry Pi Setup: This project involved installing the Raspbian operating system on a Raspberry Pi 4b, creating a custom 3D printed case, and implementing a display that shows statistics about the Raspberry Pi's usage. The process included downloading the Raspbian image, flashing it to a microSD card, configuring the Raspberry Pi's settings, and designing and printing the case using a 3D modeling software. The display was then connected to the Raspberry Pi and programmed to display real-time statistics such as CPU usage, memory usage, and temperature.",
     },
     {
-      image: "twitter.png",
+      image: "twitter.webp",
       title: "Matrix Twitter Bot",
       smallText:
         "Twitter bot in Python that publishes Matrix movie frames every hour.",
@@ -17,7 +17,7 @@ function generateCards() {
         "Matrix Twitter Bot: This project was a Python script that automatically tweets a frame from the movie Matrix every hour. The process included creating a Twitter developer account and obtaining API credentials, using the Python library Tweepy to connect to the Twitter API, and designing the script to randomly select a frame from the movie and tweet it along with a caption. Additionally, the script was set to run on a schedule using a cron job.",
     },
     {
-      image: "timeline.png",
+      image: "timeline.webp",
       title: "Movie Color Visualization",
       smallText:
         "Python script that extracts average color of each second of a movie and creates image with color bars.",
@@ -25,7 +25,7 @@ function generateCards() {
         "Movie Color Visualization: This project involved creating a Python script that extracts the average color of each second of a movie and generates an image with bars representing each color. The process included using the Python library OpenCV to read the movie frame by frame, analyzing each frame to extract the average color, and using the Python library Pillow to create an image with bars for each color. The final result was a colorful visualization of the movie's color palette.",
     },
     {
-      image: "internet.png",
+      image: "internet.webp",
       title: "Website Design and Hosting",
       smallText:
         "Website design and development, including domain purchase, free hosting and Cloudflare HTTPS configuration.",
@@ -33,14 +33,14 @@ function generateCards() {
         "Website Design and Hosting: This project involved designing and developing a website to showcase my resume, IT skills, and education. The process included purchasing a domain name, finding a free hosting provider, and configuring Cloudflare to add HTTPS to the website. Additionally, I used HTML, CSS, JavaScript, and Bootstrap to design the website layout and add interactive elements such as buttons and hover effects. Finally, I configured the website to be accessible to the public.",
     },
     {
-      image: "publictransport.png",
+      image: "publictransport.webp",
       title: "Transport times",
       smallText: "App public transport wait times",
       bigText:
         "App for Public Transport Wait Times: This project involved connecting to a city API to retrieve real-time information on the arrival times of various public transportation options. The application was designed to process and display this data in an easily accessible format for users. Technical steps included API integration, data processing and display logic implementation, and user interface design using HTML, CSS, JavaScript, and Bootstrap. The end result is a functional tool for commuters to stay informed on public transport wait times.",
     },
     {
-      image: "plans.png",
+      image: "plans.webp",
       title: "Planning App",
       smallText:
         "Mobile app for finding out the best weekend to do an activity some friends",
@@ -87,44 +87,50 @@ function generateCards() {
     output += cardHtml;
   });
   let expandedElement = `
-<div class="col-sm-5">
+  <div class="col-sm-5">
     <div class="card card-skill expanded hiddenProjects" style="z-index: 1000;" id="expanded">
-        <div class="row">
+        <div class="row h-100">
             <div class="col-sm-5">
-                <div class="card-top">
-                    <!--<div id="background"></div>-->
-                    <img src="images/projectcards/raspberry.png" class="image imgexpanded">
+                <div class="card-top d-flex flex-column justify-content-center align-items-center">
+                      <!--<img src="images/projectcards/raspberry.webp" class="image imgexpanded cropped-ofp">
+                </div>-->
+                <div class="section">
+                  <div class="image-container">
+                    <div class="image-container-inner"></div>
+                    <img id="image" src="images/compressedPng/timeline.png" class="image imgexpanded ">
+                  </div>
+                  <button id='restart'>Restart</button>
                 </div>
+              </div>
             </div>
             <div class="col-sm-7">
-                <div class="card-middle">
-                    <!--<h2 class="mt-3 text-uppercase"></h2>-->
-                    <h2 class="data text-uppercase" id="movingletters"></h2>
-                    <p class="px-4 small-size minimized hiddenProjects"></p>
-                    <p class="px-4 big-size"></p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <div class="card-bottom">
-                    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        class="svg-sprite">
-                        <defs>
-                            <filter id="filter">
-                                <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1"
-                                    result="warp" seed="1">
-                                </feTurbulence>
-                                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30"
-                                    in="SourceGraphic" in2="warp">
-                                </feDisplacementMap>
-                            </filter>
-                        </defs>
-                    </svg>
-                    <div class="body-section">
-                        <div class="half">
-                            <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n</div>
+                <div class="card-middle d-flex flex-column justify-content-center align-items-center">
+                    <div class="row">
+                        <h2 class="data text-uppercase" id="movingletters"></h2>
+                    </div>
+                    <div class="row">
+                        <p class="px-4 small-size minimized hiddenProjects"></p>
+                        <p class="px-4 big-size"></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="card-bottom">
+                                <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    class="svg-sprite">
+                                    <defs>
+                                        <filter id="filter">
+                                            <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001"
+                                                numOctaves="1" result="warp" seed="1">
+                                            </feTurbulence>
+                                            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30"
+                                                in="SourceGraphic" in2="warp">
+                                            </feDisplacementMap>
+                                        </filter>
+                                    </defs>
+                                </svg>
+                                <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,7 +144,7 @@ function generateCards() {
 function changeExpanded(card) {
   const expanded = document.getElementById("expanded");
   const imageSrc = card.querySelector(".image").src;
-  /*.replace(/\.png$/, "E.png");*/
+  /*.replace(/\.webp$/, "E.webp");*/
   const h2 = card.querySelector("h2").textContent;
   const smallSize = card.querySelector(".small-size").textContent;
   const bigSize = card.querySelector(".big-size").textContent;
@@ -172,24 +178,66 @@ function movingLetters() {
     texto.reveal(2000);
   }, revealDuration);
 }
+function fancyImage() {
+  const tl = new TimelineMax();
+
+  const imgContainer = document.getElementsByClassName("image-container");
+  const imgInnerContainer = document.getElementsByClassName(
+    "image-container-inner"
+  );
+  const img = document.getElementById("image");
+  const restart = document.getElementById("restart");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    tl.from(imgContainer, 1.5, {
+      height: 0,
+      opacity: 0,
+      ease: Expo.easeInOut,
+    })
+      .from(
+        img,
+        1.35,
+        {
+          opacity: 0,
+          scale: 1.8,
+          ease: Expo.easeOut,
+        },
+        1.45
+      )
+      .to(
+        imgInnerContainer,
+        1.25,
+        {
+          height: 0,
+          ease: Expo.easeInOut,
+        },
+        1.25
+      );
+
+    restart.addEventListener("click", function () {
+      tl.restart();
+    });
+  });
+}
 generateCards();
 const expanded = document.getElementById("expanded"); //Expanded Card
 const buttons = document.querySelectorAll(".expand-button"); //Botones expandir
 
 const header = document.getElementById("my-header");
 const overlay = document.getElementById("overlay");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const card = button.closest(".card");
-    expanded.classList.toggle("hiddenProjects");
-    const isExpanded = card.classList.contains("expanded");
-    overlay.style.display = isExpanded ? "none" : "block";
-    header.style.display = isExpanded ? "block" : "none";
-    const h2 = card.querySelector("h2");
-    card.querySelector("h2").classList.toggle("text-expanded");
-
-    changeExpanded(card);
-    movingLetters();
+document.addEventListener("DOMContentLoaded", function () {
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".card");
+      expanded.classList.toggle("hiddenProjects");
+      const isExpanded = card.classList.contains("expanded");
+      overlay.style.display = isExpanded ? "none" : "block";
+      header.style.display = isExpanded ? "block" : "none";
+      const h2 = card.querySelector("h2");
+      card.querySelector("h2").classList.toggle("text-expanded");
+      changeExpanded(card);
+      movingLetters();
+      fancyImage();
+    });
   });
 });

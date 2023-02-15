@@ -16,7 +16,6 @@ function toggleDarkMode() {
     sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
   moonIcon.className =
     moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
-  localStorage.setItem("dark", body.classList.contains("dark"));
   Array.from(document.getElementsByClassName("card")).forEach((card) => {
     card.classList.toggle("dark-mode-card");
   });
@@ -24,7 +23,9 @@ function toggleDarkMode() {
   dropdowns.forEach((dropdown) => {
     dropdown.classList.toggle("dropdown-menu-dark");
   });
+  localStorage.setItem("dark", body.classList.contains("dark"));
 }
-
-toggle.addEventListener("change", toggleDarkMode);
-localStorage.getItem("dark") === "true" ? toggleDarkMode() : undefined;
+document.addEventListener("DOMContentLoaded", function () {
+  toggle.addEventListener("change", toggleDarkMode);
+  localStorage.getItem("dark") === "true" ? toggleDarkMode() : undefined;
+});

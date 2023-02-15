@@ -18,7 +18,7 @@ button.learn-more {
 }
 
 button.learn-more .circle {
-  background: #ffca2c;
+  background: #45287a;
   border-radius: 1.625rem;
   display: block;
   height: 3rem;
@@ -140,7 +140,7 @@ button:hover .button-text {
   border-radius: 10px;
   height: 100%;
   position: absolute;
-  text-transfrom: uppercase;
+  /*text-transfrom: uppercase;*/
   transform: scaleX(0);
   transform-origin: left;
 }

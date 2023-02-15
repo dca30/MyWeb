@@ -1,52 +1,146 @@
-<div class="col-sm-5">
-    <div class="card card-skill expanded hiddenProjects" style="z-index: 1000;" id="expanded">
+<div class="section">
+    <div class="image-container">
+        <div class="image-container-inner"></div>
+        <img id="image" src="images/compressedPng/timeline.png">
+    </div>
+    <button id='restart'>Restart</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script>
+    const tl = new TimelineMax()
 
-        <div class="col-sm-5">
-            <div class="card-top">
-                <!--<div id="background"></div>-->
-                <img src="images/projectcards/raspberry.png" class="image imgexpanded">
-            </div>
-        </div>
-        <div class="col-sm-7">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h2 class="data text-uppercase" id="movingletters"></h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <div class="card-middle">
-                        <p class="px-4 small-size minimized hiddenProjects"></p>
-                        <p class="px-4 big-size"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <div class="card-bottom">
-                        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            class="svg-sprite">
-                            <defs>
-                                <filter id="filter">
-                                    <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1"
-                                        result="warp" seed="1">
-                                    </feTurbulence>
-                                    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30"
-                                        in="SourceGraphic" in2="warp">
-                                    </feDisplacementMap>
-                                </filter>
-                            </defs>
-                        </svg>
-                        <div class="body-section">
-                            <div class="half">
-                                <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    const imgContainer = document.getElementsByClassName('image-container');
+    const imgInnerContainer = document.getElementsByClassName('image-container-inner');
+    const img = document.getElementById('image');
+    const restart = document.getElementById('restart');
 
+    document.addEventListener('DOMContentLoaded', () => {
+
+        tl
+            .from(imgContainer, 1.5, {
+                height: 0,
+                opacity: 0,
+                ease: Expo.easeInOut
+            })
+            .from(img, 1.35, {
+                opacity: 0,
+                scale: 1.8,
+                ease: Expo.easeOut
+            }, 1.45)
+            .to(imgInnerContainer, 1.25, {
+                height: 0,
+                ease: Expo.easeInOut
+            }, 1.25)
+
+        restart.addEventListener("click", function () {
+            tl.restart();
+        });
+
+    })
+</script>
+<style>
+    .section {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 25%;
+        height: 90%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-container-inner {
+        height: 100%;
+        width: 100%;
+        background: pink;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .image-container>img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: auto;
+    left: -30%;
+}
+
+
+    #restart {
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+    }
+</style>
+
+
+<!--<div class="outer" id="outer">
+    <div class="inner" id="inner">
+        <img class="image"
+            src="https://images.unsplash.com/photo-1552058767-fc73a3ecca30?ixlib=rb-1.2.1&auto=format&fit=crop&w=5304&q=80">
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<style>
+
+
+    .outer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .outer:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 149.9245852187%;
+    }
+
+    .outer>.inner {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .outer>.inner img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        overflow: hidden;
+    }
+</style>
+<script>
+    anime({
+        targets: '.outer',
+        translateY: '-100%',
+        direction: 'reverse',
+        duration: 3000,
+        easing: 'easeInOutCubic',
+    })
+
+    anime({
+        targets: '.inner',
+        translateY: '100%',
+        direction: 'reverse',
+        duration: 3000,
+        easing: 'easeInOutCubic',
+    })
+
+    anime({
+        targets: '.image',
+        scale: 2,
+        easing: 'easeInOutQuad',
+        direction: 'reverse',
+        duration: 3500,
+    })
+</script>-->
