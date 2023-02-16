@@ -6,7 +6,7 @@
   position: fixed;
   right: 30px;
   top: 30px;
-  z-index: 950;
+  z-index: 1000;
 }
 
 #overlay {
@@ -77,23 +77,23 @@
 
 .section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
 }
 
 .image-container {
-  width: 25%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
 
 .image-container-inner {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background: pink;
+  background: black;
   z-index: 2;
   position: absolute;
 }
@@ -104,10 +104,18 @@
   height: 100%;
   width: auto;
   /*left: -100px;*/
+  /*left: -30%;*/
+  left: 0;
 }
 
 #restart {
   position: absolute;
   left: 5%;
   bottom: 10%;
+}
+#myrow{
+  padding-left: 0;
+}
+.row > * {
+  padding-left: 0;
 }

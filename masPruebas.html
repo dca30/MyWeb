@@ -3,39 +3,30 @@
 
 <head>
     <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <style>
-        .box {
-            position: relative;
-            height: 50px;
-            width: 100px;
-            transition: left 1s, top 1s;
-            float: left;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/styleDark.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/styleSwitch.css" rel="stylesheet" />
+    <link href="css/projects.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <link href="css/btnglitch.css" rel="stylesheet">
 </head>
-<div class="container-fluid vh-100">
-    <div class="row h-100">
-        <div class="col-6 bg-dark h-100"></div>
-        <div class="col-6 h-100 d-flex flex-column">
-            <div class="row bg-primary flex-grow-1"></div>
-            <div class="row bg-secondary flex-grow-1"></div>
-            <div class="row bg-success flex-grow-1"></div>
-        </div>
-    </div>
-</div>
-
 <div class="col-sm-5">
     <div class="card card-skill expanded hiddenProjects" style="z-index: 1000;" id="expanded">
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="card-top">
-                    <!--<div id="background"></div>-->
-                    <img src="images/projectcards/raspberry.png" class="image imgexpanded">
+        <div class="row h-100 w-100">
+            <div class="col-sm-5 h-100">
+                <div class="card-top d-flex flex-column justify-content-start align-items-center">
+                    <div class="section">
+                        <div class="image-container">
+                            <div class="image-container-inner"></div>
+                            <img id="image" src="images/compressedPng/timeline.png" class="image imgexpanded ">
+                        </div>
+                        <button id='restart'>Restart</button>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-7">
-                <div class="card-middle">
+                <div class="card-middle d-flex flex-column justify-content-center align-items-center">
                     <div class="row">
                         <h2 class="data text-uppercase" id="movingletters"></h2>
                     </div>
@@ -60,16 +51,10 @@
                                         </filter>
                                     </defs>
                                 </svg>
-                                <div class="body-section">
-                                    <div class="half">
-                                        <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n</div>
                             </div>
                         </div>
                     </div>
-                    <!--<h2 class="mt-3 text-uppercase"></h2>-->
                 </div>
             </div>
         </div>
@@ -158,7 +143,7 @@
         </div>
     </div>
 </div>-->
-<script>
+<!--<script>
     var moved = false;
     //var originalLeft = [];
     var originalTop = [];
@@ -193,7 +178,7 @@
         }
         moved = !moved;
     }
-</script>
+</script>-->
 </body>
 
 </html>

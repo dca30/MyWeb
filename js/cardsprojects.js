@@ -88,18 +88,15 @@ function generateCards() {
   });
   let expandedElement = `
   <div class="col-sm-5">
-    <div class="card card-skill expanded hiddenProjects" style="z-index: 1000;" id="expanded">
-        <div class="row h-100">
-            <div class="col-sm-5">
-                <div class="card-top d-flex flex-column justify-content-center align-items-center">
-                      <!--<img src="images/projectcards/raspberry.webp" class="image imgexpanded cropped-ofp">
-                </div>-->
+    <div class="card card-skill expanded hiddenProjects" id="expanded">
+        <div class="row h-100 w-100" id="myrow">
+            <div class="col-sm-5 h-100">
+                <div class="card-top d-flex <!--flex-column justify-content-start align-items-center-->">
                 <div class="section">
                   <div class="image-container">
                     <div class="image-container-inner"></div>
                     <img id="image" src="images/compressedPng/timeline.png" class="image imgexpanded ">
                   </div>
-                  <button id='restart'>Restart</button>
                 </div>
               </div>
             </div>
@@ -129,7 +126,7 @@ function generateCards() {
                                         </filter>
                                     </defs>
                                 </svg>
-                                <div class="glitch btn-small btn-dark btn-glitch expand-button">Bitch'n</div>
+                                <div class="glitch btn-small btn-dark btn-glitch expand-button" id="btnglitcheado">Bitch'n</div>
                             </div>
                         </div>
                     </div>
@@ -180,45 +177,38 @@ function movingLetters() {
 }
 function fancyImage() {
   const tl = new TimelineMax();
-
+  //tl.restart();
   const imgContainer = document.getElementsByClassName("image-container");
   const imgInnerContainer = document.getElementsByClassName(
     "image-container-inner"
   );
   const img = document.getElementById("image");
-  const restart = document.getElementById("restart");
-
-  document.addEventListener("DOMContentLoaded", () => {
-    tl.from(imgContainer, 1.5, {
-      height: 0,
-      opacity: 0,
-      ease: Expo.easeInOut,
-    })
-      .from(
-        img,
-        1.35,
-        {
-          opacity: 0,
-          scale: 1.8,
-          ease: Expo.easeOut,
-        },
-        1.45
-      )
-      .to(
-        imgInnerContainer,
-        1.25,
-        {
-          height: 0,
-          ease: Expo.easeInOut,
-        },
-        1.25
-      );
-
-    restart.addEventListener("click", function () {
-      tl.restart();
-    });
-  });
+  tl.from(imgContainer, 1.5, {
+    height: 0,
+    opacity: 0,
+    ease: Expo.easeInOut,
+  })
+    .from(
+      img,
+      1.35,
+      {
+        opacity: 0,
+        scale: 1.8,
+        ease: Expo.easeOut,
+      },
+      1.45
+    )
+    .to(
+      imgInnerContainer,
+      1.25,
+      {
+        height: 0,
+        ease: Expo.easeInOut,
+      },
+      1.25
+    );
 }
+
 generateCards();
 const expanded = document.getElementById("expanded"); //Expanded Card
 const buttons = document.querySelectorAll(".expand-button"); //Botones expandir
@@ -233,6 +223,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const isExpanded = card.classList.contains("expanded");
       overlay.style.display = isExpanded ? "none" : "block";
       header.style.display = isExpanded ? "block" : "none";
+      const btnVuelta = document.getElementById("btnglitcheado");
+      console.log(btnVuelta);
       const h2 = card.querySelector("h2");
       card.querySelector("h2").classList.toggle("text-expanded");
       changeExpanded(card);

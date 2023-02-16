@@ -1,43 +1,47 @@
-<div class="section">
-    <div class="image-container">
-        <div class="image-container-inner"></div>
-        <img id="image" src="images/compressedPng/timeline.png">
+<div id="wrapper">
+    <p>Click the button to reveal the section:</p>
+    <button id="show-section">Show Section</button>
+    <div class="section" style="display:none;">
+        <div class="image-container">
+            <div class="image-container-inner"></div>
+            <img id="image" src="images/compressedPng/timeline.png">
+        </div>
     </div>
-    <button id='restart'>Restart</button>
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 <script>
-    const tl = new TimelineMax()
+    const tl = new TimelineMax();
 
     const imgContainer = document.getElementsByClassName('image-container');
     const imgInnerContainer = document.getElementsByClassName('image-container-inner');
     const img = document.getElementById('image');
-    const restart = document.getElementById('restart');
+    const showSectionButton = document.getElementById('show-section');
+    const section = document.querySelector('.section');
 
-    document.addEventListener('DOMContentLoaded', () => {
+    tl
+        .from(imgContainer, 1.5, {
+            height: 0,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+        .from(img, 1.35, {
+            opacity: 0,
+            scale: 1.8,
+            ease: Expo.easeOut
+        }, 1.45)
+        .to(imgInnerContainer, 1.25, {
+            height: 0,
+            ease: Expo.easeInOut
+        }, 1.25)
+        .pause(); // pause the timeline initially
 
-        tl
-            .from(imgContainer, 1.5, {
-                height: 0,
-                opacity: 0,
-                ease: Expo.easeInOut
-            })
-            .from(img, 1.35, {
-                opacity: 0,
-                scale: 1.8,
-                ease: Expo.easeOut
-            }, 1.45)
-            .to(imgInnerContainer, 1.25, {
-                height: 0,
-                ease: Expo.easeInOut
-            }, 1.25)
-
-        restart.addEventListener("click", function () {
-            tl.restart();
-        });
-
-    })
+    showSectionButton.addEventListener('click', function () {
+        section.style.display = 'block'; // show the section
+        tl.restart(); // restart the timeline when button is clicked
+    });
 </script>
+
 <style>
     .section {
         height: 100vh;
@@ -48,7 +52,7 @@
     }
 
     .image-container {
-        width: 25%;
+        width: 50%;
         height: 90%;
         overflow: hidden;
         position: relative;
@@ -63,20 +67,23 @@
     }
 
     .image-container>img {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: auto;
-    left: -30%;
-}
-
-
-    #restart {
         position: absolute;
-        left: 5%;
-        bottom: 10%;
+        top: 0;
+        height: 100%;
+        width: auto;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #show-section {
+        margin-top: 1em;
     }
 </style>
+
 
 
 <!--<div class="outer" id="outer">

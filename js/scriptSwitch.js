@@ -7,6 +7,10 @@ const navTop = document.getElementById("navTop");
 const dropdowns = document.querySelectorAll(".dropdown-menu");
 
 function toggleDarkMode() {
+  const color = document.documentElement.style;
+  localStorage.getItem("dark") === "true"
+    ? color.setProperty("--hover-color", "black")
+    : color.setProperty("--hover-color", "white");
   body.classList.toggle("dark");
   body.classList.toggle("light");
   body.classList.toggle("dark-body");
