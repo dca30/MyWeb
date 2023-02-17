@@ -78,11 +78,7 @@ function generateSocialMedia() {
                 <li>
                     <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank"><i
                             class="fab fa-linkedin-in"></i></a>
-                </li>
-                <!--<li>
-                          <a href="" onclick="copyToClipboard(event,'calvoalegred@gmail.com')" target="blank"><i
-                              class="fab fa-at"></i></a>
-                        </li>-->
+                </li>      
                 <li>
                     <button class="learn-more" onclick="copyToClipboard(event,'calvoalegred@gmail.com')">
                         <span class="circle" aria-hidden="true">
@@ -125,8 +121,9 @@ function copyToClipboard(event, text) {
 function checkHeight() {
   const htmlHeight = document.body.scrollHeight;
   const displayHeight = window.innerHeight;
-  if (htmlHeight < displayHeight) {
-    document.querySelector(".contenido").classList.toggle("hidden");
+  const contenido = document.querySelector(".contenido");
+  if (htmlHeight < displayHeight && contenido.classList.contains("hidden")) {
+    contenido.classList.toggle("hidden");
   }
 }
 checkHeight();

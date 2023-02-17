@@ -65,10 +65,11 @@
   display: none !important;
 }
 
-.fas,
-.fa-brands {
+.dot > .fas,
+.dot > .fa-brands {
   color: white;
 }
+
 
 #cardTimeline {
   align-items: center;

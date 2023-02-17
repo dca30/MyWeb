@@ -95,7 +95,7 @@ function generateCards() {
                 <div class="section">
                   <div class="image-container">
                     <div class="image-container-inner"></div>
-                    <img id="image" src="images/compressedPng/timeline.png" class="image imgexpanded ">
+                    <img id="image" src="" class="image imgexpanded ">
                   </div>
                 </div>
               </div>

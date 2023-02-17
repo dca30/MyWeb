@@ -8,8 +8,10 @@ const translations = {
     language: "Idioma",
     //About me
     about_me: "SOBRE MI",
+    /*description_aboutme:
+      "Me considero una persona abierta, con facilidad para el trato con mis compañeros. Enfocado al logro, soy una persona muy versátil y con mucha facilidad para aprender nuevos conocimientos y adaptarme a las circunstancias y entornos. Estoy interesado en poder aportar todo mi potencial en una empresa a medida que obtengo nuevas habilidades informáticas.",*/
     description_aboutme:
-      "Me considero una persona abierta, con facilidad para el trato con mis compañeros. Enfocado al logro, soy una persona muy versátil y con mucha facilidad para aprender nuevos conocimientos y adaptarme a las circunstancias y entornos. Estoy interesado en poder aportar todo mi potencial en una empresa a medida que obtengo nuevas habilidades informáticas.",
+      "Soy un programador apasionado que acaba de entrar en el mundo profesional. Tengo un gran interés en el desarrollo de proyectos secundarios y me siento cómodo trabajando con diversas tecnologías de programación. Siempre estoy ansioso por aprender y mejorar mis habilidades, y prospero en entornos de trabajo dinámicos que me desafían a pensar creativamente y a encontrar soluciones innovadoras. Con una sólida base en los principios de programación, estoy emocionado por aplicar mis conocimientos a proyectos del mundo real y contribuir al éxito de los equipos con los que trabajo.",
     interests: "INTERESES",
     hobbies: "AFICIONES",
     city: "Ciudad:",
@@ -74,8 +76,10 @@ const translations = {
     language: "Language",
     //About me
     about_me: "ABOUT ME",
+    //description_aboutme:
     description_aboutme:
-      "I consider myself an open person, with ease in dealing with my colleagues. Focused on achieving goals, I am a very versatile person with a lot of ability to learn new knowledge and adapt to different circumstances and environments. I am interested in being able to contribute my full potential in a company as I gain new IT skills.",
+      "I'm a passionate programmer who's just entered the professional world. I have a strong interest in developing side projects and am comfortable working with various programming technologies. I'm always eager to learn and improve my skills, and I thrive in dynamic work environments that challenge me to think creatively and come up with innovative solutions. With a solid foundation in programming principles, I'm excited to apply my knowledge to real-world projects and contribute to the success of the teams I work with.",
+    //  "I consider myself an open person, with ease in dealing with my colleagues. Focused on achieving goals, I am a very versatile person with a lot of ability to learn new knowledge and adapt to different circumstances and environments. I am interested in being able to contribute my full potential in a company as I gain new IT skills.",
     interests: "INTERESTS",
     hobbies: "HOBBIES",
     city: "City:",
@@ -133,9 +137,7 @@ const translations = {
   },
 };
 function updateContent() {
-  // remove the "fade-out" class before updating the content
   let elements = document.querySelectorAll("[data-translate]");
-  // get the current language from local storage or default to "es"
   let lang = localStorage.getItem("lang") || "es";
   // update the content
   elements.forEach(function (element) {
