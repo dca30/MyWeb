@@ -15,6 +15,7 @@
 }
 
 .dot {
+  transform-origin: center center;
   align-items: center;
   background-color: black;
   border-radius: 20px;
@@ -39,16 +40,23 @@
 
 .diagonal {
   color: black;
-  left: 0px;
   position: absolute;
   text-align: left;
   top: -40px;
 }
+.dot.bigger i {
+  transform: scale(0.7);
+}
+/*.dot.bigger p {
+  transform: scale(0.6);
+}*/
 
-.bigger {
+.dot.bigger {
   transform: scale(1.75);
 }
-
+.dot.bigger .diagonal {
+  top: -30px;
+}
 .bold {
   font-weight: bold;
 }
@@ -69,7 +77,6 @@
 .dot > .fa-brands {
   color: white;
 }
-
 
 #cardTimeline {
   align-items: center;
