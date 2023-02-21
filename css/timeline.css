@@ -34,7 +34,7 @@
 
 .line {
   background-color: black;
-  height: 4px;
+  height: 3px;
   width: 100%;
 }
 
@@ -44,15 +44,19 @@
   text-align: left;
   top: -40px;
 }
-.dot.bigger i {
-  transform: scale(0.7);
-}
+/*.dot.bigger i {
+  transform: scale(1) !important;
+}*/
 /*.dot.bigger p {
   transform: scale(0.6);
 }*/
 
 .dot.bigger {
-  transform: scale(1.75);
+  /*transform: scale(1.75);*/
+  max-height: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  min-width: 30px;
 }
 .dot.bigger .diagonal {
   top: -30px;
@@ -64,13 +68,16 @@
 .primary {
   background-color: black;
 }
+.primary-dark {
+  background-color: white;
+}
 
 .secondary {
-  background-color: lightgray;
+  background-color: rgb(133, 132, 132);
 }
 
 .hide {
-  display: none !important;
+  /*display: none !important;*/
 }
 
 .dot > .fas,
@@ -85,7 +92,6 @@
   border-radius: 20px;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
   display: flex;
-
   flex: 1 0 18%;
   justify-content: center;
   margin: 0 auto;

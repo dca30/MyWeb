@@ -34,9 +34,7 @@ function generateNavbar() {
               <!-- Recordad que cada menú desplegable tiene que tener su propio id -->
               <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
                 role="button">
-                <!--id="navbarDropdown2"-->
-                <i class="d-none d-lg-inline fas fa-globe"></i>
-                <span class="d-lg-none"> Idioma</span>
+                <i class=" d-lg-inline fas fa-globe"></i>
               </a>
               <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
               <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
