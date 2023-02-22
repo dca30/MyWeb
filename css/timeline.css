@@ -10,26 +10,26 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 50px;
-  padding: 0 5% 0 5%;
+  margin: 50px 0 50px 0;
+  padding: 0 8% 0 8%;
 }
 
 .dot {
   transform-origin: center center;
   align-items: center;
   background-color: black;
-  border-radius: 20px;
+  border-radius: 28px;
   cursor: pointer;
   display: flex;
-  height: 20px;
+  height: 28px;
+  width: 28px;
   justify-content: center;
-  max-height: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  min-width: 20px;
+  max-height: 28px;
+  max-width: 28px;
+  min-height: 28px;
+  min-width: 28px;
   position: relative;
   transition: all 0.5s ease;
-  width: 20px;
 }
 
 .line {
@@ -44,19 +44,9 @@
   text-align: left;
   top: -40px;
 }
-/*.dot.bigger i {
-  transform: scale(1) !important;
-}*/
-/*.dot.bigger p {
-  transform: scale(0.6);
-}*/
 
 .dot.bigger {
-  /*transform: scale(1.75);*/
-  max-height: 30px;
-  max-width: 30px;
-  min-height: 30px;
-  min-width: 30px;
+  transform: scale(1.5);
 }
 .dot.bigger .diagonal {
   top: -30px;
@@ -77,7 +67,7 @@
 }
 
 .hide {
-  /*display: none !important;*/
+  display: none !important;
 }
 
 .dot > .fas,
@@ -99,4 +89,7 @@
   max-width: 100%;
   transition: transform 0.5s ease;
   width: 100%;
+}
+.icon {
+  transform: scale(0.9);
 }
