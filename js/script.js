@@ -14,7 +14,7 @@ function generateNavbar() {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="enlaces">
+          <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0" id="enlaces">
             <li class="nav-item">
               <a class="nav-link text-uppercase" href="index.html" data-translate="home"></a>
             </li>

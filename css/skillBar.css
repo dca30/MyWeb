@@ -75,7 +75,7 @@
 .skills-bar .bar .progress-line {
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   background: #f0f0f0;
-  border-radius: 10px;
+  border-radius: 8px;
   height: 10px;
   position: relative;
   transform: scaleX(0);

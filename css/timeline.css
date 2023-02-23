@@ -17,7 +17,7 @@
 .dot {
   transform-origin: center center;
   align-items: center;
-  background-color: black;
+  /*background-color: black;*/
   border-radius: 28px;
   cursor: pointer;
   display: flex;
@@ -33,38 +33,70 @@
 }
 
 .line {
-  background-color: black;
   height: 3px;
   width: 100%;
 }
 
-.diagonal {
+.textdot {
   color: black;
   position: absolute;
   text-align: left;
   top: -40px;
 }
+.dark-mode-card .textdot {
+  color: white;
+}
 
 .dot.bigger {
   transform: scale(1.5);
 }
-.dot.bigger .diagonal {
+.dot.bigger .textdot {
   top: -30px;
 }
 .bold {
   font-weight: bold;
 }
+/* Set background-color of .main-dark when .dark-mode-card is present*/
+.dark-mode-card .primary {
+  background-color: white;
+}
+.dark-mode-card .primary-dark {
+  background-color: grey;
+}
+.dark-mode-card .primary .icon {
+  color: black;
+}
+.dark-mode-card .primary-dark .icon {
+  color: black;
+}
+
+.dark-mode-card .primary .line {
+  background-color: white;
+}
+.dark-mode-card .primary-dark .line {
+  background-color: grey;
+}
+
+/**/
 
 .primary {
   background-color: black;
 }
 .primary-dark {
-  background-color: white;
+  background-color: lightgray;
 }
-
-.secondary {
+/*.main-light {
+  background-color: black;
+}
+.shadow-light {
+  background-color: lightgray;
+}
+.main-dark {
   background-color: rgb(133, 132, 132);
 }
+.shadow-dark {
+  background-color: lightgray;
+}*/
 
 .hide {
   display: none !important;

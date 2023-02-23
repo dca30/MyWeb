@@ -269,15 +269,6 @@ img {
   margin: 6px 15px;
   width: 50%;
 }
-.section-title h4::after {
-  background: #dee2e6;
-  border-radius: 7px;
-  content: "";
-  display: inline-block;
-  height: 3px;
-  margin: 6px 15px;
-  width: 160px;
-}
 .section-title h4::before {
   background: #dee2e6;
   border-radius: 7px;
@@ -285,7 +276,18 @@ img {
   display: inline-block;
   height: 3px;
   margin: 6px 15px;
-  width: 160px;
+  min-width: 100px;
+  max-width: 400px;
+}
+.section-title h4::after {
+  background: #dee2e6;
+  border-radius: 7px;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  margin: 6px 15px;
+  min-width: 100px;
+  max-width: 400px;
 }
 .section-title {
   align-items: center; /* align elements to the center of the cross axis */

@@ -101,7 +101,7 @@ function generateCards() {
               </div>
             </div>
             <div class="col-sm-7">
-                <div class="card-middle d-flex flex-column justify-content-center align-items-center">
+                <div class="card-middle px-5 d-flex flex-column justify-content-center align-items-center">
                     <div class="row">
                         <h2 class="data text-uppercase" id="movingletters"></h2>
                     </div>
