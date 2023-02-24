@@ -43,7 +43,7 @@
   text-align: left;
   top: -40px;
 }
-.dark-mode-card .textdot {
+.dark .textdot {
   color: white;
 }
 
@@ -56,24 +56,23 @@
 .bold {
   font-weight: bold;
 }
-/* Set background-color of .main-dark when .dark-mode-card is present*/
-.dark-mode-card .primary {
+.dark .primary {
   background-color: white;
 }
-.dark-mode-card .primary-dark {
+.dark .primary-dark {
   background-color: grey;
 }
-.dark-mode-card .primary .icon {
+.dark .primary .icon {
   color: black;
 }
-.dark-mode-card .primary-dark .icon {
+.dark .primary-dark .icon {
   color: black;
 }
 
-.dark-mode-card .primary .line {
+.dark .primary .line {
   background-color: white;
 }
-.dark-mode-card .primary-dark .line {
+.dark .primary-dark .line {
   background-color: grey;
 }
 
@@ -127,6 +126,11 @@
   transition: transform 0.5s ease;
   width: 100%;
 }
+.dark #cardTimeline {
+  background-color: #303e54;
+  transition: transform 0.5s ease;
+}
+
 .icon {
   transform: scale(0.9);
 }

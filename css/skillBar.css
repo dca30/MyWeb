@@ -21,6 +21,7 @@
   min-width: 180px;
   transition: all 0.3s ease-in-out;
 }
+
 .card-skill {
   display: flex;
   justify-content: center;

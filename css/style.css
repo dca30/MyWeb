@@ -209,7 +209,7 @@ html:hover .scrollable-container::-webkit-scrollbar {
   width: 10px;
 }
 
-.dark-mode-card {
+.dark .card {
   background: #303e54;
   color: white;
 }

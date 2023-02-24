@@ -15,8 +15,15 @@ body.dark,
 .dark-mode-header {
   transition: all 0.75s;
 }
-
-.navbar-dark {
+.dark #navTop {
+  background-color: #303e54;
+  color: white;
+}
+.light #navTop {
+  background-color: white;
+  color: black;
+}
+/*.navbar-dark {
   background-color: #303e54;
   color: white;
 }
@@ -24,8 +31,19 @@ body.dark,
 .navbar-light {
   background-color: white;
   color: black;
-}
+}*/
 
-.dropdown-menu-dark {
+.light .dropdown-menu {
+  background-color: white;
+}
+.dark .dropdown-menu {
   background-color: #303e54;
+}
+.light .dropdown-item {
+  background-color: white;
+  color: black;
+}
+.dark .dropdown-item {
+  background-color: #303e54;
+  color: white;
 }
