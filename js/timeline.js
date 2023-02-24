@@ -1,14 +1,6 @@
 //Primera timeline
 const container1 = document.querySelector(".container1-timeline");
-const words1 = [
-  "Cyber",
-  "Servidores",
-  "Frontend",
-  "Backend",
-  "Linux",
-  "OS",
-  "Auto",
-];
+const words1 = ["cyber", "server", "front", "back", "linux", "os", "auto"];
 const icons1 = [
   ["fas", "fa-shield-alt"],
   ["fas", "fa-server"],
@@ -21,18 +13,18 @@ const icons1 = [
 //Segunda timeline
 const container2 = document.querySelector(".container2-timeline");
 const words2 = [
-  "Tenis",
-  "Padel",
-  "Gym",
-  "Bici",
-  "Correr",
-  "Electro",
-  "Series",
-  "Peliculas",
+  "tennis",
+  "padel",
+  "gym",
+  "bike",
+  "run",
+  "electro",
+  "tv",
+  "movie",
 ];
 const icons2 = [
-  ["fas", "fa-tennis-ball"],
-  ["fas", "fa-paddle-ball"],
+  ["bx", "bx-tennis-ball"],
+  ["fa", "fa-table-tennis-paddle-ball"],
   ["fas", "fa-dumbbell"],
   ["fas", "fa-bicycle"],
   ["fas", "fa-running"],
@@ -55,7 +47,7 @@ function createTimeline(words, container, icons) {
   function createDotsAndLines(words, container) {
     // Create start line
     const startLine = document.createElement("span");
-    startLine.classList.add("line","primary");
+    startLine.classList.add("line", "primary");
     container.prepend(startLine);
 
     // Create dots for each word
@@ -67,7 +59,7 @@ function createTimeline(words, container, icons) {
 
     // Create end line
     const endLine = document.createElement("span");
-    endLine.classList.add("line","primary");
+    endLine.classList.add("line", "primary");
     container.appendChild(endLine);
   }
   // Create dot
@@ -77,7 +69,8 @@ function createTimeline(words, container, icons) {
 
     const textdot = document.createElement("p");
     textdot.classList.add("textdot", "hide"); // add the hide class here
-    textdot.innerText = word;
+    textdot.setAttribute("data-translate", word);
+    //textdot.innerText = word;
 
     // Add Font Awesome icon to dot
     const iconClasses = icons[index];
@@ -95,7 +88,7 @@ function createTimeline(words, container, icons) {
   // Create line
   function createLine() {
     const line = document.createElement("span");
-    line.classList.add("line","primary");
+    line.classList.add("line", "primary");
     return line;
   }
   // Add click event to dot
@@ -135,7 +128,7 @@ function createTimeline(words, container, icons) {
 
       // Set the background color of this dot to black, and make its textdot line bold
       //dot.style.backgroundColor = "black";
-      
+
       dot.querySelector(".textdot").classList.add("bold");
 
       //Set the background color of all previous siblings of this dot (dots and lines) to black

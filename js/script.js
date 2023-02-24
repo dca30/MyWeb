@@ -38,8 +38,8 @@ function generateNavbar() {
               </a>
               <!-- Montamos el menú dropdown. Añadimos la clase .dropdown-menu-end para que no se salga el menú anidado por la derecha  -->
               <ul aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="">Español</a></li>
-                <li><a class="dropdown-item" href="">English</a></li>
+                <li><a class="dropdown-item seleccionado" id="es" href="">Español</a></li>
+                <li><a class="dropdown-item" id="en" href="">English</a></li>
                 <!--<i class="fa-solid fa-check" id="checkeng"></i>
                 <i class="fa-solid fa-check" id="checkesp"></i>-->
               </ul>
@@ -59,6 +59,7 @@ function generateNavbar() {
         <div class="progress-bar" id="myBar"></div>
       </div>
     </nav>`;
+  
 }
 function generateSocialMedia() {
   var socialmedia = document.getElementById("socialmedia");

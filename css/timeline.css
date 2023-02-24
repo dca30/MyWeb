@@ -103,8 +103,13 @@
 }
 
 .dot > .fas,
-.dot > .fa-brands {
+.dot > .fa-brands,
+.dot > .bx,
+.dot > .fa {
   color: white;
+}
+.dot > .bx {
+  transform: scale(1.2);
 }
 
 #cardTimeline {
