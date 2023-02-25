@@ -127,7 +127,7 @@
   width: 100%;
 }
 .dark #cardTimeline {
-  background-color: #303e54;
+  background-color: #1e1e1e;
   transition: transform 0.5s ease;
 }
 

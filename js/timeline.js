@@ -96,7 +96,6 @@ function createTimeline(words, container, icons) {
     dot.addEventListener("click", function () {
       // Check if this dot is the last clicked dot and return if it is
       if (lastClicked === dot) {
-        console.log("se ha clickado el mismo");
         return;
       }
       // If there was a last clicked dot, toggle its "bigger" class and hide its textdot line if it has one

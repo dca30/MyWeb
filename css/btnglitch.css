@@ -51,11 +51,11 @@
 .btn-dark {
   background-color: #121212;
   color: #fff;
-  border-color: #fff;
+  /*border-color: #fff;*/
 }
 
 .btn-dark:hover {
-  color: yellow;
+  color: white;
 }
 
 .btn-glitch {

@@ -139,7 +139,8 @@ button.learn-more {
 }
 
 button.learn-more .circle {
-  background: #45287a;
+  /*background: #bb86fc;*/
+  background: #6200ee;
   border-radius: 1.625rem;
   display: block;
   height: 3rem;
@@ -166,17 +167,7 @@ button.learn-more .circle .icon.arrow {
   width: 1.125rem;
 }
 
-button.learn-more .circle .icon.arrow::before {
-  border-right: 0.125rem solid white;
-  border-top: 0.125rem solid white;
-  content: "";
-  height: 0.625rem;
-  position: absolute;
-  right: 0.0625rem;
-  top: -0.29rem;
-  transform: rotate(45deg);
-  width: 0.625rem;
-}
+
 
 button.learn-more .button-text {
   bottom: 0;
@@ -209,4 +200,7 @@ button:hover .button-text {
 .sci li a:hover {
   background: #03a9f4;
   color: #fff;
+}
+.fa-angle-right {
+  color: white;
 }

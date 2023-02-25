@@ -18,7 +18,9 @@ button.learn-more {
 }
 
 button.learn-more .circle {
-  background: #45287a;
+  /*background: #bb86fc;*/
+  background: #6200ee;
+
   border-radius: 1.625rem;
   display: block;
   height: 3rem;

@@ -3,9 +3,8 @@
   color: white;
 }*/
 /*DARK MODE*/
-body.dark,
-.dark-body {
-  background-color: #222831; /*#121212*/
+body.dark {
+  background-color: #121212; /*#121212*/
   color: white;
 }
 
@@ -16,7 +15,7 @@ body.dark,
   transition: all 0.75s;
 }
 .dark #navTop {
-  background-color: #303e54;
+  background-color: #1e1e1e;
   color: white;
 }
 .light #navTop {

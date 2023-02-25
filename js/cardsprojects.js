@@ -63,7 +63,7 @@ function generateCards() {
           <img src="images/projectcards/__IMAGE__" class="image" />
         </div>
         <div class="card-middle">
-          <h2 class="mt-3" data-translate="__TITLE__"></h2>
+          <h2 class="mt-3 px-4" data-translate="__TITLE__"></h2>
           <p class="px-4 small-size" data-translate="__SMALL_TEXT__">__SMALL_TEXT__</p>
           <p class="px-4 big-size hiddenProjects" data-translate="__BIG_TEXT__"></p>
         </div>
@@ -79,7 +79,7 @@ function generateCards() {
                   </filter>
                 </defs>
               </svg>
-           <div class="glitch btn-small btn-dark btn-glitch expand-button rounded-pill">Bitch'n</div>
+           <div class="glitch btn-dark btn-glitch expand-button" data-translate="showmore"></div>
         </div>
       </div>
     </div>`;
@@ -133,7 +133,7 @@ function generateCards() {
                                         </filter>
                                     </defs>
                                 </svg>
-                                <div class="glitch btn-small btn-dark btn-glitch expand-button" id="btnglitcheado">Bitch'n</div>
+                                <div class="glitch btn-dark btn-glitch expand-button" data-translate="showless" id="btnglitcheado"></div>
                             </div>
                         </div>
                     </div>
@@ -231,7 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.style.display = isExpanded ? "none" : "block";
       header.style.display = isExpanded ? "block" : "none";
       const btnVuelta = document.getElementById("btnglitcheado");
-      console.log(btnVuelta);
       const h2 = card.querySelector("h2");
       card.querySelector("h2").classList.toggle("text-expanded");
       changeExpanded(card);

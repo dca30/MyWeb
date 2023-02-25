@@ -81,7 +81,8 @@ function generateSocialMedia() {
                 <li>
                     <button class="learn-more" onclick="copyToClipboard(event,'calvoalegred@gmail.com')">
                         <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
+                            <span class="icon arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            
                         </span>
                         <span class="button-text">COPY MAIL</span>
                     </button>

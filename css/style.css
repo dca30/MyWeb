@@ -144,7 +144,8 @@ hr:not([size]) {
 }
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  background: #45287a;
+  /*background: #bb86fc;*/
+  background: #6200ee;
   /*FFC107*/
   width: 0%;
 }
@@ -210,7 +211,7 @@ html:hover .scrollable-container::-webkit-scrollbar {
 }
 
 .dark .card {
-  background: #303e54;
+  background: #1e1e1e;
   color: white;
 }
 .card-about {
@@ -311,8 +312,11 @@ img {
 .btn-morado,
 .btn-morado:hover {
   color: #ffffff;
-  background-color: #45287a;
-  border-color: #45287a;
+  /*background-color: #bb86fc;
+  border-color: #bb86fc;*/
+  background-color: #6200ee;
+  border-color: #6200ee;
+  /*45287a*/
 }
 .dropdown-item {
   line-height: 1.5; /* set the line height to match the dot height */
