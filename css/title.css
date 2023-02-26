@@ -1,4 +1,4 @@
-button {
+/*button {
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -18,9 +18,7 @@ button.learn-more {
 }
 
 button.learn-more .circle {
-  /*background: #bb86fc;*/
   background: #6200ee;
-
   border-radius: 1.625rem;
   display: block;
   height: 3rem;
@@ -85,7 +83,7 @@ button:hover .button-text {
 }
 .button-text {
   display: none;
-}
+}*/
 /*MOOVING TITLE*/
 .content {
   text-align: center;

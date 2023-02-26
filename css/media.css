@@ -128,10 +128,6 @@ button {
   text-decoration: none;
   vertical-align: middle;
 }
-.circle {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 0.3s ease-in-out;
-}
 
 button.learn-more {
   height: auto;
@@ -150,24 +146,17 @@ button.learn-more .circle {
   width: 3rem;
 }
 
-button.learn-more .circle .icon {
-  background: #fff;
+button.learn-more .circle .arrow {
+  background: none;
+  left: 1.15rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   bottom: 0;
   margin: auto;
   position: absolute;
   top: 0;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  display: flex;
+  align-items: center;
 }
-
-button.learn-more .circle .icon.arrow {
-  background: none;
-  height: 0.125rem;
-  left: 0.625rem;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  width: 1.125rem;
-}
-
-
 
 button.learn-more .button-text {
   bottom: 0;
@@ -203,4 +192,5 @@ button:hover .button-text {
 }
 .fa-angle-right {
   color: white;
+  transform: scale(1.3);
 }

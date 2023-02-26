@@ -1,5 +1,6 @@
 generateNavbar();
 generateSocialMedia();
+
 function generateNavbar() {
   var header = document.getElementById("my-header");
   header.innerHTML = `
@@ -7,7 +8,7 @@ function generateNavbar() {
     <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
       <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
       <div class="container-fluid">
-        <!--<a href="#"><img src="/images/favicon.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
+        <!--<a href="#"><img src="/images/logo.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
             id="imagen" /></a>-->
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
           class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
@@ -59,7 +60,6 @@ function generateNavbar() {
         <div class="progress-bar" id="myBar"></div>
       </div>
     </nav>`;
-  
 }
 function generateSocialMedia() {
   var socialmedia = document.getElementById("socialmedia");
@@ -81,7 +81,7 @@ function generateSocialMedia() {
                 <li>
                     <button class="learn-more" onclick="copyToClipboard(event,'calvoalegred@gmail.com')">
                         <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
                             
                         </span>
                         <span class="button-text">COPY MAIL</span>

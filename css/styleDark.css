@@ -48,13 +48,13 @@ body.dark {
   background-color: white;
 }
 .dark .dropdown-menu {
-  background-color: #303e54;
+  background-color: #1e1e1e;
 }
 .light .dropdown-item {
   background-color: white;
   color: black;
 }
 .dark .dropdown-item {
-  background-color: #303e54;
+  background-color: #1e1e1e;
   color: white;
 }
