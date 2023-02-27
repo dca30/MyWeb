@@ -48,14 +48,20 @@
   color: #fff;
 }*/
 
-.btn-dark {
+.light .btn-dark {
   background-color: #121212;
   color: #fff;
-  /*border-color: #fff;*/
+}
+.dark .btn-dark {
+  background-color: #fff;
+  color: #121212;
 }
 
-.btn-dark:hover {
-  color: white;
+.light .btn-dark:hover {
+  color: #fff;
+}
+.dark .btn-dark:hover {
+  color: #121212;
 }
 
 .btn-glitch {

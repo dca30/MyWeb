@@ -22,7 +22,7 @@
 .hiddenProjects {
   opacity: 0;
   visibility: hidden;
-  display: none;
+  display: none !important;
 }
 
 .visible {
@@ -113,10 +113,13 @@
   left: 5%;
   bottom: 10%;
 }
-#myrow{
+#myrow {
   padding-left: 0;
 }
 .row > * {
   padding-left: 0;
 }
 
+.big-size {
+  display: none;
+}

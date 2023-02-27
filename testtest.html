@@ -587,7 +587,7 @@
         }
     }
 </style>-->
-
+<!--
 <div class="containerrr">
     <div class="data">Twitter bot matrix</div>
 </div>
@@ -631,4 +631,21 @@
     setTimeout(function () {
         text.reveal(2000);
     }, revealDuration);
+</script>-->
+
+<body>
+    <button class="btn">ClickMe</button>
+    <p class="paragraph" style="display: none;">Make this paragraph appear and disappear by toggling the button.</p>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(".btn").click(function () {
+        $(".paragraph").fadeIn("slow");
+
+        if ($(".slider").css("background-color") === "rgb(3, 201, 169)") {
+            $(".paragraph").fadeOut("slow");
+        } else {
+            $(".paragraph").fadeIn("slow");
+        }
+    });
 </script>

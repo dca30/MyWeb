@@ -121,14 +121,14 @@ function createTimeline(words, container, icons) {
         .classList.toggle("hide", !dot.classList.contains("bigger"));
 
       // If there was a last clicked dot, remove the bold class from its textdot line
-      if (lastClicked) {
+      /*if (lastClicked) {
         lastClicked.querySelector(".textdot").classList.remove("bold");
-      }
+      }*/
 
       // Set the background color of this dot to black, and make its textdot line bold
       //dot.style.backgroundColor = "black";
 
-      dot.querySelector(".textdot").classList.add("bold");
+      //dot.querySelector(".textdot").classList.add("bold");
 
       //Set the background color of all previous siblings of this dot (dots and lines) to black
       let prev = dot.previousElementSibling;
