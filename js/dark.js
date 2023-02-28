@@ -5,14 +5,6 @@ const moonIcon = document.querySelector(".toggle .bx-moon");
 //const navTop = document.getElementById("navTop");
 
 function toggleDarkMode() {
-  /*if (localStorage.getItem("dark") === "true") {
-    body.classList.add("light");
-    body.classList.remove("dark");
-  } else {
-    body.classList.add("dark");
-    body.classList.remove("light");
-  }
-*/
   body.classList.toggle("light");
   body.classList.toggle("dark");
 

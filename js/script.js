@@ -5,11 +5,8 @@ function generateNavbar() {
   var header = document.getElementById("my-header");
   header.innerHTML = `
     <!-- Con la clase .fixed-top dejamos fija la cabecera siempre -->
-    <nav id="navTop" class="navbar navbar-expand-lg nav-light navbar-light sombranav mx-auto"><!-- bg-gray-->
-      <!-- Inicio de barra de navegación https://getbootstrap.com/docs/5.0/components/navbar/ -->
+    <nav id="navTop" class="navbar navbar-expand-lg mx-auto"><!-- bg-gray-->
       <div class="container-fluid">
-        <!--<a href="#"><img src="/images/logo.png" width="45" alt="" class="d-inline-block align-middle mx-2 mr-2"
-            id="imagen" /></a>-->
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
           class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>

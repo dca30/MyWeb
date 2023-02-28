@@ -130,10 +130,9 @@ function expandCard(card) {
             </div>`;
   const expanded = document.getElementById("expanded");
   let imageSrc = card.querySelector(".image").src;
-  imageSrc = imageSrc.replace("projectsMiniatures", "original");
+  imageSrc = imageSrc.replace("projectsMiniatures", "projectsImages");
   imageSrc = imageSrc.replace("webp", "png");
 
-  /*.replace(/\.webp$/, "E.webp");*/
   const h2 = card.querySelector("h2").textContent;
   const smallSize = card.querySelector(".small-size").textContent;
   const bigSize = card.querySelector(".big-size").textContent;
