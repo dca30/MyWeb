@@ -1,3 +1,4 @@
+createSkillBars();
 function createSkillBars() {
   let cardsSkills = [
     {
@@ -90,7 +91,7 @@ function createSkillBars() {
     "#f34b7d", // Git
   ];
   const isDarkMode = localStorage.getItem("dark") === "true";
-  const saturationValue = isDarkMode ? 0.65 : 0.35;
+  const saturationValue = isDarkMode ? 0.75 : 0.35;
 
   const transparentColors = colors.map((color) => {
     const [r, g, b] = color.match(/\w\w/g).map((x) => parseInt(x, 16));
@@ -126,9 +127,7 @@ function createSkillBars() {
   style.innerHTML = estilosBarras;
   document.head.appendChild(style);
 }
-createSkillBars();
-
-var btn = document.getElementById("show-more");
+const btn = document.getElementById("show-more");
 btn.addEventListener("click", function () {
   btn.setAttribute(
     "data-translate",
@@ -140,10 +139,10 @@ btn.addEventListener("click", function () {
   document.addEventListener("DOMContentModified", checkHeight);
 
   function transitionBars() {
-    var cards = document.querySelectorAll(".card");
-    var barras = document.querySelectorAll(".bar");
-    var iconos = document.querySelectorAll(".icono");
-    var h2s = Array.from(document.getElementsByTagName("h2"));
+    const cards = document.querySelectorAll(".card");
+    const barras = document.querySelectorAll(".bar");
+    const iconos = document.querySelectorAll(".icono");
+    const h2s = Array.from(document.getElementsByTagName("h2"));
 
     cards.forEach((card) => {
       card.style.opacity = "0";

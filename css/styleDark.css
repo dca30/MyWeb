@@ -1,7 +1,3 @@
-/*.dark-mode-nav {
-  background-color: #393e46;
-  color: white;
-}*/
 /*DARK MODE*/
 body.dark {
   background-color: #121212; /*#121212*/
@@ -27,22 +23,13 @@ body.dark {
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
 }
-.dark .nav-link.active{
+.dark .nav-link.active {
   color: white;
 }
 
 #navTop {
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
-/*.navbar-dark {
-  background-color: #303e54;
-  color: white;
-}
-
-.navbar-light {
-  background-color: white;
-  color: black;
-}*/
 
 .light .dropdown-menu {
   background-color: white;

@@ -70,7 +70,6 @@ function createTimeline(words, container, icons) {
     const textdot = document.createElement("p");
     textdot.classList.add("textdot", "hide"); // add the hide class here
     textdot.setAttribute("data-translate", word);
-    //textdot.innerText = word;
 
     // Add Font Awesome icon to dot
     const iconClasses = icons[index];
@@ -119,33 +118,19 @@ function createTimeline(words, container, icons) {
       dot
         .querySelector(".textdot")
         .classList.toggle("hide", !dot.classList.contains("bigger"));
-
-      // If there was a last clicked dot, remove the bold class from its textdot line
-      /*if (lastClicked) {
-        lastClicked.querySelector(".textdot").classList.remove("bold");
-      }*/
-
-      // Set the background color of this dot to black, and make its textdot line bold
-      //dot.style.backgroundColor = "black";
-
-      //dot.querySelector(".textdot").classList.add("bold");
-
       //Set the background color of all previous siblings of this dot (dots and lines) to black
       let prev = dot.previousElementSibling;
       while (prev) {
         if (prev.classList.contains("dot") || prev.classList.contains("line")) {
-          //prev.style.backgroundColor = "black";
           prev.classList.add("primary");
           prev.classList.remove("primary-dark");
         }
         prev = prev.previousElementSibling;
       }
-
       // Set the background color of all next siblings of this dot (dots and lines) to lightgray
       let next = dot.nextElementSibling;
       while (next) {
         if (next.classList.contains("dot") || next.classList.contains("line")) {
-          //next.style.backgroundColor = "lightgray";
           next.classList.add("primary-dark");
           next.classList.remove("primary");
         }

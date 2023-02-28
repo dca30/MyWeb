@@ -2,7 +2,7 @@ const body = document.querySelector("body");
 const toggle = document.getElementById("toggle");
 const sunIcon = document.querySelector(".toggle .bxs-sun");
 const moonIcon = document.querySelector(".toggle .bx-moon");
-const navTop = document.getElementById("navTop");
+//const navTop = document.getElementById("navTop");
 
 function toggleDarkMode() {
   /*if (localStorage.getItem("dark") === "true") {

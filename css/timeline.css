@@ -84,19 +84,6 @@
 .primary-dark {
   background-color: lightgray;
 }
-/*.main-light {
-  background-color: black;
-}
-.shadow-light {
-  background-color: lightgray;
-}
-.main-dark {
-  background-color: rgb(133, 132, 132);
-}
-.shadow-dark {
-  background-color: lightgray;
-}*/
-
 .hide {
   display: none !important;
 }

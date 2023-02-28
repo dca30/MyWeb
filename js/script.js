@@ -1,6 +1,6 @@
 generateNavbar();
 generateSocialMedia();
-
+activeNav();
 function generateNavbar() {
   var header = document.getElementById("my-header");
   header.innerHTML = `
@@ -91,20 +91,22 @@ function generateSocialMedia() {
         </div>
     `;
 }
-const currentPage = "/MyWeb" + location.pathname;
-if (currentPage.startsWith("/MyWeb/")) {
-  const navlink = document.querySelector(
-    `a[href="${currentPage.substring(7)}"]`
-  );
-  switch (currentPage) {
-    case "/MyWeb/index.html":
-    case "/MyWeb/aboutme.html":
-    case "/MyWeb/projects.html":
-    case "/MyWeb/skills.html":
-      navlink.classList.add("active");
-      break;
-    default:
-      break;
+function activeNav() {
+  const currentPage = "/MyWeb" + location.pathname;
+  if (currentPage.startsWith("/MyWeb/")) {
+    const navlink = document.querySelector(
+      `a[href="${currentPage.substring(7)}"]`
+    );
+    switch (currentPage) {
+      case "/MyWeb/index.html":
+      case "/MyWeb/aboutme.html":
+      case "/MyWeb/projects.html":
+      case "/MyWeb/skills.html":
+        navlink.classList.add("active");
+        break;
+      default:
+        break;
+    }
   }
 }
 function copyToClipboard(event, text) {
@@ -126,6 +128,14 @@ function checkHeight() {
     contenido.classList.toggle("hidden");
   }
 }
-checkHeight();
+
+//Ocultar media y boton en y = 0
+const elements = document.querySelectorAll(".contenido, #btn-back-to-top");
+window.addEventListener("scroll", function () {
+  const action = window.pageYOffset > 100 ? "remove" : "add";
+  elements.forEach((el) => el.classList[action]("hidden"));
+});
+
 // Call the checkHeight function after modifying the contents of the HTML document
 document.addEventListener("DOMContentModified", checkHeight);
+checkHeight();

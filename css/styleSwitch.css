@@ -1,101 +1,83 @@
-/*
-    -- General Styles --
-
-.toggle {
-  transform: scale(0.5);
-}*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
 .toggle {
-    border-radius: 25px;
-    cursor: pointer;
-    display: flex;
-    height: 30px;
-    justify-content: space-between;
-    position: relative;
-    transition: .8s;
-    width: 60px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.8s;
+  width: 60px;
 }
 
 .toggle i {
-    font-size: 15px;
-    line-height: 30px;
-    text-align: center;
-    width: 50%;
-    z-index: 1;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  width: 50%;
+  z-index: 1;
 }
 
 .toggle .ball {
-    border-radius: 50%;
-    height: 22px;
-    margin: 4px;
-    position: absolute;
-    transition: .5s ease-out;
-    width: 22px;
+  border-radius: 50%;
+  height: 22px;
+  margin: 4px;
+  position: absolute;
+  transition: 0.5s ease-out;
+  width: 22px;
 }
 
 input {
-    display: none;
+  display: none;
 }
 */
-/*
-    -- Light Mode --
-*/
+/*    -- Light Mode --      */
 
 .light {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 .light .toggle {
-    background: white;
-   /* background: linear-gradient(145deg, #e1e1e1, #fff);
-    box-shadow: 3px 3px 4px #e6e6e6,
-                -3px -3px 4px #ffffff;*/
+  background: white;
 }
 
-
 .light .toggle .bxs-sun {
-    color: #fafafa;
+  color: #fafafa;
 }
 
 .light .toggle .bx-moon {
-    color: #151d2a;
+  color: #1e1e1e;
 }
 
 .light .toggle .ball {
-    background: #474747;
+  background: #1e1e1e;
 }
-*/
-/*
-    -- Dark Mode --
-*/
+
+/*    -- Dark Mode --       */
 
 .dark {
-    background: #222831;
-    color: white;
+  background: #1e1e1e;
+  color: white;
 }
 
 .dark .toggle {
-    background: transparent;
-    /*box-shadow: 2px 2px 2px #474747,
-                -2px -2px 2px #474747;*/
+  background: transparent;
 }
 
 .dark .toggle .bx-sun {
-    color: #fafafa;
+  color: #fafafa;
 }
 
 .dark .toggle .bxs-moon {
-    color: #474747;
+  color: #1e1e1e;
 }
 
 .dark .toggle .ball {
-    background: #fafafa;
-    transform: translateX(29px);
+  background: #fafafa;
+  transform: translateX(29px);
 }
-
