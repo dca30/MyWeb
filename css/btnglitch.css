@@ -1,3 +1,5 @@
+@import "variables.css";
+
 .glitch {
   -webkit-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -6,7 +8,7 @@
   transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-family: "Roboto mono", sans-serif;
   font-weight: 500;
-  border: 1px solid #121212;
+  border: 1px solid var(--dark-primary);
   line-height: 2.5;
   font-size: em(14px);
   width: 150px;
@@ -24,20 +26,20 @@
   outline: none;
 }
 
-.light .btn-dark {
-  background-color: #121212;
-  color: #fff;
+.light .glitch {
+  background-color: var(--dark-primary);
+  color: var(--light-primary);
 }
-.dark .btn-dark {
-  background-color: #fff;
-  color: #121212;
+.dark .glitch {
+  background-color: var(--light-primary);
+  color: var(--dark-primary);
 }
 
-.light .btn-dark:hover {
-  color: #fff;
+.light .glitch:hover {
+  color: var(--light-primary);
 }
-.dark .btn-dark:hover {
-  color: #121212;
+.dark .glitch:hover {
+  color: var(--dark-primary);
 }
 
 .btn-glitch {
@@ -72,31 +74,6 @@
   animation: colorshift-blue 2.6s infinite;
   animation-timing-function: step-end;
 }
-
-/*body {
-  margin: 0;
-}
-
-.body-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100vh;
-}
-
-.body-section .dark {
-  background-color: #121212;
-}
-
-.body-section .half {
-  flex: 0 0 100%;
-  max-height: 50%;
-  min-height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
 
 @keyframes colorshift-red {
   0%,

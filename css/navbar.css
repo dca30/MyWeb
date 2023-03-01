@@ -1,4 +1,6 @@
 /*NAVBAR*/
+@import "variables.css";
+
 nav {
   transition: all 0.5s;
 }
@@ -46,11 +48,11 @@ nav {
 }
 .dark #enlaces a:before,
 .dark #enlaces a:after {
-  background: white;
+  background: var(--light-primary);
 }
 .light #enlaces a:before,
 .light #enlaces a:after {
-  background: black;
+  background: var(--dark-primary);
 }
 #enlaces a:before {
   top: 5px;

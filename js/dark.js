@@ -2,7 +2,6 @@ const body = document.querySelector("body");
 const toggle = document.getElementById("toggle");
 const sunIcon = document.querySelector(".toggle .bxs-sun");
 const moonIcon = document.querySelector(".toggle .bx-moon");
-//const navTop = document.getElementById("navTop");
 
 function toggleDarkMode() {
   body.classList.toggle("light");

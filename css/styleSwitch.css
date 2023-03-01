@@ -1,3 +1,5 @@
+@import "variables.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,49 +37,38 @@
 input {
   display: none;
 }
-*/
+
 /*    -- Light Mode --      */
-
-.light {
-  background: #fafafa;
-}
-
 .light .toggle {
-  background: white;
+  background: var(--light-primary);
 }
 
 .light .toggle .bxs-sun {
-  color: #fafafa;
+  color: var(--light-primary);
 }
 
 .light .toggle .bx-moon {
-  color: #1e1e1e;
+  color: var(--dark-secondary);
 }
 
 .light .toggle .ball {
-  background: #1e1e1e;
+  background: var(--dark-secondary);
 }
 
 /*    -- Dark Mode --       */
-
-.dark {
-  background: #1e1e1e;
-  color: white;
-}
-
 .dark .toggle {
   background: transparent;
 }
 
 .dark .toggle .bx-sun {
-  color: #fafafa;
+  color: var(--light-primary);
 }
 
 .dark .toggle .bxs-moon {
-  color: #1e1e1e;
+  color: var(--dark-secondary);
 }
 
 .dark .toggle .ball {
-  background: #fafafa;
+  background: var(--light-primary);
   transform: translateX(29px);
 }

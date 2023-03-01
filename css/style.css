@@ -1,3 +1,5 @@
+@import "variables.css";
+
 .fade-out {
   animation: fade-out 1s ease-in;
 }
@@ -32,7 +34,7 @@ body {
 }
 
 .text-white {
-  color: white;
+  color: var(--light-primary);
 }
 nav {
   transition: all 0.5s;
@@ -81,19 +83,6 @@ hr:not([size]) {
 .button:nth-child(4):hover .icon {
   background: #333;
 }
-/*
-.button:nth-child(1){
-    color:
-}
-.button:nth-child(2){
-    color:
-}
-.button:nth-child(3){
-    color:
-}
-.button:nth-child(4){
-    color:
-}*/
 .carousel-item {
   position: relative;
 }
@@ -113,7 +102,6 @@ hr:not([size]) {
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  /* Como centrar en CSS un elemento con position absolute y sin widtth: 100% */
   position: absolute;
   right: 0;
   text-align: center;
@@ -122,15 +110,6 @@ hr:not([size]) {
   z-index: 500;
 }
 /*Style de la barra de desplazamiento
-/* Style the header: fixed position (always stay at the top) */
-/*.header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: #f1f1f1;
-}
-*/
 /* The progress container (grey background) */
 .progress {
   background-color: transparent;
@@ -148,14 +127,6 @@ hr:not([size]) {
   /*FFC107*/
   width: 0%;
 }
-.dark-mode-body {
-  background-color: #222831; /*#121212*/
-  color: white;
-}
-.dark-mode-nav {
-  background-color: #393e46;
-  color: white;
-}
 .vertical-text {
   transform: rotate(270deg);
   transform-origin: left top 0;
@@ -170,18 +141,6 @@ hr:not([size]) {
 #imagen {
   border-radius: 15%;
 }
-/*
-Paleta de colores
-2C3333
-395B64
-A5C9CA
-E7F6F2
-
-https://colorhunt.co/palettes/dark
-*/
-/* custom scrollbar */
-/*  Doble dos puntos y no tengo ni puta idea de lo que es   */
-
 /* Style the custom scrollbar */
 
 ::-webkit-scrollbar {
@@ -210,8 +169,8 @@ html:hover .scrollable-container::-webkit-scrollbar {
 }
 
 .dark .card {
-  background: #1e1e1e;
-  color: white;
+  background: var(--dark-secondary);
+  color: var(--light-primary);
 }
 .card-about {
   height: 60px;
@@ -294,10 +253,7 @@ img {
   display: flex;
   justify-content: center;
 }
-/*  .container {
-         align elements to the start of the cross axis
-    }
-*/
+
 .vr {
   background: #dee2e6;
   border-radius: 7px;
@@ -311,11 +267,8 @@ img {
 .btn-morado,
 .btn-morado:hover {
   color: #ffffff;
-  /*background-color: #bb86fc;
-  border-color: #bb86fc;*/
-  background-color: #6200ee;
-  border-color: #6200ee;
-  /*45287a*/
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 .dropdown-item {
   line-height: 1.5; /* set the line height to match the dot height */
@@ -329,11 +282,9 @@ img {
 .dropdown-menu li a.seleccionado::after {
   content: "●";
 }
-.light .dropdown-menu li a::after {
-  color: black;
-}
+.light .dropdown-menu li a::after,
 .dark .dropdown-menu li a::after {
-  color: white;
+  color: var(--accent-color);
 }
 /* Iamdca */
 .movingname {
@@ -343,7 +294,7 @@ img {
   align-items: center;
   display: flex;
   position: absolute;
-  top: 50%;
+  bottom: 300%;
   left: 50%;
   transform: translate(-50%, -20%);
 }
@@ -351,11 +302,11 @@ img {
 .text {
   font-weight: 100;
   font-size: 50px;
-  color: #fafafa;
+  color: var(--light-primary);
 }
 
 .dud {
-  color: #fafafa;
+  color: var(--light-primary);
 }
 
 /*MOOVING TITLE*/
@@ -366,4 +317,7 @@ img {
   display: inline-block;
   text-transform: uppercase;
   width: 3rem;
+}
+.ltr {
+  font-size: 50px;
 }

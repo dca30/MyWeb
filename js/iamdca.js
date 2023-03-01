@@ -1,9 +1,5 @@
 "use strict";
 
-// ——————————————————————————————————————————————————
-// TextScramble
-// ——————————————————————————————————————————————————
-
 class TextScramble {
   constructor(el) {
     this.el = el;
@@ -63,22 +59,13 @@ class TextScramble {
   }
 }
 
-// ——————————————————————————————————————————————————
-// Example
-// ——————————————————————————————————————————————————
-
-const phrases = [
-  "iamdca.es",
-  "IamDCA",
-  "I am Diego Calvo Alegre",
-  "I'm Diego" /*, 'that there\'s a difference', 'between knowing the path', 'and walking the path'*/,
-];
+const phrases = ["iamdca.es", "IamDCA", "I am Diego Calvo Alegre", "I'm Diego"];
 const el = document.querySelector(".text");
 const fx = new TextScramble(el);
 let counter = 0;
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 800);
+    setTimeout(next, 1200);
   });
   counter = (counter + 1) % phrases.length;
 };

@@ -1,3 +1,11 @@
+@import "variables.css";
+
+:root {
+  --light-primary: #fafafa;
+  --light-secondary: #00ff00;
+  --dark-primary: #121212;
+  --dark-secondary: #1e1e1e;
+}
 .center {
   align-items: center;
   display: flex;
@@ -38,13 +46,13 @@
 }
 
 .textdot {
-  color: black;
+  color: var(--dark-primary);
   position: absolute;
   text-align: left;
   top: -40px;
 }
 .dark .textdot {
-  color: white;
+  color: var(--light-primary);
 }
 
 .dot.bigger {
@@ -57,20 +65,20 @@
   font-weight: bold;
 }
 .dark .primary {
-  background-color: white;
+  background-color: var(--light-primary);
 }
 .dark .primary-dark {
   background-color: grey;
 }
 .dark .primary .icon {
-  color: black;
+  color: var(--dark-primary);
 }
 .dark .primary-dark .icon {
-  color: black;
+  color: var(--dark-primary);
 }
 
 .dark .primary .line {
-  background-color: white;
+  background-color: var(--light-primary);
 }
 .dark .primary-dark .line {
   background-color: grey;
@@ -79,7 +87,7 @@
 /**/
 
 .primary {
-  background-color: black;
+  background-color: var(--dark-primary);
 }
 .primary-dark {
   background-color: lightgray;
@@ -92,7 +100,7 @@
 .dot > .fa-brands,
 .dot > .bx,
 .dot > .fa {
-  color: white;
+  color: var(--light-primary);
 }
 .dot > .bx {
   transform: scale(1.2);
@@ -100,7 +108,7 @@
 
 #cardTimeline {
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid lightgray;
   border: 0;
   border-radius: 20px;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
@@ -114,7 +122,7 @@
   width: 100%;
 }
 .dark #cardTimeline {
-  background-color: #1e1e1e;
+  background-color: var(--dark-secondary);
   transition: transform 0.5s ease;
 }
 

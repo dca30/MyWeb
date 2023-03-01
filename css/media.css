@@ -1,3 +1,5 @@
+@import "variables.css";
+
 #show-more {
   bottom: 15px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -88,7 +90,7 @@
 }
 
 .sci li a:hover {
-  background: #03a9f4;
+  /*background: #03a9f4;*/
   color: #fff;
 }
 
@@ -108,9 +110,9 @@
   background-color: #0077b5;
 }
 
-.detail ul li:nth-child(4) a:hover {
+/*.detail ul li:nth-child(4) a:hover {
   background-color: green;
-}
+}*/
 
 /*BOTON QUE SE EXPANDE*/
 button {
@@ -134,7 +136,7 @@ button.learn-more {
 
 button.learn-more .circle {
   /*background: #bb86fc;*/
-  background: #6200ee;
+  background: var(--accent-color);
   border-radius: 1.625rem;
   display: block;
   height: 3rem;
@@ -185,8 +187,8 @@ button:hover .button-text {
   width: 125px;
 }
 .sci li a:hover {
-  background: #03a9f4;
-  color: #fff;
+  /*background: #03a9f4;*/
+  color: white;
 }
 .fa-angle-right {
   color: white;

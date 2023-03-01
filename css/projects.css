@@ -35,7 +35,7 @@
   top: 566px;
   left: 10px;
 }
-#myDiv {
+/*#myDiv {
   display: none;
   position: fixed;
   top: 0;
@@ -45,7 +45,7 @@
   background-color: lightgray;
   z-index: 200;
   align-self: center;
-}
+}*/
 .card-top {
   height: 100%;
   display: flex;

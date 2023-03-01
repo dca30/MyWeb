@@ -1,22 +1,29 @@
 /*DARK MODE*/
+@import "variables.css";
+
+/*:root {
+  --light-primary: #fafafa;
+  --light-secondary: #00ff00;
+  --dark-primary: #121212;
+  --dark-secondary: #1e1e1e;
+}*/
 body.dark {
-  background-color: #121212; /*#121212*/
-  color: white;
+  background-color: var(--dark-primary); /*#121212*/
+  color: var(--light-primary);
 }
 
 .icono-sol,
 .dark-mode-iconUser,
-.dark-mode-nav,
 .dark-mode-header {
   transition: all 0.75s;
 }
 .dark #navTop {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: var(--dark-secondary);
+  color: var(--light-primary);
 }
 .light #navTop {
-  background-color: white;
-  color: black;
+  background-color: var(--light-primary);
+  color: var(--dark-primary);
 }
 .dark .nav-link,
 .dark .nav-link {
@@ -24,7 +31,7 @@ body.dark {
   text-decoration: none;
 }
 .dark .nav-link.active {
-  color: white;
+  color: var(--light-primary);
 }
 
 #navTop {
@@ -32,16 +39,16 @@ body.dark {
 }
 
 .light .dropdown-menu {
-  background-color: white;
+  background-color: var(--light-primary);
 }
 .dark .dropdown-menu {
-  background-color: #1e1e1e;
+  background-color: var(--dark-secondary);
 }
 .light .dropdown-item {
-  background-color: white;
-  color: black;
+  background-color: var(--light-primary);
+  color: var(--dark-primary);
 }
 .dark .dropdown-item {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: var(--dark-secondary);
+  color: var(--light-primary);
 }

@@ -25,13 +25,11 @@ const startNumberAnimation = () => {
       "e",
       "g",
       "o",
-      " ",
       "c",
       "a",
       "l",
       "v",
       "o",
-      " ",
       "a",
       "l",
       "e",
@@ -78,6 +76,8 @@ const replaceNumbersWithLetters = (elements, letters, index) => {
       parseInt($(this).attr("data-change"))
     ) {
       index = $(".ltr").index(this);
+      const letter = letters[index];
+      const html = letter === " " ? "<br/>" : letter;
       $(this).html(letters[index]);
       $(this).removeClass("nbr");
     }
@@ -91,13 +91,13 @@ const resetRandomDiv = () => {
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
+                        <br/>                        
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
-                        <span class="nbr ltr h2">0</span>
-                        <span class="nbr ltr h2">0</span>
+                        <br/>
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>
                         <span class="nbr ltr h2">0</span>

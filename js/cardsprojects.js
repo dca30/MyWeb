@@ -61,7 +61,7 @@ function generateCards() {
                   </filter>
                 </defs>
               </svg>
-           <div class="glitch btn-dark btn-glitch expand-button" data-translate="showmore"></div>
+           <div class="glitch btn-glitch expand-button" data-translate="showmore"></div>
         </div>
       </div>
     </div>`;
@@ -111,7 +111,7 @@ function generateCards() {
                                         </filter>
                                     </defs>
                                 </svg>
-                                <div class="glitch btn-dark btn-glitch expand-button" data-translate="showless" id="btnglitcheado"></div>
+                                <div class="glitch btn-glitch expand-button" data-translate="showless" id="btnglitcheado"></div>
                             </div>
                         </div>
                     </div>
