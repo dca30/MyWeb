@@ -80,7 +80,7 @@ function generateCards() {
     <div class="card card-skill expanded hiddenProjects" id="expanded">
         <div class="row h-100 w-100" id="myrow">
             <div class="col-sm-5 h-100">
-                <div class="card-top d-flex <!--flex-column justify-content-start align-items-center-->">
+                <div class="card-top d-flex">
                 <div class="section">                 
                 </div>
               </div>
@@ -91,7 +91,7 @@ function generateCards() {
                         <h2 class="data text-uppercase" id="movingletters"></h2>
                     </div>
                     <div class="row">
-                        <p class="px-4 small-size minimized hiddenProjects"></p>
+                        <p class="px-4 small-size <!--minimized--> hiddenProjects"></p>
                         <p class="px-4 big-size"></p>
                     </div>
                     <div class="row">

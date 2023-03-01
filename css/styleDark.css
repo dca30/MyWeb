@@ -1,22 +1,15 @@
-/*DARK MODE*/
 @import "variables.css";
 
-/*:root {
-  --light-primary: #fafafa;
-  --light-secondary: #00ff00;
-  --dark-primary: #121212;
-  --dark-secondary: #1e1e1e;
-}*/
 body.dark {
-  background-color: var(--dark-primary); /*#121212*/
+  background-color: var(--dark-primary);
   color: var(--light-primary);
 }
 
-.icono-sol,
+/*.icono-sol,
 .dark-mode-iconUser,
 .dark-mode-header {
   transition: all 0.75s;
-}
+}*/
 .dark #navTop {
   background-color: var(--dark-secondary);
   color: var(--light-primary);

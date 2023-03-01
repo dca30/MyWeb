@@ -1,3 +1,6 @@
+main {
+  margin-top: 4rem;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -26,14 +29,14 @@
   display: flex;
   justify-content: center;
 }
-.disappear {
+/*.disappear {
   opacity: 0;
   visibility: hidden;
 }
 .appear {
   opacity: 1;
   visibility: visible;
-}
+}*/
 
 .card:not(.expanded):hover {
   transform: scale(1.1);
@@ -50,7 +53,7 @@
 .oculto {
   display: none;
 }
-.skills {
+/*.skills {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -58,8 +61,8 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
+}*/
+/*Toda la wea de los porcentajes y cositas asi*/
 .skills-bar .bar {
   margin: 15px 0;
 }
@@ -85,7 +88,6 @@
 }
 
 .bar .progress-line span {
-  /*text-transfrom: uppercase;*/
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   background: rgb(63, 63, 63);
   border-radius: 10px;

@@ -1,21 +1,17 @@
-/*NAVBAR*/
 @import "variables.css";
 
-nav {
-  transition: all 0.5s;
-}
 .navbar {
   margin: 0px;
   margin-top: 0px;
   width: 100%;
+  transition: all 0.5s;
 }
 
 .navbar.scrolled {
   margin: 8px;
   width: 55%;
 }
-
-.padding-header {
+/*.padding-header {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 0px;
@@ -25,8 +21,8 @@ nav {
   color: white;
 }
 .dropdown-itemactivo:active {
-  background-color: red; /* replace with desired color */
-}
+  background-color: red; 
+}*/
 
 /*Efecto barras navbar*/
 #enlaces a {

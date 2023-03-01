@@ -63,18 +63,18 @@
   justify-content: center;
   height: 100%;
 }
-.cropped-ofp {
+/*.cropped-ofp {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
-}
+}*/
 
 .data {
   text-align: center;
   font-size: 27px;
 }
-
+/*Aqui meto la imagen bailonga de proyectos*/
 .section {
   height: 100vh;
   width: 100%;
@@ -103,19 +103,17 @@
   top: 0;
   height: 100%;
   width: auto;
-  /*left: -100px;*/
-  /*left: -30%;*/
+  /*left: -100px;
+  left: -30%;*/
   left: 0;
 }
 
-#restart {
+/*#restart {
   position: absolute;
   left: 5%;
   bottom: 10%;
-}
-#myrow {
-  padding-left: 0;
-}
+}*/
+#myrow,
 .row > * {
   padding-left: 0;
 }
