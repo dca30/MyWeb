@@ -120,3 +120,9 @@ main {
 .icon {
   transform: scale(0.9);
 }
+.dark .fa-arrow-right {
+  color: white;
+}
+.light .fa-arrow-right {
+  color: black;
+}

@@ -4,4 +4,6 @@
   --dark-primary: #121212;
   --dark-secondary: #1e1e1e;
   --accent-color: #6200ee;
+  --saturation-dark: 0.75;
+  --saturation-light: 0.35;
 }

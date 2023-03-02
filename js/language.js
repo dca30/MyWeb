@@ -27,7 +27,7 @@ const translations = {
       "Soy un programador apasionado que acaba de entrar en el mundo profesional. Tengo un gran interés en el desarrollo de proyectos secundarios y me siento cómodo trabajando con diversas tecnologías de programación. Siempre estoy ansioso por aprender y mejorar mis habilidades, y prospero en entornos de trabajo dinámicos que me desafían a pensar creativamente y a encontrar soluciones innovadoras. Con una sólida base en los principios de programación, estoy emocionado por aplicar mis conocimientos a proyectos del mundo real y contribuir al éxito de los equipos con los que trabajo.",
     interests: "INTERESES",
     hobbies: "AFICIONES",
-    city: "Ciudad:",
+    city: " Ciudad:",
     country: "España",
     birthday: "Nacimiento:",
     //Index
@@ -120,16 +120,15 @@ const translations = {
     gym: "Gym",
     bike: "Bike",
     run: "Running",
-    electro: "Electrnics",
-    tv: "Tv shows",
+    electro: "Electronics",
+    tv: "Shows",
     movie: "Movies",
     //description_aboutme:
     description_aboutme:
       "I'm a passionate programmer who's just entered the professional world. I have a strong interest in developing side projects and am comfortable working with various programming technologies. I'm always eager to learn and improve my skills, and I thrive in dynamic work environments that challenge me to think creatively and come up with innovative solutions. With a solid foundation in programming principles, I'm excited to apply my knowledge to real-world projects and contribute to the success of the teams I work with.",
-    //  "I consider myself an open person, with ease in dealing with my colleagues. Focused on achieving goals, I am a very versatile person with a lot of ability to learn new knowledge and adapt to different circumstances and environments. I am interested in being able to contribute my full potential in a company as I gain new IT skills.",
     interests: "INTERESTS",
     hobbies: "HOBBIES",
-    city: "City:",
+    city: " City:",
     country: "Spain",
     birthday: "Birthday:",
     //Index

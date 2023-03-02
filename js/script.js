@@ -108,7 +108,62 @@ function copyToClipboard(event, text) {
       console.error("Failed to copy text: ", err);
     });
 }
-function checkHeight() {
+let btnArriba = document.getElementById("btn-back-to-top");
+btnArriba.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+const showmore = document.getElementById("show-more");
+//Barra scroll navbar
+function scrollFunction() {
+  const winScroll = window.pageYOffset;
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  const barra = document.getElementById("myBar");
+  barra.style.width = `${scrolled}%`;
+  if (location.pathname.includes("skills")) {
+    const dataTranslate = showmore.getAttribute("data-translate");
+    if (dataTranslate === "showmore") resetScroll();
+  }
+}
+window.addEventListener("scroll", scrollFunction);
+
+function resetScroll() {
+  const barra = document.getElementById("myBar");
+  barra.style.width = `0%`;
+}
+//Aparecer btnArriba y media cuando necesario
+const media = document.getElementById("socialmedia");
+if (location.pathname.includes("index")) {
+  media.classList.toggle("hidden");
+}
+window.addEventListener("scroll", function () {
+  const action = window.pageYOffset > 100 ? "remove" : "add";
+  btnArriba.classList[action]("hidden");
+  if (location.pathname.includes("index")) {
+    media.classList[action]("hidden");
+  }
+});
+
+//Cambiar el nav a modo pill al scrollear
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  const scrollPos = window.scrollY;
+  const windowWidth = window.innerWidth;
+  if (scrollPos > 0 && windowWidth >= 992) {
+    navbar.classList.add("scrolled", "rounded-pill");
+  } else {
+    navbar.classList.remove("scrolled", "rounded-pill");
+  }
+});
+
+//////////////////////////
+//////////////////////////
+
+/*function checkHeight() {
   const htmlHeight = document.body.scrollHeight;
   const displayHeight = window.innerHeight;
   const contenido = document.querySelector(".contenido");
@@ -117,13 +172,6 @@ function checkHeight() {
   }
 }
 
-//Ocultar media y boton en y = 0
-const elements = document.querySelectorAll(".contenido, #btn-back-to-top");
-window.addEventListener("scroll", function () {
-  const action = window.pageYOffset > 100 ? "remove" : "add";
-  elements.forEach((el) => el.classList[action]("hidden"));
-});
-
 // Call the checkHeight function after modifying the contents of the HTML document
 document.addEventListener("DOMContentModified", checkHeight);
-checkHeight();
+checkHeight();*/

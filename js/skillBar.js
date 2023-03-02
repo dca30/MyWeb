@@ -1,3 +1,14 @@
+function updateSaturation() {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const backgroundColor = getComputedStyle(card).backgroundColor;
+    const [r, g, b] = backgroundColor.match(/\d+/g).map(Number);
+    const isDarkMode = localStorage.getItem("dark") === "true";
+    const saturationValue = isDarkMode ? 0.55 : 0.4;
+    card.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${saturationValue})`;
+  });
+}
+
 createSkillBars();
 function createSkillBars() {
   let cardsSkills = [
@@ -135,8 +146,6 @@ btn.addEventListener("click", function () {
   );
   updateContent();
   transitionBars();
-  checkHeight();
-  document.addEventListener("DOMContentModified", checkHeight);
 
   function transitionBars() {
     const cards = document.querySelectorAll(".card");

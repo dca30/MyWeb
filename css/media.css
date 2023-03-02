@@ -190,7 +190,8 @@ button:hover .button-text {
   /*background: #03a9f4;*/
   color: white;
 }
-.fa-angle-right {
+.arrow .fa-angle-right {
   color: white;
   transform: scale(1.3);
 }
+

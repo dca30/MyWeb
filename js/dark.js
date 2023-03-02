@@ -13,7 +13,11 @@ function toggleDarkMode() {
     moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
 
   localStorage.setItem("dark", body.classList.contains("dark"));
+  if (location.pathname.includes("skills")) {
+    updateSaturation();
+  }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   toggle.addEventListener("change", toggleDarkMode);
   localStorage.getItem("dark") === "true" ? toggleDarkMode() : undefined;
