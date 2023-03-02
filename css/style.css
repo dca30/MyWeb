@@ -107,8 +107,7 @@ hr:not([size]) {
   width: 60%;
   z-index: 500;
 }
-/*Style de la barra de desplazamiento
-/* The progress container (grey background) */
+/*Style de la barra de desplazamiento*/
 .progress {
   background-color: transparent;
   bottom: 0;

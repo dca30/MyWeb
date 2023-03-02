@@ -1,5 +1,4 @@
 /*  BACK TO TOP   */
-const navbar = document.querySelector(".navbar");
 let btnArriba = document.getElementById("btn-back-to-top");
 btnArriba.addEventListener("click", () => {
   document.body.scrollTop = 0;
@@ -7,6 +6,7 @@ btnArriba.addEventListener("click", () => {
 });
 
 //Cambiar el nav a modo pill al scrollear
+const navbar = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
   const scrollPos = window.scrollY;
   const windowWidth = window.innerWidth;

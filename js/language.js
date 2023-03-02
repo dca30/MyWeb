@@ -23,8 +23,6 @@ const translations = {
     electro: "Electrónica",
     tv: "Series",
     movie: "Películas",
-    /*description_aboutme:
-      "Me considero una persona abierta, con facilidad para el trato con mis compañeros. Enfocado al logro, soy una persona muy versátil y con mucha facilidad para aprender nuevos conocimientos y adaptarme a las circunstancias y entornos. Estoy interesado en poder aportar todo mi potencial en una empresa a medida que obtengo nuevas habilidades informáticas.",*/
     description_aboutme:
       "Soy un programador apasionado que acaba de entrar en el mundo profesional. Tengo un gran interés en el desarrollo de proyectos secundarios y me siento cómodo trabajando con diversas tecnologías de programación. Siempre estoy ansioso por aprender y mejorar mis habilidades, y prospero en entornos de trabajo dinámicos que me desafían a pensar creativamente y a encontrar soluciones innovadoras. Con una sólida base en los principios de programación, estoy emocionado por aplicar mis conocimientos a proyectos del mundo real y contribuir al éxito de los equipos con los que trabajo.",
     interests: "INTERESES",

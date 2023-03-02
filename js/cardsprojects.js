@@ -47,7 +47,7 @@ function generateCards() {
         <div class="card-middle">
           <h2 class="mt-3 px-4" data-translate="__TITLE__"></h2>
           <p class="px-4 small-size" data-translate="__SMALL_TEXT__">__SMALL_TEXT__</p>
-          <p class="px-4 big-size hiddenProjects" id="esteeste"data-translate="__BIG_TEXT__"></p>
+          <p class="px-4 big-size hiddenProjects" data-translate="__BIG_TEXT__"></p>
         </div>
         <div class="card-bottom mb-4">      
           <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
@@ -60,7 +60,7 @@ function generateCards() {
                     </feDisplacementMap>
                   </filter>
                 </defs>
-              </svg>
+          </svg>
            <div class="glitch btn-glitch expand-button" data-translate="showmore"></div>
         </div>
       </div>
@@ -232,9 +232,10 @@ function expandFromIndex() {
 generateCards();
 const expanded = document.getElementById("expanded"); //Expanded Card
 const buttons = document.querySelectorAll(".expand-button"); //Botones expandir
-const big = document.querySelector(".big-size");
+//const big = document.querySelector(".big-size");
 const header = document.getElementById("my-header");
 const overlay = document.getElementById("overlay");
+
 document.addEventListener("DOMContentLoaded", function () {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
