@@ -87,14 +87,14 @@ function generateCards() {
             </div>
             <div class="col-sm-7">
                 <div class="card-middle px-5 d-flex flex-column justify-content-center align-items-center">
-                    <div class="row">
+                    <div class="row mb-5">
                         <h2 class="data text-uppercase" id="movingletters"></h2>
                     </div>
                     <div class="row">
                         <p class="px-4 small-size <!--minimized--> hiddenProjects"></p>
                         <p class="px-4 big-size"></p>
                     </div>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-sm-12 text-center">
                             <div class="card-bottom">
                                 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"

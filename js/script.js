@@ -61,13 +61,13 @@ function generateSocialMedia() {
                         <i class="fab fa-github"></i></a>
                 </li>
                 <li>
+                    <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank">
+                    <i class="fab fa-linkedin-in"></i></a>
+                </li> 
+                <li>
                     <a href="https://www.instagram.com/calvoalegrediego/" target="blank">
                     <i class="fab fa-instagram"></i></a>
                 </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/diego-calvo-b495a219a/" target="blank">
-                    <i class="fab fa-linkedin-in"></i></a>
-                </li>      
                 <li>
                     <button class="learn-more" onclick="copyToClipboard(event,'calvoalegred@gmail.com')">
                         <span class="circle" aria-hidden="true">
@@ -97,6 +97,18 @@ function activeNav() {
     }
   }
 }
+function changeCarouselImages() {
+  const isDarkMode = localStorage.getItem("dark") === "true";
+  const images = document.querySelectorAll(".carousel-item img");
+  images.forEach((img) => {
+    const currentSrc = img.getAttribute("src");
+    const newSrc = isDarkMode
+      ? currentSrc.replace("-d", "-l")
+      : currentSrc.replace("-l", "-d");
+    img.setAttribute("src", newSrc);
+  });
+}
+
 function copyToClipboard(event, text) {
   event.preventDefault();
   navigator.clipboard

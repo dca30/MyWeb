@@ -11,11 +11,11 @@ function toggleDarkMode() {
     sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
   moonIcon.className =
     moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
-
-  localStorage.setItem("dark", body.classList.contains("dark"));
   if (location.pathname.includes("skills")) {
     updateSaturation();
   }
+  changeCarouselImages();
+  localStorage.setItem("dark", body.classList.contains("dark"));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
