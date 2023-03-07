@@ -40,7 +40,7 @@ function generateCards() {
 
   let html = `
     <div class="col-sm-5">
-      <div class="card card-skill">
+      <div class="card">
         <div class="card-top">
           <img src="images/projectsMiniatures/__IMAGE__" class="image" />
         </div>
@@ -77,7 +77,7 @@ function generateCards() {
   });
   let expandedElement = `
   <div class="col-sm-5">
-    <div class="card card-skill expanded hiddenProjects" id="expanded">
+    <div class="card expanded hiddenProjects" id="expanded">
         <div class="row h-100 w-100" id="myrow">
             <div class="col-sm-5 h-100">
                 <div class="card-top d-flex">
@@ -87,14 +87,14 @@ function generateCards() {
             </div>
             <div class="col-sm-7">
                 <div class="card-middle px-5 d-flex flex-column justify-content-center align-items-center">
-                    <div class="row mb-5">
+                    <div class="row row-top position-absolute top-0">
                         <h2 class="data text-uppercase" id="movingletters"></h2>
                     </div>
-                    <div class="row">
-                        <p class="px-4 small-size <!--minimized--> hiddenProjects"></p>
+                    <div class="row row-middle">
+                        <p class="px-4 small-size hiddenProjects"></p>
                         <p class="px-4 big-size"></p>
                     </div>
-                    <div class="row mt-5">
+                    <div class="row row-bottom position-absolute bottom-0 ">
                         <div class="col-sm-12 text-center">
                             <div class="card-bottom">
                                 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"

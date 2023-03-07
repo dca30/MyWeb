@@ -11,18 +11,6 @@
   margin: 8px;
   width: 55%;
 }
-/*.padding-header {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 0px;
-}
-.dropdown-item.activo {
-  background-color: #6200ee;
-  color: white;
-}
-.dropdown-itemactivo:active {
-  background-color: red; 
-}*/
 
 /*Efecto barras navbar*/
 #enlaces a {
@@ -40,7 +28,7 @@
   height: 1px;
   content: "";
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.7s;
 }
 .dark #enlaces a:before,
 .dark #enlaces a:after {

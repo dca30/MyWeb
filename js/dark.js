@@ -14,7 +14,6 @@ function toggleDarkMode() {
   if (location.pathname.includes("skills")) {
     updateSaturation();
   }
-  changeCarouselImages();
   localStorage.setItem("dark", body.classList.contains("dark"));
 }
 

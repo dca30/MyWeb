@@ -57,9 +57,7 @@ main {
 .dot.bigger .textdot {
   top: -30px;
 }
-/*.bold {
-  font-weight: bold;
-}*/
+
 .dark .primary {
   background-color: var(--light-primary);
 }

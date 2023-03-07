@@ -5,11 +5,6 @@ body.dark {
   color: var(--light-primary);
 }
 
-/*.icono-sol,
-.dark-mode-iconUser,
-.dark-mode-header {
-  transition: all 0.75s;
-}*/
 .dark #navTop {
   background-color: var(--dark-secondary);
   color: var(--light-primary);

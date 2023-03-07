@@ -5,16 +5,15 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
-.card-bar {
+/*.card-bar {
   text-align: left;
-}
+}*/
 .card {
   align-content: center;
   align-items: center; /* centers the content along the cross axis */
   border: 1px solid #ccc;
   border: 0;
   border-radius: 0;
-  /*transition: transform 0.2s ease;*/
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
   flex: 1 0 18%;
   height: 120px;
@@ -22,28 +21,14 @@ main {
   margin-bottom: 1.5em;
   max-width: 200px;
   min-width: 180px;
-  transition: all 0.3s ease-in-out;
-}
-
-.card-skill {
+  transition: all 0.2s ease-in-out;
+  /*Antiguamente estas dos estaban en card-skill*/
   display: flex;
   justify-content: center;
 }
-/*.disappear {
-  opacity: 0;
-  visibility: hidden;
-}
-.appear {
-  opacity: 1;
-  visibility: visible;
-}*/
-
-.card:not(.expanded):hover {
-  transform: scale(1.1);
-}
 
 .card.small {
-  align-items: unset; /* centers the content along the cross axis */
+  align-items: unset;
   height: 80px;
 }
 
@@ -51,17 +36,8 @@ main {
   min-width: 90%;
 }
 .oculto {
-  display: none;
+  display: none; /*Para el icono de la carta*/
 }
-/*.skills {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}*/
 /*Toda la wea de los porcentajes y cositas asi*/
 .skills-bar .bar {
   margin: 15px 0;
@@ -96,7 +72,12 @@ main {
   transform: scaleX(0);
   transform-origin: left;
 }
-
+.dark .skills-bar .bar .progress-line {
+  background: gray;
+}
+.dark .bar .progress-line span {
+  background: white;
+}
 @keyframes animate {
   100% {
     transform: scaleX(1);

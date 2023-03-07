@@ -98,6 +98,7 @@ const translations = {
       "Aplicación móvil para encontrar el mejor fin de semana para hacer una actividad con amigos",
     plan_bt:
       "Aplicación móvil para programar actividades en grupo: este proyecto implicó crear una aplicación móvil que ayuda a los usuarios a planificar actividades en grupo. La aplicación se integra con los calendarios de los usuarios para determinar los mejores momentos para un evento grupal en función de la disponibilidad de todos. El proceso involucró el desarrollo de un algoritmo para analizar los horarios de los usuarios, así como el diseño de una interfaz fácil de usar para agregar y ver horarios. El resultado final es una herramienta útil para que amigos y grupos coordinen sus horarios y aseguren el máximo número de asistentes para cualquier actividad planificada.",
+    explore: "Explorar",
   },
   en: {
     //Navbar
@@ -199,6 +200,7 @@ const translations = {
       "Mobile app for finding out the best weekend to do an activity some friends",
     plan_bt:
       "Mobile App for Group Activity Scheduling: This project involved creating a mobile application that helps users plan group activities. The app integrates with users' calendars to determine the best times for a group event based on everyone's availability. The process involved developing an algorithm to analyze users' schedules, as well as designing a user-friendly interface for adding and viewing schedules. The end result is a helpful tool for friends and groups to coordinate their schedules and ensure the maximum number of attendees for any planned activity.",
+    explore: "Explore",
   },
 };
 function updateContent() {

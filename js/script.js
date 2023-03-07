@@ -26,7 +26,7 @@ function generateNavbar() {
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item <!--dropdown--> dropdown-menu-end">
+            <li class="nav-item dropdown-menu-end">
               <a id="iconUser" aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
                 role="button">
                 <i class=" d-lg-inline fas fa-globe"></i>
@@ -102,9 +102,12 @@ function changeCarouselImages() {
   const images = document.querySelectorAll(".carousel-item img");
   images.forEach((img) => {
     const currentSrc = img.getAttribute("src");
-    const newSrc = isDarkMode
-      ? currentSrc.replace("-d", "-l")
-      : currentSrc.replace("-l", "-d");
+    let newSrc;
+    if (isDarkMode) {
+      newSrc = currentSrc.replace("-l", "-d");
+    } else {
+      newSrc = currentSrc.replace("-d", "-l");
+    }
     img.setAttribute("src", newSrc);
   });
 }
@@ -171,19 +174,3 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled", "rounded-pill");
   }
 });
-
-//////////////////////////
-//////////////////////////
-
-/*function checkHeight() {
-  const htmlHeight = document.body.scrollHeight;
-  const displayHeight = window.innerHeight;
-  const contenido = document.querySelector(".contenido");
-  if (htmlHeight < displayHeight && contenido.classList.contains("hidden")) {
-    contenido.classList.toggle("hidden");
-  }
-}
-
-// Call the checkHeight function after modifying the contents of the HTML document
-document.addEventListener("DOMContentModified", checkHeight);
-checkHeight();*/

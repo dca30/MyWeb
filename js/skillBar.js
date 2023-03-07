@@ -63,7 +63,7 @@ function createSkillBars() {
   ];
 
   let html = `
-      <div class="card card-bar card-skill pt-4 my-4">
+      <div class="card text-start pt-4 my-4">
         <i class="icono __FA__ fa-2x"></i>
         <h2>__TITLE__</h2>
         <div class="skills-bar px-4">
@@ -174,7 +174,7 @@ btn.addEventListener("click", function () {
           card.style.opacity = "1";
           card.style.visibility = "visible";
         });
-      }, 300);
-    }, 300);
+      }, 200);
+    }, 200);
   }
 });
