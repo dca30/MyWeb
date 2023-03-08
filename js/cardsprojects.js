@@ -146,6 +146,8 @@ function expandCard(card) {
   const isExpanded = card.classList.contains("expanded");
   overlay.style.display = isExpanded ? "none" : "block";
   header.style.display = isExpanded ? "block" : "none";
+  backtotop.style.display = isExpanded ? "block" : "none";
+  media.style.display = isExpanded ? "block" : "none";
   movingLetters();
   fancyImage();
   smoothAppear();
@@ -234,6 +236,7 @@ const expanded = document.getElementById("expanded"); //Expanded Card
 const buttons = document.querySelectorAll(".expand-button"); //Botones expandir
 //const big = document.querySelector(".big-size");
 const header = document.getElementById("my-header");
+const backtotop = document.getElementById("btn-back-to-top");
 const overlay = document.getElementById("overlay");
 
 document.addEventListener("DOMContentLoaded", function () {

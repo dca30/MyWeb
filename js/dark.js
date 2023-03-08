@@ -2,6 +2,7 @@ const body = document.querySelector("body");
 const toggle = document.getElementById("toggle");
 const sunIcon = document.querySelector(".toggle .bxs-sun");
 const moonIcon = document.querySelector(".toggle .bx-moon");
+if (localStorage.getItem("dark") === null) localStorage.setItem("dark", true);
 
 function toggleDarkMode() {
   body.classList.toggle("light");
